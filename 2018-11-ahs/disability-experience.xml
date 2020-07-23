@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+ <lang>en</lang>
+  <title>Meeting the Challenge of Online Accessibility</title>
+  <name>Jon Gunderson, Ph.D.</name>
+  <desc href="http://disability.illinois.edu">Division of Disability Resources and Educational Services</desc>
+  <desc href="http://ahs.illinois.edu">College of Applied Health Sciences</desc>
+  <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+  <email>jongund@illinois.edu</email>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+  <stylesheet media="screen">../css/xml-slides.css</stylesheet>
+  <stylesheet media="screen">../css/highlight.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/highlight.pack.js</script>
+  <script>../js/xml-slides.js</script>
+
+  <slide>
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li>Making disability personal</li>
+        <li>The experience of disability</li>
+        <li>Tools to support accessible design</li>
+        <li>Human resource development</li>
+      </ul>
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>When do you plan on retiring?</title>
+    <contents>
+      <ul>
+        <li>&lt;50</li>
+        <li>50-59</li>
+        <li>60-69</li>
+        <li>70-79</li>
+        <li>80-89</li>
+        <li>90+</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>How are you planning financially for your retirement?</title>
+    <contents>
+      <ul>
+        <li>None</li>
+        <li>Social Security</li>
+        <li>Retirement Investments</li>
+        <li>Trust fund</li>
+        <li>Lottery</li>
+        <li>Other</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>What age are you planning on being severely disabled?</title>
+    <contents>
+      <ul>
+        <li>&lt;50</li>
+        <li>50-59</li>
+        <li>60-69</li>
+        <li>70-79</li>
+        <li>80-89</li>
+        <li>90+</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>What disability are you planning on getting?</title>
+    <contents>
+      <ul>
+        <li>Weakness/Paralysis</li>
+        <li>Fine motore skills</li>
+        <li>Visual impairment</li>
+        <li>Hearing impairment</li>
+        <li>Memory/Cognitive</li>
+        <li>Other</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Distribution of disability by age</title>
+    <style>
+      ${demo.css}
+    </style>
+    <contents>
+      <p><a href="https://www.census.gov/prod/2008pubs/p70-117.pdf">Americans With Disabilities: 2005</a></p>
+
+      <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+      <script src="../highcharts/code/highcharts.js"></script>
+      <script src="../highcharts/code/modules/exporting.js"></script>
+
+      <script type="text/javascript">
+
+        $('#container').highcharts({
+          chart: {
+            type: 'column'
+          },
+          title: {
+          text: 'Disability Prevalence and the Need for Assistance by Age: 2005'
+          },
+          subtitle: {
+            text: 'Source: Americans With Disabilities 2005'
+          },
+          xAxis: {
+            categories: [
+            'Under 15',
+            '15-24',
+            '25 to 44',
+            '45 to 54',
+            '55 to 64',
+            '65 to 69',
+            '70 to 74',
+            '75 to 79',
+            '80 and over'
+            ],
+            crosshair: true
+          },
+          yAxis: {
+            min: 0,
+            max : 100,
+            tickAmount: 6,
+            title: {
+              text: 'Percent Population'
+            }
+          },
+          tooltip: {
+            headerFormat: "&lt;span style='font-size:10px'>{point.key}&lt;/span>&lt;table>",
+            pointFormat: '&lt;tr>&lt;td style="color:{series.color};padding:0">{series.name}: &lt;/td>&lt;td style="padding:0">&lt;b>{point.y:.1f} mm&lt;/b>&lt;/td>&lt;/tr>',
+            footerFormat: '&lt;/table>',
+            shared: true,
+           useHTML: true
+          },
+          plotOptions: {
+            column: {
+              pointPadding: 0,
+              borderWidth: 0
+            }
+          },
+          series: [{
+            name: 'Any disability',
+            data: [8.8, 10.4, 11.4, 19.4, 30.1, 37.4, 43.8, 55.9, 71.0]
+
+            }, {
+            name: 'Severe disability',
+            data: [3.6, 5.0, 7.5, 12.8, 20.8, 26.1, 27.6, 37.8, 56.2]
+
+            }, {
+            name: 'Needs assistance',
+            data: [0.4, 1.3, 1.9, 3.4, 5.7, 7.6, 9.4, 16.1, 29.2]
+          }]
+        });
+      </script>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>What's your Personal Disability Quotient (PDQ)?</title>
+    <contents>
+      <p><a href="http://www.whatsmypdq.org/">Calculate your Personal Disability Quotient (PDQ)?</a></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Victor Tsaran (Yahoo/PayPal/Google) on the Technology and Disability</title>
+    <contents>
+      <p class="center"><a href="https://www.youtube.com/watch?v=BsJB73c38yw">TEDxSiliconValley - Victor Tsaran</a></p>
+      <p class="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/BsJB73c38yw" frameborder="0" allowfullscreen=""></iframe></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Models of Web Accessibility</title>
+    <contents>
+      <dl>
+
+        <dt class="more">Accessibility Remediation</dt>
+        <dd class="more">Software is already built, before accessibility addressed.</dd>
+        <dd class="more">Typically a high number of accessibility issues, expensive consultants are hired to come in a triage problems.</dd>
+        <dd class="more">Fix as many high priority issues as possible before launching online resources, but many issues remain resulting in poor usability or not able to use website.</dd>
+        <dd class="more">Similar to building a side walk and after you are done deciding it needs curb cuts.</dd>
+
+        <dt class="more">Accessible Design</dt>
+        <dd class="more">Understanding the experience of disability during the design process.</dd>
+        <dd class="more">Using Web Standards related to accessibility to support interoperability.</dd>
+        <dd class="more">Cost effective, no remediation costs, high level of usability.</dd>
+        <dd class="more">Curbcuts are part of the original design and construction of the sidewalk.</dd>
+      </dl>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Functional Accessibility Evaluator (FAE) 2.0</title>
+    <contents>
+      <ul>
+        <li>Two versions of Functional Accessibility Evaluator 2.0
+          <ul>
+            <li><a href="https://fae.disability.illinois.edu"  target="_fae20">FAE 2.0 Individual License Version</a></li>
+            <li><a href="https://fae.illinois.edu" target="_fae20">FAE 2.0 Institutional License Version</a> using <a href="https://www.incommon.org/"  target="_other">InCommon</a></li>
+            <li><a href="https://github.com/opena11y/fae2" target="_other">Source Code for FAE 2.0</a></li>
+          </ul>
+        </li>
+        <li>Designed for:
+          <ul>
+            <li>Managers</li>
+            <li>Web designers</li>
+            <li>Software developers</li>
+            <li>Quality assurance testers</li>
+            <li>IT Auditors</li>
+          </ul>
+        </li>
+        <li>Website rule result summaries and implementation status</li>
+        <li>Page rule result summaries</li>
+        <li>Organizes rules by Rule Categories, Rule Scope and WCAG Guidelines</li>
+        <li>Archive and share reports</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>AInspector WCAG</title>
+    <contents>
+      <ul>
+        <li><a href="https://go.illinois.edu/ainspector-wcag" target="_ainspector_wcag">Firefox Add-ons: AInspector WCAG</a></li>
+        <li>Designed for:
+          <ul>
+            <li>Web designers</li>
+            <li>Software developers</li>
+            <li>Quality assurance testers</li>
+          </ul>
+        </li>
+        <li>Summary Rule Results
+          <ul>
+            <li>Rule Categories</li>
+            <li>WCAG Guideline</li>
+          </ul>
+        </li>
+        <li>Analyzes the browser DOM content</li>
+        <li>Highlighting elements</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Bookmarklets for Visualizing Accessibility Features</title>
+    <contents>
+      <ul>
+        <li><a href="https://accessibility-bookmarklets.org/" target="_bookmarklets">Bookmarklets Website</a> (<a href="https://github.com/oaa-tools/bookmarklets">Source Code</a>)</li>
+        <li>Features:
+          <ul>
+            <li>Highlight Regions and Elements on page</li>
+            <li>Element information</li>
+            <li>Default or defined <code>role</code></li>
+            <li>Accessible name</li>
+            <li>Accessible description</li>
+            <li>Important properties (e.g the number of items in a list)</li>
+          </ul>
+        </li>
+      </ul>
+
+      <iframe src="https://accessibility-bookmarklets.org" width="98%" height="600px" title="Bookmarklets Website"></iframe>
+
+    </contents>
+  </slide>
+
+   <slide>
+    <title>Training</title>
+    <contents>
+      <ul>
+        <li><a href="https://iadp.ahs.illinois.edu/" target="_related">Information Accessibility Design and Policy Certificate</a></li>
+        <li><a href="https://go.illinois.edu/a11y-badges" target="_related">Web Accessibility Badging Courses using HTML5 and ARIA Authoring Practices</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+
+</slides>
+
+

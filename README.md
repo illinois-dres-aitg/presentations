@@ -1,2 +1,1 @@
-# presentations
-DRES Accessible IT Group Presentations
+# Presentations by Jon Gunderson

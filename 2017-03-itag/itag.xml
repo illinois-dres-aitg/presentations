@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <lang>en</lang>
+  <title>BTAA Information Technology Accessibility Group</title>
+  <name>Jon Gunderson, Ph.D.</name>
+  <desc href="http://disability.illinois.edu">Division of Disability Resources and Educational Services</desc>
+  <desc href="http://ahs.illinois.edu">College of Applied Health Sciences</desc>
+  <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+  <desc href="http://go.illinois.edu/btaa-itag/">BTAA ITAG Meeting</desc>
+  <email>jongund@illinois.edu</email>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+  <stylesheet media="screen">../css/xml-slides2.css</stylesheet>
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/xml-slides.js</script>
+
+  <slide>
+    <title>Welcome</title>
+    <contents>
+      <ul>
+        <li>History</li>
+        <li>Introductions</li>
+        <li>Panel Session</li>
+        <li>Collaboration, Tracking and Sharing Tool</li>
+        <li>Accessibility 101</li>
+        <li>Dinner at 6:30 at Big Grove Tavern</li>
+      </ul>
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>History</title>
+    <contents>
+      <ul>
+        <li>Illinois (2005)</li>
+        <li>Ohio State (2006)</li>
+        <li>Minnesota (2007)</li>
+        <li>Michigan State (2008)</li>
+        <li>Indiana (2009)</li>
+        <li>Purdue (2010)</li>
+        <li>Wisconsin (2011)</li>
+        <li>Northwestern (2013)</li>
+        <li>Penn State (2014)</li>
+        <li>Michigan (2015)</li>
+        <li>Illinois (2016)</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Introductions</title>
+    <contents>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Institutional IT Accessibility Policies and Implementation Plans</title>
+    <contents>
+      <ul>
+        <li>Peter Bossley, Ohio State (online)</li>
+        <li>Nathan Evans, MSU</li>
+        <li>Hadi Rangin, University of Washington</li>
+        <li>Christian Vinten-Johansen, Penn State (online)</li>
+        <li>Bill Welsh, Rutgers</li>
+        <li>Sean Reynolds, CIO, Northwestern</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Peter Bossley, Rutgers</title>
+    <contents>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Nate Evans, Michigan State</title>
+    <contents>
+      <ol>
+        <li>Stakeholder alignment
+            <ul>
+                <li>ADA Coodinator</li>
+                <li>Legal counsel</li>
+            </ul>
+        </li>
+        <li>Earning and maintaining buy-in
+          <ul>
+            <li>Each units need different teams</li>
+            <li>42 MAUs on campus</li>
+          </ul>
+        </li>
+        <li>"Building the plane while it is flying.” – Building a team and balancing incoming priorities with processes/workflow development
+          <ol>
+            <li>Meeting individual needs</li>
+            <li>Stragetic initiatives</li>
+            <li>Making tough choices of limted resources</li>
+          </ol>
+        </li>
+        <li>Integrating universal design into teaching and learning</li>
+      </ol>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Hadi Rangin, Washington</title>
+    <contents>
+      <ol>
+        <li>Accessibility as a criteria in procurement</li>
+        <li>Ownership/accountability of accessibility for IT products
+          <ul>
+            <li>I am not the owner of accessibility, the service needs to own accesibility</li>
+          </ul>
+        </li>
+        <li>Collaboration with third-party vendors: short-term and long-term goals
+          <ul>
+            <li>Have contract with vendors</li>
+            <li>Deployment blockers, high priority issues</li>
+            <li>Most companies are not against accessibility, they just don't know about</li>
+            <li>Educate companies on accessibility, develop trust with their representatives</li>
+            <li>Help company develop a culture of accessibility, different for each comapny</li>
+          </ul>
+        </li>
+      </ol>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Christian Vinten-Johansen, Penn State</title>
+    <contents>
+      <ol>
+        <li>Wins at PSU
+          <ul>
+            <li>Updated policy related to including vendors</li>
+          </ul>
+        </li>
+        <li>Communication on accessibility, high level awareness on cmapus.</li>
+        <li>Top level support accessibility</li>
+        <li>Purchasing group is with accessibility group</li>
+        <li>4 major projects related to cloud based services</li>
+        <li>Biggest challenges ate STEM content</li>
+        <li>PSU is under investigation again, presented with websites analyzed using WebAIM
+          <ul>
+            <li>Color contrast</li>
+            <li>Images not having ALT text</li>
+            <li>Onerious reporting requirements</li>
+          </ul>
+        </li>
+      </ol>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Bill Welsh, Rutgers</title>
+    <contents>
+      <ol>
+        <li>Experience at PSU and Rutgers</li>
+        <li>Web liason model
+          <ul>
+            <li>Each unit has to identify someone who is repsonsible for accessibility</li>
+            <li>Prevailing culture is that this is a disability services problem, not a unit problem</li>
+            <li>Liason model shows instituional byin</li>
+          </ul>
+        </li>
+        <li>No plicy 4 years ago</li>
+        <li>Develped a worknig group to develop a plan including key stake holders
+          <ul>
+            <li>Educational technologies</li>
+            <li>Faculty senate</li>
+            <li>Colleges and units</li>
+            <li>Best practices for online learning</li>
+          </ul>
+        </li>
+        <li>You know you made it when people come to you saying we are accessible</li>
+        <li>People are taking responsibility for accessible on their own, not just a disability services problems</li>
+      </ol>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Sean Reynolds, Northwestern</title>
+    <contents>
+      <ol>
+        <li>Not jsut about compliance and rick management, but about equal access, very compelling</li>
+        <li>How do you make an arguement for accountability</li>
+        <li>Need people who are committed,and not just people with accessbility in their job title</li>
+        <li>There has to be passion or commitment</li>
+        <li>This group is important to help the Big10 understand this issue</li>
+        <li>This group has alot of leaders who beleive in the cause</li>
+        <li>How do we build this leadership with in a insitution</li>
+        <li>You need passion, but it cannot  be in yur face</li>
+        <li>It is a journey, need to take steps where you can, can't get everything at one time</li>
+      </ol>
+    </contents>
+  </slide>
+
+ <slide>
+    <title>Questions</title>
+    <contents>
+      <ol>
+        <li>Building and maintaining distributed responsibility for accessibility</li>
+        <li>Accessibility ever going to have the same level of priority as security</li>
+        <li>CIO role in accessibility planning and mplementation.</li>
+      </ol>
+    </contents>
+  </slide>
+
+</slides>
+
+

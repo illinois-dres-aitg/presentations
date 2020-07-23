@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu"
+      alt="University of Illinois">
+      <img src="..\images\block-i.png"/>
+    </a>
+    Copyright &#169; 2020 University of Illinois
+  </footer>
+  <title>Disability Inclusion: Campus Wide Assistive Technologies and Authoring Resources</title>
+  <person>
+    <name>Angella Anderson, M.S.</name>
+    <desc>Disability Specialist, Alternate Format Production</desc>
+    <desc href="http://disability.illinois.edu">Disability Resources and Education Services</desc>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:aanders2@illinois.edu">aanders2@illinois.edu</desc>
+  </person>
+  <person>
+    <name>Jon Gunderson, Ph.D.</name>
+    <desc>Coordinator of Accessible IT Group</desc>
+    <desc href="http://disability.illinois.edu">Disability Resources and Education Services</desc>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  </person>
+
+  <conference>
+    <name href="https://www.itproforum.illinois.edu/sessions#201911-02">IT Professionals Forum Fall 2019 Conference</name>
+    <desc>November 6th, 2019</desc>
+    <desc>iHotel, Champaign, IL</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/xml-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/xml-slides.js</script>
+
+  <slide>
+    <title>Overview</title>
+    <contents>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th>Microsoft Windows 10</th>
+            <td>
+              <ul>
+                <li>Ease of Access Options</li>
+                <li>JAWS Screen Reader</li>
+                <li>ZoomText for Magnification</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>macOS</th>
+            <td>
+              <ul>
+                <li>Sticky Keys/Mousekeys</li>
+                <li>Zoom Magnifier</li>
+                <li>VoiceOver Screen Reader</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Kurzweil 3000</th>
+            <td>
+              <ul>
+                <li>Kurzweil 3000 for Reading Disabilities (Web License)</li>
+                <li>Read the Web extension for Chrome Browser</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Authoring Resources</th>
+            <td>
+              <ul>
+                <li>EquatIO: Acessible math</li>
+                <li>SensusAccess: Accessible documents and document transformation</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Other Services</th>
+            <td>
+              Aira On Demand Description Service (Stop by Poster Session)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Why is knowing about campuswide IT accessibility resources important?</title>
+    <contents>
+      <dl>
+        <dt>Computing Labs</dt>
+        <dd>Public computing and teaching computer labs have assisitive technologies available to students.</dd>
+
+        <dt>Testing</dt>
+        <dd>People testing websites and of software have access to assistive technologies for functional testing.</dd>
+
+        <dt>Accommodating Faculty and Staff</dt>
+        <dd>People may be interested for their own use or may know collegaues that may benefit from using some of these assistive technologies.</dd>
+      </dl>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Windows: Ease of Access Options</title>
+    <contents>
+      <ul>
+        <li><a href="https://www.microsoft.com/en-gb/Accessibility/" target="_presentation">Learn about accessibility options</a>
+          <ul>
+            <li>Stickey Keys</li>
+            <li>Mouse Keys</li>
+            <li>High contrast display settings</li>
+            <li>Cortana voice control</li>
+            <li>Magnifier</li>
+            <li>Narrator</li>
+          </ul>
+        </li>
+        <li>Make sure to enable access "Ease of Access Features" on public computers</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Windows: JAWS Screen Reader</title>
+    <contents>
+      <p class="center"><a href="http://disability.illinois.edu/itproinfo" target="_presentation">Configuring JAWS for campus license</a></p>
+      <p class="center"><img src="images/jaws.png" alt="screen shot of JAWS list of headings"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Windows: ZoomText</title>
+    <contents>
+      <p class="center"><a href="http://disability.illinois.edu/itproinfo" target="_presentation">Configuring ZoomText for campus license</a></p>
+      <p class="center"><img width="100%" src="images/zoomtext.png" alt="screen shot of Zoomtext toolbar"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Windows and macOS: Kurzweil 3000</title>
+    <contents>
+      <p class="center"><a href="http://disability.illinois.edu/itproinfo" target="_presentation">Download links for installing Kurzweil 3000 on WIindows and macOS</a></p>
+      <p class="center"><a href="docs/illinois-strategic-plan.pdf">Sample document for reading.</a></p>
+      <p class="center"><img width="100%" src="images/kurzweil3000.png" alt="screen shot of Kurzweil 3000"/></p>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Chrome Browser Extension: Read the Web</title>
+    <contents>
+        <p class="center"><a href="https://chrome.google.com/webstore/detail/read-the-web/hdgegmlancchhhlkkddoiedlklgocffm?hl=en" target="_presentation">Get Read the Web Chrome Extension</a></p>
+        <p class="center"><img width="100%" src="images/read-the-web.png" alt="screen shot of Read the Web toolbar in Chrome Browser"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>macOS: Accessibility</title>
+    <contents>
+      <p><a href="https://www.apple.com/accessibility/mac/" target="_presentation" >macOS Accessibility Features</a></p>
+      <p class="center"><img width="100%" src="images/accessibility-preferences.png" alt="screen shot of macOS accessibility preferences"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>macOS: VoiceOver Screen Reader</title>
+    <contents>
+      <p class="center"><img width="100%" src="images/voiceover-smaller.png" alt="screen shot of voice over with list of headings"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>macOS: Zoom Magnifier and High Contrast</title>
+    <contents>
+      <p class="center"><img width="100%" src="images/highcontrast-zoom-smaller.jpg" alt="screen shot of zoom on and high contrast settings enabled"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>EquatIO</title>
+    <contents>
+      <ul>
+        <li><a href="https://go.illinois.edu/equateio" target="_presentation">EquatIO information from DRES.</a></li>
+        <li><a href="https://webstore.illinois.edu/shop/product.aspx?zpid=3809" target="_presentation">EquatIO available from University Webstore</a></li>
+        <li><a href="docs/equatio.docx">Sample document for EquatIO demonstration</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Sensus Access</title>
+    <contents>
+      <ul>
+        <li><a href="https://www.disability.illinois.edu/accommodations/text-conversion-services/sensusaccess" target="_presentation">DRES Web Form for Submitting a Coversion Request to SensusAccess</a></li>
+        <li><a href="docs/sensus-access-socw-test.pdf">PDF Document to be converted</a></li>
+        <li><a href="docs/sensus-access-socw-conv.docx">Word Version of PDF document converted with Sensus Access</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Aira On Demand Description Service</title>
+    <contents>
+      <ul>
+        <li><a href="https://www.disability.illinois.edu/academic-supports/accommodations/aira-demand-description-service" target="_presentation">Aira service website.</a></li>
+        <li><a href="https://www.disability.illinois.edu/academic-supports/accommodations/aira-demand-description-service" target="_presentation">Aira information for campus usage.</a></li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Questions?</title>
+    <contents>
+      <p>Are people interested in training on:</p>
+      <ul>
+        <li>How assistive technologies work?</li>
+        <li>Creating accessible documents or converting to other formats?</li>
+      </ul>
+    </contents>
+  </slide>
+</slides>
+
+

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <lang>en</lang>
+  <title>Automated Testing of Browser Implementation of ARIA and HTML5</title>
+  <person>
+    <name>Joanmarie Diggs</name>
+    <desc href="https://www.igalia.com/nc/igalia-247/igalian/item/jdiggs/">Igalia</desc>
+    <desc href="mailto:jdiggs@igalia.com">E-mail Joanmarie Diggs</desc>
+  </person>
+  <person>
+    <name>Jon Gunderson</name>
+    <desc href="http://disability.illinois.edu">Disability Resources and Education Services</desc>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:jongund@illinois.edu">E-mail Jon Gunderson</desc>
+  </person>
+  <conference>
+    <name href="http://www.csun.edu/cod/conference/2018/sessions/index.php/public/presentations/view/316">2018 CSUN Conference, San Diego, CA</name>
+    <desc>March 23rd, 2018</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/xml-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/xml-slides.js</script>
+
+  <slide>
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li>W3C Accessibility Standards</li>
+        <li>ARIA Working Group</li>
+        <li>Accessibility Standards and Asssitive Technologies</li>
+        <li>Testing web browsers for implementation</li>
+        <li>Implementation results</li>
+        <li>How you can help</li>
+      </ul>
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>WCAG Is Not the Only Accessibility Standard from the W3C</title>
+    <contents>
+      <ul>
+        <li class="more"><a href="https://www.w3.org/TR/html/">HTML 5.x</a></li>
+        <li class="more"><a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Application 1.1</a></li>
+        <li class="more"><a href="https://www.w3.org/TR/core-aam/">Accessibility API Mapping (Core AAM)</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>What is the difference between WCAG and other W3C Accessibility Standards?</title>
+    <contents>
+      <dl>
+        <dt>Web Content Acessibility Guidelines 2.0</dt>
+        <dd class="more">Guidelines that are interpreted for various technologies and operating environments.</dd>
+        <dd class="more">Disagreements on what is required or not required in different situations.</dd>
+
+        <dt class="more">ARIA Specification</dt>
+        <dd class="more">Specific syntax and requirements (e.g. a <code>menu</code> must have <code>menuitem</code>s).</dd>
+        <dd class="more">Expected behaviors associated with each role (e.g. <a href="https://www.w3.org/TR/wai-aria-practices/" target="_specs">ARIA Authoring Practices</a>).</dd>
+
+        <dt class="more">ARIA, HTML5 and SVG</dt>
+        <dd class="more">Define specific accessibility API mappings.</dd>
+        <dd class="more">Browsers either do the mapping requirement or not, no interpretation.</dd>
+
+      </dl>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Activities of the ARIA Working Group</title>
+    <contents>
+      <ul>
+        <li>ARIA Specfication</li>
+        <li>ARIA Authoring Practices</li>
+        <li>Accessibility API Mapping (AAM) of events, roles, properties and states</li>
+        <li>Coordinate activities with other working groups, including HTML5, DPUB and SVG.</li>
+        <li>Testing browsers for implementation (i.e. what this presentation is about!)</li>
+      </ul>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>HTML5, ARIA and Assistive Technologies (ATs)</title>
+    <contents>
+      <dt>
+        <dt class="more">Authors</dt>
+        <dd class="more">HTML5 native semantics used to idenitfy the features and interaction on a page.</dd>
+        <dd class="more">ARIA is added to supplement native semantics or to fill in when no native semantics exist.</dd>
+        <dd class="more">ARIA <em>only</em> changes how information is communicated to <abbr title="Assistive Technologies">ATs</abbr>, does <code>not</code> change the beahvior of browsers*.</dd>
+
+        <dt class="more">Web Browsers</dt>
+        <dd class="more">Provide information to accessibility <abbr title="Application Programming Interfaces">APIs</abbr> based on content provided by the author.</dd>
+        <dd class="more">Browsers <em>must</em> communicate the same information to accessibility APIs to acheive interoperability.</dd>
+
+        <dt class="more">Assistive Technologies</dt>
+        <dd class="more">Screen readers typically read role, name and description information to users as they navigate the content of a page.</dd>
+        <dd class="more"><abbr title="Assistive Technologies">ATs</abbr> are free to use or not use information in the accessibility API, none of the W3C specications defines their use or behavior of accessibility information*.</dd>
+      </dt>
+      <p class="more" style="margin-top: 1.5em">* Part of the original contract with browser and assistive technology developers to implement ARIA requirements.</p>
+    </contents>
+  </slide>
+
+ <slide>
+    <title>Testing Web Browsers for Implementation</title>
+    <contents>
+      <ul>
+        <li><a href="https://www.w3.org/TR/wai-aria/" target="_specs">Accessible Rich Internet Applications (WAI-ARIA) 1.1</a></li>
+        <li><a href="https://www.w3.org/TR/core-aam-1.1/" target="_specs">Core Accessibility API Mappings 1.1</a></li>
+        <li><a href="https://www.w3.org/TR/accname/" target="_specs">Accessible Name and Description Computation 1.1</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Automated versus Manual Implementation Testing</title>
+    <contents>
+      <dl>
+        <dt>Manual Testing</dt>
+        <dd>People must go to each test page.</dd>
+        <dd>Use accessibility inspection tool to find target elements and check for accessibility information.</dd>
+        <dd>Need lots of coordinated people to do testing.</dd>
+        <dd>Limited human resources reduces number of test pages that need testing.</dd>
+
+        <dt>Automated Testing</dt>
+        <dd>Orders of magnitude faster (testing in minutes instead of days).</dd>
+        <dd>Many more test cases can be created and tested.</dd>
+        <dd>Minimum of human resources need for testing and reporting.</dd>
+
+      </dl>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>WPT and ATTAs</title>
+    <contents>
+        <p>Shane McCarron (Spec-Ops) and Joanmarie Diggs (Igalia) developed a way to test browsers mapping to accessibility <abbr title="Application Programming Interfaces">APIs</abbr>.
+        <br/>(<em>Give them a big thank you if you see them!</em>)
+        </p>
+
+        <dl>
+          <dt>Web Platform Test (WPT)</dt>
+          <dd>Public web testing platform to insure interoperability*.</dd>
+          <dd>Open source (<a href="https://github.com/w3c/web-platform-tests"><abbr title="Web Platform Test">WPT</abbr> on Github</a>).</dd>
+          <dd><a href="https://w3c-test.org/tools/runner/index.html" target="_tools">W3C WPT Test runner</a></dd>
+          <dd class="more">Includes test cases for W3C specifications</dd>
+
+          <dt>Asssistive Technology Test Adapter (ATTA)</dt>
+          <dd><a href="https://spec-ops.github.io/atta-api/index.html"  target="_specs">Note on the architecture of an <abbr title="Asssistive Technology Test Adapter">ATTA</abbr></a></dd>
+          <dd>Receives test information for a specific API from WPT test page.</dd>
+          <dd>Tests for required API mappings and events.</dd>
+          <dd>Returns test result to WPT test page.</dd>
+          <dd>Each accessibility API has it own test adapter (e.g. MSAA/IAccessible2, AXAPI, ATK-SPI, UIAutomate)</dd>
+        </dl>
+
+      <p style="margin-top: 1.5em">* Open standards and interoperability are the heart and sole of W3C specifications.</p>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Web Platform Test Cases</title>
+    <contents>
+      <ul>
+        <li><a href="https://www.w3.org/wiki/ARIA_1.1_Testable_Statements" title="Wiki"  target="_results">Accessible Rich Application Interface (ARIA) 1.1 test cases.</a> (<a href="https://github.com/w3c/web-platform-tests/tree/master/wai-aria" title="Accessible Rich Application Interface (ARIA) 1.1 test cases." target="_results">GitHub</a>)</li>
+        <li><a href="https://github.com/w3c/web-platform-tests/tree/master/core-aam" title="GitHub" target="_results">CORE Accessibility API Mapping test cases.</a> (GitHub only)</li>
+        <li><a href="https://www.w3.org/wiki/AccName_1.1_Testable_Statements" title="Wiki">Accessible Name test cases</a>.(<a href="https://github.com/w3c/web-platform-tests/tree/master/accname" title="Accessible Name test cases." target="_results">GitHub</a>)</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Demonstration of Generating a Report</title>
+    <contents>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Implementation Reports</title>
+    <contents>
+      <ul>
+        <li><a href="http://w3c.github.io/test-results/wai-aria/" target="_specs">Accessible Rich Application Interface (ARIA) 1.1 test results</a></li>
+        <li><a href="http://w3c.github.io/test-results/core-aam/" target="_specs">CORE Accessibility API Mapping (CORE-AAM) test results</a></li>
+        <li><a href="http://w3c.github.io/test-results/accname/" target="_specs">Accessible Name and Description Calculation (ACCNAME) 1.1 test results</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Filing Browser Bugs</title>
+    <contents>
+      <ul>
+        <li><a href="https://bugs.chromium.org/p/chromium/issues/list" target="_bugs">Chrome bug reporting</a></li>
+        <li><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/" target="_bugs">EdgeHTML issue tracker</a></li>
+        <li><a href="https://bugzilla.mozilla.org/enter_bug.cgi" target="_bugs">Firefox bug reporting</a></li>
+        <li><a href="https://bugs.webkit.org/enter_bug.cgi?product=WebKit&amp;component=Accessibility&amp;op_sys=All&amp;rep_platform=All&amp;short_desc=AX%3A%20" target="_bugs">Safari bug reporting</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>What is Not Tested</title>
+    <contents>
+      <ul>
+        <li>What a specific assisitive technology does with a feature.</li>
+        <li>W3C specifications ook at the latest (beta) browsers for implmentation iof requirements, so commonly used browser or legacy browsers are not part of report.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>How you can help!</title>
+    <contents>
+      <ul>
+        <li>Filing and tracking issues with browser developers.</li>
+        <li>Creating test cases.</li>
+        <li>Developing and testing ATTAs.</li>
+        <li>Contact <a href="mailto:mailto:jdiggs@igalia.com">Joanmarie Diggs</a> or <a href="mailto:jongund@illinois.edu">Jon Gunderson</a> if you are interested.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>HTML5 and ARIA Training and Open Source Tools from Illinois</title>
+    <contents>
+      <h2>Training</h2>
+      <ul>
+        <li><a href="https://go.illinois.edu/a11y-badges" target="_training">DRES Web Accessibility Badging Program</a> (6-8 hours/badge)</li>
+        <li><a href="http://online.ahs.illinois.edu/iadp/" target="_training">AHS Information Accessibility Design and Policy (IADP) Certificate</a> (Three 8 Week Credit courses)
+        </li>
+      </ul>
+
+      <h2>Tools</h2>
+
+      <ul>
+        <li><a href="https://accessibility-bookmarklets.org/" target="_tools">Accessibility Bookmarklets</a></li>
+        <li><a href="http://ainspector.github.io/" target="_tools">AInspector Sidebar</a></li>
+        <li><a href="https://fae.disability.illinois.edu" target="_tools">Functional Accessibility Evalautor (FAE) 2.0 (Self-Registration Version)</a></li>
+        <li><a href="https://fae.illinois.edu" target="_tools">Functional Accessibility Evalautor (FAE) 2.0 (Institutional Version)</a></li>
+      </ul>
+
+    </contents>
+  </slide>
+  <slide>
+    <title>Questions and Discussion</title>
+    <contents>
+    </contents>
+  </slide>
+
+</slides>
+
+

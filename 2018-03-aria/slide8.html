@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML//EN">
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Slide 8: WPT and ATTAs</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
+<link rel="stylesheet" type="text/css" href="../css/xml-slides.css">
+<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script><script type="text/javascript" src="../js/bootstrap.min.js"></script><script type="text/javascript" src="../js/bootstrap-accessibility.min.js"></script><script type="text/javascript" src="../js/xml-slides.js"></script>
+<style id="style" type="text/css"></style>
+</head>
+<body>
+<nav id="nav" class="navbar navbar-default">
+<div class="container">
+<div class="navbar-header">
+<button class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#slide-nav"><span class="sr-only">
+                  Toggle navigation
+                </span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+</div>
+<div id="slide-nav" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li>
+<a id="ID_SLIDE_INDEX" href="index.html">
+                        Index
+                      </a>
+</li>
+<li>
+<a id="ID_SLIDE_FIRST" href="slide1.html">
+                        First
+                      </a>
+</li>
+<li>
+<a id="ID_SLIDE_PREVIOUS" href="slide7.html">Previous
+                      </a>
+</li>
+<li>
+<a id="ID_SLIDE_NEXT" href="slide9.html">
+                        Next
+                      </a>
+</li>
+<li>
+<a id="ID_SLIDE_LAST" href="slide16.html">
+                        Last
+                      </a>
+</li>
+</ul>
+<div class="navbar-text pull-right">Slide 8 of 16</div>
+</div>
+</div>
+</nav>
+<main id="content" class="container">
+<a name="main" id="main"></a>
+<h1 id="h1_title" class="title">WPT and ATTAs</h1>
+<p>Shane McCarron (Spec-Ops) and Joanmarie Diggs (Igalia) developed a way to test browsers mapping to accessibility <abbr title="Application Programming Interfaces">APIs</abbr>.
+        <br>(<em>Give them a big thank you if you see them!</em>)
+        </p>
+<dl>
+
+<dt>Web Platform Test (WPT)</dt>
+
+<dd>Public web testing platform to insure interoperability*.</dd>
+
+<dd>Open source (<a href="https://github.com/w3c/web-platform-tests"><abbr title="Web Platform Test">WPT</abbr> on Github</a>).</dd>
+
+<dd>
+<a href="https://w3c-test.org/tools/runner/index.html" target="_tools">W3C WPT Test runner</a>
+</dd>
+
+<dd class="more">Includes test cases for W3C specifications</dd>
+
+
+<dt>Asssistive Technology Test Adapter (ATTA)</dt>
+
+<dd>
+<a href="https://spec-ops.github.io/atta-api/index.html" target="_specs">Note on the architecture of an <abbr title="Asssistive Technology Test Adapter">ATTA</abbr></a>
+</dd>
+
+<dd>Receives test information for a specific API from WPT test page.</dd>
+
+<dd>Tests for required API mappings and events.</dd>
+
+<dd>Returns test result to WPT test page.</dd>
+
+<dd>Each accessibility API has it own test adapter (e.g. MSAA/IAccessible2, AXAPI, ATK-SPI, UIAutomate)</dd>
+
+</dl>
+<p style="margin-top: 1.5em">* Open standards and interoperability are the heart and sole of W3C specifications.</p>
+</main>
+<footer class="container">
+<div id="footer" class="well well-sm">
+        Copyright &copy; 2018 University of Illinois
+      </div>
+</footer>
+</body>
+</html>

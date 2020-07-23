@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu"
+      alt="University of Illinois">
+      <img src="..\images\block-i.png"/>
+    </a>
+    Copyright &#169; 2020 University of Illinois
+  </footer>
+  <title>Understanding Web Accessibility Standards and Open Source Tools</title>
+  <person>
+    <name>Jon Gunderson, Ph.D.</name>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  </person>
+  <conference>
+    <name href="https://events.educause.edu/annual-conference/2019/agenda/understanding-web-accessibility-standards-and-opensource-tools">2019 Educuase Conference</name>
+    <desc>October 17th, 2019</desc>
+    <desc>Chicago, IL</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/xml-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/xml-slides.js</script>
+
+  <slide>
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li><a href="http://davidmacd.com/wcag_theme_song.html">Web Content Accessibility Guidelines (WCAG) 2.0 Theme Song</a></li>
+        <li>Why open source?</li>
+        <li>Standards for web accessibility</li>
+        <li>Open Source Tools</li>
+      </ul>
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Why Open Source?</title>
+    <contents>
+      <ul>
+        <li><a href="http://disability.illinois.edu/history-firsts">History of University of Illinois in Disability Services</a>.</li>
+        <li>Raise awareness of accessibility issues.</li>
+        <li>Help people learn about accessibility through the use of web standards.</li>
+        <li>Develop a collective understanding of accessibility.</li>
+        <li>Use scarce resources for human resource development.</li>
+      </ul>
+    </contents>
+  </slide>
+
+   <slide>
+    <title>Web Content Accessibility Guidelines (WCAG) 2.1</title>
+    <contents>
+      <p class="center">
+        <a href="https://www.w3.org/TR/WCAG" target="_specification">WCAG Specification</a>
+      </p>
+      <iframe src="https://www.w3.org/TR/WCAG " width="98%" height="600px" title="WCAG 2.1 Specification"></iframe>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Accessible Rich Internet Applications (ARIA) 1.1</title>
+    <contents>
+      <p class="center">
+        <a href="https://www.w3.org/TR/wai-aria" target="_specification">ARIA Specification</a>
+      </p>
+      <iframe src="https://www.w3.org/TR/wai-aria" width="98%" height="600px" title="ARIA 1.0 Specification"></iframe>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>HTML 5.2</title>
+    <contents>
+      <p class="center">
+        <a href="https://www.w3.org/TR/html5" target="_specification">HTML5 Specification</a>
+      </p>
+      <iframe src="https://www.w3.org/TR/html5/" width="98%" height="600px" title="HTML 5.2 Specification"></iframe>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>HTML5: main element</title>
+    <contents>
+      <p class="center">
+        <a href="https://www.w3.org/TR/html5/grouping-content.html#the-main-element" target="_specification">HTML 5: main element</a>
+      </p>
+      <iframe src="https://www.w3.org/TR/html5/grouping-content.html#the-main-element" width="98%" height="600px" title="main element section of W3C HTML 5 Specification"></iframe>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>HTML Accessibility API Mappings</title>
+    <contents>
+      <p class="center">
+        <a href="https://www.w3.org/TR/html-aam-1.0/" target="_specification">HTML Accessibility API Mappings Specification</a>
+      </p>
+      <iframe src="https://www.w3.org/TR/html-aam-1.0/" width="98%" height="600px" title="HTML Accessibility API Mappings Specification"></iframe>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>ARIA Authoring Practices 1.1</title>
+    <contents>
+      <p class="center">
+        <a href="https://w3c.github.io/aria-practices/" target="_specification">ARIA Authoring Practices 1.1 Note</a>
+      </p>
+      <iframe src="https://w3c.github.io/aria-practices/" width="98%" height="600px" title="WAI-ARIA Authoring Practices 1.1 note"></iframe>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>OpenAjax Evaluation Library</title>
+    <contents>
+      <ul>
+        <li>Support the use of HTML5 and ARIA techniques for implementation of WCAG 2.0 Level A and AA requirements</li>
+        <li>Raise awareness of accessibility of accessibility issues</li>
+        <li>Knowledge base on what it means to comply with WCAG 2.0 requirements for specific technologies (e.g. teaching and learning framework)</li>
+        <li>Support institutional planning and compliance</li>
+        <li>Open source to promote discussion and conversation on what it means to be "accessible" (e.g. people can define their own definition with open source)</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Rule Features</title>
+    <contents>
+      <p class="center">
+
+      </p>
+
+      <ul>
+        <li>Summary</li>
+        <li>Definition</li>
+        <li>Purpose</li>
+        <li>WCAG 2.0 Success Criteria</li>
+        <li>Techniques</li>
+        <li>Scope: Website, Page or element</li>
+        <li>Links to related information</li>
+        <li><a href="https://fae.disability.illinois.edu/rulesets/CONTROL_1/" target="_specification">Example Rule: Form controls must have labels</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Rule Results</title>
+    <contents>
+
+      <table aria-labelledby="id1" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Result</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="background-color: #FFAEAE">Violation</td>
+            <td>Fails a required rule</td>
+          </tr>
+          <tr>
+            <td style="background-color: #FFEC94">Warning</td>
+            <td>Fails a recommended rule</td>
+          </tr>
+          <tr>
+            <td style="background-color: #B4D8E7">Manual Check</td>
+            <td>Human judgment is needed for verification of meeting an accessibility requirement</td>
+          </tr>
+          <tr>
+            <td style="background-color: #B0E57C">Passed</td>
+            <td>The accessibility requirement has been met</td>
+          </tr>
+          <tr>
+            <td style="background-color: black; color: #CCC">Not Applicable</td>
+            <td>No elements on the page applied to this rule</td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title> Rule Categories</title>
+    <contents>
+
+      <table class="details table table-striped table-hover" aria-labelledby="rule_categories">
+        <thead>
+          <tr>
+            <th class="text">Category</th>
+            <th class="text">Definition</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <th>Landmarks</th>
+            <td>Use ARIA landmark roles to structure the content of each page and identify major sections of content, thus making them more findable and navigable. The use of landmarks will, in many cases, reflect the visual styling and page layouts that web designers utilize to set apart various sections of content.</td>
+          </tr>
+
+          <tr>
+            <th>Headings</th>
+            <td>Use heading elements (H1-H6) to provide appropriate labels for landmarks, and to identify subsections of content within landmarks.</td>
+          </tr>
+
+          <tr>
+            <th>Styles/Content</th>
+            <td>Use proper HTML markup to identify the semantics and language of text content. Ensure that text is readable by adhering to color contrast guidelines, and that information is not conveyed solely by the use of color, shape, location or sound.</td>
+          </tr>
+
+          <tr>
+            <th>Images</th>
+            <td>Provide appropriate text alternatives for static images and graphics.</td>
+          </tr>
+
+          <tr>
+            <th>Links</th>
+            <td>Use link text that properly describes the target of each link. Ensure consistency and uniqueness for links that are usable, predictable and understandable.</td>
+          </tr>
+
+          <tr>
+            <th>Tables</th>
+            <td>Provide table captions or other meta-information as needed. Provide row and column header references for data cells of data tables. Ensure that tables used for layout properly linearize text content.</td>
+          </tr>
+
+          <tr>
+            <th>Forms</th>
+            <td>Provide meaningful labels for form elements and usable and understandable error feedback as needed.</td>
+          </tr>
+
+          <tr>
+            <th>Widgets/Scripts</th>
+            <td>Use appropriate event handlers on elements to support native interactivity using JavaScript. Ensure that custom widgets created using JavaScript support keyboard interaction and include ARIA markup to describe their roles, properties and states.</td>
+          </tr>
+
+          <tr>
+            <th>Audio/Video</th>
+            <td>Provide appropriate text transcripts, captions or audio descriptions for elements used in rendering audio and video content.</td>
+          </tr>
+
+          <tr>
+            <th>Keyboard</th>
+            <td>Provide logical and sequential keyboard navigation among interactive elements such as links and form controls. Use standard models of keyboard interaction for custom widgets.</td>
+          </tr>
+
+          <tr>
+            <th>Timing</th>
+            <td>Eliminate accessibility problems caused by time limits on input and by content that moves, scrolls, flashes or auto-updates.</td>
+          </tr>
+
+          <tr>
+            <th>Site Navigation</th>
+            <td>Ensure the consistent labeling and ordering of recurrent page sections across all pages within a website. Provide a meaningful title for each page within a website.</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Ruleset and Rule Details</title>
+    <contents>
+      <ul>
+        <li><a href="https://fae.disability.illinois.edu/rulesets/ruleset/ARIA_STRICT/" target="_specification">HTML5 and ARIA Ruleset</a></li>
+        <li><a href="https://fae.disability.illinois.edu/rulesets/ruleset/ARIA_TRANS/" target="_specification">HTML4 Legacy Ruleset</a></li>
+        <li><a href="https://fae.disability.illinois.edu/rulesets/" target="_specification">Comparison of OpenAjax Rulesets</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Functional Accessibility Evaluator (FAE) 2.0</title>
+    <contents>
+      <ul>
+        <li>Two versions of Functional Accessibility Evaluator 2.0
+          <ul>
+            <li><a href="https://fae.disability.illinois.edu"  target="_fae20">FAE 2.0 Individual License Version</a></li>
+            <li><a href="https://fae.illinois.edu" target="_fae20">FAE 2.0 Institutional License Version</a> using <a href="https://www.incommon.org/"  target="_other">InCommon</a></li>
+            <li><a href="https://github.com/opena11y/fae2" target="_other">Source Code for FAE 2.0</a></li>
+          </ul>
+        </li>
+        <li>Designed for:
+          <ul>
+            <li>Managers</li>
+            <li>Web designers</li>
+            <li>Software developers</li>
+            <li>Quality assurance testers</li>
+            <li>IT Auditors</li>
+          </ul>
+        </li>
+        <li>Website rule result summaries and implementation status</li>
+        <li>Page rule result summaries</li>
+        <li>Organizes rules by Rule Categories, Rule Scope and WCAG Guidelines</li>
+        <li>Archive and share reports</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>AInspector WCAG</title>
+    <contents>
+      <ul>
+        <li><a href="https://go.illinois.edu/ainspector-wcag" target="_ainspector_wcag">Firefox Add-ons: AInspector WCAG</a></li>
+        <li>Designed for:
+          <ul>
+            <li>Web designers</li>
+            <li>Software developers</li>
+            <li>Quality assurance testers</li>
+          </ul>
+        </li>
+        <li>Summary Rule Results
+          <ul>
+            <li>Rule Categories</li>
+            <li>WCAG Guideline</li>
+          </ul>
+        </li>
+        <li>Analyzes the browser DOM content</li>
+        <li>Highlighting elements</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Bookmarklets for Visualizing Accessibility Features</title>
+    <contents>
+      <ul>
+        <li><a href="https://accessibility-bookmarklets.org/" target="_bookmarklets">Bookmarklets Website</a> (<a href="https://github.com/oaa-tools/bookmarklets">Source Code</a>)</li>
+        <li>Features:
+          <ul>
+            <li>Highlight Regions and Elements on page</li>
+            <li>Element information</li>
+            <li>Default or defined <code>role</code></li>
+            <li>Accessible name</li>
+            <li>Accessible description</li>
+            <li>Important properties (e.g the number of items in a list)</li>
+          </ul>
+        </li>
+      </ul>
+
+      <iframe src="https://accessibility-bookmarklets.org" width="98%" height="600px" title="Bookmarklets Website"></iframe>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>FAE Auditor (Beta)</title>
+    <contents>
+      <ul>
+        <li><a href="https://fae-auditor.disability.illinois.edu/rules/2018-bb-conf-2-2018-10-17/rc/"  target="_fae_auditor">Athletic Conferences Report</a> (<a href="https://github.com/opena11y/faeAuditor">Source Code</a>)</li>
+        <li>Identify strengths and weaknesses of accessibility implementation</li>
+        <li>Compare websites and groups of websites</li>
+        <li>Support creating accessibility dashboard</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+
+   <slide>
+    <title>Submit an Issue or Idea</title>
+    <contents>
+      <ul>
+        <li><a href="https://github.com/opena11y/oaa-rules/issues"  target="_issues">Issues or ideas on the OpenAjax Rules, Rulesets and Messaging</a></li>
+        <li><a href="https://github.com/opena11y/fae2/issues" target="_issues">Issues or ideas on the features for FAE 2.0</a></li>
+        <li><a href="https://github.com/ainspector/webextension-firefox/issues" target="_issues">Issues or ideas on the features for AInspector WCAG</a></li>
+        <li><a href="https://github.com/oaa-tools/bookmarklets/issues" target="_issues">Issues or ideas on the Bookmarklets</a></li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>A11yFirst Editor Enhancements for CKEditor 4</title>
+    <contents>
+      <ul>
+        <li><a href="https://a11yfirst.gitlab.io/custom/a11yfirst.html"  target="_a11yfirst">A11yFirst demonstration</a></li>
+        <li>Just in time accessibility feedback during authoring process</li>
+        <li>Authors understand the importance of accessibility</li>
+        <li>Built-in help resources on accessibility</li>
+      </ul>
+
+      <h2>How to Get CKEditor</h2>
+
+      <ul>
+        <li><a href="https://ckeditor.com/cke4/builder" target="_a11yfirst">CKEditor 4 Builder</a></li>
+        <li><a href="https://www.drupal.org/sandbox/jongund/3030129" target="_a11yfirst">A11yFirst Editor Enhancements Module for Drupal 8</a></li>
+        <li><a href="https://github.com/a11yfirst/distribution/releases" target="_a11yfirst">Pre-built CKEditor 4 builds with A11yFirst</a> (what you would get from CKEditor 4 builder)</li>
+        <li><a href="https://github.com/a11yfirst/plugins-dev/tree/a11yfirst-master" target="_a11yfirst">Source Code for Plugins (a11yfirst-master branch)</a> (for developers)</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Supporting Tool and Resource Development</title>
+    <contents>
+      <h2>Support Options</h2>
+      <ul>
+        <li><a href="https://fae.disability.illinois.edu/account/donate/" target="_other">Make a Donation</a></li>
+        <li><a href="https://fae.disability.illinois.edu/subscription/" target="_other">Subscription Options</a></li>
+      </ul>
+
+      <h2>Use of Resources</h2>
+      <ul>
+        <li>Improve tools</li>
+        <li>New tools</li>
+        <li>Support students</li>
+        <li>Developing training materials</li>
+        <li>Support participation in standards groups</li>
+      </ul>
+
+      <h2 id="join">Joining</h2>
+      <p>Create a free account on <a href="https://fae.disability.illinois.edu/accounts/register/" target="_fae20">Functional Accessibility Evaluator 2.0</a></p>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Open Source Accessibility Tools Sustainable Community</title>
+    <contents>
+      <h2>Purpose</h2>
+      <ul>
+        <li>Meet the evaluation needs of the community of users.</li>
+        <li>Develop a collective understanding web accessibility.</li>
+        <li>Develop solutions that can be shared among institutions.</li>
+        <li>Build human capital the understands accessibility.</li>
+      </ul>
+    </contents>
+  </slide>
+
+   <slide>
+    <title>Training</title>
+    <contents>
+      <ul>
+        <li><a href="http://iadp.ahs.illinois.edu" target="_related">Information Accessibility Design and Policy Certificate</a></li>
+        <li><a href="https://go.illinois.edu/a11y-badges" target="_related">Web Accessibility Badging Courses using HTML5 and ARIA Authoring Practices</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>W3C WAI Interest Group</title>
+    <contents>
+      <ul>
+        <li><a href="https://www.w3.org/WAI/about/groups/waiig/" target="_specification">W3C Interest Group</a>.</li>
+        <li><a href="https://www.w3.org/WAI/about/groups/waiig/#mailinglist" target="_specification">Interest group e-mail discussion and announcement lists.</a></li>
+        <li>Review and provide feedback on standards.</li>
+        <li>Discuss WCAG requirements and techniques.</li>
+      </ul>
+      <iframe src="https://www.w3.org/WAI/about/groups/waiig/" width="99%" height="600px" title="W3C Membership List"></iframe>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>International Association of Accessibility Professionals (IAAP)</title>
+    <contents>
+      <ul>
+        <li><a href="https://www.accessibilityassociation.org" target="_specification">W3C Web Accessibility Initiative (WAI)</a></li>
+        <li>Managers, designers, developers and content editors</li>
+        <li>Indentifying knowledge base</li>
+        <li>Sharing knowledge</li>
+        <li>Raising awareness</li>
+        <li>Certification</li>
+      </ul>
+      <iframe src="https://www.accessibilityassociation.org" width="99%" height="600px" title="International Association of Accessibility Professionals home page"></iframe>
+    </contents>
+  </slide>
+
+    <slide>
+    <title>Educause IT Accessibility Interest Group</title>
+    <contents>
+      <ul>
+        <li><a href="https://www.educause.edu/community/it-accessibility-community-group">Educause IT Accessibility Interest Group</a></li>
+        <li>IT professionals in technology in Higher Education</li>
+        <li>Monthly teleconference on sharing information on IT accessibility policy and resources</li>
+        <li>E-mail discussion list</li>
+        <li>Educause annual conference has workshops and sessions on IT accessibility issues.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Assistive Technology in Higher Education Network (ATHEN)</title>
+    <contents>
+      <ul>
+        <li><a href="http://athenpro.org">Assistive Technology in Higher Education Network (ATHEN)</a></li>
+        <li>Primarily people in disability services </li>
+        <li>Affliated with <a href="https://www.ahead.org/">AHEAD</a></li>
+        <li>E-mail discussion list</li>
+        <li>Annual conference on technology and disability in higher education: <a href="https://accessinghigherground.org/">Accessing Higher Ground Conference</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Other Organizations</title>
+    <contents>
+      <h2>Training Resources</h2>
+      <ul>
+        <li><a href="https://www.washington.edu/doit/" target="_other_org">Disabilities, Opportunities, Internetworking, and Technology (DOIT) at  University of Washington</a></li>
+        <li><a href="http://webaim.org" target="_other_org">WebAIM: Web Accessibility in Mind</a></li>
+        <li><a href="https://knowbility.org" target="_other_org">Knowibility</a></li>
+        <li><a href="https://2019ict.org/" target="_other_org">ICT Accessibility Testing Symposium</a></li>
+      </ul>
+
+      <h2>Research Centers</h2>
+      <ul>
+        <li><a href="https://trace.umd.edu/" target="_other_org">Trace Center at University of Maryland</a></li>
+        <li><a href="https://idrc.ocadu.ca/" target="_other_org">Inclusive Design Research Centre at OCAD University</a></li>
+      </ul>
+
+      <h2>Disability Advocacy Organizations</h2>
+      <ul>
+        <li><a href="https://afb.org">American Foundation for the Blind</a></li>
+        <li><a href="https://nfb.org">National Federation of the Blind</a></li>
+        <li><a href="https://nad.org">National Association of the Deaf</a></li>
+      </ul>
+
+    </contents>
+  </slide>
+
+</slides>
+
+

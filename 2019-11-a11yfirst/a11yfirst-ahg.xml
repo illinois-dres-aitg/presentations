@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu"
+      alt="University of Illinois">
+      <img src="..\images\block-i.png"/>
+    </a>
+    Copyright &#169; 2020 University of Illinois
+  </footer>
+  <title>A11yFirst for CKEditor and Drupal 8: Creating Accessible Content As You Edit</title>
+
+  <person>
+    <name>Jon Gunderson</name>
+    <desc href="http://disability.illinois.edu">Disability Resources and Educational Services</desc>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:jongund@illinois.edu">E-mail Jon Gunderson</desc>
+  </person>
+  <conference>
+    <name href="https://accessinghigherground.org/a11yfirst-editor-enhancements-module-for-drupal-8/">Accessing Higher Ground Conference</name>
+    <desc>Westminster, CO</desc>
+    <desc>November 21st, 2019</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/xml-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/xml-slides.js</script>
+
+  <slide>
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li>Problem of supporting Authors in creating accessible content</li>
+        <li>A11yFirst features to support authors in creating accessible content</li>
+        <li>Drupal 8 Module for including A11yFirst features</li>
+      </ul>
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>University of Illinois Library <abbr title="Content Management System">CMS</abbr></title>
+    <contents>
+      <ul>
+        <li>Moving to using WordPress to manage web content.</li>
+        <li>Want to support accessible content on new website.</li>
+        <li>Remediation of existing content is labor intensive and expensive.</li>
+        <li>Library grant to investigate more than accessibility remdiation.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>A11yFirst Project Goals</title>
+    <contents>
+      <ul>
+        <li>Accessible authoring versus remediation.</li>
+        <li>Support accessibility as content is created.</li>
+        <li>Teach authors about accessibility.</li>
+        <li>Change how people think about creating content.</li>
+        <li>Support features of a11yChecker for CKEditor.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Author Thinking of WYSISWYG Editors</title>
+    <contents>
+      <ul>
+        <li>What does the page look like.</li>
+        <li>HTML markup is about styling (e.g. don't understand/appreciate structure).</li>
+        <li>Not aware of accessibility requirements.</li>
+        <li>Not aware of accessibility issues of different types of content.</li>
+        <li>Accessibility takes more time and is hard (e.g. remidation model).</li>
+      </ul>
+    </contents>
+  </slide>
+
+
+
+
+  <slide>
+    <title>Change User Thinking About Accessibility</title>
+    <contents>
+      <ul>
+        <li>Accessibility is important to the <em>organization</em>.</li>
+        <li>Accessibility is part of <em>their</em> responsibilities.</li>
+        <li>HTML <em>semantics</em> are important (e.g. headings, lists, ..).</li>
+        <li>Meaningful link text.</li>
+        <li>Describing images.</li>
+        <li>Accessibility during the <em>creation</em> of content.</li>
+      </ul>
+    </contents>
+  </slide>
+
+ <slide>
+    <title>A11yFirst configuration of CKEditor</title>
+    <contents>
+
+      <h2>Typical CKEditor Toolbar</h2>
+      <p><img src="images/toolbar-typical.png" alt="screen shot of toolbar showing typical CKEditor button configuration"/></p>
+      <p><a href="https://ckeditor.com/ckeditor-4/demo/#article" target="_ckeditor">CKEditor demonstration</a></p>
+
+      <h2>A11yFirst Toolbar</h2>
+      <p><img src="images/toolbar.png" alt="screen shot of toolbar showing A11yFirst button configuration"/></p>
+      <p><a href="https://a11yfirst.gitlab.io/custom/a11yfirst.html" target="_a11yfirst">A11yFirst demonstration</a></p>
+
+      <h2 id="">A11yFirst Replacements for Original Plugins</h2>
+      <p>The following table shows the A11yFirst plugins and the CKEditor plugins they replace in the configuration file.  The corresponding CKEditor plugins must be removed when using the A11yFirst plug-ins.</p>
+      <table class="table table-striped" aria-label="Features and associated CKEditor plugins">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Original Plugin</th>
+            <th>a11yFirst Plugin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Heading / Paragraph</td>
+            <td>format</td>
+            <td>a11yheading</td>
+          </tr>
+          <tr>
+            <td>Character Style</td>
+            <td>stylescombo</td>
+            <td>a11ystylescombo</td>
+          </tr>
+          <tr>
+            <td>Links</td>
+            <td>link</td>
+            <td>a11ylink</td>
+          </tr>
+          <tr>
+            <td>Images</td>
+            <td>image or image2</td>
+            <td>a11yimage</td>
+          </tr>
+          <tr>
+            <td>Accessibility Information</td>
+            <td><em>none</em></td>
+            <td>a11yhelp</td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Heading / Paragraph: Menu Button</title>
+    <contents>
+
+      <h2>Headings</h2>
+      <ul>
+        <li>Only headings that are in sequence are enabled</li>
+        <li>Menu items are styled the same to reinforce their use as structural elements</li>
+        <li>Menu item labels indicate purpose</li>
+      </ul>
+
+      <h2>Heading configuration options</h2>
+      <ul>
+        <li>Allow only one <code>h1</code> (true or false)</li>
+        <li>Gaps are ignored (<code>h1;h2;h4</code> results in <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>)</li>
+      </ul>
+
+      <h2>Paragraph formats</h2>
+      <ul>
+        <li>Normal</li>
+        <li>Preformatted text</li>
+        <li>Address line</li>
+        <li>Normal (DIV)</li>
+      </ul>
+
+      <h2>Menu / Button</h2>
+      <ul>
+        <li>Located in the first position of the first row of the toolbar</li>
+        <li>Provides a Help menu item</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Heading / Paragraph: Why use it?</title>
+    <contents>
+
+      <ul>
+        <li>Headings are important — they make it easier for all readers to understand the structure of your document.</li>
+        <li>Headings allow screen reader users to quickly and easily navigate from one section of your document to another.</li>
+        <li>Using headings sequentially avoids unnecessary confusion
+          <div style="margin-top: 1em">
+          For example, understanding the context of a ‘Level 3’ heading, when there is no corresponding ‘Level 2’ heading preceding it, can be confusing.</div>
+      </li>
+      </ul>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Character Style: Menu Button</title>
+    <contents>
+      <p>Based on the CKEditor Styles menu:</p>
+
+      <ul>
+        <li>Eliminates block styles</li>
+        <li>Configured with same syntax as Styles</li>
+      </ul>
+      <h2>Menu / Button</h2>
+      <ul>
+        <li>Located in the bottom row of the toolbar (for de-emphasis)</li>
+        <li>Provides a Help menu item</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Character Style: Why use it?</title>
+    <contents>
+      <p>When visual styling is used in place of structural elements such as heading or list markup, important semantic information that helps screen reader users understand your content is missing from your document.</p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>A11yFirst Link</title>
+    <contents>
+      <p>Based on the CKEditor Link plugin:</p>
+      <ul>
+        <li>Does not default to using the URL as the Display Text</li>
+        <li>Does not allow empty Display Text</li>
+        <li>Requires confirmation when a URL is used as the Display Text</li>
+        <li>Detects the use of nondescriptive words and phrases such as ‘click here,’ ‘more’ et al.</li>
+      </ul>
+
+      <h2>Dialog box</h2>
+      <ul>
+        <li>Provides a Help button</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>A11yFirst Link: Why use it?</title>
+    <contents>
+      <ul>
+        <li>The display text for a link should describe the target of the link.</li>
+        <li>URLs are typically not very descriptive when used as display text.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>A11yFirst Image</title>
+    <contents>
+      <p>Based on the CKEditor Image2 plugin:</p>
+      <ul>
+        <li>Prompts for Alternative Text</li>
+        <li>Warns when Alt. Text is more than 100 char. in length</li>
+        <li>Detects Alt. Text words and phrases such as ‘image of,’ ‘photo of’ et al.</li>
+        <li>Detects use of file name or size in Alt. Text</li>
+        <li>For a decorative image, allows the user to indicate that Alt. Text is not required</li>
+        <li>Asks the user whether a Long Description is needed, and if so, where it will be located in the document</li>
+      </ul>
+      <h2>Dialog box</h2>
+      <ul>
+        <li>Provides a Help button</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>A11yFirst Image: Why use it?</title>
+    <contents>
+      <ul>
+        <li>People with visual impairments need text descriptions of informative images.</li>
+
+        <li>An informative image must at least have alternative text so that a screen reader can briefly describe the information it conveys.</li>
+
+        <li>Alternative text should be succinct and should not include redundant or irrelevant information.</li>
+
+        <li>A complex informative image should have a long description in the document, adjacent to the image.</li>
+
+        <li>An image that is purely decorative should have an empty alt attribute, which tells the screen reader to ignore it. Thus there should be a way to indicate that an image is decorative.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>A11yFirst Help</title>
+    <contents>
+      <p>Help content is provided for each A11yFirst plugin.</p>
+      <ul>
+        <li>Each topic can be accessed from the corresponding A11yFirst plugin</li>
+        <li>Topics may include links to external resources</li>
+      </ul>
+
+      <p>Additional topics:</p>
+      <ul>
+        <li>List buttons</li>
+        <li>Getting Started</li>
+        <li>About A11yFirst</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Toolbar Reorganized: Top Row</title>
+    <contents>
+
+      <p><img src="images/toolbar.png" alt="screen shot of toolbar showing A11yFirst button configuration"/></p>
+      <p>Used for block elements, to promote choices relating to document structure as opposed to visual styling:</p>
+
+      <ul>
+        <li>A11yFirst Heading / Paragraph</li>
+        <li>List (ordered &amp; unordered)</li>
+        <li>A11yFirst Image</li>
+        <li>Table</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Toolbar Reorganized: Bottom Row</title>
+    <contents>
+
+      <p><img src="images/toolbar.png" alt="screen shot of toolbar showing A11yFirst button configuration"/></p>
+      <p>Includes common actions along with inline features such as:</p>
+
+      <ul>
+        <li>Undo / Redo</li>
+        <li>Cut / Copy / Paste</li>
+        <li>A11yFirst Character Style</li>
+        <li>A11yFirst Link</li>
+        <li>Set Language</li>
+        <li>Insert Special Character</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Public A11yFirst Demonstration Page</title>
+    <contents>
+      <p><a href="https://a11yfirst.gitlab.io/custom/a11yfirst.html" target="_a11yfirst">A11yFirst Demonstration Website</a></p>
+      <p>URL: <code>https://a11yfirst.gitlab.io/custom/a11yfirst.html</code></p>
+      <iframe src="https://a11yfirst.gitlab.io/custom/a11yfirst.html" width="800px" height="600px" title="A11yFirst Demonstration Website"></iframe>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Drupal 8: A11yFirst Editor Enhancements Module</title>
+    <contents>
+      <ul>
+        <li><a href="https://a11yfirsteditor.web.illinois.edu/" target="_drupal_demo">A11yFirst Demonstration Website</a></li>
+        <li><a href="https://www.drupal.org/sandbox/jongund/3030129" target="_drupal_sandbox">Sandbox A11yFirst Editor Enhancements Module for Drupal 8 (Sandbox Project)</a></li>
+       </ul>
+      <img width="98%" src="images/screenshot-1.png" aly="A11yFirst Editor Enhancements for Drupal 8"/>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Usability Testing Results</title>
+    <contents>
+      <p>Authors need to know:</p>
+      <ul>
+        <li>Accessibility is important to the organization.</li>
+        <li>They are responsible for accessibiliy.</li>
+        <li>Basic concepts of document accessibility.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>How can I use it?</title>
+    <contents>
+      <ul>
+        <li>Drupal 8 Module</li>
+        <li>Pre-configured releases (ZIP file)</li>
+        <li>Add-ons available in CKEditor Builder</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>A11yFirst Distribution</title>
+    <contents>
+      <p>A distribution of CKEditor pre-configured with the A11yFirst toolbar design and A11yFirst plugins is available to use in projects where you are currently using CKEditor or TinyMCE. </p>
+
+      <p><a href="https://github.com/a11yfirst/distribution/releases" target="_releases">Releases of A11yFirst Distributions</a></p>
+
+      <p>URL: <code>https://github.com/a11yfirst/distribution/releases</code></p>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>CKEditor 4 Builder Add-ons</title>
+    <contents>
+      <ul>
+        <li><a href="https://ckeditor.com/cke4/addon/a11yheading" target="_plugin">A11yFirst Header / Paragraph</a></li>
+        <li><a href="https://ckeditor.com/cke4/addon/a11yimage" target="_plugin">A11yFirst Image</a></li>
+        <li><a href="https://ckeditor.com/cke4/addon/a11ylink" target="_plugin">A11yFirst Link</a></li>
+        <li><a href="https://ckeditor.com/cke4/addon/a11ystylescombo" target="_plugin">A11yFirst Character Style</a></li>
+        <li><a href="https://ckeditor.com/cke4/addon/a11yfirsthelp" target="_plugin">A11yFirst Help</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Next Steps</title>
+    <contents>
+      <ul>
+        <li>A11yFirst Modue for Drupal 8: Supporting image uploads.</li>
+        <li>Documentation and training materials.</li>
+        <li>Lobbying LMS vendors to include A11yFirst features.</li>
+        <li>Porting features to TinyMCE.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>E-mail Discussion and Github Repositories</title>
+    <contents>
+      <ul>
+        <li><a href="https://lists.illinois.edu/lists/info/a11yfirst-ckeditor-l"  target="_discussion">Subscribe to A11yFirst disucssion and announcement list.</a></li>
+        <li><a href="https://www.drupal.org/sandbox/jongund/3030129" target="_discussion">A11yFirst Editor Enhancements Drupal Module</a></li>
+        <li><a href="https://github.com/a11yfirst/" target="_discussion">A11yFirst github respository</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Questions and Discussion</title>
+    <contents>
+    </contents>
+  </slide>
+
+</slides>
+
+

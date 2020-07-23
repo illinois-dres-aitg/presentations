@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <lang>en</lang>
+  <title>Federal Website WCAG 2.0 Compliance and Accessibility Trends</title>
+  <person>
+    <name>Dr. Jon Gunderson</name>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  </person>
+  <person>
+    <name>Dr. Jonathan Lazar</name>
+    <desc href="http://towson.edu">Towson University</desc>
+    <desc href="mailto:jlazar@towson.edu">jlazar@towson.edu</desc>
+  </person>
+  <conference>
+    <name href="https://ictaccessibilitytesting.org/">The 2017 ICT Accessibility Testing Symposium: Automated &amp; Manual Testing, WCAG 2.1, and Beyond</name>
+    <desc>October 26th, 2017</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/xml-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/xml-slides.js</script>
+
+  <script>../highcharts/code/highcharts.src.js</script>
+  <script>../highcharts/code/modules/exporting.js</script>
+  <script>../highcharts/code/modules/offline-exporting.js</script>
+  <script>../highcharts/code/modules/accessibility.js</script>
+
+  <slide>
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li>Section 508 refresh to use WCAG 2.0 Level A and AA requirements.</li>
+        <li>OpenAjax evaluation library for evaluating WCAG 2.0 requirements.</li>
+        <li>Audit results for September 2015 and January 2017 for Federal websites.</li>
+        <li>Website implementation scores for all rules.</li>
+        <li>Implementation of selected rules.</li>
+        <li>Next steps and discussion of auditing needs.</li>
+      </ul>
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Section 508 Refresh</title>
+    <contents>
+      <ul>
+        <li><a href="https://www.section508.gov/content/learn/laws-and-policies">Section 508 of the Rehabilitation Act</a>
+          <ul>
+            <li>Purpose is to give employees with disabilities and members of the public access to information that is comparable to access available to others.</li>
+            <li>Applies to all Federal agencies.</li>
+            <li>Includes the development, procurement, maintainance of  or use electronic and information technologies.</li>
+          </ul>
+        </li>
+        <li><a href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh">Information and Communication Technology (ICT) Refresh</a>
+        <ul>
+          <li>Harmonization of accessibility requirements with international standards, including the European Commission.</li>
+          <li>The rule references <a href="https://www.w3.org/TR/WCAG/">Web Content Accessibility Guidleines 2.0</a> Level A and AA Success Criteria and Conformance Requirements.</li>
+        </ul>
+      </li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>OpenAjax Evaluation Engine and Rulesets</title>
+    <contents>
+      <ul>
+        <li>Support the implementation of the W3C Accessible Rich Internet Application 1.0 specficiation:
+          <ul>
+            <li>Operates of the Document Object Model (DOM) of a browser rendering engine (e.g. not looking at HTML source code sent to browser).  In this case we use HTMLUnit, an open source server based rendering engine emulator designed for unit testing of web resources.</li>
+            <li>At least one rule for each WCAG 2.0 Level A and AA requirements.</li>
+            <li>Rules are based on the use of ARIA, HTML5 and HTML4 techniques.</li>
+          </ul>
+        </li>
+        <li>Support accessible design through the use of web standards:
+          <ul>
+            <li><a href="http://www.w3.org/tr/wcag/">W3C Web Content Accessibility Guidelines 2.0</a> (2008)</li>
+            <li><a href="http://www.w3.org/tr/wai-aria/">W3C Accessible Rich Internet Application (ARIA) 1.0</a> (2014)</li>
+            <li><a href="http://w3c.github.io/aria-practices/">W3C ARIA AUthoring Practices Guide</a> (2017)</li>
+            <li><a href="http://www.w3.org/tr/html5/">W3C HMTL 5.1</a> (2015)</li>
+          </ul>
+        </li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Audit Information</title>
+    <contents>
+
+
+          <table style="max-width: 50%" aria-labelledby="Information on data collection" class="table table-striped">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="num">September 2015</th>
+                <th class="num">February 2017</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="text">Websites</th>
+                <td class="num">629</td>
+                <td class="num">549</td>
+              </tr>
+              <tr>
+                <th class="text">Pages</th>
+                <td class="num">28,249</td>
+                <td class="num">23,713</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><a href="http://fae.disability.illinois.edu/rulesets/ruleset/ARIA_STRICT/">OpenAjax HTML5 and ARIA Techniques Ruleset</a> was used to sample websites in both 2015 and 2017.</p>
+
+
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Comparison of Implementation Scores for Websites in 2015 and 2017</title>
+    <contents>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <ul>
+            <li>Implementation score is an average of all 132 rules in OpenAjax HTML5 and ARIA techniques ruleset.</li>
+            <li>Not all rule results are pass or fail, most results are not applicable or a manual check is required.</li>
+            <li>Implementation score for this study is based solely on pass/fail results.</li>
+            <li>The following chart shows the distribution of implementation scores from lowest to highest for each year.</li>
+          </ul>
+
+          <img class="chart" src="images/implementation-2015-2017.png" alt="Comparison of Implementation Scores for Federal websites in 2015 and 2017, description follows the data"/>
+
+
+          <details>
+            <summary>Description of Graph Features</summary>
+            <ul>
+              <li>The Figure shows two sets of data points, one set for 2015 and the other for 2017.</li>
+              <li>Between 2015 and 2017, the figure shows a slight improvement of in overall implementation scores of about 2.2%.</li>
+              <li>The figure has three strong features.
+                <ol>
+                  <li>The first 20 websites generally follow a linear progression from an implementation score of 20 to 40.</li>
+                  <li>The next 80 websites show an approximately linear progression from an implementation score of 40 to 60.</li>
+                  <li>The next 450 websites show an approximately linear progression of implementation score from 60 to 90.</li>
+                  <li>There are a few implementation scores near 100 (which would be considered an ideal score).</li>
+                </ol>
+              </li>
+            </ul>
+          </details>
+
+        </div>
+
+      </div>
+
+
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Difference in Implementation Scores Between 2015 and 2017</title>
+    <contents>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <ul>
+            <li>Computed a difference in implementation score for a each of the 549 websites in both audits.</li>
+            <li>Implementation score is an average of all 132 rules in OpenAjax HTML5 and ARIA techniques ruleset.</li>
+            <li>Not all evaluation results are pass or fail, most results are not applicable or a manual check is required.</li>
+            <li>Implementation score for this study is based solely on pass/fail results.</li>
+            <li>The following chart shows the implementation score differences for each website, going from largest reductions in accessibility (e.g negative numbers) to the largest improvements (e.g. positive numbers).</li>
+          </ul>
+
+          <img class="chart" src="images/implementation-diffs.png" alt="Difference in Implementation Scores Between 2015 and 2017 for federal websites, description follows the data"/>
+
+          <details>
+            <summary>Description of Graph Features</summary>
+            <ul>
+              <li>The data in the figure ranges from about -20 to 20 for changes in implementation scores.</li>
+              <li>About 60% of websites had minimal change implementation scores, about 30% of websites improving and 16% of websites getting worse.</li>
+              <li>About 54% of website had no significant changes in implementation score.</li>
+              <li>Figure has three prominent features:
+                <ol>
+                  <li>The first 20 websites show a steep line of difference scores from -80 to -20 and then over the next 80 websites there is a curve from -20 to 0.</li>
+                  <li>The next 300 websites show an implementation score of about 0 or slightly above 0.</li>
+                  <li>The last 230 websites show an inverse curve of difference scores from about 2 to 58.</li>
+                </ol>
+              </li>
+            </ul>
+          </details>
+
+        </div>
+      </div>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Rule: ALT Attribute for Images</title>
+    <contents>
+
+      <p>Percentage of pages that have an <code>alt</code> attribute on each <code>img</code> element.</p>
+
+      <div id="container" style="width:100%; height:400px;"></div>
+
+      <script>
+      $(function () {
+    var myChart = Highcharts.chart('container', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'ALT Attribute for Images'
+        },
+        xAxis: {
+            categories: ['Percent Pages Pass', 'Percent Pages Fail', 'Percent Pages<br/>Not Applicable']
+        },
+        yAxis: {
+            title: {
+                text: 'Score'
+            },
+            max: 100,
+            min: 0,
+            tickAmount: 11
+
+        },
+        series: [{
+            name: '2015',
+            data: [71.8, 21.0, 7.2]
+        }, {
+            name: '2017',
+            data: [70.6, 20.7, 8.7]
+        }]
+      });
+    });
+  </script>
+
+      <details>
+        <summary><h2>Rule Description</h2></summary>
+        <table class="table table-striped table-hover rule" style="margin-top: 1em;" aria-label="Information on rule, Images must have alt text">
+          <tbody>
+            <tr>
+              <th>Definition</th>
+              <td>Each <code>img</code> element must specify an <code>alt</code> attribute or equivalent markup that either defines a text alternative or identifies the image as being used for decoration, spacing or some other stylistic purpose.</td>
+            </tr>
+            <tr>
+              <th>Purpose</th>
+              <td>
+                <ul>
+                  <li>A text alternative for an image, usually specified with an <code>alt</code> attribute, provides a summary of the purpose of the image for people with visual impairments, enabling them to understand the content or purpose of the image on the page.</li>
+                  <li>An image with a text alternative that is an empty string or that has <code>role="presentation"</code> is ignored by assistive technologies. Such markup indicates that the image is being used for decoration, spacing or other stylistic purposes rather than meaningful content.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Mappings</th>
+              <td>
+                <ul>
+                  <li>HTML4 Legacy Techniques (Required)</li>
+                  <li>HTML5 and ARIA Techniques (Required)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>WCAG 2.0 Success Criteria</th>
+              <td>
+                <p class="primary"><a href="http://www.w3.org/TR/WCAG20/#text-equiv" target="_requirement_ref">1.1.1 Non-text Content (Level A, <em>Primary Success Criterion</em>)</a></p>
+                <p class="related">Other Related Success Criterion:</p>
+              </td>
+            </tr>
+            <tr>
+              <th>Target Resources</th>
+              <td><code>img</code> and [role="img"]
+                <ul>
+                  <li><code>area</code></li>
+                  <li><code>img</code></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Techniques</th>
+              <td>
+                <ul>
+                  <li>A text alternative should summarize the purpose of an image as succinctly as possible (preferably with no more than 100 characters).</li>
+                  <li>The <code>alt</code> attribute is the preferred and most commonly used way to provide a text alternative for <code>img</code> and <code>area</code> elements.</li>
+                  <li>The <code>aria-labelledby</code> attribute can be used to provide a text alternative when an image can be described using text already associated with the image, or for elements with <code>role="img"</code>.</li>
+                  <li>The <code>aria-label</code> attribute should only be used to provide a text alternative in the special case when an element has a <code>role="img"</code> attribute. Use the <code>alt</code> attribute for <code>img</code> and <code>area</code> elements.</li>
+                  <li>The <code>title</code> attribute will be used by assistive technologies to provide a text alternative if no other specification technique is found.</li>
+                  <li>Use the attributes <code>alt=""</code>, <code>role="presentation"</code> or include the image as a CSS <code>background-image</code> to identify it as being used purely for stylistic or decorative purposes and one that should be ignored by people using assistive technologies.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+
+      <details>
+        <summary id="data1"><h2>Data for ALT Attribute for Images Result</h2></summary>
+        <table aria-labelledby="data1" class="table table-striped" aria-label="Rule results for Each img element must specify an alt attribute or equivalent markup that either defines a text alternative or identifies the image as being used for decoration, spacing or some other stylistic purpose.">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th class="num" title="Percentage of Pages Pass">Percent Pass</th>
+              <th class="num" title="Percentage of Pages Fail">Percent Fail</th>
+              <th class="num" title="Percentage of Pages Not Applicable">Percent N/A</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr>
+               <th>September 2015</th>
+               <td class="num">71.8%</td>
+               <td class="num">70.6%</td>
+               <td class="num">6.5%</td>
+             </tr>
+             <tr>
+               <th>February 2017</th>
+               <td class="num">21.0%</td>
+               <td class="num">20.7%</td>
+               <td class="num">8.7%</td>
+             </tr>
+          </tbody>
+        </table>
+      </details>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Rule: Labels for Form Controls</title>
+    <contents>
+
+      <p>Percentage of pages that all form controls have labels.</p>
+
+      <div id="container" style="width:100%; height:400px;"></div>
+
+      <script>
+      $(function () {
+    var myChart = Highcharts.chart('container', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Labels for Form Controls'
+        },
+        xAxis: {
+            categories: ['Percent Pages Pass', 'Percent Pages Fail', 'Percent Pages<br/>Not Applicable']
+        },
+        yAxis: {
+            title: {
+                text: 'Score'
+            },
+            max: 100,
+            min: 0,
+            tickAmount: 11
+
+        },
+        series: [{
+            name: '2015',
+            data: [40, 36.4, 23.6]
+        }, {
+            name: '2017',
+            data: [39.2, 35.8, 25.0]
+        }]
+      });
+    });
+  </script>
+
+      <details>
+        <summary><h2>Rule Description</h2></summary>
+        <table class="table table-striped table-hover rule" style="margin-top: 1em;" aria-label="Information on rule, Form controls must have labels">
+          <tbody>
+            <tr>
+              <th>Definition</th>
+              <td>Each <code>input</code>, <code>select</code>, <code>textarea</code>, <code>progress</code>, <code>meter</code> and <code>output</code> element must have an accessible label.</td>
+            </tr>
+            <tr>
+              <th>Purpose</th>
+              <td>
+                <ul>
+                  <li>A label associated with a form control ensures that information about the form control is spoken by screen readers when it receives focus.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>WCAG 2.0 Success Criteria</th>
+              <td>
+                <p class="primary"><a href="http://www.w3.org/TR/WCAG20/#minimize-error-cues" target="_requirement_ref">3.3.2 Labels or Instructions (Level A, <em>Primary Success Criterion</em>)</a></p>
+                <p class="related">Other Related Success Criterion:</p>
+                <ul class="related">
+                  <li class="related"><a href="http://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic" target="_requirement_ref">1.3.1 Info and Relationships (Level A)</a></li>
+                  <li class="related"><a href="http://www.w3.org/TR/WCAG20/#navigation-mechanisms-descriptive" target="_requirement_ref">2.4.6 Headings and Labels (Level AA)</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Target Resources</th>
+              <td><code>input</code>, <code>select</code>, <code>textarea</code>, <code>progress</code>, <code>meter</code> and <code>output</code> elements
+                <ul>
+                  <li><code>select</code></li>
+                  <li><code>textarea</code></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Techniques</th>
+              <td>
+                <ul>
+                  <li>The preferred technique for labeling form controls is by reference: First, include an <code>id</code> attribute on the form control to be labeled; then use the <code>label</code> element with a <code>for</code> attribute value that references the <code>id</code> value of the control.</li>
+                  <li>An alternative technique is to use the <code>label</code> element to encapsulate the form control element.</li>
+                  <li>In special cases, the <code>aria-labelledby</code> attribute can be used on the form control element to reference the id(s) of the elements on the page that describe its purpose.</li>
+                  <li>In special cases, the <code>aria-label</code> attribute can be used on the form control element to provide an explicit text description of its purpose.</li>
+                  <li>In special cases, the <code>title</code> attribute on the form control element can be used to provide an explicit text description of its purpose.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+
+      <details>
+        <summary id="data1"><h2>Data for Labels for Form Controls</h2></summary>
+        <table aria-labelledby="data1" class="table table-striped" aria-label="">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th class="num" title="Percentage of Pages Pass">Percent Pass</th>
+              <th class="num" title="Percentage of Pages Fail">Percent Fail</th>
+              <th class="num" title="Percentage of Pages Not Applicable">Percent N/A</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr>
+               <th>September 2015</th>
+               <td class="num">40.0%</td>
+               <td class="num">36.4%</td>
+               <td class="num">23.6%</td>
+             </tr>
+             <tr>
+               <th>February 2017</th>
+               <td class="num">39.2%</td>
+               <td class="num">35.8%</td>
+               <td class="num">25.0%</td>
+             </tr>
+          </tbody>
+        </table>
+      </details>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Rule: At Least One Main Landmark</title>
+    <contents>
+
+      <p>Percentage of pages that have a <code>main</code> landmark.</p>
+
+      <div id="container" style="width:100%; height:400px;"></div>
+
+      <script>
+      $(function () {
+    var myChart = Highcharts.chart('container', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'At least One Main Landmark'
+        },
+        xAxis: {
+            categories: ['Percent Pages Pass', 'Percent Pages Fail', 'Percent Pages<br/>Not Applicable']
+        },
+        yAxis: {
+            title: {
+                text: 'Score'
+            },
+            max: 100,
+            min: 0,
+            tickAmount: 11
+
+        },
+        series: [{
+            name: '2015',
+            data: [14.6, 85.4, 0.0]
+        }, {
+            name: '2017',
+            data: [22.9, 77.1, 0.0]
+        }]
+      });
+    });
+  </script>
+
+      <details>
+        <summary><h2>Rule Description</h2></summary>
+        <table class="table table-striped table-hover rule" style="margin-top: 1em;" aria-label="Information on rule, main landmark: at least one">
+          <tbody>
+            <tr>
+              <th>
+                Definition
+              </th>
+              <td>
+                Each page must have at least one
+                <code>
+                  main
+                </code>
+                 landmark, used to identify the main content.
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Purpose
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    A
+                    <code>
+                      main
+                    </code>
+                     landmark provides a navigation point to the primary content of the page for users of assistive technologies.
+                  </li>
+                  <li>
+                    Most pages only need one
+                    <code>
+                      main
+                    </code>
+                     landmark, but in the case of portals or mashups, there may be more than one
+                    <code>
+                      main
+                    </code>
+                     landmark on a "page".
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                WCAG 2.0 Success Criteria
+              </th>
+              <td>
+                <p class="primary">
+                  <a href="http://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip" target="_requirement_ref">
+                    2.4.1 Bypass Blocks (Level A,
+                    <em>
+                      Primary Success Criterion
+                    </em>
+                    )
+                  </a>
+                </p>
+                <p class="related">
+                  Other Related Success Criterion:
+                </p>
+                <ul class="related">
+                  <li class="related">
+                    <a href="http://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic" target="_requirement_ref">
+                      1.3.1 Info and Relationships (Level A)
+                    </a>
+                  </li>
+                  <li class="related">
+                    <a href="http://www.w3.org/TR/WCAG20/#navigation-mechanisms-descriptive" target="_requirement_ref">
+                      2.4.6 Headings and Labels (Level AA)
+                    </a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Scope
+              </th>
+              <td>
+                Page
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Target Resources
+              </th>
+              <td>
+                <code>
+                  [role="main"]
+                </code>
+                 and
+                <code>
+                  main
+                </code>
+                 element
+                <ul>
+                  <li>
+                    <code>
+                      main
+                    </code>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Techniques
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    A
+                    <code>
+                      main
+                    </code>
+                     element or an element with a
+                    <code>
+                      role="main"
+                    </code>
+                     attribute defines a
+                    <code>
+                      main
+                    </code>
+                     landmark.
+                  </li>
+                  <li>
+                    When there is only one
+                    <code>
+                      main
+                    </code>
+                     landmark on the page (the typical case), do not use a label.
+                  </li>
+                  <li>
+                    When there is more than one
+                    <code>
+                      main
+                    </code>
+                     landmark, use the
+                    <code>
+                      aria-labelledby
+                    </code>
+                     or
+                    <code>
+                      aria-label
+                    </code>
+                     attribute to describe the content of each.
+                  </li>
+                  <li>
+                    If you need to support Microsoft Internet Explorer 8, you must NOT use the
+                    <code>
+                      main
+                    </code>
+                     element since the element is supported in the accessibility API, just use
+                    <code>
+                      role="main"
+                    </code>
+                     to identify the main landmark.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Informational Links
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <a href="http://www.w3.org/TR/wai-aria/roles#main">
+                      Accessible Rich Internet Applications (WAI-ARIA) 1.0 Specification: main role
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.w3.org/TR/html5/sections.html#the-main-element">
+                      HTML5: The MAIN element
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.w3.org/TR/WCAG20-TECHS/ARIA11">
+                      ARIA11: Using ARIA landmarks to identify regions of a page
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.w3.org/TR/WCAG20-TECHS/ARIA13">
+                      ARIA13: Using aria-labelledby to name regions and landmarks
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.w3.org/TR/WCAG20-TECHS/ARIA14">
+                      ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used
+                    </a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </details>
+
+      <details>
+        <summary id="data1"><h2>Data for Main Landmark</h2></summary>
+        <table aria-labelledby="data1" class="table table-striped" aria-label="Main Landmark rule results">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th class="num" title="Percentage of Pages Pass">Percent Pass</th>
+              <th class="num" title="Percentage of Pages Fail">Percent Fail</th>
+              <th class="num" title="Percentage of Pages Not Applicable">Percent N/A</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr>
+               <th>September 2015</th>
+               <td class="num">14.6</td>
+               <td class="num">85.4</td>
+               <td class="num">0.0</td>
+             </tr>
+             <tr>
+               <th>February 2017</th>
+               <td class="num">22.9</td>
+               <td class="num">77.1</td>
+               <td class="num">0.0</td>
+             </tr>
+          </tbody>
+        </table>
+      </details>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Summary and Conclusions</title>
+    <contents>
+      <dl>
+        <dt>WEBSITE: Implementation Score</dt>
+        <dd>A general overall improvement of about 2.2%.</dd>
+        <dd>Many websites are improving, many dramatically.</dd>
+        <dd>Some websites getting worse.</dd>
+
+        <dt>RULE: <code>alt</code> attribute for <code>img</code> element</dt>
+        <dd>High implementation, as expected for such a well-know rule.</dd>
+        <dd>Not much change in implementation between 2015 and 2017.</dd>
+
+        <dt>RULE: Label for form controls</dt>
+        <dd>Lower than expected implementation for such as easy rule to automatically test.</dd>
+        <dd>Not much change in implementation between 2015 and 2017.</dd>
+
+        <dt>RULE: At laset one <code>main</code> landmark</dt>
+        <dd>Rule shows implementation of latest standards.</dd>
+        <dd>Currently low usage, but increasing faster than other features.</dd>
+        <dd>70% increase from 2015 ro 2017.</dd>
+      </dl>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Next Steps and Discussion</title>
+    <contents>
+      <h2>Questions for further research</h2>
+      <ul>
+        <li>What factors resulted in large improvements in accessibility features?</li>
+        <li>What factors resulted in reduction in accessibility features?</li>
+        <li>Why are some requirements implemented at a higher rate than others?</li>
+        <li>How quickly are new accessibility features of ARIA and HTML5 being used?</li>
+        <li>What is the role of manual checks and not applicable results in understanding accessibility?</li>
+        <li>How predictive are automated results (e.g. pass/fail results) in predicting overall accessibility conformance with WCAG 2.0?</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Other Illinois Resources</title>
+    <contents>
+      <ul>
+        <li><a href="https://go.illinois.edu/a11y-badges" target="_reference">DRES IT Accessibility Badging Program </a></li>
+        <li><a href="https://go.illinois.edu/a11y-tools">Open Source Web Accessibility Evaluation and Inspection Tools</a></li>
+        <li><a href="https://a11yfirst.library.illinois.edu/">A11yFirst Project for CKEditor</a></li>
+        <li><a href="http://online.ahs.illinois.edu/iadp/">AHS Information Accessibility Design and Policy (IADP) Certificate</a></li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Acknowledgements</title>
+    <contents>
+
+      <h2>Sponsors</h2>
+      <ul>
+        <li>University of Illinois</li>
+        <li>Employees of the Hollister Corporation through the University of Illinois Foundation</li>
+        <li>IBM Corporation (OAA Evaluation Library)</li>
+      </ul>
+
+      <h2>Primary Developers</h2>
+      <dl>
+        <dt>Jon Gunderson, Illinois</dt>
+        <dd>Project coordinator</dd>
+        <dd>OAA evaluation library software development</dd>
+        <dd>Software developer for FAE 2.0</dd>
+
+        <dt>Nicholas Hoyt, Illinois</dt>
+        <dd>Conceptual model for accessibility evaluation</dd>
+        <dd>Interaction designer for AInspector, Bookmarklets and FAE 2.0</dd>
+        <dd>Software developer for AInspector Sidebar and Bookmarklets</dd>
+      </dl>
+
+      <h2>Other Contributing Developers</h2>
+
+      <dl>
+        <dt>Pramod Joshi, AITS</dt>
+        <dd>Software developer for fae-util</dd>
+
+      </dl>
+
+      <h2>Previous Contributors</h2>
+      <dl>
+        <dt>Prasanna Bale, Illinois Technology Services</dt>
+        <dd>Software development of FAE 1.1 and AInspector for Firebug</dd>
+
+        <dt>Jeff Heckel, AITS</dt>
+        <dd>Software developer for fae-util</dd>
+      </dl>
+    </contents>
+  </slide>
+</slides>
+
+
