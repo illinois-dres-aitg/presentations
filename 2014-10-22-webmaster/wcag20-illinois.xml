@@ -10,16 +10,16 @@
   <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
   <desc href="http://webmasters.illinois.edu">Webmaster Workshop</desc>
   <desc href="../">Presentation Home Page</desc>
- <stylesheet media="screen">http://slides.cita.illinois.edu/xml-slides.css</stylesheet>
+ <stylesheet media="screen">http://slides.cita.illinois.edu/html-slides.css</stylesheet>
 
   <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
-  <stylesheet media="screen">../css/xml-slides2.css</stylesheet>
+  <stylesheet media="screen">../css/html-slides2.css</stylesheet>
   <script>../js/jquery-2.1.1.min.js</script>
   <script>../js/bootstrap.min.js</script>
   <script>../js/bootstrap-accessibility.min.js</script>
-  <script>../js/xml-slides.js</script>
+  <script>../js/html-slides.js</script>
 
   <slide>
     <title>Overview</title>

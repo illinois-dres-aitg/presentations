@@ -15,11 +15,11 @@
   <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
-  <stylesheet media="screen">../css/xml-slides2.css</stylesheet>
+  <stylesheet media="screen">../css/html-slides2.css</stylesheet>
   <script>../js/jquery-2.1.1.min.js</script>
   <script>../js/bootstrap.min.js</script>
   <script>../js/bootstrap-accessibility.min.js</script>
-  <script>../js/xml-slides.js</script>
+  <script>../js/html-slides.js</script>
 
   <script>https://code.highcharts.com/highcharts.src.js</script>
   <script>http://code.highcharts.com/modules/exporting.js</script>

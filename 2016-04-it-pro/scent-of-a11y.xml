@@ -4,25 +4,25 @@
 <slides>
   <lang>en</lang>
   <title>The Scent of Accessibility</title>
-  <name>Jon Gunderson, DRES and Mike Scott, DHS</name> 
+  <name>Jon Gunderson, DRES and Mike Scott, DHS</name>
 
   <desc href="http://disability.illinois.edu">Division of Disability Resources and Educational Services</desc>
   <desc href="http://www.dhs.state.il.us">Department of Human Services</desc>
-  <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc> 
-  <desc href="mailto:mike.scott@illinois.gov">mike.scott@illinois.gov</desc> 
-  <desc href="../">Presentations</desc> 
+  <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  <desc href="mailto:mike.scott@illinois.gov">mike.scott@illinois.gov</desc>
+  <desc href="../">Presentations</desc>
   <desc>April 28th, 2016</desc>
   <desc href="http://webcon.illinois.edu">Illinois Web Conference 2016</desc>
-  
+
   <stylesheet media="screen">../slides2/css/bootstrap.min.css</stylesheet>
   <stylesheet media="screen">../slides2/css/bootstrap-theme.min.css</stylesheet>
   <stylesheet media="screen">../slides2/css/bootstrap-accessibility.css</stylesheet>
-  <stylesheet media="screen">../slides2/css/xml-slides2.css</stylesheet>
+  <stylesheet media="screen">../slides2/css/html-slides2.css</stylesheet>
   <script>../slides2/js/jquery-2.1.1.min.js</script>
   <script>../slides2/js/bootstrap.min.js</script>
   <script>../slides2/js/bootstrap-accessibility.min.js</script>
-  <script>../slides2/js/xml-slides.js</script>
-  
+  <script>../slides2/js/html-slides.js</script>
+
   <slide>
     <title>Overview</title>
     <contents>
@@ -41,13 +41,13 @@
     </contents>
   </slide>
 
-  <slide> 
+  <slide>
     <title>What is Accessibility?</title>
     <contents>
     </contents>
-  </slide> 
+  </slide>
 
-  <slide> 
+  <slide>
     <title>Equal Access for People with Disabilities</title>
     <contents>
         <ul>
@@ -57,16 +57,16 @@
           <li>People with learning disabilities</li>
         </ul>
     </contents>
-  </slide> 
-  
-  
-  <slide> 
+  </slide>
+
+
+  <slide>
     <title>Why is Accessibility Important?</title>
     <contents>
     </contents>
-  </slide> 
-  
-  <slide> 
+  </slide>
+
+  <slide>
     <title>Your Customers, Your Staff, Your Students, Your Self</title>
     <contents>
       <ul>
@@ -75,9 +75,9 @@
         <li>Accessibility and usability go hand-in-hand</li>
       </ul>
     </contents>
-  </slide> 
+  </slide>
 
-  <slide> 
+  <slide>
     <title>The Law</title>
     <contents>
       <ul>
@@ -87,19 +87,19 @@
         <li>Illinois Information Technology Accessibility Act (2007)</li>
       </ul>
     </contents>
-  </slide> 
-  
-  
-  <slide> 
+  </slide>
+
+
+  <slide>
     <title>IITAA: Web Accessibility Implementation Guidelines</title>
     <contents>
       <p>
         <a href="http://www.dhs.state.il.us/IITAA/IITAAWebImplementationGuidelines.html">IITAA: Implementation Guidelines for Web-Based Information and Applications 1.0</a>
       </p>
     </contents>
-  </slide> 
-  
-  <slide> 
+  </slide>
+
+  <slide>
     <title>W3C Web Content Accessibility Guidelines 2.0 and Section 508 Refresh</title>
     <contents>
       <ul>
@@ -107,24 +107,24 @@
         <li><a href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh" >Refresh of the Section 508 Standards and the Telecommunications Act Guidelines</a></li>
       </ul>
     </contents>
-  </slide> 
+  </slide>
 
-  <slide> 
+  <slide>
     <title>IITAA: Web Accessibility Quick Test Checklist</title>
     <contents>
       <p>
         <a href="http://www.dhs.state.il.us/accessibility/references/web-accessibility-quick-test-checklist.html" >IITAA: Web Accessibility Quick Test Checklist</a>
       </p>
     </contents>
-  </slide> 
-  
+  </slide>
+
   <slide>
     <title>Valid HTML Code</title>
     <contents>
       <p><a href="https://validator.w3.org/">W3C Validator</a></p>
     </contents>
   </slide>
-  
+
   <slide>
     <title>Zooming Text</title>
     <contents>
@@ -172,7 +172,7 @@
 
     </contents>
   </slide>
-  
+
   <slide>
     <title>High Contrast Test</title>
     <contents>
@@ -205,7 +205,7 @@
       </table>
     </contents>
   </slide>
-  
+
   <slide>
     <title>Keyboard Testing</title>
     <contents>
@@ -254,7 +254,7 @@
       </table>
     </contents>
   </slide>
-  
+
   <slide>
     <title>AInspector Sidebar for Firefox</title>
     <contents>
@@ -265,15 +265,15 @@
       <ul>
         <li>ALT Text for images</li>
         <li>Labels for form controls</li>
-        <li>Heading structure</li>  
+        <li>Heading structure</li>
         <li>Landmark structure</li>
-        <li>Color contrast</li>  
+        <li>Color contrast</li>
         <li>Ask vendors to explain violations and warnings</li>
         <li>Ask vendors to explain if they meet the requirements associated with the manual checks</li>
       </ul>
-      
+
     </contents>
-  </slide>  
+  </slide>
 
   <slide>
     <title>Accessibility Bookmarklets</title>
@@ -281,19 +281,19 @@
       <p>
         <a href="https://accessibility-bookmarklets.org/">Accessibility Bookmarklets</a>
       </p>
-      
+
       <ul>
         <li>ALT Text for images</li>
         <li>Labels for form controls</li>
-        <li>Heading structure</li>  
+        <li>Heading structure</li>
         <li>Landmark structure</li>
-        <li>Color contrast</li>  
+        <li>Color contrast</li>
         <li>Ask vendors to explain violations and warnings</li>
         <li>Ask vendors to explain if they meet the requirements associated with the manual checks</li>
       </ul>
-      
+
     </contents>
-  </slide>  
+  </slide>
 
   <slide>
     <title>Questions to ask vendors</title>
@@ -307,7 +307,7 @@
       </ul>
     </contents>
   </slide>
-  
+
   <slide>
     <title>Working with Vendors on Accessibility</title>
     <contents>
@@ -323,35 +323,35 @@
   <slide>
     <title>People at Illinois that Can Help in Working with Vendors</title>
     <contents>
-      
+
       <h2>AITS</h2>
       <ul>
         <li>Shirisha Balusani, Quality Assurance Specialist</li>
         <li>Michael DeYoung, Web Specialist II</li>
       </ul>
-      
+
       <h2>Center of Innovation in Teaching and Learning (CITL)</h2>
       <ul>
         <li>Marc Thompson, Senior Instructional Designer</li>
       </ul>
-      
+
       <h2>Disability Resources and Educational Services (DRES)</h2>
       <ul>
         <li>Jon Gunderson, Coordinator of Accessible IT Group</li>
         <li>Lori Lane, IT Accessibility Specialist in Universal Design</li>
       </ul>
-      
+
       <h2>Library</h2>
       <ul>
         <li>Ja Eun Ku, Internet Applications System Specialist</li>
         <li>Robert Slater, Technical Architect for Web Content</li>
       </ul>
-      
+
       <h2>OBFS Procurement Services</h2>
       <ul>
         <li>Daniel Szajna, Associate Director of Compliance, Policy and Conflict</li>
       </ul>
-      
+
       <h2>Technology Services</h2>
       <ul>
         <li>Keith Hays, Senior Information Design Specialist</li>
@@ -360,14 +360,14 @@
 
     </contents>
   </slide>
-  
-  
+
+
   <slide>
     <title>Questions and Discussion</title>
     <contents>
     </contents>
-  </slide>  
-  
-</slides> 
+  </slide>
+
+</slides>
 
 
