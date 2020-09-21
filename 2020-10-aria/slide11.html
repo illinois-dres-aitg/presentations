@@ -113,20 +113,20 @@ div.checkbox:hover {
 <div class="col-md-9">
 <h1 id="h1_title" class="title">Part 3: Keyboard Focus and hover styling</h1>
 <ul>
-
+        
 <li>Keyboard <code>focus</code> and <code>hover</code> styling should be similar to to harmonize the look and feel of styling between interaction techniques.</li>
-
+        
 <li>Recommend <code>focus</code> styling has a border and <code>hover</code> does not.</li>
-
+        
 <li>
 <code>focus</code> styling should use a 2 pixel<code>border</code> or <code>outline</code> width to make the control with focus easy for users to see and track.</li>
-
+        
 <li>If the <code>border</code> technique is used the <code>border</code> must be removed when the widget does not have focus to support focus styling to change when users select operating system high contrast modes.</li>
-
+        
 <li>Need to use <code>onfocus</code> and <code>onblur</code> events to create focus styling of standard radio buttons and checkboxes by styling their labels.</li>
-
+        
 <li>Styling background color makes the focus change much easier to detect visually.</li>
-
+      
 </ul>
 <script id="script" type="text/javascript">
 function toggleCheckbox(node) {
@@ -171,7 +171,7 @@ function checkboxBlur(event) {
 <div id="example">
 
 <fieldset>
-
+    
 <legend>
         Pizza Toppings
     </legend>
@@ -183,21 +183,21 @@ function checkboxBlur(event) {
       <input type="checkbox" onfocus="checkboxFocus(event)" onblur="checkboxBlur(event)">
         Onion
     </label>
-
+    
 <div class="checkbox" role="checkbox" aria-checked="false" tabindex="0" onclick="clickCheckbox(event)" onkeydown="keydownCheckbox(event)">
-
+      
 <span aria-hidden="true"></span>
         Mushrooms
     </div>
-
+    
 <div class="checkbox" role="checkbox" aria-checked="false" tabindex="0" onclick="clickCheckbox(event)" onkeydown="keydownCheckbox(event)">
-
+      
 <span aria-hidden="true"></span>
           Spinach
     </div>
-
+  
 </fieldset>
-
+     
 </div>
 <h2>HTML Source Code</h2>
 <pre>
@@ -243,9 +243,9 @@ function checkboxBlur(event) {
 <a href="https://illinois.edu" alt="University of Illinois">
       <img src="../images/block-i.png">
     </a>
-
-
-
+    
+      
+    
     Copyright &copy; 2020 University of Illinois
   </div>
 </footer>
