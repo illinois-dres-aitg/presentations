@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <footer>
+    <a href="https://illinois.edu"
+      alt="University of Illinois">
+      <img src="../images/block-i.png"/>
+    </a>
+    Copyright &#169; 2020 University of Illinois
+  </footer>
+
+ <lang>en</lang>
+  <title>The sweet 16: Web Accessibility and Athletic Conferences</title>
+  <person>
+    <name>Jon Gunderson, Ph.D., CPWA</name>
+    <desc>Coordinator of Accessible IT Group</desc>
+    <desc>Division of Disability Resources and Educational Services</desc>
+    <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  </person>
+
+  <conference>
+    <name href="https://events.educause.edu/annual-conference">2020 EDUCAUSE Annual Conference</name>
+    <desc>Online</desc>
+    <desc>October 27th, 28th, 29th, 2020</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/html-slides.js</script>
+
+  <slide>
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li>Purpose of ARIA</li>
+        <li>Goals of ARIA 1.2 release</li>
+        <li>ARIA Authoring Practices</li>
+        <li>ARIA Assistive Technology Project</li>
+      </ul>
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+</slides>
