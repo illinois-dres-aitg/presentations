@@ -46,7 +46,7 @@
       <ul>
         <li>Why Accessibility?</li>
         <li>Measuring Accessibility</li>
-        <li>Accessibility trends</li>
+        <li>Summary data for 2020</li>
         <li>Who is in the Sweet 16</li>
         <li>Open source tools</li>
       </ul>
@@ -59,7 +59,7 @@
       The presentation concludes with the results of scanning over 1,700 websites from over 200 educational institutions organized by basketball conferences.
       I will first give some background in why web accessibility is important.
       Second I will discuss the primary issues in measuring web accessibility.
-      Third will look at some trends in accessibility based on a few individual rules.
+      Third will look at summary data for groups of rules and for selected individual rules.
       Fourth, what everyone will want to know, is where does my university rank in the accessibility scans I made in September of 2020.
       I will conclude with information on where you can get the open source tools used in this project.
     </transcript>
