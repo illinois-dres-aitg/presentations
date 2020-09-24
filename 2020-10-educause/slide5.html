@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "">
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Slide 5: Distribution of Types of Disabilities by Age Range</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
+<link rel="stylesheet" type="text/css" href="../css/html-slides.css">
+<script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script>
+<style id="style">
+      table.table thead th {
+        text-align: right;
+      }
+      table.table thead tr th:first-child {
+        text-align: left;
+      }
+      table.table tbody td {
+        text-align: right;
+      }
+    </style>
+</head>
+<body>
+<nav id="nav" class="navbar navbar-default">
+<div class="container">
+<div class="navbar-header">
+<button class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#slide-nav"><span class="sr-only">
+                  Toggle navigation
+                </span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+</div>
+<div id="slide-nav" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li>
+<a id="ID_SLIDE_INDEX" href="index.html">
+                        Index
+                      </a>
+</li>
+<li>
+<a id="ID_SLIDE_FIRST" href="slide1.html" title="Slide 1">
+                        First
+                      </a>
+</li>
+<li>
+<a id="ID_SLIDE_PREVIOUS" href="slide4.html" title="Slide 4">
+                        Previous
+                      </a>
+</li>
+<li>
+<a id="ID_SLIDE_NEXT" href="slide6.html" title="Slide 6">
+                        Next
+                      </a>
+</li>
+<li>
+<a id="ID_SLIDE_LAST" href="slide17.html" title="Slide 17">
+                        Last
+                      </a>
+</li>
+</ul>
+<ul class="nav navbar-nav pull-right">
+<li style="float: left">
+<a target="transcript" href="transcript.html#slide5">
+                        Full Audio Transcript
+                    </a>
+</li>
+<li class="nav navbar-text">Slide 5 of 17</li>
+</ul>
+</div>
+</div>
+</nav>
+<main id="content" class="container">
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-9">
+<h1 id="h1_title" class="title">Distribution of Types of Disabilities by Age Range</h1>
+<p>Data from the following chart and table is from the <a href="https://disabilitycompendium.org/sites/default/files/user-uploads/2017_AnnualReport_2017_FINAL.pdf">2017 Disability Statistics Annual Report</a> from the University of New Hampshire</p>
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<script src="../js/highcharts/code/highcharts.js"></script><script src="../js/highcharts/code/modules/exporting.js"></script><script type="text/javascript">
+
+        $('#container').highcharts({
+          chart: {
+            type: 'column'
+          },
+          title: {
+          text: 'Percentage of Types of Disability by Age: 2005'
+          },
+          subtitle: {
+            text: 'Source: 2017 Disability Statistics Annual Report'
+          },
+          xAxis: {
+            categories: [
+            'Under 5',
+            '5 to 17',
+            '18 to 64',
+            'Over 65'
+            ],
+            crosshair: true
+          },
+          yAxis: {
+            min: 0,
+            max : 25,
+            tickAmount: 6,
+            title: {
+              text: 'Percent Population'
+            }
+          },
+          tooltip: {
+            headerFormat: "<span style='font-size:10px'>{point.key}</span><table>",
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td><td style="padding:0"><b>{point.y:.1f} percent</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+           useHTML: true
+          },
+          plotOptions: {
+            column: {
+              pointPadding: 0,
+              borderWidth: 0
+            }
+          },
+          series: [{
+            name: 'Vision',
+            data: [0.4, 0.9, 2.0, 6.6]
+
+            }, {
+            name: 'Hearing',
+            data: [0.5, 0.6, 2.0, 14.6]
+
+            }, {
+            name: 'Mobility',
+            data: [0.0, 0.6, 5.1, 22.5]
+            }, {
+            name: 'Cognitive',
+            data:   [0.0, 4.2, 4.5, 8.9]
+            }]
+        });
+      </script>
+<details>
+        
+<summary>Table View of the Data in Chart</summary>
+
+        
+<table class="table table-striped" aria-labelledby="h1_title">
+          
+<caption>Percentage of Types of Disability by Age: 2005</caption>
+          
+<thead>
+            
+<tr>
+              
+<th class="text">Disability</th>
+              <th class="num">Under 5 years</th>
+              <th class="num">Ages 5 to 17 years</th>
+              <th class="num">Ages 18 to 64 years</th>
+              <th class="num">Ages over 65</th>
+            
+</tr>
+          
+</thead>
+          
+<tbody>
+            
+<tr>
+              
+<th scope="row">Vision</th>
+              <td class="num">0.4%</td>
+              <td class="num">0.9%</td>
+              <td class="num">2.0%</td>
+              <td class="num">6.6%</td>
+            
+</tr>
+            
+<tr>
+              
+<th scope="row">Hearing</th>
+              <td class="num">0.5%</td>
+              <td class="num">0.6%</td>
+              <td class="num">2.0%</td>
+              <td class="num">14.6%</td>
+            
+</tr>
+            
+<tr>
+              
+<th scope="row">Mobility</th>
+              <td class="num">-</td>
+              <td class="num">0.6%</td>
+              <td class="num">5.1%</td>
+              <td class="num">22.5%</td>
+            
+</tr>
+            
+<tr>
+              
+<th scope="row">Cognitive</th>
+              <td class="num">-</td>
+              <td class="num">4.2%</td>
+              <td class="num">4.5%</td>
+              <td class="num">8.9%</td>
+            
+</tr>
+          
+</tbody>
+        
+</table>
+      
+</details>
+</div>
+<div class="col"></div>
+</div>
+</main>
+<aside class="container" aria-label="Transcript">
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-9">
+<details class="transcript-container">
+<summary id="id-slide-transcript-button" class="btn-primary btn-sm" title="Audio transcript of the portion of the video for this slide">
+                          Audio Transcript
+                        </summary>
+<div class="slide-transcript">
+One of the questions many people new to accessibility ask is how many people have disabilities?
+
+How many people will be impacted if I make a website more accessible?
+
+ While one slide cannot provide a detailed answer to these questions, the chart on this slide does provide some insights to the prevalence of four broad types of disability as we age: vision, hearing, mobility and cognitive.
+
+If you cannot see the chart or have difficulty reading charts there is an option to view a data table just after the chart on the web page.
+
+From the perspective of web design, it is easy for people to understand how someone with a visual impairment who has trouble seeing the computer screen or cannot see the screen at all would have trouble using a web page.
+
+For example, one of the best-known accessibility requirements is providing a text description or Alternative Text for each image in a web page, so that someone using a screen reader can understand the purpose of the image.
+
+I am going to point to bars in the chart with the mouse to highlight how the rate of visual impairments increases with age:
+
+0.4% for people less than 5 years old.
+
+0.9% for people from 5 to 17 years old.
+
+2% for people from 18 to 64 years old.
+
+6.6% of people over 65 years age.
+
+Multiply these percentages by 7 billion people and you can see that millions of people with visual impairments are affected by the design decisions of web developers and web development teams.
+
+People with hearing impairments have similar demographics as people with visual impairments.  I am going to point to bars in the chart with the mouse to highlight how the rate of hearing impairments increases with age:
+
+0.5% for people less than 5 years old.
+
+0.6% for people from 5 to 17 years old.
+
+2% for people from 18 to 64 years old.
+
+14.6% of people over 65 years of age.
+
+Comparing the hearing impairments to visual Impairments shows similar instances, until age 65.
+
+At 65 there are more than twice as many people with hearing impairments as visual impairments.
+
+The main design feature for people with hearing impairments is the availability of captions for videos.
+
+Captioning videos is a real winner for making the web more useful to everyone, since captions also benefit people who&rsquo;s native language is different from the speakers on the video.  For example, here at the University of Illinois we have many students from foreign countries including India and China.  The use of video lectures has greatly increased in the past couple of years and in some courses the lectures are only available as a video, similar to the course you are taking now.  While these students learn English before they come to the United States, for many of them the ability to read English is much better than their ability to listen to English, since there are often few opportunities to listen to native English speakers in other countries.  In this case the captions will help them understand the lecture content much more easily.   The captions can also help many students with learning disabilities that have trouble processing speech.  The redundancy of the captions with the speech helps students to learn much more efficiently.   Caption text can also be used by search engines to help people find specific topics of interest within a video.  It is much easier to search for keywords in a video with closed captions, than videoes without closed captions.
+
+People with mobility impairments are not as common until people are over 18 years of age when about 5% of the population experiences a mobility impairment of some type and then increase to 22% for people over 65 years old.   Not all mobility impairments affect the ability to use computing and mobile technologies, but many do affect the ability of people to type on a keyboard, move and activate the button on a mouse, or point and tap their finger on a touch screen device.  In these cases, there is a need to make sure that web and mobile apps can be operated with assistive technologies like voice input or other devices that make it appear the person is typing from a keyboard or pointing on a touch screen.
+
+One of the most difficult to understand areas of making web pages accessible is for people with learning disabilities and cognitive impairments.
+
+I am going to point with the mouse to bars in the chart to show the prevalence of identified cognitive impairments:
+
+4.2% for people from 5 to 17 years old.
+
+4.5% for people from 18 to 64 years old.
+
+22.5% of people over 65 years of age.
+
+Current accessibility standards related specifically to cognitive impairments are relatively few, but standards continue to be developed to help designers and developers better understand the needs of people with cognitive impairments.
+    </div>
+</details>
+</div>
+<div class="col"></div>
+</div>
+</aside>
+<footer class="container">
+<div id="footer" class="well well-sm">
+<a href="https://illinois.edu" alt="University of Illinois">
+      <img src="../images/block-i.png">
+    </a>
+    
+      
+    
+    Copyright &copy; 2020 University of Illinois
+  </div>
+</footer>
+</body>
+</html>
