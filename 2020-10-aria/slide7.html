@@ -96,11 +96,6 @@ div.checkbox.checked span:before {
 </li>
 </ul>
 <ul class="nav navbar-nav pull-right">
-<li style="float: left">
-<a target="transcript" href="transcript.html#slide7">
-                        Full Audio Transcript
-                    </a>
-</li>
 <li class="nav navbar-text">Slide 7 of 18</li>
 </ul>
 </div>
@@ -199,35 +194,6 @@ function clickCheckbox(event) {
 <div class="col"></div>
 </div>
 </main>
-<aside class="container" aria-label="Transcript">
-<div class="row">
-<div class="col-md-1"></div>
-<div class="col-md-9">
-<details class="transcript-container">
-<summary id="id-slide-transcript-button" class="btn-primary btn-sm" title="Audio transcript of the portion of the video for this slide">
-                          Audio Transcript
-                        </summary>
-<div class="slide-transcript">
-      This slide shows a set of 4 checkboxes.
-      The first 2 are standard HTML checkboxes and the next two are custom checkboxes made out of DIV elements, Javascript and CSS.
-      The accessibility issues for these custom checkboxes include:
-      Keyboard support so that screen reader and keyboard only users can interact with the checkbox.
-      Keyboard focus styling so that keyboard only users can see that they are interacting with the checkbox.
-      Role information on the custom widget being a checkbox.
-      Accessible name identifying what the checkbox is about.
-      Communicating the state of checkbox.
-
-      As we view the source code you can see that the first two checkboxes are defined using the standard HTML input type checkbox.
-
-      The last two checkbox are defined using DIV elements with event handlers and CSS to define the checked state using the psuedo technique of ::before based on the class name of "checked".
-
-      The Javascript shows a only a click event handler for operation with only the mouse.
-    </div>
-</details>
-</div>
-<div class="col"></div>
-</div>
-</aside>
 <footer class="container">
 <div id="footer" class="well well-sm">
 <a href="https://illinois.edu" alt="University of Illinois">

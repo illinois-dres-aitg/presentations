@@ -3,7 +3,6 @@
 <?xm-well_formed path="funct.dtd"?>
 <slides>
  <lang>en</lang>
-  <addtranscript/>
   <footer>
     <a href="https://illinois.edu"
       alt="University of Illinois">
@@ -121,7 +120,6 @@ The primary adage for people to developers not familiar with ARIA is “No ARIA 
 ARIA does not directly interact with assistive technologies like screen readers.
 ARIA only controls how information about a web page is communicate to screen readers through operating system accessibility APIs.
 The current ARIA specification provides accessibility API mappings for ATK/AT-SPI (Linux/Unix), Microsoft Active Accessibility (MSAA) + IAccessible2 for Windows 10, Microsoft UI Automate for Windows 10 and the MacOS Accessibility API.
-
 
     </transcript>
   </slide>
@@ -269,33 +267,6 @@ I have never used a tabindex value greater than 0 in my 20 years of web developm
             </tr>
             <tr>
               <td>3</td>
-              <td>Encapsulation using the <code>label</code> element<br/><span class="new">New in ARIA 1.2</span></td>
-              <td>
-                <ul>
-                  <li>Allows the use of the HTML <code>label</code> element to define an accessible name for the following roles:
-                    <ul>
-                      <li><code>checkbox</code></li>
-                      <li><code>listbox</code></li>
-                      <li><code>meter</code></li>
-                      <li><code>radio</code></li>
-                      <li><code>searchbox</code></li>
-                      <li><code>spinbutton</code></li>
-                      <li><code>switch</code></li>
-                      <li><code>textbox</code></li>
-                    </ul>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>The <code>legend</code> element for grouping roles<br/><span class="new">New in ARIA 1.2</span></td>
-              <td>
-                  Allows the use of the HTML <code>legend</code> element to define the accessible name for the <code>group</code> and <code>gradiogroup</code> roles.
-              </td>
-            </tr>
-            <tr>
-              <td>5</td>
               <td>text content</td>
               <td>
                 <ul>
@@ -306,7 +277,7 @@ I have never used a tabindex value greater than 0 in my 20 years of web developm
               </td>
             </tr>
             <tr>
-              <td>6</td>
+              <td>4</td>
               <td><code>title</code></td>
               <td>
                 <ul>
@@ -383,13 +354,6 @@ I have never used a tabindex value greater than 0 in my 20 years of web developm
             </tr>
             <tr>
               <td>2</td>
-              <td><code>aria-description</code><br/><span class="new">New in ARIA 1.2</span></td>
-              <td>
-                Similar to <code>aria-label</code> attribute, text content is used to define an accessible description.
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
               <td><code>title</code></td>
               <td>
                 <ul>
@@ -1434,14 +1398,8 @@ function checkboxBlur(event) {
             <li>Some new roles, like <code>generic</code> role for elements with no semantics like <code>div</code> and <code>span</code>, should not be used by developers.</li>
           </ul>
         </li>
-        <li>New ways to define an accessible name:
-          <ul>
-            <li>Encapsulation using the <code>label</code>role for a limited set of elements (e.g. <code>checkbox</code>, <code>radio</code> ...).</li>
-            <li>The <code>legend</code> role for the <code>group</code> and <code>radiogroup</code> roles.</li>
-          </ul>
-        </li>
         <li>Combobox design pattern 1.2 that works with assistive technologies.</li>
-        <li>Accessible Object Model (AOM) to reflect ARIA properties.</li>
+        <li>Accessible Object Model (AOM) to reflect most ARIA properties.</li>
       </ul>
     </contents>
   </slide>
@@ -1459,11 +1417,23 @@ function checkboxBlur(event) {
             <li>Proper use of ARIA properties and states.</li>
           </ul>
         </li>
-        <li>High contrast support in newer examples:
+        <li>Linting code quality:
           <ul>
-            <li>Date pickers</li>
-            <li>Combobox</li>
+            <li>HTML code</li>
+            <li>CSS code</li>
+            <li>Javascript code</li>
+          </ul>
+        </li>
+        <li>High contrast support in new and some updated examples:
+          <ul>
             <li>Carousel</li>
+            <li>Combobox</li>
+            <li>Date Pickers</li>
+            <li>Menubar</li>
+            <li>Menu Button</li>
+            <li>Single-Thumb Slider</li>
+            <li>Toolbar</li>
+            <li>Treeview Navigation</li>
           </ul>
         </li>
       </ul>

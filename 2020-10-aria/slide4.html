@@ -47,11 +47,6 @@
 </li>
 </ul>
 <ul class="nav navbar-nav pull-right">
-<li style="float: left">
-<a target="transcript" href="transcript.html#slide4">
-                        Full Audio Transcript
-                    </a>
-</li>
 <li class="nav navbar-text">Slide 4 of 18</li>
 </ul>
 </div>
@@ -160,30 +155,6 @@
 <div class="col"></div>
 </div>
 </main>
-<aside class="container" aria-label="Transcript">
-<div class="row">
-<div class="col-md-1"></div>
-<div class="col-md-9">
-<details class="transcript-container">
-<summary id="id-slide-transcript-button" class="btn-primary btn-sm" title="Audio transcript of the portion of the video for this slide">
-                          Audio Transcript
-                        </summary>
-<div class="slide-transcript">
-Tabindex is an important feature for identifying which element on the page can receive keyboiard focus and keyboard events.
-For example if I am building a web application and using DIV element to build a interactive menu with Javascript and CSS, I need to use tabindex to make the menu part of the tab sequence of the page and to allow keyboard events to change the menu selection.
-Tabindex values of 0 are used to make elements part of the tab sequence of the page.
-Tabindex values of -1 allow an element to receive keyboard focus and to process keyboard events, but the element is not included in the tabindex of a page.
-Sometimes an element, like an Anchor or link element, which Is normally part of the tab sequence of the page will be used in a more complex tree or menu widget.
-In this case we want to make sure the the link is not part of the tabindex of the web page by we setting its tabindex value to -1.
-The only think I have to say about tabindex values besides 0 and -1 is one is don&rsquo;t&rsquo; do it!
-There are many bad things that can happen and not very much potential benefit to using tabindex values greater than 0.
-I have never used a tabindex value greater than 0 in my 20 years of web development and we don&rsquo;t have time in this presentation to do a deeper dive.
-    </div>
-</details>
-</div>
-<div class="col"></div>
-</div>
-</aside>
 <footer class="container">
 <div id="footer" class="well well-sm">
 <a href="https://illinois.edu" alt="University of Illinois">
