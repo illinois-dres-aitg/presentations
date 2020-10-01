@@ -187,6 +187,15 @@
             
 <tr>
               
+<th scope="row">Skip to main link</th>
+              <td class="num">70.8</td>
+              <td class="num">4.4</td>
+              <td class="num">24.8</td>
+            
+</tr>
+            
+<tr>
+              
 <th scope="row">Video captions</th>
               <td class="num">-</td>
               <td class="num">-</td>
@@ -209,15 +218,6 @@
               <td class="num">-</td>
               <td class="num">-</td>
               <td class="num">100</td>
-            
-</tr>
-            
-<tr>
-              
-<th scope="row">Skip to main link</th>
-              <td class="num">70.8</td>
-              <td class="num">4.4</td>
-              <td class="num">24.8</td>
             
 </tr>
             
@@ -265,10 +265,10 @@
               'Tables have headers',
               'Form labels',
               'Grouping label for radios',
+              'Skip to main link',
               'Video captions',
               'Audio must have alternative',
               'Control time limits',
-              'Skip to main link',
               'At least two ways to find'
             ],
             crosshair: true
@@ -299,13 +299,13 @@
           },
           series: [{
             name: 'Manual Check',
-            data: [0, 0, 0, 0, 19.2, 0, 0, 0, 16.5, 0, 0, 100, 100, 100, 24.8, 100]
+            data: [0, 0, 0, 0, 19.2, 0, 0, 0, 16.5, 0, 0, 24.8, 100, 100, 100, 100]
             }, {
             name: 'Fail',
-            data: [29.7, 21.6, 14.4, 21.8, 4.8, 7.2, 42.3, 77.0, 78.8, 10.7, 48.6, 0, 0, 0, 4.4, 0]
+            data: [29.7, 21.6, 14.4, 21.8, 4.8, 7.2, 42.3, 77.0, 78.8, 10.7, 48.6, 4.4, 0, 0, 0, 0]
             }, {
             name: 'Pass',
-            data: [70.3, 78.4, 85.6, 78.2, 76.0, 92.8, 57.7, 23.0, 4.6, 89.3, 51.4, 0, 0, 0, 70.8, 0]
+            data: [70.3, 78.4, 85.6, 78.2, 76.0, 92.8, 57.7, 23.0, 4.6, 89.3, 51.4, 70.8, 0, 0, 0, 0]
             }]
         });
       </script>
@@ -322,7 +322,36 @@
                           Audio Transcript
                         </summary>
 <div class="slide-transcript">
-      Rule Category Results
+      This chart shows selected rule results with the associated passed, failed and manual check rules.
+
+      If you cannot see the chart or have difficulty reading charts there is an option to view a table of the data after the chart on the web page.
+
+      The rule All Content in Landmarks is an indication content is associated with named regions on the screen.  The high level of conformance for this rule may be deceptive since common HTML sectioning like, the header, footer, nav and aside elements automatically landmarks, usually in a way that supports accessibility, but in some cases their may be too many landmarks or content in a landmark that is not appropriate.
+
+      The Main Landmark requires authors to specifically define a main landmark using the role attribute or the main element.  This is a better indicator of authors using accessibility in their design, because adding a main landmark is usually not done by accident.  The chart shows almost 80% of website are using the main landmarks.
+
+      When a main landmark is present the H1 for Main Landmark rule is passed over 80% of the time.   This makes an H1 heading element, which is easy for screen reader users to navigate to, available on alot of pages.
+
+      Properly nested headings passes at over 80% and is an indicator the author is  using HTML heading markup correctly, making it easier for screen reader users to navigate the sections of the website.
+
+      Color Contrast Ratio is passing at less than 80%.  Color contrast ratio is critical for people with visual impairments and this indicates there is a significant portion of web page content that will not be accessible.  Notice this rule has a manual checking component which is much larger portion of the result than failure of this rule.  Manual check is required when text is placed on top of a background images, so the background not being a solid color value the contrast ratio cannot be computed.
+
+      The use of ALT attribute on an IMG element is the poster child accessibility rule for accessibility and probably the most well known rule for accessibility, since it is pretty esay for most people to understand that for someone who cannot see the image they will need some type of description.  Even though this rule is passing more than 90% of the time, there are a significant number of images that do not have a description.
+
+      The Unique link text rule is passing at less than 60% of the time.   The most common problem when people have links like "more" or "click here" which do not describe where the link will take the user.
+
+      Data tables are a huge problem shown by the low compliance of the next two rules related to a providing an accessible name and headers to provide context to the content of the data cells.
+
+      the rule for labeling form controls has steadily improved over the past 10 years to almost 90% compliance in this evaluation.  Ten years ago when I started these evaluations less that 50% of form controls had labels.  But this is such an important and easy requirement to implement it hard to understand why compliance is not higher.
+
+      The use of grouping label for radio buttons using fieldset and legend elements is still an area of poor implementation, with just over 50% compliance.  The is definitely a need for form designers to learn more about creating accessible forms with accessible error feedback.
+
+      The Skip to main link provides a means for keyboard only users to move directly to the main content of the page and is implemented in about 70% of the pages evaluated and is considered a basic accessibility feature.
+
+      The last four rules in the chart related to videos having captions, audio must have an alternative, the ability of users to have time to respond to web pages with time outs and website navigation features all require manual checks.
+
+      These features need to be addressed during the design of the website, because just like curbcuts in sidewalks they are expensive to retrofit into production websites.
+
     </div>
 </details>
 </div>

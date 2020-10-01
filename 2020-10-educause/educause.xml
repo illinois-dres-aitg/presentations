@@ -65,6 +65,12 @@
       Third will look at summary data for groups of rules and for selected individual rules.
       Fourth, what everyone wants to know, where does my university rank in the accessibility scans I made in September of 2020.
       I will conclude with information on where you can get the open source tools used in this project.
+
+      The slides for this presentation all use HTML markup and a publicly available on the web.
+
+      The link on this page can be used to go to the actual HTML slides.
+
+      So feel free to go to the link and follow along and explore the slides in the comfort of your own browser.
     </transcript>
   </slide>
 
@@ -963,7 +969,7 @@ The ability to use the web will continue to be important as we age, so designing
 
       Web applications need authentication and more complex testing strategies than simple spidering of web pages and analyzing mostly static content.
 
-      Web applications are a challenge to meet WCAG accessibility requirements due to the level of interaction and user interface complexity.
+      Note that web applications like course management systems and other collaboration tools used in higher education are a challenge to meet WCAG accessibility requirements due to the level of interaction and user interface complexity.
 
     </transcript>
   </slide>
@@ -1137,7 +1143,30 @@ The ability to use the web will continue to be important as we age, so designing
       </script>
     </contents>
     <transcript>
-      Rule Category Results
+      This chart in this slide shows the results related to groups of rules organized by rule categories for all 129,287 pages analyzed.
+
+      The set of rules used in this evaluation has at least one rule for each WCAG 2.0 level A and double A requirements.
+
+      If you cannot see the chart or have difficulty reading charts there is an option to view a table of the data after the chart on the web page.
+
+      The green portion of the bars indicate the percentage of rules that passed in the category of rules.
+
+      The red portion of the bars indicate the percentage of rules that failed in the category of rules.
+
+      The yellow portion of the bars indicate the percentage of manual checks for in the category of rules.
+
+      You can see from the chart more than half of the rule results require manual checking and for the rules related to site navigation, timing and audio/video can only be checked through human inspection and understanding of the requirements.
+
+      While the green portion dominates the red portion of the bars, it can be seen that there are significant failures for rules related to landmarks, headings, links and data tables.
+
+      With data tables having the highest percentage of known accessibility issues.
+
+      The widgets/scripts category is also misleading, since scripting accessibility issues require knowledge of Accessible Rich Internet Application or ARIA technologies to make sure the behaviors and sections of a website are properly defined.
+
+      The passing and failing rules in the widget/script category are only looking for syntax errors, not if the ARIA was applied properly to describe the features and behaviors of the page.
+
+      The weight of the manual checking rules related to scripting and keyboard support are critical for accessibility requirements to be met.
+
     </transcript>
   </slide>
 
@@ -1227,6 +1256,12 @@ The ability to use the web will continue to be important as we age, so designing
               <td class="num">-</td>
             </tr>
             <tr>
+              <th scope="row">Skip to main link</th>
+              <td class="num">70.8</td>
+              <td class="num">4.4</td>
+              <td class="num">24.8</td>
+            </tr>
+            <tr>
               <th scope="row">Video captions</th>
               <td class="num">-</td>
               <td class="num">-</td>
@@ -1243,12 +1278,6 @@ The ability to use the web will continue to be important as we age, so designing
               <td class="num">-</td>
               <td class="num">-</td>
               <td class="num">100</td>
-            </tr>
-            <tr>
-              <th scope="row">Skip to main link</th>
-              <td class="num">70.8</td>
-              <td class="num">4.4</td>
-              <td class="num">24.8</td>
             </tr>
             <tr>
               <th scope="row">At least two ways to find</th>
@@ -1293,10 +1322,10 @@ The ability to use the web will continue to be important as we age, so designing
               'Tables have headers',
               'Form labels',
               'Grouping label for radios',
+              'Skip to main link',
               'Video captions',
               'Audio must have alternative',
               'Control time limits',
-              'Skip to main link',
               'At least two ways to find'
             ],
             crosshair: true
@@ -1327,19 +1356,48 @@ The ability to use the web will continue to be important as we age, so designing
           },
           series: [{
             name: 'Manual Check',
-            data: [0, 0, 0, 0, 19.2, 0, 0, 0, 16.5, 0, 0, 100, 100, 100, 24.8, 100]
+            data: [0, 0, 0, 0, 19.2, 0, 0, 0, 16.5, 0, 0, 24.8, 100, 100, 100, 100]
             }, {
             name: 'Fail',
-            data: [29.7, 21.6, 14.4, 21.8, 4.8, 7.2, 42.3, 77.0, 78.8, 10.7, 48.6, 0, 0, 0, 4.4, 0]
+            data: [29.7, 21.6, 14.4, 21.8, 4.8, 7.2, 42.3, 77.0, 78.8, 10.7, 48.6, 4.4, 0, 0, 0, 0]
             }, {
             name: 'Pass',
-            data: [70.3, 78.4, 85.6, 78.2, 76.0, 92.8, 57.7, 23.0, 4.6, 89.3, 51.4, 0, 0, 0, 70.8, 0]
+            data: [70.3, 78.4, 85.6, 78.2, 76.0, 92.8, 57.7, 23.0, 4.6, 89.3, 51.4, 70.8, 0, 0, 0, 0]
             }]
         });
       </script>
     </contents>
     <transcript>
-      Rule Category Results
+      This chart shows selected rule results with the associated passed, failed and manual check rules.
+
+      If you cannot see the chart or have difficulty reading charts there is an option to view a table of the data after the chart on the web page.
+
+      The rule All Content in Landmarks is an indication content is associated with named regions on the screen.  The high level of conformance for this rule may be deceptive since common HTML sectioning like, the header, footer, nav and aside elements automatically landmarks, usually in a way that supports accessibility, but in some cases their may be too many landmarks or content in a landmark that is not appropriate.
+
+      The Main Landmark requires authors to specifically define a main landmark using the role attribute or the main element.  This is a better indicator of authors using accessibility in their design, because adding a main landmark is usually not done by accident.  The chart shows almost 80% of website are using the main landmarks.
+
+      When a main landmark is present the H1 for Main Landmark rule is passed over 80% of the time.   This makes an H1 heading element, which is easy for screen reader users to navigate to, available on alot of pages.
+
+      Properly nested headings passes at over 80% and is an indicator the author is  using HTML heading markup correctly, making it easier for screen reader users to navigate the sections of the website.
+
+      Color Contrast Ratio is passing at less than 80%.  Color contrast ratio is critical for people with visual impairments and this indicates there is a significant portion of web page content that will not be accessible.  Notice this rule has a manual checking component which is much larger portion of the result than failure of this rule.  Manual check is required when text is placed on top of a background images, so the background not being a solid color value the contrast ratio cannot be computed.
+
+      The use of ALT attribute on an IMG element is the poster child accessibility rule for accessibility and probably the most well known rule for accessibility, since it is pretty esay for most people to understand that for someone who cannot see the image they will need some type of description.  Even though this rule is passing more than 90% of the time, there are a significant number of images that do not have a description.
+
+      The Unique link text rule is passing at less than 60% of the time.   The most common problem when people have links like "more" or "click here" which do not describe where the link will take the user.
+
+      Data tables are a huge problem shown by the low compliance of the next two rules related to a providing an accessible name and headers to provide context to the content of the data cells.
+
+      the rule for labeling form controls has steadily improved over the past 10 years to almost 90% compliance in this evaluation.  Ten years ago when I started these evaluations less that 50% of form controls had labels.  But this is such an important and easy requirement to implement it hard to understand why compliance is not higher.
+
+      The use of grouping label for radio buttons using fieldset and legend elements is still an area of poor implementation, with just over 50% compliance.  The is definitely a need for form designers to learn more about creating accessible forms with accessible error feedback.
+
+      The Skip to main link provides a means for keyboard only users to move directly to the main content of the page and is implemented in about 70% of the pages evaluated and is considered a basic accessibility feature.
+
+      The last four rules in the chart related to videos having captions, audio must have an alternative, the ability of users to have time to respond to web pages with time outs and website navigation features all require manual checks.
+
+      These features need to be addressed during the design of the website, because just like curbcuts in sidewalks they are expensive to retrofit into production websites.
+
     </transcript>
   </slide>
 
@@ -1620,7 +1678,18 @@ The ability to use the web will continue to be important as we age, so designing
       </script>
     </contents>
     <transcript>
-      Who is in the Sweet 16?
+      The chart in this slide shows the accessibility ranking for the top 24 universities based on the highest percentage of rules passed for all the web pages evaluated for that university.
+
+      If you cannot see the chart or have difficulty reading charts there is an option to view a table of the data after the chart on the web page.
+
+      As you have learned earlier in this presentation there are a lot of caveats with these rankings do to the limited number of pages tested, the exclusion of web applications and the inherit nature of many accessibility requirements needing manual checks, but it is kind of a fun way to compare universities and engage in the natural rivalries between higher educational institutions to motivate people to dive deeper into the accessibility of their campus websites.
+
+      The winner this year is the University of Buffalo.
+
+      Congratulations!
+
+      There is a link to look at all the results, so if you don't see your school in this chart you can look at the data for all 151 universities.
+
     </transcript>
   </slide>
 
@@ -1821,25 +1890,52 @@ The ability to use the web will continue to be important as we age, so designing
       </script>
     </contents>
     <transcript>
-      Who is in the Sweet 16?
+      The chart in this slide shows the accessibility ranking for the athletic conferences used in thie evaluation based on the highest percentage of rules passed for all the web pages associated with that conference.
+
+      The limitations of this evaluation were discussed in the previous slide.
+
+      If you cannot see the chart or have difficulty reading charts there is an option to view a table of the data after the chart on the web page.
+
+      The top conference this year was the Midamerican conference, followed by non-conference schools and the Big Ten.
+
     </transcript>
   </slide>
 
   <slide>
     <title>Conclusions</title>
     <contents>
-    <p>The results show there is still much work to do to improve the accessibility and usability of web resources to people with disabilities in higher education. Universities need to  implement proactive plans to support the accessibility and usability of online administrative and instructional materials. To move web accessibility into the main stream of web development, online instructional design and procurement of vended online resources universities need tools to help them understand the accessibility of existing campus web resources.</p>
+    <ul>
+      <li>Human resources problem, more people need to understand accessibility.</li>
+      <li>Communicate the importance of accessibility to vendors.</li>
+      <li>Content creation and editing tools need to support accessible authoring.</li>
+    </ul>
 
-
-    <p>Data is needed to help answer the following questions:</p>
+    <h2>Data is needed to help answer the following questions:</h2>
     <ul>
       <li>Current level of implementation of web accessibility in higher education?</li>
       <li>What accessibility requirements are understood and what requirements do people need to learn about?</li>
       <li>What development and procurement teams need to understand to improve accessibility?</li>
+      <li>How are the tools students, faculty and staff use support creating accessible content?</li>
     </ul>
     </contents>
     <transcript>
-      Conclusions
+      The results show there is still much work to do to improve the accessibility and usability of web resources to people with disabilities in higher education.
+
+      It is clear accessibility has a human resources problem.
+
+      More people at our institutions need to know more about accessibility.
+
+      People don't need to know everything about accessibility, but they need to know what is important for their job or role.
+
+      Universities need to implement proactive plans to support the accessibility and usability of online administrative and instructional materials.
+
+      An important part of those plans need to include procurement processes that encourage vendors to provide accessible web applications.
+
+      To move web accessibility into the main stream of the campus culture authoring tools used to create online content need to support authors in learning about and including accessibility features in the online resources they create.
+
+      Ask vendors how their products not only meet accessibility requirements, but also how they help students, faculty and staff learn about and create accessible content.
+
+
     </transcript>
   </slide>
 
@@ -1853,6 +1949,17 @@ The ability to use the web will continue to be important as we age, so designing
       </ul>
     </contents>
     <transcript>
+      The links on this slide are to tools that use the same ruleset used in this evaluation.
+
+      AInspector for Firefox is a extension for Firefox than analyzes the currently opened window in Firefox and generates a report shown in the left hand sidebar.
+
+      The Functional Accessibility Evaluator or FAE is a server based tool to spider a website and provide in addition to page level reports a higher level rpoert on all the pages.
+
+      The accessibility bookmarklets can be used on all modern browser to help visually highlight hidden accessibility information on web pages, which is very useful for manual inspection of a web page.
+
+      These are open source tools, so they are free for you to use and share.
+
+      Please contact me if you have any questions.
     </transcript>
   </slide>
 
@@ -1872,10 +1979,17 @@ The ability to use the web will continue to be important as we age, so designing
       </div>
 
       <h2>Acknowledgments</h2>
-      <p>This work was carried out with the support of the University of Illinois, University of Illinois Foundation and an IBM corporate gift to support rule development.  I would also like to thank the including Nicholas Hoyt (DRES), Joshi Pramod (AITS).  A special thanks to the members of the OpenAjax Accessibility Task Force, the Open Accessibility Alliance Tools Discussion group and the many people who have taken time to provide feedback and report bugs on the tools or evaluation library.  Additional support is provided by the <a href="https://techsage.gatech.edu/">TechSAge</a> Project, which is funded by the National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR grant number #90REGE0006-01-00 ).</p>
+      <p>This work was carried out with the support of the University of Illinois, University of Illinois Foundation and an IBM corporate gift to support rule development.  I would also like to thank the Nicholas Hoyt (DRES) and Joshi Pramod (AITS).  A special thanks to the members of the OpenAjax Accessibility Task Force, the Open Accessibility Alliance Tools Discussion group and the many people who have taken time to provide feedback and report bugs on the tools or evaluation library.  Additional support is provided by the <a href="https://techsage.gatech.edu/">TechSAge</a> Project, which is funded by the National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR grant number #90REGE0006-01-00 ).</p>
     </contents>
     <transcript>
-      Acknowledgments and Contact Information
+      Please contact me if you have any questions about this presentation or the open source tools.
+
+      This work was carried out with the support of the University of Illinois, University of Illinois Foundation and an IBM corporate gift to support rule development.
+
+      I would also like to thank my colleagues Nicholas Hoyt of DRES and Joshi Pramod of AITS.
+      A special thanks to the members of the OpenAjax Accessibility Task Force, the Open Accessibility Alliance Tools Discussion group and the many people who have taken time to provide feedback and report bugs on the tools or evaluation library.
+
+      Additional support is provided by the TechSAge Project, which is funded by the National Institute on Disability, Independent Living, and Rehabilitation Research.
     </transcript>
   </slide>
 
