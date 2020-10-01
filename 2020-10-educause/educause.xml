@@ -1964,13 +1964,13 @@ The ability to use the web will continue to be important as we age, so designing
       </ul>
     </contents>
     <transcript>
-      The links on this slide are to tools that use the same ruleset used in this evaluation.
+      The links on this slide are to tools that use the same ruleset and evaluation engine used in this evaluation.
 
       AInspector for Firefox is a extension for Firefox than analyzes the currently opened window in Firefox and generates a report shown in the left hand sidebar.
 
-      The Functional Accessibility Evaluator or FAE is a server based tool to spider a website and provide in addition to page level reports a higher level rpoert on all the pages.
+      The Functional Accessibility Evaluator or FAE is a server based tool to spider a website and provide both page and website level reports.
 
-      The accessibility bookmarklets can be used on all modern browser to help visually highlight hidden accessibility information on web pages, which is very useful for manual inspection of a web page.
+      The accessibility bookmarklets can be used on all modern browsers to visually highlight hidden accessibility information on web pages, which is very useful for manual inspection of web accessibility requirements.
 
       These are open source tools, so they are free for you to use and share.
 
