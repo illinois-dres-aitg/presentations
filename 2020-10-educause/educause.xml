@@ -1381,19 +1381,20 @@ The ability to use the web will continue to be important as we age, so designing
       </script>
     </contents>
     <transcript>
-      This chart shows selected rule results with the associated passed, failed and manual check rules.
+      This chart shows selected rule results with the associated passed, failed and manual check rules using the same green, red and yellow for the bars as in the previous chart.
 
       If you cannot see the chart or have difficulty reading charts there is an option to view a table of the data after the chart on the web page.
 
-      The rule All Content in Landmarks is an indication content is associated with named regions on the screen.  The high level of conformance for this rule may be deceptive since common HTML sectioning like, the header, footer, nav and aside elements automatically landmarks, usually in a way that supports accessibility, but in some cases their may be too many landmarks or content in a landmark that is not appropriate.
+      The first rule "All Content in Landmarks" is used to measure how much of rendered content is associated with a named region on the screen.  The high level of conformance for this rule may be deceptive since common HTML sectioning elements like header, footer, nav and aside elements automatically create landmark regions, usually in a way that supports accessibility, but in some cases their may be too many landmark regions or content in a landmark region that is not appropriate.
 
-      The Main Landmark requires authors to specifically define a main landmark using the role attribute or the main element.  This is a better indicator of authors using accessibility in their design, because adding a main landmark is usually not done by accident.  The chart shows almost 80% of website are using the main landmarks.
+      The second rule is the presence of a Main Landmark region, which requires authors to specifically define a main landmark region using a role attribute or the main element.
+      This is a better indicator of authors using landmark regions appropriately in their design, because adding a main landmark region is usually not done by accident.  The chart shows almost 80% of web pages are using a main landmark region.
 
-      When a main landmark is present the H1 for Main Landmark rule is passed over 80% of the time.   This makes an H1 heading element, which is easy for screen reader users to navigate to, available on alot of pages.
+      The third rules identifies if a main landmark region beging with an H1 heading.  This rule passes over 80% of the web pages measured.  Having an H1 heading element identify the start of the main content makes it easy for screen reader users to locate and navigate the main content of the page.
 
-      Properly nested headings passes at over 80% and is an indicator the author is  using HTML heading markup correctly, making it easier for screen reader users to navigate the sections of the website.
+      The fourth rule identifies properly nested headings, which passes for over 80% of the web pages and is an indicator the author is using HTML heading markup correctly, making it easier for screen reader users to navigate the sections of a web page.
 
-      Color Contrast Ratio is passing at less than 80%.  Color contrast ratio is critical for people with visual impairments and this indicates there is a significant portion of web page content that will not be accessible.  Notice this rule has a manual checking component which is much larger portion of the result than failure of this rule.  Manual check is required when text is placed on top of a background images, so the background not being a solid color value the contrast ratio cannot be computed.
+      The fifth rule is looking at Color Contrast Ratio of text in a web page, and is passing at less than 80% for web pages.  Color contrast ratio is critical for people with visual impairments and this result indicates there is a significant portion of web page content that will not be accessible to many people.  Notice this rule has a manual checking component which is a larger portion of the result than failures of the rule.  The Manual check is required when text is placed on top of a background image.  The background not being a solid color is beyond the capability of the current ruleset to compute, due to the difficulty in getting access to the image colors and alignment with the text xontet.
 
       The use of ALT attribute on an IMG element is the poster child accessibility rule for accessibility and probably the most well known rule for accessibility, since it is pretty esay for most people to understand that for someone who cannot see the image they will need some type of description.  Even though this rule is passing more than 90% of the time, there are a significant number of images that do not have a description.
 
