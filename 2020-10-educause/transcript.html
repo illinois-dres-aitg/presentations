@@ -24,11 +24,14 @@
 </h2>
 <div class="full-transcript">
       This presentation is an invitation to learning about measuring web accessibility for people with disabilities and understanding the limitations of automated testing for accessibility.
+      Most accessibility requirements cannot be tested automatically, requiring .
+      designers and developers to understand accessibility requirements and build accessibility during the design and development of a website or web application.
+      Just like putting curbcuts in sidewalks is much less expensive and more elegant when putting the sidewalks, than later after the sidewalks have been built.
       The presentation concludes with the results of scanning over 1,700 websites from over 200 educational institutions organized by basketball conferences.
       I will first give some background in why web accessibility is important.
       Second I will discuss the primary issues in measuring web accessibility.
       Third will look at summary data for groups of rules and for selected individual rules.
-      Fourth, what everyone will want to know, is where does my university rank in the accessibility scans I made in September of 2020.
+      Fourth, what everyone wants to know, where does my university rank in the accessibility scans I made in September of 2020.
       I will conclude with information on where you can get the open source tools used in this project.
     </div>
 <h2>
@@ -39,11 +42,11 @@
 <div class="full-transcript">
       Accessibility for people with disabilities is part of building an inclusive culture on your campus.
       Disability has traditionally not been included within diversity and inclusion initiatives in higher education.
-      One issue is just counting students with disabilities, since students do not have to divulge their disability as part of their college application and the university is required not to ask.
+      One issue is just counting students with disabilities, since students do not have to disclose their disability as part of their college application and the university is required not to ask.
       But disability is a part of the lives of approximately 1 out of every 10 students on campus.
-      As information technology has become more apart of the educational experience, disability rights have been extended to include access to information technologies, just like curbcuts and ramps were eventually required to make sidewalks and buildings on campus accessible to students in wheelchairs.
+      As information technology has become more apart of the educational experience, disability rights have been extended to include more than physical access buildings, but also to the virtual world of information technologies, just like curbcuts and ramps were eventually required to make sidewalks and buildings on campus accessible to students in wheelchairs.
       Disability inclusion approaches based on Universal Design give all students more ways to learn course content, resulting in students taking less time to learn a topic and fewer questions to the instructor.
-      For example in one study of online course using pre-recorded videos, half the class received the videos with captioning and half the class did not have captions.  The group with captions on the average spent 40% less time watching the videos with no significant difference in the grade distributions at the end of the course.
+      For example in one study of online math course using pre-recorded videos, half the class received the videos with captioning and half the class did not have captions.  The group with captions on the average spent 40% less time, approximately 45 hours saved, watching the videos with no significant difference in the grade distributions at the end of the course.
       Which videos would your rather watch?
       When instructional materials and online resources are accessible, students with disabilities do not need to request accommodations or spend time trying to explain to their instructor why their needs are different from other students.
       When students don't have to ask for accommodations, it makes them feel more included in the campus culture and gives them more time to focus on learning, rather than educating instructors on why they need something different and the delays in getting information in the format they need.
@@ -54,34 +57,44 @@
                         Disabilities Registered with DRES at Illinois</a>
 </h2>
 <div class="full-transcript">
-        The chart in this slide shows the distribution of disabilities that are registered with disability services at Illinois.
+        The chart in this slide shows the distribution of disabilities that are registered with disability services at Illinois during the 2019-2020 academic year.
+
+        If you cannot see the chart or have difficulty reading charts there is an option to view a table of the data after the chart on the web page.
+
+        I am pointing to the number of students in each category in the chart using the mouse:
 
         The chart shows:
-        838 students with psychological diagnosis which effect learning in some way, for example testing in a safe environment or flexible schedules due to medication schedules or episodic situations.
+        838 students with psychological diagnosis which effect learning in some way, example accommodations include taking tests in a safe environment or flexible schedules due to medication schedules or episodic situations.
 
         641 students with ADHD that may need coaching for prioritizing their work or distraction free testing accommodations.
 
-        362 students with systemic or medical conditions that effect their daily living, for example a chronic disease like arthritis.
+        362 students with systemic or medical conditions that effect their daily living, for example a chronic disease like arthritis which may restrict mobility and reduced stamina.
 
         167 students with physical mobility impairments due to amputations or paralysis.
 
         161 students with learning disabilities that require the student to use different strategies to learn some types of materials, often requiring materials in electronic format for reading using speech.
 
-        49 students who are Deaf or Hard-of-Hearing, these students relay on interpreters and text captoning for learning.
+        49 students who are Deaf or Hard-of-Hearing, these students rely on interpreters and text captioning for learning.
 
-        47 students who are Blind or visually impaired who need print material in electronic formats with image descriptions.
+        47 students who are Blind or visually impaired who need print material in electronic formats or Braille with descriptions of images and graphics.
 
-        16 students with acquired brain injury, including soldiers returning from overseas deployments, which often results in both learning disabilities and physiological issues which is helped by having muli-modal and flexible learning environments.
+        16 students with acquired brain injury, including soldiers returning from overseas deployments, which often results in both learning disabilities and physiological issues which is helped by having multi-modal and flexible learning environments.
 
         2 students with impaired speech making it difficult for them to communicate to their instructors or fellow students.  In these cases disability staff can help develop communication strategies help the student to express their ideas in instructional settings and be a part of social groups with peers.
 
-        While the traditional stereotype of disability is someone with vision, hearing or physical impairement, from the chart you can see that the vast majority of students registered have learning disabilities or psychological conditions that effect their learning.
-        The later two groups are often referred to as hidden disabilities, and so it is often difficult for people to understand their needs for materials in certain formats to support their learning.
+        While the traditional stereotype of disability is someone with vision, hearing or physical impairment, from the chart you can see that the vast majority of students registered have learning disabilities or psychological conditions that effect their learning.
+
+        The largest groups are often referred to as hidden disabilities, and so it is often difficult for people to understand their needs for materials in certain formats to support learning.
+
         It should be noted that typically only about a third of students with disabilities in higher education actually register for disability related accommodations.
-        In a survey of all students at Illinois a few years ago, students who self identify as having a disability only a third said they used disability services.
-        Another third said they did not need accommodations or could negotiate them on their own.
+
+        In a survey of all students at Illinois a few years ago, students who self identify as having a disability, only a third said they used disability services.
+
+        Another third reported they did not need accommodations or could negotiate them on their own.
+
         The remaining third said they did not even know there were disability services available on campus.
-        So you can see there are a lot of students in higher education and many students will benefit from accessible design.
+
+        So you can see there are a lot of students in higher education and many students who can benefit from universal design in learning.
       </div>
 <h2>
 <a id="slide4" target="slides" href="slide4.html">
@@ -93,7 +106,9 @@ The chart in this side shows that disability becomes a pretty inclusive club as 
 
 If you cannot see the chart or have difficulty reading charts there is an option to view a table of the data after the chart on the web page.
 
-The chart shows the percentage of the population that has any disability, a severe disability and a disability that needs assistance for activities of daily living for nine different age ranges.  I am going to point to the rate of severe disability in the charts using the mouse:
+The chart shows the percentage of the population that has any disability, a severe disability and a disability that needs assistance for activities of daily living for nine different age ranges.
+
+I am going to point to the rate of severe disability in the charts using the mouse:
 
 3.6% for people under 15 years old.
 
@@ -115,7 +130,7 @@ The chart shows the percentage of the population that has any disability, a seve
 
 By age 80, about half of people with severe disability need some type of daily assistance.
 
-The ability to use the web will continue to be important as we age, so designing web pages to be accessible not only helps people with disabilities now, including our family and friends, but most likely we will be also helping ourselves as we age.
+The ability to use the web will continue to be important as we age, so designing web pages to be accessible not only helps people with disabilities now, including our family and friends, but most likely we will be also helping many of us as we age.
     </div>
 <h2>
 <a id="slide5" target="slides" href="slide5.html">
@@ -123,61 +138,77 @@ The ability to use the web will continue to be important as we age, so designing
                         Distribution of Types of Disabilities by Age Range</a>
 </h2>
 <div class="full-transcript">
-One of the questions many people new to accessibility ask is how many people have disabilities?
+      One of the questions many people new to accessibility ask is how many people have disabilities?
 
-How many people will be impacted if I make a website more accessible?
+      How many people will be impacted if I make a website more accessible?
 
- While one slide cannot provide a detailed answer to these questions, the chart on this slide does provide some insights to the prevalence of four broad types of disability as we age: vision, hearing, mobility and cognitive.
+      While one slide cannot provide a detailed answer to these questions, the chart on this slide does provide some insights to the prevalence of four broad types of disability as we age: vision, hearing, mobility and cognitive.
 
-If you cannot see the chart or have difficulty reading charts there is an option to view a data table just after the chart on the web page.
+      If you cannot see the chart or have difficulty reading charts there is an option to view a data table just after the chart on the web page.
 
-From the perspective of web design, it is easy for people to understand how someone with a visual impairment who has trouble seeing the computer screen or cannot see the screen at all would have trouble using a web page.
+      From the perspective of web design, it is easy for people to understand how someone with a visual impairment who has trouble seeing the computer screen or cannot see the screen at all would have trouble using a web page.
 
-For example, one of the best-known accessibility requirements is providing a text description or Alternative Text for each image in a web page, so that someone using a screen reader can understand the purpose of the image.
+      For example, one of the best-known accessibility requirements is providing a text description or Alternative Text for each image in a web page, so that someone using a screen reader can understand the purpose of the image.
 
-I am going to point to bars in the chart with the mouse to highlight how the rate of visual impairments increases with age:
+      I am going to point to bars in the chart with the mouse to highlight how the rate of visual impairments increases with age:
 
-0.4% for people less than 5 years old.
+      0.4% for people less than 5 years old.
 
-0.9% for people from 5 to 17 years old.
+      0.9% for people from 5 to 17 years old.
 
-2% for people from 18 to 64 years old.
+      2% for people from 18 to 64 years old.
 
-6.6% of people over 65 years age.
+      6.6% of people over 65 years age.
 
-Multiply these percentages by 7 billion people and you can see that millions of people with visual impairments are affected by the design decisions of web developers and web development teams.
+      Multiply these percentages by 7 billion people and you can see that millions of people with visual impairments are affected by the design decisions of web developers and web development teams.
 
-People with hearing impairments have similar demographics as people with visual impairments.  I am going to point to bars in the chart with the mouse to highlight how the rate of hearing impairments increases with age:
+      People with hearing impairments have similar demographics as people with visual impairments.  I am going to point to bars in the chart with the mouse to highlight how the rate of hearing impairments increases with age:
 
-0.5% for people less than 5 years old.
+      0.5% for people less than 5 years old.
 
-0.6% for people from 5 to 17 years old.
+      0.6% for people from 5 to 17 years old.
 
-2% for people from 18 to 64 years old.
+      2% for people from 18 to 64 years old.
 
-14.6% of people over 65 years of age.
+      14.6% of people over 65 years of age.
 
-Comparing the hearing impairments to visual Impairments shows similar instances, until age 65.
+      Comparing the hearing impairments to visual Impairments shows similar instances, until age 65.
 
-At 65 there are more than twice as many people with hearing impairments as visual impairments.
+      At 65 there are more than twice as many people with hearing impairments as visual impairments.
 
-The main design feature for people with hearing impairments is the availability of captions for videos.
+      The main design feature for people with hearing impairments is the availability of captions for videos.
 
-Captioning videos is a real winner for making the web more useful to everyone, since captions also benefit people who&rsquo;s native language is different from the speakers on the video.  For example, here at the University of Illinois we have many students from foreign countries including India and China.  The use of video lectures has greatly increased in the past couple of years and in some courses the lectures are only available as a video, similar to the course you are taking now.  While these students learn English before they come to the United States, for many of them the ability to read English is much better than their ability to listen to English, since there are often few opportunities to listen to native English speakers in other countries.  In this case the captions will help them understand the lecture content much more easily.   The captions can also help many students with learning disabilities that have trouble processing speech.  The redundancy of the captions with the speech helps students to learn much more efficiently.   Caption text can also be used by search engines to help people find specific topics of interest within a video.  It is much easier to search for keywords in a video with closed captions, than videoes without closed captions.
+      Captioning videos is a real winner for making the web more useful to everyone, since captions also benefit people who&rsquo;s native language is different from the speakers on the video.
 
-People with mobility impairments are not as common until people are over 18 years of age when about 5% of the population experiences a mobility impairment of some type and then increase to 22% for people over 65 years old.   Not all mobility impairments affect the ability to use computing and mobile technologies, but many do affect the ability of people to type on a keyboard, move and activate the button on a mouse, or point and tap their finger on a touch screen device.  In these cases, there is a need to make sure that web and mobile apps can be operated with assistive technologies like voice input or other devices that make it appear the person is typing from a keyboard or pointing on a touch screen.
+      For example, here at the University of Illinois we have many students from foreign countries including India and China.
 
-One of the most difficult to understand areas of making web pages accessible is for people with learning disabilities and cognitive impairments.
+      The use of video lectures has greatly increased in the past couple of years and in some courses the lectures are only available as a video, similar to the course you are taking now.
 
-I am going to point with the mouse to bars in the chart to show the prevalence of identified cognitive impairments:
+      While these students learn English before they come to the United States, for many of them the ability to read English is much better than their ability to listen to English, since there are often few opportunities to listen to native English speakers in other countries.
 
-4.2% for people from 5 to 17 years old.
+      In this case the captions will help them understand the lecture content much more easily.
 
-4.5% for people from 18 to 64 years old.
+      The captions can also help many students with learning disabilities that have trouble processing speech.
 
-22.5% of people over 65 years of age.
+      The redundancy of the captions with the speech helps students to learn much more efficiently.
 
-Current accessibility standards related specifically to cognitive impairments are relatively few, but standards continue to be developed to help designers and developers better understand the needs of people with cognitive impairments.
+      Caption text can also be used by search engines to help people find specific topics of interest within a video.
+
+      It is much easier to search for keywords in a video with closed captions, than videoes without closed captions.
+
+      People with mobility impairments are not as common until people are over 18 years of age when about 5% of the population experiences a mobility impairment of some type and then increase to 22% for people over 65 years old.   Not all mobility impairments affect the ability to use computing and mobile technologies, but many do affect the ability of people to type on a keyboard, move and activate the button on a mouse, or point and tap their finger on a touch screen device.  In these cases, there is a need to make sure that web and mobile apps can be operated with assistive technologies like voice input or other devices that make it appear the person is typing from a keyboard or pointing on a touch screen.
+
+      One of the most difficult to understand areas of making web pages accessible is for people with learning disabilities and cognitive impairments.
+
+      I am going to point with the mouse to bars in the chart to show the prevalence of identified cognitive impairments:
+
+      4.2% for people from 5 to 17 years old.
+
+      4.5% for people from 18 to 64 years old.
+
+      22.5% of people over 65 years of age.
+
+      Current accessibility standards related specifically to cognitive impairments and learning disability are relatively few, but there is a wealth of information on how Universal Design in Learning techniques give students more options in learning course materials and demonstrating their knowledge of what they have learned.
     </div>
 <h2>
 <a id="slide6" target="slides" href="slide6.html">
@@ -187,8 +218,12 @@ Current accessibility standards related specifically to cognitive impairments ar
 <div class="full-transcript">
       In measuring web accessibility it is important to understand two main concepts.
       The first is the standard for which accessibility will be measured against, the W3C web content accessibility guidelines.
+
       The second is the extent automated rules can be used to measure accessibility.
-      Most WCAG accessibility requirements cannot be measured automatically, so care must be taken to not over interpret the meaning of automated test results, especially if the results to indicate few accessibility issues.
+
+      Most WCAG accessibility requirements cannot be measured automatically.
+
+      Care must be taken to not over interpret the meaning of automated test results, especially if the results to indicate few accessibility issues.
     </div>
 <h2>
 <a id="slide7" target="slides" href="slide7.html">
@@ -197,10 +232,17 @@ Current accessibility standards related specifically to cognitive impairments ar
 </h2>
 <div class="full-transcript">
       The W3C Web Content Accessibility Guidelines or WCAG is the internationally recognized standard for the accessibility of web content, including the United States Federal Section 508 web accessibility requirements.
-      Some important features to know about WCAG is that while it was inspired by the need to make HTML based documents and applications accessible, it was designed to be technology agnostic so it could be applied to a wider range of technologies, for example PDF documents and web application technologies like Adobe Flash and Microsoft Silverlight.
-      The requirements identify the accessibility needs of people with disabilities to access online resources, with supporting references to techniques to help people learn how the needs can be met with a specific technology, like HTML or Adobe PDF.
+
+      Some important features to know about WCAG is that while it was inspired by the need to make HTML based documents and applications accessible, it was designed to be technology agnostic.
+
+       WCAG can and is applied to a wider range of technologies, for example PDF documents and web application technologies like Adobe Flash and Microsoft Silverlight.
+
+       WCAG is even being adapted to identify the features to make mobile applications accessible.
+
+      The WCAG requirements identify the accessibility needs of people with disabilities to access online resources, with supporting references to techniques to help people learn how the needs can be met with a specific technology, like HTML or Adobe PDF.
       It is important to note the techniques are just advisory, they are incomplete and often missing common best practices.
-      People looking for a design resource in the technique reference will mostly be disappointed and frustrated, since the techniques are typically based on minimum requirements in code needed for what the working group considers sufficient implementation of a Success Criteria requirement.
+
+      People looking for a design resource in the WCAG techniques reference will mostly be disappointed and frustrated, since the techniques are typically based on minimum requirements in code needed for what the working group considers sufficient implementation of a Success Criteria requirement.
     </div>
 <h2>
 <a id="slide8" target="slides" href="slide8.html">
@@ -209,8 +251,13 @@ Current accessibility standards related specifically to cognitive impairments ar
 </h2>
 <div class="full-transcript">
       We don&rsquo;t have time to take a deep dive into WCAG, but I would like to give you a little more information into the organization of WCAG.
-      At the top level are the 4 principles, Perceiving, Operable, Understanding and Robust. With Robust requirements requiring the use of standards and built-in operating system features to support interoperability and compatibility with assistive technologies.
+
+      At the top level are the 4 principles, Perceiving, Operable, Understanding and Robust.
+
+      The first letters spell out the word pour, so you you often hear people talk about the pour principles of accessibility.
+
       The principles are divided into 13 sub-categories called Guidelines which provide more specific labels for groups of success criteria.
+
       The Guidelines for Perceivable include:
         Text Alternatives.
         Time-based Media.
@@ -240,14 +287,18 @@ Current accessibility standards related specifically to cognitive impairments ar
       The Double AA requirements have the next highest priority implementation and conformance
       The Triple-A requirements have the lowest priority for implementation and conformance
 
-      The priority for a requirement is based on the consensus of the WCAG working group.
+      The priority for a requirement is based on the consensus of the WCAG working group and take into account the importance and difficulty in implementation.
 
       The legal conformance standards for accessibility are based on the Single A and Double AA requirements.
 
       The priority is important when retrofitting accessibility into existing designs, since changes are difficult and expensive to make.
-      Analogy is adding curb cuts to an already existing sidewalk, it requires using jack hammers and chisels to remove the existing concrete, before pouring the cement for the curb cut.
+
+      Analogy is adding curb cuts to an already existing sidewalk, it requires using jack hammers and chisels to remove the existing concrete, before pouring the cement for the curbcut.
+
       On new sidewalks the curb cuts require little if any additional work and the same is true when designing a new web resource.
+
       When companies and organizations consider accessibility during the design phase of product development there is typically no or little cost in adding accessibility features, and accessibility testing can more easily integrated into the testing plan for the product or service.
+
       The priorities therefore guide companies and organizations who are new to accessibility requirements in identifying where to start their accessibility efforts.
     </div>
 <h2>
@@ -255,25 +306,60 @@ Current accessibility standards related specifically to cognitive impairments ar
                         Slide 9:
                         Automated Rules</a>
 </h2>
-<div class="notranscript">
-                          No transcript for this slide.
-                        </div>
+<div class="full-transcript">
+      The automated rules used in this study could have one of five results.
+
+      The first is passed, which means the accessibility requirement has been met.
+      For example an IMG element has an ALT attribute.
+
+      The second is a violation, which means a required accessibility feature is missing.
+      For example a form control is missing a label.
+
+      The third is a warning, which means a recommended accessibility feature is missing.
+      For example an ALT text description should be less than 100 characters for the English language.
+
+      The fourth is a manual check.  This means there is markup in the web page that indicates this rule might apply and it is up to the author to determine if an accessibility requirement applies and if it does, has the requirement been met.
+
+      The fifth result is not applicable.  This means the markup was not found in the web page that would apply to this rule.
+
+      For a typical website 35-40% of the rule results are passed, violations or warnings.  The rest require manual inspection and testing.
+
+    </div>
 <h2>
 <a id="slide10" target="slides" href="slide10.html">
                         Slide 10:
                         Data Collected</a>
 </h2>
 <div class="full-transcript">
-    
-</div>
+      The purpose of this poster session is to help people understand the strengths and weaknesses of automated testing and that many WCAG requirements require manual checking, which means knowledge on the part of the designers and developers.
+
+      The hope of this presentation is to encourage universities to start thinking about accessibility during the design stage of a website or application, where adding accessibility features is much easier and accessibility quality assurance can be included in the quality assurance process.
+
+      The data was collected in September of 2020.
+
+      Over 1,700 websites from 151 universities were analyzed for this presentation.
+
+      The website came from university home pages, the home pages of major colleges, disability services, admissions and financial aid.
+
+      A total of 129,287 web pages were analyzed.
+    </div>
 <h2>
 <a id="slide11" target="slides" href="slide11.html">
                         Slide 11:
                         Limitations of Data Collected</a>
 </h2>
 <div class="full-transcript">
-    
-</div>
+      Only public facing websites were evaluated.
+
+      Only a small sample of websites from a university were analyzed.
+
+      Web applications used for managing courses and providing interactive experiences were not included, and typically have significant accessibility issues.
+
+      Web applications need authentication and more complex testing strategies than simple spidering of web pages and analyzing mostly static content.
+
+      Web applications are a challenge to meet WCAG accessibility requirements due to the level of interaction and user interface complexity.
+
+    </div>
 <h2>
 <a id="slide12" target="slides" href="slide12.html">
                         Slide 12:
