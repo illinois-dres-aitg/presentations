@@ -50,10 +50,10 @@ header .skip-to.aitg button {
   text-decoration: none;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 6px 8px 6px 8px;
-  border-right: 1px solid white;
-  border-left: 1px solid white;
-  border-bottom: 1px solid white;
+  padding: 6px 8px 8px;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
 }
@@ -66,7 +66,7 @@ header .skip-to.aitg button:hover {
 }
 
 header .skip-to.aitg button:focus {
-  padding: 6px 5px 4px 6px;
+  padding: 6px 7px 7px;
   border-right: 3px solid #ff552e;
   border-left: 3px solid #ff552e;
   border-bottom: 3px solid #ff552e;
@@ -112,8 +112,8 @@ header .skip-to.aitg button:focus {
 }
 
 .banner-logo a:focus {
-  outline-offset: -2px;
-  outline: 2px solid #ff552e;
+  outline-offset: -3px;
+  outline: 3px solid #ff552e;
 }
 
 .banner-search {
@@ -177,8 +177,8 @@ header .skip-to.aitg button:focus {
   background: #cad9ef url("images/search-icon-inv.svg") no-repeat;
   background-position: left 10px top 50%;
   background-size: 20.5px 20.5px;
-  outline-offset: -2px;
-  outline: 2px solid #ff552e;
+  outline-offset: -3px;
+  outline: 3px solid #ff552e;
 }
 
 .banner-row-2 {
@@ -187,14 +187,14 @@ header .skip-to.aitg button:focus {
   width: 100%;
 }
 
-.banner-aitg {
+.banner-name {
   float: left;
   width: 100%;
   font-size: 24px;
   white-space: nowrap;
 }
 
-.banner-aitg a {
+.banner-name a {
   display: block;
   color: #fff;
   text-decoration: none;
@@ -202,8 +202,8 @@ header .skip-to.aitg button:focus {
   padding: 12px 24px;
 }
 
-.banner-aitg a:focus,
-.banner-aitg a:hover {
+.banner-name a:focus,
+.banner-name a:hover {
   color: #1d4b90;
   background-color: #fff;
   -webkit-transition: 0.3s background;
@@ -211,28 +211,34 @@ header .skip-to.aitg button:focus {
   text-decoration: underline;
 }
 
-.banner-aitg a:focus {
-  outline-offset: -2px;
-  outline: 2px solid #ff552e;
+.banner-name a:focus {
+  outline-offset: -3px;
+  outline: 3px solid #ff552e;
 }
 
 @media screen and (min-width: 992px) {
-  .banner-aitg {
+  .banner-name {
     width: auto;
   }
 
-  .banner-aitg a {
+  .banner-name a {
     padding: 17px 24px;
   }
 }
 /* -------- BANNER MENU -------- */
 .banner-menu {
+  font-size: 16px;
+  white-space: nowrap;
   margin: 0;
   padding: 0;
   float: left;
-  font-size: 16px;
-  white-space: nowrap;
   padding-left: 12px;
+}
+@media screen and (min-width: 992px) {
+  .banner-menu {
+    float: right;
+    padding-right: 18px;
+  }
 }
 
 .banner-menu ul,
@@ -241,102 +247,97 @@ header .skip-to.aitg button:focus {
   padding: 0;
 }
 
-.banner-menu ul.menu > li {
+.banner-menu ul.menu li.menu-item a,
+.banner-menu ul.menu li-menu-item a:visited {
+  color: #fff;
+}
+
+.banner-menu ul.menu li.menu-item a:focus,
+.banner-menu ul.menu li.menu-item a:hover {
+  background-color: #1d58a7;
+  -webkit-transition: 0.3s background;
+  transition: 0.3s background;
+}
+
+.banner-menu ul.menu li.menu-item a:focus {
+  outline-offset: -3px;
+  outline: 3px solid #ff552e;
+}
+
+.banner-menu ul.menu > li.menu-item {
   display: inline-block;
   position: relative;
 }
 
-.banner-menu ul.menu a,
-.banner-menu ul.menu a:visited,
-.banner-menu ul.menu span {
+.banner-menu ul.menu > li.menu-item > a {
   display: inline-block;
-  color: #fff;
   padding: 14px 12px;
   text-decoration: none;
+  border-sizing: border-box;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+@media screen and (min-width: 992px) {
+  .banner-menu ul.menu > li.menu-item > a {
+    padding: 22px 12px;
+  }
+}
+
+.banner-menu ul.menu > li.menu-item > a:hover {
+  padding: 12px 12px 14px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+}
+@media screen and (min-width: 992px) {
+  .banner-menu ul.menu > li.menu-item > a:hover {
+    padding: 22px 12px;
+    border-top: none;
+  }
+}
+
+.banner-menu ul.menu > li.menu-item.menu-item-has-children > a::after {
+  content: url("images/chevron-down.svg");
+  position: relative;
+  top: -2px;
+  left: 6px;
+  margin-right: 7px;
+}
+
+.banner-menu ul.menu > li.menu-item > a::after {
+  content: url("images/chevron-right.svg");
+  position: relative;
+  top: 0.5px;
+  left: 6px;
+  margin-right: 7px;
+}
+
+.banner-menu ul.sub-menu {
+  list-style: none;
 }
 
 .banner-menu ul.sub-menu ul.sub-menu li {
-  padding-left: 2em;
+  padding-left: 1em;
 }
 
 .banner-menu ul.sub-menu,
 .banner-menu ul.sub-menu a {
   display: block;
   background: #13294b;
-}
-
-.banner-menu ul.menu > li > a::after,
-.banner-menu ul.menu > li > span::after {
-  content: url("images/chevron-right.svg");
-  position: relative;
-  top: 0.5px;
-  left: 6px;
-  margin-right: 4px;
-}
-
-.banner-menu ul.menu > li.menu-item-has-children > a::after {
-  content: url("images/chevron-down.svg");
-  position: relative;
-  top: -2px;
-  left: 6px;
-  margin-right: 4px;
-}
-
-.banner-menu ul.menu > li:first-child {
-  padding-left: 16px;
-}
-
-.banner-menu ul.menu > li:last-child {
-  padding-right: 16px;
+  padding: 8px 12px;
 }
 
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
   display: none;
   position: absolute;
-  top: 47px;
+  top: 48px;
 }
-
-.banner-menu ul.menu a:focus,
-.banner-menu ul.menu a:hover {
-  background-color: #1d58a7;
-  -webkit-transition: 0.3s background;
-  transition: 0.3s background;
-}
-
-.banner-menu ul.menu a:focus {
-  outline-offset: -2px;
-  outline: 2px solid #ff552e;
-}
-
-.banner-menu ul.menu a:hover {
-  padding: 12px 10px 14px;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  border-left: 2px solid #fff;
-}
-
 @media screen and (min-width: 992px) {
-  .banner-menu {
-    float: right;
-    padding-right: 18px;
-  }
-
-  .banner-menu ul.menu a {
-    padding: 22px 12px;
-  }
-
   .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
-    top: 63px;
-  }
-
-  .banner-menu ul.menu a:hover {
-    outline: none;
-    padding: 22px 10px;
-    border-top: none;
-    border-right: 2px solid #fff;
-    border-left: 2px solid #fff;
+    top: 64px;
   }
 }
+
 /* -------- MAIN: FLEX LAYOUT -------- */
 main {
   color: #00132c;
@@ -477,6 +478,11 @@ footer a {
   white-space: normal;
   padding: 4px;
 }
+@media screen and (min-width: 414px) {
+  footer a {
+    white-space: nowrap;
+  }
+}
 
 footer a:focus,
 footer a:hover {
@@ -488,12 +494,5 @@ footer a:hover {
 }
 
 footer a:focus {
-  outline-offset: -2px;
   outline: 2px solid #ff552e;
-}
-
-@media screen and (min-width: 414px) {
-  footer a {
-    white-space: nowrap;
-  }
 }
