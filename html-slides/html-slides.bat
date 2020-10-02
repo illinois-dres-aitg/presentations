@@ -1,4 +1,4 @@
-set SLIDEPATH=C:\inetpub\wwwroot\html-slides\html-slides
+set SLIDEPATH=C:\inetpub\wwwroot\presentations\html-slides
 set SLIDECLASSPATH=%SLIDEPATH%\xalan\serializer.jar
 set SLIDECLASSPATH=%SLIDECLASSPATH%;%SLIDEPATH%\xalan\xalan.jar
 set SLIDECLASSPATH=%SLIDECLASSPATH%;%SLIDEPATH%\xalan\xercesImpl.jar
