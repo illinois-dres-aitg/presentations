@@ -182,7 +182,6 @@ $(document).ready(function() {
 
     $(node).html(transcriptHTML);
 
-
   }
 
   var fullTranscriptNodes = document.querySelectorAll('.full-transcript');
@@ -267,7 +266,7 @@ $(document).keydown(function( event ) {
     event.preventDefault();
   }
 
-  if (event.ctrlKey) {
+  if (event.altKey && event.ctrlKey && event.which == 32) {
     if ($('main').hasClass('highlight')) {
       $('main').removeClass('highlight');
       $('footer').removeClass('highlight');
