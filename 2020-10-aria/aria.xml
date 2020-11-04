@@ -52,29 +52,29 @@
       </script>
     </contents>
     <transcript>
-Hello my name is Jon Gunderson.
+      Hello my name is Jon Gunderson.
 
-I work at the University of Illinois in disability services.
+      I work at the University of Illinois in disability services.
 
-I’ve been working in the area of technology and disability for over 40 years and specifically in web technologies for 20 years.
+      I’ve been working in the area of technology and disability for over 40 years and specifically in web technologies for 20 years.
 
-I’m a member of the aria working group and a contributor to the aria authoring practices.
+      I’m a member of the aria working group and a contributor to the aria authoring practices.
 
-Thank you for the opportunity to talk about some of the basics of aria technologies.
+      Thank you for the opportunity to talk about some of the basics of aria technologies.
 
-There’s a lot of misunderstandings about how aria works and how to use it to make webpages more accessible and compliant with W3C Web content accessibility standards.
+      There’s a lot of misunderstandings about how aria works and how to use it to make webpages more accessible and compliant with W3C Web content accessibility standards.
 
-Today were going to talk about some the basic principles associated with aria.
+      Today were going to talk about some the basic principles associated with aria.
 
-We are going to build a simple custom checkbox widget using some of these principles and show how it changes the user experience for people using screen readers.
+      We are going to build a simple custom checkbox widget using some of these principles and show how it changes the user experience for people using screen readers.
 
-I’ll also be talking about some the new features that are available in up coming release of aria 1.2.
+      I’ll also be talking about some the new features that are available in up coming release of aria 1.2.
 
-I will also reference the aria authoring practices which I think is an important resource for anybody trying to understand how to use aria to make websites more accessible.
+      I will also reference the aria authoring practices which I think is an important resource for anybody trying to understand how to use aria to make websites more accessible.
 
-At the bottom of the slide is a URL to the HTML slides of the this presentation.
+      At the bottom of the slide is a URL to the HTML slides of the this presentation.
 
-The URL publicly available and I encourage you to follow along with the HTML slides directly and try out some the examples during the presenation.
+      The URL publicly available and I encourage you to follow along with the HTML slides directly and try out some the examples during the presenation.
     </transcript>
   </slide>
 
@@ -103,24 +103,23 @@ The URL publicly available and I encourage you to follow along with the HTML sli
       </ul>
     </contents>
     <transcript>
-The basic purpose of aria which is to describe the semantics and behavior of webpages that does this in several ways.
-Some of the important terms you will learn about today include:
-The most basic feature of ARIA is the role attribute which describes to users of screen readers the type of keyboard interaction and the potential properties and states of a custom widget.
-When people first look at the aria specification, they see all of these familiar roles like “menu”, “tab panel”, “dialog” and “navigation”.
-They start looking around their webpage and feel that I have these things in my webpage and they start sprinkling the roles throughout their webpage thinking that’ll be more accessible.
-Actually the page will be less accessible, since the keyboard interaction associated with these roles most likely is not supported.
-Using roles that do not actually describe the behavior of a widget is analogous to someone opening up a door to what they think is a bathroom, stepping in and falling into a swimming pool.
-The screen reader user will be disoriented.
-For example, you use a “menu” role, but it is just a list of tab-able links, the cursor keys don’t work you just pushed the user into the pool.
-Properties and states attributes communicate information about a widget being expanded, or if can open a pop-up menu, or a checkbox being checked or unchecked, more on that later.
-An important feature that is often not understood about using ARIA roles, properties and states is that the translation of this information to local languages is handled by the browser and operating system.  This is an important feature when websites are used by people from all around the world.
-Widgets and many structural roles need a label or accessible name.   ARIA defines how the accessible name is calculated.  For example, a role of “textbox” tells the user they can enter text, but the label “name” tells them this textbox is for entering your name.
-There are other features for describing relationships between widgets and to identify groups of related content or controls.  When relationships and grouping are properly used screen readers can provide navigation features to allow users to more efficiently ignore and find content of interest to them.  When not properly used pages become more confusing and difficult to navigate.
-The primary adage for people to developers not familiar with ARIA is “No ARIA is better than bad ARIA”.
-ARIA does not directly interact with assistive technologies like screen readers.
-ARIA only controls how information about a web page is communicate to screen readers through operating system accessibility APIs.
-The current ARIA specification provides accessibility API mappings for ATK/AT-SPI (Linux/Unix), Microsoft Active Accessibility (MSAA) + IAccessible2 for Windows 10, Microsoft UI Automate for Windows 10 and the MacOS Accessibility API.
-
+      The basic purpose of aria which is to describe the semantics and behavior of webpages that does this in several ways.
+      Some of the important terms you will learn about today include:
+      The most basic feature of ARIA is the role attribute which describes to users of screen readers the type of keyboard interaction and the potential properties and states of a custom widget.
+      When people first look at the aria specification, they see all of these familiar roles like “menu”, “tab panel”, “dialog” and “navigation”.
+      They start looking around their webpage and feel that I have these things in my webpage and they start sprinkling the roles throughout their webpage thinking that’ll be more accessible.
+      Actually the page will be less accessible, since the keyboard interaction associated with these roles most likely is not supported.
+      Using roles that do not actually describe the behavior of a widget is analogous to someone opening up a door to what they think is a bathroom, stepping in and falling into a swimming pool.
+      The screen reader user will be disoriented.
+      For example, you use a “menu” role, but it is just a list of tab-able links, the cursor keys don’t work you just pushed the user into the pool.
+      Properties and states attributes communicate information about a widget being expanded, or if can open a pop-up menu, or a checkbox being checked or unchecked, more on that later.
+      An important feature that is often not understood about using ARIA roles, properties and states is that the translation of this information to local languages is handled by the browser and operating system.  This is an important feature when websites are used by people from all around the world.
+      Widgets and many structural roles need a label or accessible name.   ARIA defines how the accessible name is calculated.  For example, a role of “textbox” tells the user they can enter text, but the label “name” tells them this textbox is for entering your name.
+      There are other features for describing relationships between widgets and to identify groups of related content or controls.  When relationships and grouping are properly used screen readers can provide navigation features to allow users to more efficiently ignore and find content of interest to them.  When not properly used pages become more confusing and difficult to navigate.
+      The primary adage for people to developers not familiar with ARIA is “No ARIA is better than bad ARIA”.
+      ARIA does not directly interact with assistive technologies like screen readers.
+      ARIA only controls how information about a web page is communicate to screen readers through operating system accessibility APIs.
+      The current ARIA specification provides accessibility API mappings for ATK/AT-SPI (Linux/Unix), Microsoft Active Accessibility (MSAA) + IAccessible2 for Windows 10, Microsoft UI Automate for Windows 10 and the MacOS Accessibility API.
     </transcript>
   </slide>
 
@@ -139,20 +138,20 @@ The current ARIA specification provides accessibility API mappings for ATK/AT-SP
       </ul>
     </contents>
     <transcript>
-Slide 3 talks about the contract that ARIA working group made with browser developers and assistive technology developers.
-First, for browser developers ARIA does not change the behavior of the web page.  So if I use a “menu” role or “aria-haspopup” on a web page, nothing changes about the web page in the standard graphical rendering.
-This was important, because ARIA was originally designed to “repair” in accessible web pages, and add if adding ARIA “broke” changed the behavior of the web page is some way, it could break the page for people using the graphical rendering, it would not have been accepted by either the browser or developer community.
-ARIA only changes what information is communicated to assistive technologies through accessibility APIs.
-So if your page includes a “menu” role you as the author need to make sure it has the keyboard interaction for the menu role, and that keyboard interaction is available to all users of our web page.
-ARIA if nothing else was a huge first step in standardizing how browsers map web page information to assistive technologies, which is fundamental for interoperability.
-Before ARIA, browser developers had to make their own decisions about how to represent web content in accessibility APIS.
-While some mapping like for headings (H1-H6) are pretty clear other content was open to interpretation, meaning which browser a screen reader was using could have a big impact on their experience.
-The second promise was to developers of screen readers.
-The promise to screen reader developers was not to tell them what to do with this information.
-They said they know their users and would make use of the new information if it was reliable and important to their users.
-This means it is not entirely predictable what adding ARIA to a web page will mean for users of different types of assistive technologies.
-A new W3C working group called ARIA AT working group is developing test cases to see how different types of assistive technologies are rendering ARIA information.
-This information is important to developers so they can understand how adding an ARIA feature will affect the user experience in different contexts, and also assistive technology companies for them to see where they may not be using all the ARIA information available to them.
+        Slide 3 talks about the contract that ARIA working group made with browser developers and assistive technology developers.
+        First, for browser developers ARIA does not change the behavior of the web page.  So if I use a “menu” role or “aria-haspopup” on a web page, nothing changes about the web page in the standard graphical rendering.
+        This was important, because ARIA was originally designed to “repair” in accessible web pages, and add if adding ARIA “broke” changed the behavior of the web page is some way, it could break the page for people using the graphical rendering, it would not have been accepted by either the browser or developer community.
+        ARIA only changes what information is communicated to assistive technologies through accessibility APIs.
+        So if your page includes a “menu” role you as the author need to make sure it has the keyboard interaction for the menu role, and that keyboard interaction is available to all users of our web page.
+        ARIA if nothing else was a huge first step in standardizing how browsers map web page information to assistive technologies, which is fundamental for interoperability.
+        Before ARIA, browser developers had to make their own decisions about how to represent web content in accessibility APIS.
+        While some mapping like for headings (H1-H6) are pretty clear other content was open to interpretation, meaning which browser a screen reader was using could have a big impact on their experience.
+        The second promise was to developers of screen readers.
+        The promise to screen reader developers was not to tell them what to do with this information.
+        They said they know their users and would make use of the new information if it was reliable and important to their users.
+        This means it is not entirely predictable what adding ARIA to a web page will mean for users of different types of assistive technologies.
+        A new W3C working group called ARIA AT working group is developing test cases to see how different types of assistive technologies are rendering ARIA information.
+        This information is important to developers so they can understand how adding an ARIA feature will affect the user experience in different contexts, and also assistive technology companies for them to see where they may not be using all the ARIA information available to them.
       </transcript>
   </slide>
 
@@ -169,8 +168,7 @@ This information is important to developers so they can understand how adding an
         <li>
             <a
               href="https://www.w3.org/TR/html5/editing.html#focus"  target="_specification">
-              HTM5 focus and tabindex requirements
-            </a>
+              HTML focus</a> and <a href="https://html.spec.whatwg.org/multipage/interaction.html#the-tabindex-attribute"  target="_specification">tabindex</a> requirements.
         </li>
        <li>Actively define visual focus style, since the default browser visual focus styling of focus is typically hard to discern.</li>
       </ul>
@@ -208,7 +206,7 @@ This information is important to developers so they can understand how adding an
               <ul>
                 <li>Support keyboard focus/blur events.</li>
                 <li>Defines the tab order of the page.</li>
-                <li><strong>Note:</strong> This technique is not recommended due to browser incompatibilities and unpredicatable focus behaviors.</li>
+                <li><strong>Note:</strong> This technique is not recommended due to browser incompatibilities and unpredictable focus behaviors.</li>
               </ul>
             </td>
           </tr>
@@ -216,15 +214,15 @@ This information is important to developers so they can understand how adding an
       </table>
     </contents>
     <transcript>
-Tabindex is an important feature for identifying which element on the page can receive keyboiard focus and keyboard events.
-For example if I am building a web application and using DIV element to build a interactive menu with Javascript and CSS, I need to use tabindex to make the menu part of the tab sequence of the page and to allow keyboard events to change the menu selection.
-Tabindex values of 0 are used to make elements part of the tab sequence of the page.
-Tabindex values of -1 allow an element to receive keyboard focus and to process keyboard events, but the element is not included in the tabindex of a page.
-Sometimes an element, like an Anchor or link element, which Is normally part of the tab sequence of the page will be used in a more complex tree or menu widget.
-In this case we want to make sure the the link is not part of the tabindex of the web page by we setting its tabindex value to -1.
-The only think I have to say about tabindex values besides 0 and -1 is one is don’t’ do it!
-There are many bad things that can happen and not very much potential benefit to using tabindex values greater than 0.
-I have never used a tabindex value greater than 0 in my 20 years of web development and we don’t have time in this presentation to do a deeper dive.
+      Tabindex is an important feature for identifying which element on the page can receive keyboiard focus and keyboard events.
+      For example if I am building a web application and using DIV element to build a interactive menu with Javascript and CSS, I need to use tabindex to make the menu part of the tab sequence of the page and to allow keyboard events to change the menu selection.
+      Tabindex values of 0 are used to make elements part of the tab sequence of the page.
+      Tabindex values of -1 allow an element to receive keyboard focus and to process keyboard events, but the element is not included in the tabindex of a page.
+      Sometimes an element, like an Anchor or link element, which Is normally part of the tab sequence of the page will be used in a more complex tree or menu widget.
+      In this case we want to make sure the the link is not part of the tabindex of the web page by we setting its tabindex value to -1.
+      The only think I have to say about tabindex values besides 0 and -1 is one is don’t’ do it!
+      There are many bad things that can happen and not very much potential benefit to using tabindex values greater than 0.
+      I have never used a tabindex value greater than 0 in my 20 years of web development and we don’t have time in this presentation to do a deeper dive.
     </transcript>
   </slide>
 
