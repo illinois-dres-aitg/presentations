@@ -253,7 +253,7 @@
 
 
   <slide>
-    <title>Accessible Object Model (AOM): Setting Roles, Properties and States</title>
+    <title>ARIA DOM Properties: Setting Roles, Properties and States</title>
     <contents>
         <p>In addition to using in-line HTML code and the <code>setAttribute</code> and <code>getAttribute</code> DOM methods for setting ARIA roles, properties and states, new DOM properties will also be available through the <a href="https://w3c.github.io/aria/#idl-interface" target="_spec">IDL Interface requirements defined in ARIA 1.2 Editor's Working Draft</a>.</p>
 
@@ -323,13 +323,13 @@
           </tbody>
         </table>
 
-        <p>NOTE: AOM is only available on the most recent browser releases.</p>
+        <p>NOTE: ARIA DOM Properties are only available on the most recent browser releases.</p>
 
     </contents>
   </slide>
 
   <slide>
-    <title>Accessible Object Model (AOM): Getting Values</title>
+    <title>ARIA DOM Properties: Getting Values</title>
     <contents>
         <table class="table table-striped">
           <caption>Getting ARIA Role</caption>
@@ -350,7 +350,7 @@
         </table>
 
         <table class="table table-striped">
-          <caption>Getting Accessible Name</caption>
+          <caption>Getting <code>aria-label</code> property</caption>
           <tbody>
             <tr>
               <th>Attribute</th>
@@ -368,7 +368,7 @@
         </table>
 
         <table class="table table-striped">
-          <caption>Getting State</caption>
+          <caption>Getting <code>aria-checked</code> State</caption>
           <tbody>
             <tr>
               <th>Attribute</th>
@@ -390,8 +390,71 @@
     </contents>
   </slide>
 
+
   <slide>
-    <title>Test Page: role and aria-checked</title>
+    <title>ARIA DOM Properties: Setting Values</title>
+    <contents>
+        <table class="table table-striped">
+          <caption>Setting ARIA Role</caption>
+          <tbody>
+            <tr>
+              <th>Attribute</th>
+              <td><code>role</code></td>
+            </tr>
+            <tr>
+              <th>setAttribute</th>
+              <td><code>e.setAttribute("role", "checkbox");</code></td>
+            </tr>
+            <tr>
+              <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
+              <td><code>e.role = "checkbox";</code><sup>1</sup></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table table-striped">
+          <caption>Setting <code>aria-label</code> property</caption>
+          <tbody>
+            <tr>
+              <th>Attribute</th>
+              <td><code>aria-label</code></td>
+            </tr>
+            <tr>
+              <th>getAttribute</th>
+              <td><code>e.setAttribute("aria-label", "My label");</code></td>
+            </tr>
+            <tr>
+              <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
+              <td><code>e.ariaLabel = "My label";</code><sup>1</sup></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table table-striped">
+          <caption>Setting <code>aria-checked</code> state</caption>
+          <tbody>
+            <tr>
+              <th>Attribute</th>
+              <td><code>aria-checked</code></td>
+            </tr>
+            <tr>
+              <th>setAttribute</th>
+              <td><code>e.setAttribute("aria-checked", "true");</code></td>
+            </tr>
+            <tr>
+              <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
+              <td><code>e.ariaChecked = "true";</code><sup>1</sup></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><sup>1</sup>NOTE: Currently must be set using the AOM DOM property to return a value reliably and as in setting only available on the most recent browser releases.</p>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Test Page: .role and .aria-checked DOM properties</title>
     <contents>
       <script>
         function setAttribute(id, attr, value) {
@@ -418,7 +481,7 @@
           return '';
         }
       </script>
-      <p>Accessibility problems exist when return values are "undefined" or the return type is <strong>not</strong> the same on every browser.   developers may make assumptions on the consistency of using the IDL to get ARIA roles, porperties and states.</p>
+      <p>Accessibility problems exist when return values for <code>.role</code> and <code>.ariaChecked</code> are "undefined" or return a type that is <strong>not</strong> the same on every browser.   Developers assume that DOM properties for ARIA roles, properties and states are consistent between browsers, and when they are not that causes accessibility problems.</p>
       <table class="table table-striped">
         <caption>Getting value with <code>.role</code> property</caption>
         <thead>
@@ -560,9 +623,8 @@
     </contents>
   </slide>
 
-
   <slide>
-    <title>Test Page: aria-label</title>
+    <title>Test Page: .ariaLabel DOM Property</title>
     <contents>
       <script>
         function setAttribute(id, attr, value) {
@@ -589,7 +651,7 @@
           return '';
         }
       </script>
-      <p>Accessibility problems exist when return values are "undefined" or the return type is <strong>not</strong> the same on every browser.   developers may make assumptions on the consistency of using the IDL to get ARIA roles, porperties and states.</p>
+      <p>Accessibility problems exist when return values for <code>.ariaLabel</code> are "undefined" or return a type that is <strong>not</strong> the same on every browser.   Developers assume that DOM properties for ARIA roles, properties and states are consistent between browsers, and when they are not that causes accessibility problems.</p>
       <table class="table table-striped">
         <caption>Getting value with <code>.ariaLabel</code> property</caption>
         <thead>
@@ -710,11 +772,11 @@
     </contents>
   </slide>
   <slide>
-    <title>Accessible Object Model (AOM): Gotchas</title>
+    <title>ARIA DOM Properties: Gotchas</title>
     <contents>
         <ul>
           <li>Only values that have been set using the DOM property can be read using the DOM property.</li>
-          <li>Not all ARIA properties will be implemented, notably ARIA properties related to <code>ID</code> references, like <code>aria-labelledby</code>, <code>aria-controls</code>, etc..., since the HTML specification is still defining how properties using <code>ID</code> references will be implemented in the DOM.</li>
+          <li>Not all ARIA properties will be implemented, notably ARIA properties related to <code>ID</code> references, like <code>aria-labelledby</code>, <code>aria-controls</code>, etc..., since the HTML specification is still defining how properties using <code>ID</code> references will be implemented.</li>
           <li>Still determining whether string versus boolean values (or depends on how it was set) will be returned for some states with boolean values (e.g. <code>aria-checked</code>).</li>
         </ul>
     </contents>
@@ -754,6 +816,30 @@ git        <li>Proper use of ARIA roles.</li>
             <li><a href="https://github.com/w3c/aria-practices/blob/master/test/tests/combobox_autocomplete-both.js" target="_example">Regression tests for quality assurance</a> and can be used as models for in-house regression testing.</li>
           </ul>
         </li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Harmonization of W3C Accessibility Techniques</title>
+    <contents>
+      <h2>Issues</h2>
+      <ul>
+        <li>Many WAI groups indepenedently developing accessibility techniques for meeting WCAG 2.x requirements, including:
+          <ul>
+            <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/">WCAG</a></li>
+            <li><a href="https://www.w3.org/WAI/design-develop/">Education and Outreach Tutorials</a></li>
+            <li><a href="https://w3c.github.io/aria-practices/">ARIA Authoring Practices</a></li>
+          </ul>
+        </li>
+        <li>Lack of coordination increases likelihood of inconsistencies and redundancies in guidance and examples.</li>
+        <li>ARIA Authoring Practices and WCAG Techniques are versioned, so out of date information is still findable.</li>
+        <li>More difficult for the developer community to find resources they are looking for.</li>
+      </ul>
+      <h2>W3C WAI Initiative</h2>
+      <ul>
+        <li>Move to single more living reference like the Education and Outreach resources and the Mozilla Developers Network.</li>
+        <li>Build an infrastructure to support multiple editors and the complexity of examples currently being developed by each group.</li>
       </ul>
     </contents>
   </slide>

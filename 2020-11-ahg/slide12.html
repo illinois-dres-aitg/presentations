@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 12: Test Page: role and aria-checked</title>
+<title>Slide 12: ARIA DOM Properties: Setting Values</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -41,13 +41,13 @@
                       </a>
 </li>
 <li>
-<a id="ID_SLIDE_LAST" href="slide19.html" title="Slide 19">
+<a id="ID_SLIDE_LAST" href="slide21.html" title="Slide 21">
                         Last
                       </a>
 </li>
 </ul>
 <ul class="nav navbar-nav pull-right">
-<li class="nav navbar-text">Slide 12 of 19</li>
+<li class="nav navbar-text">Slide 12 of 21</li>
 </ul>
 </div>
 </div>
@@ -56,244 +56,99 @@
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<h1 id="h1_title" class="title">Test Page: role and aria-checked</h1>
-<script>
-        function setAttribute(id, attr, value) {
-          document.getElementById(id).setAttribute(attr, value);
-        }
-
-        function getAttribute(id, attr) {
-          return document.getElementById(id).getAttribute(attr);
-        }
-
-        function setProperty(id, prop, value) {
-          document.getElementById(id)[prop] = value;
-        }
-
-        function getProperty(id, prop, value) {
-          return document.getElementById(id)[prop];
-        }
-
-        function getPropertyType(id, prop) {
-          var value = document.getElementById(id)[prop];
-          if (typeof value !== 'undefined') {
-            return typeof value;
-          }
-          return '';
-        }
-      </script>
-<p>Accessibility problems exist when return values are "undefined" or the return type is <strong>not</strong> the same on every browser.   developers may make assumptions on the consistency of using the IDL to get ARIA roles, porperties and states.</p>
+<h1 id="h1_title" class="title">ARIA DOM Properties: Setting Values</h1>
 <table class="table table-striped">
-        
-<caption>Getting value with <code>.role</code> property</caption>
-        
-<thead>
           
-<tr>
-            
-<th>Setting Code</th>
-            <th>Return value of <code>.role</code></th>
+<caption>Setting ARIA Role</caption>
           
-</tr>
-        
-</thead>
-        
 <tbody>
-          
-<tr>
             
-<td class="sourcecode">&lt;input type="checkbox"/&gt;</td>
-            <td>
+<tr>
               
-<div class="sr-only">
-                
-<input id="aom-11-role" type="checkbox">
+<th>Attribute</th>
+              <td><code>role</code></td>
+            
+</tr>
+            
+<tr>
               
-</div>
+<th>setAttribute</th>
+              <td><code>e.setAttribute("role", "checkbox");</code></td>
+            
+</tr>
+            
+<tr>
               
-<script>
-                document.write(getProperty('aom-11-role', 'role'));
-              </script>
-            </td>
-          
+<th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
+              <td><code>e.role = "checkbox";</code><sup>1</sup></td>
+            
 </tr>
           
-<tr>
-            
-<td class="sourcecode">&lt;div role="checkbox"&gt;</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-12-role" role="checkbox"></div>
-              
-</div>
-              
-<script>
-                document.write(getProperty('aom-12-role', 'role'));
-              </script>
-            </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">e.setAttribute('role', 'checkbox');</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-13-role"></div>
-              
-</div>
-              
-<script>
-                setAttribute('aom-13-role', 'role', 'checkbox');
-                document.write(getProperty('aom-13-role', 'role'));
-              </script>
-            </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">e.role = 'checkbox';</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-14-role"></div>
-              
-</div>
-              
-<script>
-                setProperty('aom-14-role', 'role', 'checkbox');
-                document.write(getProperty('aom-14-role', 'role'));
-              </script>
-
-            </td>
-          
-</tr>
-        
 </tbody>
-      
+        
 </table>
 <table class="table table-striped">
-        
-<caption>Getting value of <code>.ariaChecked</code> property</caption>
-        
-<thead>
           
-<tr>
-            
-<th>Setting Code</th>
-            <th>Return value of <code>.ariaChecked</code></th>
-            <th>typeof<code>.ariaChecked</code></th>
+<caption>Setting <code>aria-label</code> property</caption>
           
-</tr>
-        
-</thead>
-        
 <tbody>
-          
-<tr>
             
-<td class="sourcecode">&lt;div role='checkbox'  aria-checked='true'&gt;</td>
-            <td>
+<tr>
               
-<div class="sr-only">
-                
-<div id="aom-22-checked" role="checkbox" aria-checked="true"></div>
+<th>Attribute</th>
+              <td><code>aria-label</code></td>
+            
+</tr>
+            
+<tr>
               
-</div>
+<th>getAttribute</th>
+              <td><code>e.setAttribute("aria-label", "My label");</code></td>
+            
+</tr>
+            
+<tr>
               
-<script>
-                document.write(getProperty('aom-22-checked', 'ariaChecked'));
-              </script>
-            </td>
-            <td>
-              <script>
-                document.write(getPropertyType('aom-22-checked', 'ariaChecked'));
-              </script>
-            </td>
-          
+<th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
+              <td><code>e.ariaLabel = "My label";</code><sup>1</sup></td>
+            
 </tr>
           
-<tr>
-            
-<td class="sourcecode">e.setAttribute('aria-checked', 'true');</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-23-checked" role="checkbox"></div>
-              
-</div>
-              
-<script>
-                setAttribute('aom-23-checked', 'aria-checked', 'true');
-                document.write(getProperty('aom-23-checked', 'ariaChecked'));
-              </script>
-            </td>
-            <td>
-              <script>
-                document.write(getPropertyType('aom-23-checked', 'ariaChecked'));
-              </script>
-            </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">e.ariaChecked = 'true'; (String)</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-24-checked" role="checkbox"></div>
-              
-</div>
-              
-<script>
-                setProperty('aom-24-checked', 'ariaChecked', true);
-                document.write(getProperty('aom-24-checked', 'ariaChecked'));
-              </script>
-            </td>
-            <td>
-              <script>
-                document.write(getPropertyType('aom-24-checked', 'ariaChecked'));
-              </script>
-            </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">e.ariaChecked = true; (Boolean)</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-25-checked" role="checkbox"></div>
-              
-</div>
-              
-<script>
-                setProperty('aom-25-checked', 'ariaChecked', true);
-                document.write(getProperty('aom-25-checked', 'ariaChecked'));
-              </script>
-            </td>
-            <td>
-              <script>
-                document.write(getPropertyType('aom-25-checked', 'ariaChecked'));
-              </script>
-            </td>
-          
-</tr>
-        
 </tbody>
-      
+        
 </table>
+<table class="table table-striped">
+          
+<caption>Setting <code>aria-checked</code> state</caption>
+          
+<tbody>
+            
+<tr>
+              
+<th>Attribute</th>
+              <td><code>aria-checked</code></td>
+            
+</tr>
+            
+<tr>
+              
+<th>setAttribute</th>
+              <td><code>e.setAttribute("aria-checked", "true");</code></td>
+            
+</tr>
+            
+<tr>
+              
+<th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
+              <td><code>e.ariaChecked = "true";</code><sup>1</sup></td>
+            
+</tr>
+          
+</tbody>
+        
+</table>
+<p>
+<sup>1</sup>NOTE: Currently must be set using the AOM DOM property to return a value reliably and as in setting only available on the most recent browser releases.</p>
 </div>
 <div class="col"></div>
 </div>
