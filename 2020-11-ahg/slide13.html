@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 13: Accessible Object Model (AOM): Gotchas</title>
+<title>Slide 13: Test Page: aria-label</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -41,13 +41,13 @@
                       </a>
 </li>
 <li>
-<a id="ID_SLIDE_LAST" href="slide18.html" title="Slide 18">
+<a id="ID_SLIDE_LAST" href="slide19.html" title="Slide 19">
                         Last
                       </a>
 </li>
 </ul>
 <ul class="nav navbar-nav pull-right">
-<li class="nav navbar-text">Slide 13 of 18</li>
+<li class="nav navbar-text">Slide 13 of 19</li>
 </ul>
 </div>
 </div>
@@ -56,16 +56,224 @@
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<h1 id="h1_title" class="title">Accessible Object Model (AOM): Gotchas</h1>
-<ul>
-          
-<li>Only values that have been set using the DOM property can be read using the DOM property.</li>
-          
-<li>Not all ARIA properties will be implemented, notably ARIA properties related to <code>ID</code> references, like <code>aria-labelledby</code>, <code>aria-controls</code>, etc..., since the HTML specification is still defining how properties using <code>ID</code> references will be implemented in the DOM.</li>
-          
-<li>Still determining whether string versus boolean values (or depends on how it was set) will be returned for some states with boolean values (e.g. <code>aria-checked</code>).</li>
+<h1 id="h1_title" class="title">Test Page: aria-label</h1>
+<script>
+        function setAttribute(id, attr, value) {
+          document.getElementById(id).setAttribute(attr, value);
+        }
+
+        function getAttribute(id, attr) {
+          return document.getElementById(id).getAttribute(attr);
+        }
+
+        function setProperty(id, prop, value) {
+          document.getElementById(id)[prop] = value;
+        }
+
+        function getProperty(id, prop, value) {
+          return document.getElementById(id)[prop];
+        }
+
+        function getPropertyType(id, prop) {
+          var value = document.getElementById(id)[prop];
+          if (typeof value !== 'undefined') {
+            return typeof value;
+          }
+          return '';
+        }
+      </script>
+<p>Accessibility problems exist when return values are "undefined" or the return type is <strong>not</strong> the same on every browser.   developers may make assumptions on the consistency of using the IDL to get ARIA roles, porperties and states.</p>
+<table class="table table-striped">
         
-</ul>
+<caption>Getting value with <code>.ariaLabel</code> property</caption>
+        
+<thead>
+          
+<tr>
+            
+<th>Setting Code</th>
+            <th>Return value of <code>.ariaLabel</code></th>
+          
+</tr>
+        
+</thead>
+        
+<tbody>
+          
+<tr>
+            
+<td class="sourcecode">&lt;input type="checkbox" aria-label="My label"/&gt;</td>
+            <td>
+              
+<div class="sr-only">
+                
+<input id="aom-11-label" type="checkbox" aria-label="My label">
+              
+</div>
+              
+<script>
+                document.write(getProperty('aom-11-label', 'ariaLabel'));
+              </script>
+            </td>
+          
+</tr>
+          
+<tr>
+            
+<td class="sourcecode">&lt;div role="checkbox" aria-label="My label"&gt;</td>
+            <td>
+              
+<div class="sr-only">
+                
+<div id="aom-12-label" role="checkbox" aria-label="My label"></div>
+              
+</div>
+              
+<script>
+                document.write(getProperty('aom-12-label', 'ariaLabel'));
+              </script>
+            </td>
+          
+</tr>
+          
+<tr>
+            
+<td class="sourcecode">e.setAttribute('aria-label', 'My label');</td>
+            <td>
+              
+<div class="sr-only">
+                
+<div id="aom-13-label" role="checkbox"></div>
+              
+</div>
+              
+<script>
+                setAttribute('aom-13-label', 'aria-label', 'My label');
+                document.write(getProperty('aom-13-label', 'ariaLabel'));
+              </script>
+            </td>
+          
+</tr>
+          
+<tr>
+            
+<td class="sourcecode">e.ariaLabel = 'My label';</td>
+            <td>
+              
+<div class="sr-only">
+                
+<div id="aom-14-label" role="checkbox"></div>
+              
+</div>
+              
+<script>
+                setProperty('aom-14-label', 'ariaLabel', 'My label');
+                document.write(getProperty('aom-14-label', 'ariaLabel'));
+              </script>
+            </td>
+          
+</tr>
+        
+</tbody>
+      
+</table>
+<table class="table table-striped">
+        
+<caption>
+<code>.ariaLabel</code> property is not computed accessible name.</caption>
+        
+<thead>
+          
+<tr>
+            
+<th>Setting Code</th>
+            <th>Return value of <code>.ariaLabel</code></th>
+          
+</tr>
+        
+</thead>
+        
+<tbody>
+          
+<tr>
+            
+<td class="sourcecode">&lt;input type="checkbox" aria-labelledby="id-label"/&gt;&lt;span id="id-label"&gt;My label&lt;/span&gt;</td>
+            <td>
+              
+<div class="sr-only">
+                
+<input id="aom-21-label" type="checkbox" aria-labelledby="id-label">
+                <span id="id-label">My label</span>
+              
+</div>
+              
+<script>
+                document.write(getProperty('aom-21-label', 'ariaLabel'));
+              </script>
+            </td>
+          
+</tr>
+          
+<tr>
+            
+<td class="sourcecode">&lt;div role="checkbox" title="My label"&gt;</td>
+            <td>
+              
+<div class="sr-only">
+                
+<div id="aom-22-label" role="checkbox" title="My label"></div>
+              
+</div>
+              
+<script>
+                document.write(getProperty('aom-22-label', 'ariaLabel'));
+              </script>
+            </td>
+          
+</tr>
+          
+<tr>
+            
+<td class="sourcecode">e.setAttribute('title', 'My label');</td>
+            <td>
+              
+<div class="sr-only">
+                
+<div id="aom-23-label" role="checkbox"></div>
+              
+</div>
+              
+<script>
+                setAttribute('aom-23-label', 'title', 'My label');
+                document.write(getProperty('aom-23-label', 'ariaLabel'));
+              </script>
+            </td>
+          
+</tr>
+          
+<tr>
+            
+<td class="sourcecode">e.title = 'My label';</td>
+            <td>
+              
+<div class="sr-only">
+                
+<div id="aom-24-label" role="checkbox"></div>
+              
+</div>
+              
+<script>
+                setProperty('aom-24-label', 'title', 'My label');
+                document.write(getProperty('aom-24-label', 'ariaLabel'));
+              </script>
+            </td>
+          
+</tr>
+        
+</tbody>
+      
+</table>
+<p>NOTE: Getting value of <code>.ariaLabel</code> property is only associated with the <code>aria-label</code> attribute, and is not a way to get the "computed" label for an widget element.</p>
 </div>
 <div class="col"></div>
 </div>
