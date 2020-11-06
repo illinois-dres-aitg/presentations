@@ -221,6 +221,7 @@
         <li>HTML harmonization</li>
         <li>Combobox design pattern 1.2 that works with assistive technologies.</li>
         <li>DOM properties to reflect ARIA roles, states and most properties.</li>
+        <li>Improvements in high contrast support for many ARIA examples.</li>
       </ul>
     </contents>
   </slide>
