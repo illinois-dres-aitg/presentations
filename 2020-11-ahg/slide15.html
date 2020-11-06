@@ -61,9 +61,23 @@
           
 <li>Only values that have been set using the DOM property can be read using the DOM property.</li>
           
-<li>Not all ARIA properties will be implemented, notably ARIA properties related to <code>ID</code> references, like <code>aria-labelledby</code>, <code>aria-controls</code>, etc..., since the HTML specification is still defining how properties using <code>ID</code> references will be implemented.</li>
+<li>Not all ARIA properties will be implemented, since the HTML specification is still defining how properties using <code>ID</code> references will be implemented.  Examples of ARIA attributes that will <strong>not</strong> be implemented include:
+            <ul>
+              
+<li>
+<code>.ariaLabelledby</code>: property for <code>aria-labelledby</code> attribute.</li>
+              
+<li>
+<code>.ariaControls</code>: property for <code>aria-controls</code> attribute.</li>
+              
+<li>
+<code>.ariaOwns</code>: property for <code>aria-owns</code> attribute.</li>
+            
+</ul>
           
-<li>Still determining whether string versus boolean values (or depends on how it was set) will be returned for some states with boolean values (e.g. <code>aria-checked</code>).</li>
+</li>
+          
+<li>Confusion on <em>string</em> versus <em>boolean</em> values being returned for some states with boolean values (e.g. <code>aria-checked</code>).</li>
         
 </ul>
 </div>
