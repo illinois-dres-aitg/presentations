@@ -775,7 +775,7 @@
     <title>ARIA DOM Properties: Gotchas</title>
     <contents>
         <ul>
-          <li>Only values that have been set using the DOM property can be read using the DOM property.</li>
+          <li>In early implementations, only values that have been set using the DOM property can be read using the DOM property.  This should not be a problem as implementation improves.</li>
           <li>Not all ARIA properties will be implemented, since the HTML specification is still defining how properties using <code>ID</code> references will be implemented.  Examples of ARIA attributes that will <strong>not</strong> be implemented include:
             <ul>
               <li><code>.ariaLabelledby</code>: property for <code>aria-labelledby</code> attribute.</li>
