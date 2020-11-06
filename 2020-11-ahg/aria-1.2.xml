@@ -796,6 +796,7 @@
         <li>Keyboard interaction.</li>
         <li>Proper use of ARIA roles.</li>
         <li>Proper use of ARIA properties and states.</li>
+        <li>Operating system high contrast support using SVG techniques.</li>
         <li>Examples:
           <ul>
             <li><a href="https://w3c.github.io/aria-practices/examples/carousel/carousel-1-prev-next.html"  target="_example">Carousel using Previous and Next Buttons</a> (ARIA 1.2 Editor's Draft)</li>
@@ -814,11 +815,11 @@
         <li>Keyboard interaction.</li>
 git        <li>Proper use of ARIA roles.</li>
         <li>Proper use of ARIA properties and states.</li>
+        <li>Operating system high contrast support using SVG techniques.</li>
         <li>Examples:
           <ul>
             <li><a href="https://w3c.github.io/aria-practices/examples/combobox/combobox-autocomplete-both.html"  target="_example">Combobox with auto-complete</a></li>
-            <li><a href="https://raw.githack.com/w3c/aria-practices/issue34-add-combobox-datepicker/examples/combobox/combobox-datepicker.html" target="_example">Date picker combobox</a> (Note: raw.githack link to pull request)</li>
-            <li>Newer examples support high contrast modes on Windows 10 and macOS.</li>
+            <li><a href="https://w3c.github.io/aria-practices/examples/combobox/combobox-datepicker.html" target="_example">Date picker combobox</a></li>
             <li><a href="https://github.com/w3c/aria-practices/blob/master/test/tests/combobox_autocomplete-both.js" target="_example">Regression tests for quality assurance</a> and can be used as models for in-house regression testing.</li>
           </ul>
         </li>
