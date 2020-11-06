@@ -813,7 +813,7 @@
       <p><a href="https://w3c.github.io/aria-practices/#combobox">Editors Draft of Combobox Design Pattern</a></p>
       <ul>
         <li>Keyboard interaction.</li>
-git        <li>Proper use of ARIA roles.</li>
+        <li>Proper use of ARIA roles.</li>
         <li>Proper use of ARIA properties and states.</li>
         <li>Operating system high contrast support using SVG techniques.</li>
         <li>Examples:
