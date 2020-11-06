@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 10: ARIA DOM Properties: Setting Roles, Properties and States</title>
+<title>Slide 10: Combobox Design Pattern and Examples</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -56,120 +56,39 @@
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<h1 id="h1_title" class="title">ARIA DOM Properties: Setting Roles, Properties and States</h1>
-<p>In addition to using in-line HTML code and the <code>setAttribute</code> and <code>getAttribute</code> DOM methods for setting ARIA roles, properties and states, new DOM properties will also be available through the <a href="https://w3c.github.io/aria/#idl-interface" target="_spec">IDL Interface requirements defined in ARIA 1.2 Editor's Working Draft</a>.</p>
-<table class="table table-striped">
-          
-<caption>Setting ARIA Role</caption>
-          
-<tbody>
-            
-<tr>
-              
-<th>Role</th>
-              <td><code>tablist</code></td>
-            
-</tr>
-            
-<tr>
-              
-<th>Inline</th>
-              <td><code>&lt;div role="tablist"&gt;</code></td>
-            
-</tr>
-            
-<tr>
-              
-<th>setAttribute</th>
-              <td><code>e.setAttribute("role", "tablist");</code></td>
-            
-</tr>
-            
-<tr>
-              
-<th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-              <td><code>e.role = tablist";</code></td>
-            
-</tr>
-          
-</tbody>
+<h1 id="h1_title" class="title">Combobox Design Pattern and Examples</h1>
+<p>
+<a href="https://w3c.github.io/aria-practices/#combobox">Editors Draft of Combobox Design Pattern</a>
+</p>
+<ul>
         
-</table>
-<table class="table table-striped">
-          
-<caption>Setting Accessible Name</caption>
-          
-<tbody>
-            
-<tr>
-              
-<th>Attribute</th>
-              <td><code>aria-label</code></td>
-            
-</tr>
-            
-<tr>
-              
-<th>Inline</th>
-              <td><code>&lt;div role="button" aria-label="Play"&gt;</code></td>
-            
-</tr>
-            
-<tr>
-              
-<th>setAttribute</th>
-              <td><code>e.setAttribute("aria-label", "play");</code></td>
-            
-</tr>
-            
-<tr>
-              
-<th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-              <td><code>e.ariaLabel = "Play";</code></td>
-            
-</tr>
-          
-</tbody>
+<li>Keyboard interaction.</li>
         
-</table>
-<table class="table table-striped">
-          
-<caption>Setting State</caption>
-          
-<tbody>
-            
-<tr>
-              
-<th>Attribute</th>
-              <td><code>aria-checked</code></td>
-            
-</tr>
-            
-<tr>
-              
-<th>Inline</th>
-              <td><code>&lt;div role="checkbox" aria-checked="mixed"&gt;</code></td>
-            
-</tr>
-            
-<tr>
-              
-<th>setAttribute</th>
-              <td><code>e.setAttribute("aria-checked", "mixed");</code></td>
-            
-</tr>
-            
-<tr>
-              
-<th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-              <td><code>e.ariaChecked = "mixed";</code></td>
-            
-</tr>
-          
-</tbody>
+<li>Proper use of ARIA roles.</li>
         
-</table>
-<p>NOTE: ARIA DOM Properties are only available on the most recent browser releases.</p>
+<li>Proper use of ARIA properties and states.</li>
+        
+<li>Operating system high contrast support using SVG techniques.</li>
+        
+<li>Examples:
+          <ul>
+            
+<li>
+<a href="https://w3c.github.io/aria-practices/examples/combobox/combobox-autocomplete-both.html" target="_example">Combobox with auto-complete</a>
+</li>
+            
+<li>
+<a href="https://w3c.github.io/aria-practices/examples/combobox/combobox-datepicker.html" target="_example">Date picker combobox</a>
+</li>
+            
+<li>
+<a href="https://github.com/w3c/aria-practices/blob/master/test/tests/combobox_autocomplete-both.js" target="_example">Regression tests for quality assurance</a> and can be used as models for in-house regression testing.</li>
+          
+</ul>
+        
+</li>
+      
+</ul>
 </div>
 <div class="col"></div>
 </div>

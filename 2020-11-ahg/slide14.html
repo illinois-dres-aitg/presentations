@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 14: Test Page: .ariaLabel DOM Property</title>
+<title>Slide 14: ARIA DOM Properties: Setting Values</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -56,224 +56,99 @@
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<h1 id="h1_title" class="title">Test Page: .ariaLabel DOM Property</h1>
-<script>
-        function setAttribute(id, attr, value) {
-          document.getElementById(id).setAttribute(attr, value);
-        }
-
-        function getAttribute(id, attr) {
-          return document.getElementById(id).getAttribute(attr);
-        }
-
-        function setProperty(id, prop, value) {
-          document.getElementById(id)[prop] = value;
-        }
-
-        function getProperty(id, prop, value) {
-          return document.getElementById(id)[prop];
-        }
-
-        function getPropertyType(id, prop) {
-          var value = document.getElementById(id)[prop];
-          if (typeof value !== 'undefined') {
-            return typeof value;
-          }
-          return '';
-        }
-      </script>
-<p>Accessibility problems exist when return values for <code>.ariaLabel</code> are "undefined" or return a type that is <strong>not</strong> the same on every browser.   Developers assume that DOM properties for ARIA roles, properties and states are consistent between browsers, and when they are not that causes accessibility problems.</p>
+<h1 id="h1_title" class="title">ARIA DOM Properties: Setting Values</h1>
 <table class="table table-striped">
-        
-<caption>Getting value with <code>.ariaLabel</code> property</caption>
-        
-<thead>
           
-<tr>
-            
-<th>Setting Code</th>
-            <th>Return value of <code>.ariaLabel</code></th>
+<caption>Setting ARIA Role</caption>
           
-</tr>
-        
-</thead>
-        
 <tbody>
-          
-<tr>
             
-<td class="sourcecode">&lt;input type="checkbox" aria-label="My label"/&gt;</td>
-            <td>
+<tr>
               
-<div class="sr-only">
-                
-<input id="aom-11-label" type="checkbox" aria-label="My label">
+<th>Attribute</th>
+              <td><code>role</code></td>
+            
+</tr>
+            
+<tr>
               
-</div>
+<th>setAttribute</th>
+              <td><code>e.setAttribute("role", "checkbox");</code></td>
+            
+</tr>
+            
+<tr>
               
-<script>
-                document.write(getProperty('aom-11-label', 'ariaLabel'));
-              </script>
-            </td>
-          
+<th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
+              <td><code>e.role = "checkbox";</code><sup>1</sup></td>
+            
 </tr>
           
-<tr>
-            
-<td class="sourcecode">&lt;div role="checkbox" aria-label="My label"&gt;</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-12-label" role="checkbox" aria-label="My label"></div>
-              
-</div>
-              
-<script>
-                document.write(getProperty('aom-12-label', 'ariaLabel'));
-              </script>
-            </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">e.setAttribute('aria-label', 'My label');</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-13-label" role="checkbox"></div>
-              
-</div>
-              
-<script>
-                setAttribute('aom-13-label', 'aria-label', 'My label');
-                document.write(getProperty('aom-13-label', 'ariaLabel'));
-              </script>
-            </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">e.ariaLabel = 'My label';</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-14-label" role="checkbox"></div>
-              
-</div>
-              
-<script>
-                setProperty('aom-14-label', 'ariaLabel', 'My label');
-                document.write(getProperty('aom-14-label', 'ariaLabel'));
-              </script>
-            </td>
-          
-</tr>
-        
 </tbody>
-      
+        
 </table>
 <table class="table table-striped">
-        
-<caption>
-<code>.ariaLabel</code> property is not computed accessible name.</caption>
-        
-<thead>
           
-<tr>
-            
-<th>Setting Code</th>
-            <th>Return value of <code>.ariaLabel</code></th>
+<caption>Setting <code>aria-label</code> property</caption>
           
-</tr>
-        
-</thead>
-        
 <tbody>
-          
-<tr>
             
-<td class="sourcecode">&lt;input type="checkbox" aria-labelledby="id-label"/&gt;&lt;span id="id-label"&gt;My label&lt;/span&gt;</td>
-            <td>
+<tr>
               
-<div class="sr-only">
-                
-<input id="aom-21-label" type="checkbox" aria-labelledby="id-label">
-                <span id="id-label">My label</span>
+<th>Attribute</th>
+              <td><code>aria-label</code></td>
+            
+</tr>
+            
+<tr>
               
-</div>
+<th>getAttribute</th>
+              <td><code>e.setAttribute("aria-label", "My label");</code></td>
+            
+</tr>
+            
+<tr>
               
-<script>
-                document.write(getProperty('aom-21-label', 'ariaLabel'));
-              </script>
-            </td>
-          
+<th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
+              <td><code>e.ariaLabel = "My label";</code><sup>1</sup></td>
+            
 </tr>
           
-<tr>
-            
-<td class="sourcecode">&lt;div role="checkbox" title="My label"&gt;</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-22-label" role="checkbox" title="My label"></div>
-              
-</div>
-              
-<script>
-                document.write(getProperty('aom-22-label', 'ariaLabel'));
-              </script>
-            </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">e.setAttribute('title', 'My label');</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-23-label" role="checkbox"></div>
-              
-</div>
-              
-<script>
-                setAttribute('aom-23-label', 'title', 'My label');
-                document.write(getProperty('aom-23-label', 'ariaLabel'));
-              </script>
-            </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">e.title = 'My label';</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-24-label" role="checkbox"></div>
-              
-</div>
-              
-<script>
-                setProperty('aom-24-label', 'title', 'My label');
-                document.write(getProperty('aom-24-label', 'ariaLabel'));
-              </script>
-            </td>
-          
-</tr>
-        
 </tbody>
-      
+        
 </table>
-<p>NOTE: Getting value of <code>.ariaLabel</code> property is only associated with the <code>aria-label</code> attribute, and is not a way to get the "computed" label for an widget element.</p>
+<table class="table table-striped">
+          
+<caption>Setting <code>aria-checked</code> state</caption>
+          
+<tbody>
+            
+<tr>
+              
+<th>Attribute</th>
+              <td><code>aria-checked</code></td>
+            
+</tr>
+            
+<tr>
+              
+<th>setAttribute</th>
+              <td><code>e.setAttribute("aria-checked", "true");</code></td>
+            
+</tr>
+            
+<tr>
+              
+<th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
+              <td><code>e.ariaChecked = "true";</code><sup>1</sup></td>
+            
+</tr>
+          
+</tbody>
+        
+</table>
+<p>
+<sup>1</sup>NOTE: Currently must be set using the AOM DOM property to return a value reliably and as in setting only available on the most recent browser releases.</p>
 </div>
 <div class="col"></div>
 </div>
