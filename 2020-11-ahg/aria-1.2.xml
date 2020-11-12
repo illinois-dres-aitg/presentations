@@ -204,7 +204,7 @@
               <td>
                 <ul>
                   <li>Similar to <code>aria-label</code> attribute, text content is used to define an accessible description.</li>
-                  <li>The <code>aria-description</code> attribute is in the current <a href="https://w3c.github.io/aria/#aria-description" target="_spec">editors working draft for ARIA 1.2</a>, but will be removed and will most likely be included in ARIA 1.3.</li>
+                  <li>The <code>aria-description</code> attribute is in the current <a href="https://w3c.github.io/aria/#aria-description" target="_specs">editors working draft for ARIA 1.2</a>, but will be removed and will most likely be included in ARIA 1.3.</li>
                 </ul>
               </td>
             </tr>
@@ -232,7 +232,7 @@
     <contents>
       <ul>
         <li>Define roles appropriate for every HTML element.</li>
-        <li>Allows assignment of default <a href="https://www.w3.org/TR/html-aria/" target="_spec">ARIA role mappings to every HTML element</a>.</li>
+        <li>Allows assignment of default <a href="https://www.w3.org/TR/html-aria/" target="_specs">ARIA role mappings to every HTML element</a>.</li>
         <li>Some new roles, like <code>generic</code> role for elements with no semantics like <code>div</code> and <code>span</code>, should not be used by developers.</li>
       </ul>
       <h2>Updating Global Attributes</h2>
@@ -302,7 +302,7 @@
   <slide>
     <title>ARIA DOM Properties: Setting Roles, Properties and States</title>
     <contents>
-        <p>In addition to using in-line HTML code and the <code>setAttribute</code> and <code>getAttribute</code> DOM methods for setting ARIA roles, properties and states, new DOM properties will also be available through the <a href="https://w3c.github.io/aria/#idl-interface" target="_spec">IDL Interface requirements defined in ARIA 1.2 Editor's Working Draft</a>.</p>
+        <p>In addition to using in-line HTML code and the <code>setAttribute</code> and <code>getAttribute</code> DOM methods for setting ARIA roles, properties and states, new DOM properties will also be available through the <a href="https://w3c.github.io/aria/#idl-interface" target="_specs">IDL Interface requirements defined in ARIA 1.2 Editor's Working Draft</a>.</p>
 
         <table class="table table-striped">
           <caption>Setting ARIA Role</caption>
@@ -854,7 +854,7 @@
       </ul>
       <h2>W3C WAI Initiative</h2>
       <ul>
-        <li>Move to single more living reference like the <a href="https://www.w3.org/WAI/design-develop/#tutorials">Education and Outreach tutorial resources</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Mozilla Developers Network</a>.</li>
+        <li>Move to single more living reference like the <a href="https://www.w3.org/WAI/design-develop/#tutorials" target="_specs">Education and Outreach tutorial resources</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility"  target="_specs">Mozilla Developers Network</a>.</li>
         <li>Build an infrastructure to support multiple editors and the complexity of examples currently being developed by each group.</li>
       </ul>
     </contents>
