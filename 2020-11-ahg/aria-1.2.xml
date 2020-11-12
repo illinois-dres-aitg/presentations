@@ -238,7 +238,7 @@
       <h2>Updating Global Attributes</h2>
       <ul>
         <li>Many global ARIA attributes did not make sense for all roles, global meant they could be on any structural, landmark or widget role.</li>
-        <li>For example, <code>aria-disabled</code> on structural and landmark roles like <code>heading</code> and <code>main</code>.
+        <li>For example, <code>aria-disabled</code> on structural and landmark roles like <code>heading</code> and <code>main</code>.</li>
         <li>ARIA attributes have been updated so they only apply to roles that they would be potenitally useful.</li>
       </ul>
     </contents>

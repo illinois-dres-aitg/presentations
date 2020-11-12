@@ -66,6 +66,16 @@
 <li>Some new roles, like <code>generic</code> role for elements with no semantics like <code>div</code> and <code>span</code>, should not be used by developers.</li>
       
 </ul>
+<h2>Updating Global Attributes</h2>
+<ul>
+        
+<li>Many global ARIA attributes did not make sense for all roles, global meant they could be on any structural, landmark or widget role.</li>
+        
+<li>For example, <code>aria-disabled</code> on structural and landmark roles like <code>heading</code> and <code>main</code>.</li>
+        
+<li>ARIA attributes have been updated so they only apply to roles that they would be potenitally useful.</li>
+      
+</ul>
 </div>
 <div class="col"></div>
 </div>
