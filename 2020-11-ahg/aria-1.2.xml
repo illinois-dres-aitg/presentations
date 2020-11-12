@@ -248,7 +248,7 @@
         <li>ARIA attributes have been updated so they only apply to roles that they are useful.</li>
       </ul>
 
-      <iframe src="https://raw.githack.com/w3c/aria/2020-09_CR/index.html#heading" title="heading role allowed ARIA attributes" height="600px" width="98%"></iframe>
+      <iframe src="https://w3c.github.io/aria/#heading" title="heading role allowed ARIA attributes" height="600px" width="98%"></iframe>
     </contents>
   </slide>
   <slide>
