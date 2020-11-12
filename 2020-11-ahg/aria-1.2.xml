@@ -216,7 +216,7 @@
   <slide>
     <title>New features in ARIA 1.2</title>
     <contents>
-      <p><a href="https://raw.githack.com/w3c/aria/2020-09_CR/index.html#caption">Editors Draft of ARIA 1.2 for Candidate Recommendation</a></p>
+      <p><a href="https://raw.githack.com/w3c/aria/2020-09_CR/index.html#caption" target="_specs">Editors Draft of ARIA 1.2 for Candidate Recommendation</a></p>
       <ul>
         <li>HTML harmonization</li>
         <li>Updating global attributes</li>
@@ -245,8 +245,10 @@
       <ul>
         <li>Many global ARIA attributes did not make sense for all roles, global meant they could be on any structural, landmark or widget role.</li>
         <li>For example, removing <code>aria-disabled</code> as an allowed attribute on structural and landmark roles like <code>heading</code> and <code>main</code>.</li>
-        <li>ARIA attributes have been updated so they only apply to roles that they would be potenitally useful.</li>
+        <li>ARIA attributes have been updated so they only apply to roles that they are useful.</li>
       </ul>
+
+      <iframe src="" title="heading role allowed ARIA attributes"></iframe>
     </contents>
   </slide>
   <slide>
