@@ -854,7 +854,7 @@
       </ul>
       <h2>W3C WAI Initiative</h2>
       <ul>
-        <li>Move to single more living reference like the Education and Outreach resources and the Mozilla Developers Network.</li>
+        <li>Move to single more living reference like the <a href="https://www.w3.org/WAI/design-develop/#tutorials">Education and Outreach tutorial resources</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Mozilla Developers Network</a>.</li>
         <li>Build an infrastructure to support multiple editors and the complexity of examples currently being developed by each group.</li>
       </ul>
     </contents>
