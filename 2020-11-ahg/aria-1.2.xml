@@ -219,6 +219,7 @@
       <p><a href="https://raw.githack.com/w3c/aria/2020-09_CR/index.html#caption">Editors Draft of ARIA 1.2 for Candidate Recommendation</a></p>
       <ul>
         <li>HTML harmonization</li>
+        <li>Updating global attributes</li>
         <li>Combobox design pattern 1.2 that works with assistive technologies.</li>
         <li>DOM properties to reflect ARIA roles, states and most properties.</li>
         <li>Improvements in high contrast support for many ARIA examples.</li>
@@ -233,6 +234,12 @@
         <li>Define roles appropriate for every HTML element.</li>
         <li>Allows assignment of default <a href="https://www.w3.org/TR/html-aria/" target="_spec">ARIA role mappings to every HTML element</a>.</li>
         <li>Some new roles, like <code>generic</code> role for elements with no semantics like <code>div</code> and <code>span</code>, should not be used by developers.</li>
+      </ul>
+      <h2>Updating Global Attributes</h2>
+      <ul>
+        <li>Many global ARIA attributes did not make sense for all roles, global meant they could be on any structural, landmark or widget role.</li>
+        <li>For example, <code>aria-disabled</code> on structural and landmark roles like <code>heading</code> and <code>main</code>.
+        <li>ARIA attributes have been updated so they only apply to roles that they would be potenitally useful.</li>
       </ul>
     </contents>
   </slide>
