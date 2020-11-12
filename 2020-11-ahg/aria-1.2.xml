@@ -132,6 +132,7 @@
               <td>
                 <ul>
                   <li>The <code>aria-label</code> attribute text content defines the accessible name.</li>
+                  <li><span class="new">ARIA 1.2</span>DOM property <code>.ariaLabel</code> to get and set the <code>aria-label</code> attribute.</li>
                 </ul>
               </td>
             </tr>
