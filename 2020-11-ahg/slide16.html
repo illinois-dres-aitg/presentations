@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 16: Test Page: .ariaLabel DOM Property</title>
+<title>Slide 16: Test Page: .role and .aria-checked DOM properties</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -41,13 +41,13 @@
                       </a>
 </li>
 <li>
-<a id="ID_SLIDE_LAST" href="slide21.html" title="Slide 21">
+<a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
                         Last
                       </a>
 </li>
 </ul>
 <ul class="nav navbar-nav pull-right">
-<li class="nav navbar-text">Slide 16 of 21</li>
+<li class="nav navbar-text">Slide 16 of 22</li>
 </ul>
 </div>
 </div>
@@ -56,7 +56,7 @@
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<h1 id="h1_title" class="title">Test Page: .ariaLabel DOM Property</h1>
+<h1 id="h1_title" class="title">Test Page: .role and .aria-checked DOM properties</h1>
 <script>
         function setAttribute(id, attr, value) {
           document.getElementById(id).setAttribute(attr, value);
@@ -82,17 +82,17 @@
           return '';
         }
       </script>
-<p>Accessibility problems exist when return values for <code>.ariaLabel</code> are "undefined" or return a type that is <strong>not</strong> the same on every browser.   Developers assume that DOM properties for ARIA roles, properties and states are consistent between browsers, and when they are not that causes accessibility problems.</p>
+<p>Accessibility problems exist when return values for <code>.role</code> and <code>.ariaChecked</code> are "undefined" or return a type that is <strong>not</strong> the same on every browser.   Developers assume that DOM properties for ARIA roles, properties and states are consistent between browsers, and when they are not that causes accessibility problems.</p>
 <table class="table table-striped">
         
-<caption>Getting value with <code>.ariaLabel</code> property</caption>
+<caption>Getting value with <code>.role</code> property</caption>
         
 <thead>
           
 <tr>
             
 <th>Setting Code</th>
-            <th>Return value of <code>.ariaLabel</code></th>
+            <th>Return value of <code>.role</code></th>
           
 </tr>
         
@@ -102,17 +102,17 @@
           
 <tr>
             
-<td class="sourcecode">&lt;input type="checkbox" aria-label="My label"/&gt;</td>
+<td class="sourcecode">&lt;input type="checkbox"/&gt;</td>
             <td>
               
 <div class="sr-only">
                 
-<input id="aom-11-label" type="checkbox" aria-label="My label">
+<input id="aom-11-role" type="checkbox">
               
 </div>
               
 <script>
-                document.write(getProperty('aom-11-label', 'ariaLabel'));
+                document.write(getProperty('aom-11-role', 'role'));
               </script>
             </td>
           
@@ -120,17 +120,17 @@
           
 <tr>
             
-<td class="sourcecode">&lt;div role="checkbox" aria-label="My label"&gt;</td>
+<td class="sourcecode">&lt;div role="checkbox"&gt;</td>
             <td>
               
 <div class="sr-only">
                 
-<div id="aom-12-label" role="checkbox" aria-label="My label"></div>
+<div id="aom-12-role" role="checkbox"></div>
               
 </div>
               
 <script>
-                document.write(getProperty('aom-12-label', 'ariaLabel'));
+                document.write(getProperty('aom-12-role', 'role'));
               </script>
             </td>
           
@@ -138,18 +138,18 @@
           
 <tr>
             
-<td class="sourcecode">e.setAttribute('aria-label', 'My label');</td>
+<td class="sourcecode">e.setAttribute('role', 'checkbox');</td>
             <td>
               
 <div class="sr-only">
                 
-<div id="aom-13-label" role="checkbox"></div>
+<div id="aom-13-role"></div>
               
 </div>
               
 <script>
-                setAttribute('aom-13-label', 'aria-label', 'My label');
-                document.write(getProperty('aom-13-label', 'ariaLabel'));
+                setAttribute('aom-13-role', 'role', 'checkbox');
+                document.write(getProperty('aom-13-role', 'role'));
               </script>
             </td>
           
@@ -157,19 +157,20 @@
           
 <tr>
             
-<td class="sourcecode">e.ariaLabel = 'My label';</td>
+<td class="sourcecode">e.role = 'checkbox';</td>
             <td>
               
 <div class="sr-only">
                 
-<div id="aom-14-label" role="checkbox"></div>
+<div id="aom-14-role"></div>
               
 </div>
               
 <script>
-                setProperty('aom-14-label', 'ariaLabel', 'My label');
-                document.write(getProperty('aom-14-label', 'ariaLabel'));
+                setProperty('aom-14-role', 'role', 'checkbox');
+                document.write(getProperty('aom-14-role', 'role'));
               </script>
+
             </td>
           
 </tr>
@@ -179,15 +180,15 @@
 </table>
 <table class="table table-striped">
         
-<caption>
-<code>.ariaLabel</code> property is not computed accessible name.</caption>
+<caption>Getting value of <code>.ariaChecked</code> property</caption>
         
 <thead>
           
 <tr>
             
 <th>Setting Code</th>
-            <th>Return value of <code>.ariaLabel</code></th>
+            <th>Return value of <code>.ariaChecked</code></th>
+            <th>typeof<code>.ariaChecked</code></th>
           
 </tr>
         
@@ -197,18 +198,22 @@
           
 <tr>
             
-<td class="sourcecode">&lt;input type="checkbox" aria-labelledby="id-label"/&gt;&lt;span id="id-label"&gt;My label&lt;/span&gt;</td>
+<td class="sourcecode">&lt;div role='checkbox'  aria-checked='true'&gt;</td>
             <td>
               
 <div class="sr-only">
                 
-<input id="aom-21-label" type="checkbox" aria-labelledby="id-label">
-                <span id="id-label">My label</span>
+<div id="aom-22-checked" role="checkbox" aria-checked="true"></div>
               
 </div>
               
 <script>
-                document.write(getProperty('aom-21-label', 'ariaLabel'));
+                document.write(getProperty('aom-22-checked', 'ariaChecked'));
+              </script>
+            </td>
+            <td>
+              <script>
+                document.write(getPropertyType('aom-22-checked', 'ariaChecked'));
               </script>
             </td>
           
@@ -216,17 +221,23 @@
           
 <tr>
             
-<td class="sourcecode">&lt;div role="checkbox" title="My label"&gt;</td>
+<td class="sourcecode">e.setAttribute('aria-checked', 'true');</td>
             <td>
               
 <div class="sr-only">
                 
-<div id="aom-22-label" role="checkbox" title="My label"></div>
+<div id="aom-23-checked" role="checkbox"></div>
               
 </div>
               
 <script>
-                document.write(getProperty('aom-22-label', 'ariaLabel'));
+                setAttribute('aom-23-checked', 'aria-checked', 'true');
+                document.write(getProperty('aom-23-checked', 'ariaChecked'));
+              </script>
+            </td>
+            <td>
+              <script>
+                document.write(getPropertyType('aom-23-checked', 'ariaChecked'));
               </script>
             </td>
           
@@ -234,18 +245,23 @@
           
 <tr>
             
-<td class="sourcecode">e.setAttribute('title', 'My label');</td>
+<td class="sourcecode">e.ariaChecked = 'true'; (String)</td>
             <td>
               
 <div class="sr-only">
                 
-<div id="aom-23-label" role="checkbox"></div>
+<div id="aom-24-checked" role="checkbox"></div>
               
 </div>
               
 <script>
-                setAttribute('aom-23-label', 'title', 'My label');
-                document.write(getProperty('aom-23-label', 'ariaLabel'));
+                setProperty('aom-24-checked', 'ariaChecked', true);
+                document.write(getProperty('aom-24-checked', 'ariaChecked'));
+              </script>
+            </td>
+            <td>
+              <script>
+                document.write(getPropertyType('aom-24-checked', 'ariaChecked'));
               </script>
             </td>
           
@@ -253,18 +269,23 @@
           
 <tr>
             
-<td class="sourcecode">e.title = 'My label';</td>
+<td class="sourcecode">e.ariaChecked = true; (Boolean)</td>
             <td>
               
 <div class="sr-only">
                 
-<div id="aom-24-label" role="checkbox"></div>
+<div id="aom-25-checked" role="checkbox"></div>
               
 </div>
               
 <script>
-                setProperty('aom-24-label', 'title', 'My label');
-                document.write(getProperty('aom-24-label', 'ariaLabel'));
+                setProperty('aom-25-checked', 'ariaChecked', true);
+                document.write(getProperty('aom-25-checked', 'ariaChecked'));
+              </script>
+            </td>
+            <td>
+              <script>
+                document.write(getPropertyType('aom-25-checked', 'ariaChecked'));
               </script>
             </td>
           
@@ -273,7 +294,6 @@
 </tbody>
       
 </table>
-<p>NOTE: Getting value of <code>.ariaLabel</code> property is only associated with the <code>aria-label</code> attribute, and is not a way to get the "computed" label for an widget element.</p>
 </div>
 <div class="col"></div>
 </div>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 18: Harmonization of W3C Accessibility Techniques</title>
+<title>Slide 18: ARIA DOM Properties: Gotchas</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -41,13 +41,13 @@
                       </a>
 </li>
 <li>
-<a id="ID_SLIDE_LAST" href="slide21.html" title="Slide 21">
+<a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
                         Last
                       </a>
 </li>
 </ul>
 <ul class="nav navbar-nav pull-right">
-<li class="nav navbar-text">Slide 18 of 21</li>
+<li class="nav navbar-text">Slide 18 of 22</li>
 </ul>
 </div>
 </div>
@@ -56,43 +56,29 @@
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<h1 id="h1_title" class="title">Harmonization of W3C Accessibility Techniques</h1>
-<h2>Issues</h2>
+<h1 id="h1_title" class="title">ARIA DOM Properties: Gotchas</h1>
 <ul>
-        
-<li>Many WAI groups indepenedently developing accessibility techniques for meeting WCAG 2.x requirements, including:
-          <ul>
-            
+          
+<li>In early implementations, only values that have been set using the DOM property can be read using the DOM property.  This should not be a problem as implementation improves.</li>
+          
+<li>Not all ARIA properties will be implemented, since the HTML specification is still defining how properties using <code>ID</code> references will be implemented.  Examples of ARIA attributes that will <strong>not</strong> be implemented in ARIA 1.2 include:
+            <ul>
+              
 <li>
-<a href="https://www.w3.org/WAI/WCAG21/Techniques/">WCAG</a>
-</li>
-            
+<code>.ariaLabelledby</code>: property for <code>aria-labelledby</code> attribute.</li>
+              
 <li>
-<a href="https://www.w3.org/WAI/design-develop/">Education and Outreach Tutorials</a>
-</li>
-            
+<code>.ariaControls</code>: property for <code>aria-controls</code> attribute.</li>
+              
 <li>
-<a href="https://w3c.github.io/aria-practices/">ARIA Authoring Practices</a>
+<code>.ariaOwns</code>: property for <code>aria-owns</code> attribute.</li>
+            
+</ul>
+          
 </li>
           
-</ul>
+<li>Confusion on <em>string</em> versus <em>boolean</em> values being returned for some states with boolean values (e.g. <code>aria-checked</code>).</li>
         
-</li>
-        
-<li>Lack of coordination increases likelihood of inconsistencies and redundancies in guidance and examples.</li>
-        
-<li>ARIA Authoring Practices and WCAG Techniques are versioned, so out of date information is still findable.</li>
-        
-<li>More difficult for the developer community to find resources they are looking for.</li>
-      
-</ul>
-<h2>W3C WAI Initiative</h2>
-<ul>
-        
-<li>Move to single more living reference like the <a href="https://www.w3.org/WAI/design-develop/#tutorials" target="_specs">Education and Outreach tutorial resources</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_specs">Mozilla Developers Network</a>.</li>
-        
-<li>Build an infrastructure to support multiple editors and the complexity of examples currently being developed by each group.</li>
-      
 </ul>
 </div>
 <div class="col"></div>

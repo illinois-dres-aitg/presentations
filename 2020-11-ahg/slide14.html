@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 14: ARIA DOM Properties: Setting Values</title>
+<title>Slide 14: ARIA DOM Properties: Getting Values</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -41,13 +41,13 @@
                       </a>
 </li>
 <li>
-<a id="ID_SLIDE_LAST" href="slide21.html" title="Slide 21">
+<a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
                         Last
                       </a>
 </li>
 </ul>
 <ul class="nav navbar-nav pull-right">
-<li class="nav navbar-text">Slide 14 of 21</li>
+<li class="nav navbar-text">Slide 14 of 22</li>
 </ul>
 </div>
 </div>
@@ -56,10 +56,10 @@
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<h1 id="h1_title" class="title">ARIA DOM Properties: Setting Values</h1>
+<h1 id="h1_title" class="title">ARIA DOM Properties: Getting Values</h1>
 <table class="table table-striped">
           
-<caption>Setting ARIA Role</caption>
+<caption>Getting ARIA Role</caption>
           
 <tbody>
             
@@ -72,15 +72,15 @@
             
 <tr>
               
-<th>setAttribute</th>
-              <td><code>e.setAttribute("role", "checkbox");</code></td>
+<th>getAttribute</th>
+              <td><code>var role = e.getAttribute("role");</code></td>
             
 </tr>
             
 <tr>
               
 <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-              <td><code>e.role = "checkbox";</code><sup>1</sup></td>
+              <td><code>var role = e.role;</code><sup>1</sup></td>
             
 </tr>
           
@@ -89,7 +89,7 @@
 </table>
 <table class="table table-striped">
           
-<caption>Setting <code>aria-label</code> property</caption>
+<caption>Getting <code>aria-label</code> property</caption>
           
 <tbody>
             
@@ -103,14 +103,14 @@
 <tr>
               
 <th>getAttribute</th>
-              <td><code>e.setAttribute("aria-label", "My label");</code></td>
+              <td><code>var label = e.getAttribute("aria-label");</code></td>
             
 </tr>
             
 <tr>
               
 <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-              <td><code>e.ariaLabel = "My label";</code><sup>1</sup></td>
+              <td><code>var label = e.ariaLabel;</code><sup>1</sup></td>
             
 </tr>
           
@@ -119,7 +119,7 @@
 </table>
 <table class="table table-striped">
           
-<caption>Setting <code>aria-checked</code> state</caption>
+<caption>Getting <code>aria-checked</code> State</caption>
           
 <tbody>
             
@@ -133,14 +133,14 @@
 <tr>
               
 <th>setAttribute</th>
-              <td><code>e.setAttribute("aria-checked", "true");</code></td>
+              <td><code>var value = e.getAttribute("aria-checked");</code></td>
             
 </tr>
             
 <tr>
               
 <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-              <td><code>e.ariaChecked = "true";</code><sup>1</sup></td>
+              <td><code>var value = e.ariaChecked;</code><sup>1</sup></td>
             
 </tr>
           

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 10: Combobox Design Pattern and Examples</title>
+<title>Slide 10: ARIA 1.2 Combobox Design Pattern</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -41,13 +41,13 @@
                       </a>
 </li>
 <li>
-<a id="ID_SLIDE_LAST" href="slide21.html" title="Slide 21">
+<a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
                         Last
                       </a>
 </li>
 </ul>
 <ul class="nav navbar-nav pull-right">
-<li class="nav navbar-text">Slide 10 of 21</li>
+<li class="nav navbar-text">Slide 10 of 22</li>
 </ul>
 </div>
 </div>
@@ -56,39 +56,24 @@
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<h1 id="h1_title" class="title">Combobox Design Pattern and Examples</h1>
-<p>
-<a href="https://w3c.github.io/aria-practices/#combobox">Editors Draft of Combobox Design Pattern</a>
-</p>
+<h1 id="h1_title" class="title">ARIA 1.2 Combobox Design Pattern</h1>
 <ul>
         
-<li>Keyboard interaction.</li>
-        
-<li>Proper use of ARIA roles.</li>
-        
-<li>Proper use of ARIA properties and states.</li>
-        
-<li>Operating system high contrast support using SVG techniques.</li>
-        
-<li>Examples:
-          <ul>
-            
 <li>
-<a href="https://w3c.github.io/aria-practices/examples/combobox/combobox-autocomplete-both.html" target="_example">Combobox with auto-complete</a>
-</li>
-            
-<li>
-<a href="https://w3c.github.io/aria-practices/examples/combobox/combobox-datepicker.html" target="_example">Date picker combobox</a>
-</li>
-            
-<li>
-<a href="https://github.com/w3c/aria-practices/blob/master/test/tests/combobox_autocomplete-both.js" target="_example">Regression tests for quality assurance</a> and can be used as models for in-house regression testing.</li>
-          
-</ul>
+<code>combobox</code> role is on the <code>input</code> element.</li>
         
-</li>
+<li>
+<code>aria-expanded</code> attribute is on the <code>input</code> element.</li>
+        
+<li>
+<code>aria-haspopup</code> attribute is on the <code>input</code> element.</li>
+        
+<li>
+<code>aria-controls</code> references the popup widget (e.g. listbox, grid or tree).</li>
       
 </ul>
+<h2>Legacy Combobox Patterns</h2>
+<p>ARIA 1.2 pattern is similar to the ARIA 1.0 combobox pattern, but instead of using <code>aria-owns</code> uses <code>aria-controls</code> to reference associated popup widget and has good AT support.  ARIA 1.1 pattern was never supported by assistive technologies and used a container model of having the <code>input</code> element and popup widget as  descendants of an element with the role <code>combobox</code>.  The 1.1 pattern change was made to support of UIAutomation model of a combobox.</p>
 </div>
 <div class="col"></div>
 </div>

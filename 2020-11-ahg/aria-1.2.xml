@@ -223,6 +223,7 @@
         <li>Combobox design pattern 1.2 that works with assistive technologies.</li>
         <li>DOM properties to reflect ARIA roles, states and most properties.</li>
         <li>Improvements in high contrast support for many ARIA examples.</li>
+        <li><a href="https://raw.githack.com/w3c/aria/2020-09_CR/index.html#substantive-changes-since-the-last-public-working-draft" target="_specs">Details of current changes in ARIA 1.2</a></li>
       </ul>
     </contents>
   </slide>
@@ -233,9 +234,14 @@
       <ul>
         <li>Define roles appropriate for every HTML element.</li>
         <li>Allows assignment of default <a href="https://www.w3.org/TR/html-aria/" target="_specs">ARIA role mappings to every HTML element</a>.</li>
-        <li>Some new roles, like <code>generic</code> role for elements with no semantics like <code>div</code> and <code>span</code>, should not be used by developers.</li>
+        <li>Some new roles, like <code><a href="https://raw.githack.com/w3c/aria/2020-09_CR/index.html#generic" target="_specs">generic</a></code> for elements with no semantics like <code>div</code> and <code>span</code> should not be used by developers.</li>
       </ul>
-      <h2>Updating Global Attributes</h2>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Updating Global Attributes</title>
+    <contents>
       <ul>
         <li>Many global ARIA attributes did not make sense for all roles, global meant they could be on any structural, landmark or widget role.</li>
         <li>For example, removing <code>aria-disabled</code> as an allowed attribute on structural and landmark roles like <code>heading</code> and <code>main</code>.</li>
@@ -243,7 +249,6 @@
       </ul>
     </contents>
   </slide>
-
   <slide>
     <title>ARIA 1.2 Combobox Design Pattern</title>
     <contents>

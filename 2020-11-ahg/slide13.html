@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 13: ARIA DOM Properties: Getting Values</title>
+<title>Slide 13: ARIA DOM Properties: Setting Roles, Properties and States</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -41,13 +41,13 @@
                       </a>
 </li>
 <li>
-<a id="ID_SLIDE_LAST" href="slide21.html" title="Slide 21">
+<a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
                         Last
                       </a>
 </li>
 </ul>
 <ul class="nav navbar-nav pull-right">
-<li class="nav navbar-text">Slide 13 of 21</li>
+<li class="nav navbar-text">Slide 13 of 22</li>
 </ul>
 </div>
 </div>
@@ -56,31 +56,39 @@
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<h1 id="h1_title" class="title">ARIA DOM Properties: Getting Values</h1>
+<h1 id="h1_title" class="title">ARIA DOM Properties: Setting Roles, Properties and States</h1>
+<p>In addition to using in-line HTML code and the <code>setAttribute</code> and <code>getAttribute</code> DOM methods for setting ARIA roles, properties and states, new DOM properties will also be available through the <a href="https://w3c.github.io/aria/#idl-interface" target="_specs">IDL Interface requirements defined in ARIA 1.2 Editor's Working Draft</a>.</p>
 <table class="table table-striped">
           
-<caption>Getting ARIA Role</caption>
+<caption>Setting ARIA Role</caption>
           
 <tbody>
             
 <tr>
               
-<th>Attribute</th>
-              <td><code>role</code></td>
+<th>Role</th>
+              <td><code>tablist</code></td>
             
 </tr>
             
 <tr>
               
-<th>getAttribute</th>
-              <td><code>var role = e.getAttribute("role");</code></td>
+<th>Inline</th>
+              <td><code>&lt;div role="tablist"&gt;</code></td>
+            
+</tr>
+            
+<tr>
+              
+<th>setAttribute</th>
+              <td><code>e.setAttribute("role", "tablist");</code></td>
             
 </tr>
             
 <tr>
               
 <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-              <td><code>var role = e.role;</code><sup>1</sup></td>
+              <td><code>e.role = tablist";</code></td>
             
 </tr>
           
@@ -89,7 +97,7 @@
 </table>
 <table class="table table-striped">
           
-<caption>Getting <code>aria-label</code> property</caption>
+<caption>Setting Accessible Name</caption>
           
 <tbody>
             
@@ -102,15 +110,22 @@
             
 <tr>
               
-<th>getAttribute</th>
-              <td><code>var label = e.getAttribute("aria-label");</code></td>
+<th>Inline</th>
+              <td><code>&lt;div role="button" aria-label="Play"&gt;</code></td>
+            
+</tr>
+            
+<tr>
+              
+<th>setAttribute</th>
+              <td><code>e.setAttribute("aria-label", "play");</code></td>
             
 </tr>
             
 <tr>
               
 <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-              <td><code>var label = e.ariaLabel;</code><sup>1</sup></td>
+              <td><code>e.ariaLabel = "Play";</code></td>
             
 </tr>
           
@@ -119,7 +134,7 @@
 </table>
 <table class="table table-striped">
           
-<caption>Getting <code>aria-checked</code> State</caption>
+<caption>Setting State</caption>
           
 <tbody>
             
@@ -132,23 +147,29 @@
             
 <tr>
               
+<th>Inline</th>
+              <td><code>&lt;div role="checkbox" aria-checked="mixed"&gt;</code></td>
+            
+</tr>
+            
+<tr>
+              
 <th>setAttribute</th>
-              <td><code>var value = e.getAttribute("aria-checked");</code></td>
+              <td><code>e.setAttribute("aria-checked", "mixed");</code></td>
             
 </tr>
             
 <tr>
               
 <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-              <td><code>var value = e.ariaChecked;</code><sup>1</sup></td>
+              <td><code>e.ariaChecked = "mixed";</code></td>
             
 </tr>
           
 </tbody>
         
 </table>
-<p>
-<sup>1</sup>NOTE: Currently must be set using the AOM DOM property to return a value reliably and as in setting only available on the most recent browser releases.</p>
+<p>NOTE: ARIA DOM Properties are only available on the most recent browser releases.</p>
 </div>
 <div class="col"></div>
 </div>
