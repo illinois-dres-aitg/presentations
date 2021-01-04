@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+ <lang>en</lang>
+  <addtranscript/>
+  <footer>
+    <a href="https://illinois.edu"
+      alt="University of Illinois">
+      <img src="../images/block-i.png"/>
+    </a>
+    Copyright &#169; 2021 University of Illinois
+  </footer>
+  <title>SkipTo: Enhanced Keyboard Navigation of Web Page Structure</title>
+  <person>
+    <name>Jon Gunderson, Ph.D.</name>
+    <desc href="http://disability.illinois.edu">Division of Disability Resources and Educational Services</desc>
+    <desc href="http://ahs.illinois.edu">College of Applied Health Sciences</desc>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  </person>
+
+  <person>
+    <name>Nicholas Hoyt</name>
+    <desc href="http://disability.illinois.edu">Division of Disability Resources and Educational Services</desc>
+    <desc href="http://ahs.illinois.edu">College of Applied Health Sciences</desc>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:nhoyt@illinois.edu">nhoyt@illinois.edu</desc>
+  </person>
+
+  <conference>
+    <name href="https://accessibility.mste.illinois.edu/explore">Explore with Hadi</name>
+    <desc>Online</desc>
+    <desc>January 12th, 2021</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/html-slides.js</script>
+
+  <slide>
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li>Why SkipTo?</li>
+      </ul>
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title></title>
+    <contents>
+    </contents>
+    <transcript>
+    </transcript>
+  </slide>
+
+  <slide>
+    <title>Questions and Discussion</title>
+    <contents>
+    </contents>
+  </slide>
+
+</slides>
+
+
