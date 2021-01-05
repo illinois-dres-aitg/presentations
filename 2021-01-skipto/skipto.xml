@@ -49,7 +49,10 @@
     <title>Overview</title>
     <contents>
       <ul>
-        <li>Why SkipTo?</li>
+        <li>WCAG requirements</li>
+        <li>Traditional approaches</li>
+        <li>Structural elements</li>
+        <li>SkipTo features</li>
       </ul>
       <script type="text/javascript">
         slideShowURL()
@@ -58,12 +61,140 @@
   </slide>
 
   <slide>
-    <title></title>
+    <title>WCAG Requirement</title>
+    <contents>
+      <p><a href="https://www.w3.org/TR/WCAG/#bypass-blocks" target="_spec">Success Criterion 2.4.1 Bypass Blocks</a></p>
+      <iframe title="Success Criterion 2.4.1 Bypass Blocks" src="https://www.w3.org/TR/WCAG/#bypass-blocks" width="98%" height="600px"/>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Which disabilities benefit from SC 2.4.1 Bypass Blocks?</title>
+    <contents>
+      <ul>
+        <li>Keyboard only users: People with physical impairments that limit use of the mouse or users of alternative input devices.</li>
+        <li>Screen reader users: Originally the primary population but with improvements in web design and assistive technologies less important.  For example <code>h1</code> elements and/or <code>main</code> landmarks are typically used for the main content and screen have built-in commands to navigate to these locations.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Traditional Skip To Main links</title>
+    <contents>
+      <table class="table table-striped">
+        <caption>Examples of Traditional Skip To Links</caption>
+        <thead>
+          <th scope="col">Website</th>
+          <th scope="col">Visible on load?</th>
+          <th scope="col">Notes</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://illinois.edu/" target="_website">Illinois</a></td>
+            <td>No</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a href="https://education.illinois.edu/" target="_website">Illinois Education</a></td>
+            <td>No</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a href="https://wisc.edu/" target="_website">Wisconsin</a></td>
+            <td>No</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a href="https://harvard.edu/" target="_website">Harvard</a></td>
+            <td>No</td>
+            <td>3 different skip locations: main, search and footer</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3.org/WAI/" target="_website">W3C Web Accessibility Initiative (WAI)</a></td>
+            <td>Yes</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>HTML Structural Elements</title>
+    <contents>
+      <h2>Headings</h2>
+        <ul>
+          <li><code>h1</code></li>
+          <li><code>h2</code></li>
+          <li><code>h3</code></li>
+          <li><code>h4</code></li>
+          <li><code>h5</code></li>
+          <li><code>h6</code></li>
+        </ul>
+
+      <h2>Landmarks</h2>
+      <table class="table table-striped">
+        <caption>Landmark Elements</caption>
+        <thead>
+          <tr>
+            <th scope="col">Role</th>
+            <th scope="col">HTML element</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>banner</code></td>
+            <td><code>header</code></td>
+            <td>Shared content at the beginning of most pages with in a website.</td>
+          </tr>
+          <tr>
+            <td><code>complementary</code></td>
+            <td><code>aside</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>contentinfo</code></td>
+            <td><code>footer</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>main</code></td>
+            <td><code>main</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>navigation</code></td>
+            <td><code>nav</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>region</code></td>
+            <td><code>section</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>search</code></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>SkipTo Structure Elements</title>
     <contents>
     </contents>
-    <transcript>
-    </transcript>
   </slide>
+
+  <slide>
+    <title>Making accessibility information visible</title>
+    <contents>
+    </contents>
+  </slide>
+
 
   <slide>
     <title>Questions and Discussion</title>
