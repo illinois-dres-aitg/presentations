@@ -178,14 +178,14 @@
   </slide>
 
   <slide>
-    <title>Bypass Link Implementation</title>
+    <title>Current Bypass Block Techniques</title>
     <contents>
 
       <h2>Features</h2>
       <ul>
-        <li>Link to internal anchor.</li>
-        <li>Link is hidden until it receives focus.</li>
-        <li>No significant changes in implementation technique since 2000.</li>
+        <li>Link at beginning of page to internal anchor.</li>
+        <li>Link is hidden until it receives keyboard focus.</li>
+        <li>No significant change in technique in over 20 years.</li>
       </ul>
 
       <h2 id="id-examples">Examples</h2>

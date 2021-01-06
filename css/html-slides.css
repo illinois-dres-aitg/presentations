@@ -297,7 +297,7 @@ aside.container {
     margin-top: 4em;
 }
 
-aside details.stranscript-container {
+aside details.transcript-container {
     padding: 0.25em;
     border: transparent solid thin;
 }
@@ -340,3 +340,10 @@ aside .full-transcript-link {
     border-radius: 4px;
 }
 
+.screenshot {
+    border: black solid 2px;
+}
+
+.screenshot img {
+    width: 100%;
+}
