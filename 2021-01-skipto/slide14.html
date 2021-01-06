@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 14: Questions and Discussion</title>
+<title>Slide 14: SkipTo: Installing and Configuration</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -35,19 +35,19 @@
                         Previous
                       </a>
 </li>
-<li class="disabled">
-<a id="ID_SLIDE_NEXT" href="#" title="On Last Slide">
+<li>
+<a id="ID_SLIDE_NEXT" href="slide15.html" title="Slide 15">
                         Next
                       </a>
 </li>
-<li class="disabled">
-<a id="ID_SLIDE_LAST" href="#" name="On Last Slide">
+<li>
+<a id="ID_SLIDE_LAST" href="slide15.html" title="Slide 15">
                         Last
                       </a>
 </li>
 </ul>
 <ul class="nav navbar-nav pull-right">
-<li class="nav navbar-text">Slide 14 of 14</li>
+<li class="nav navbar-text">Slide 14 of 15</li>
 </ul>
 </div>
 </div>
@@ -56,7 +56,39 @@
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<h1 id="h1_title" class="title">Questions and Discussion</h1>
+<h1 id="h1_title" class="title">SkipTo: Installing and Configuration</h1>
+<ul>
+        
+<li>Include reference to <a href="https://github.com/a11y-tools/skipto/tree/master/compiled/js" target="_code"><code>skipto.js</code></a> script in yout page template.</li>
+        
+<li>To change default settings use the <code>SkipToCongig</code> object.</li>
+        
+<li>
+<a href="https://github.com/a11y-tools/skipto" target="_website">Full list of configuration options.</a>
+</li>
+      
+</ul>
+<div>
+      
+<code>
+<pre>
+  &lt;script src="https://accessibleit.disability.illinois.edu/wp-content/themes/aitg-wordpress-theme/js/skipto.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+      var SkipToConfig =  {
+          'settings': {
+              'skipTo': {
+                  landmarks: 'main, [role="main"], [role="search"], nav',
+                  headings: 'main h1, main h2',
+                  colorTheme: 'illinois',
+                  customClass: 'aitg'
+              }
+          }
+      };
+      &lt;/script&gt;
+      </pre>
+</code>
+    
+</div>
 </div>
 <div class="col"></div>
 </div>

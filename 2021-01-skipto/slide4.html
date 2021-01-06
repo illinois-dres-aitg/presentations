@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 4: Which disabilities benefit from ByPass Blocks?</title>
+<title>Slide 4: History of Bypass Blocks</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -41,13 +41,13 @@
                       </a>
 </li>
 <li>
-<a id="ID_SLIDE_LAST" href="slide14.html" title="Slide 14">
+<a id="ID_SLIDE_LAST" href="slide15.html" title="Slide 15">
                         Last
                       </a>
 </li>
 </ul>
 <ul class="nav navbar-nav pull-right">
-<li class="nav navbar-text">Slide 4 of 14</li>
+<li class="nav navbar-text">Slide 4 of 15</li>
 </ul>
 </div>
 </div>
@@ -56,26 +56,126 @@
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<h1 id="h1_title" class="title">Which disabilities benefit from ByPass Blocks?</h1>
-<p>
-<a href="https://www.w3.org/WAI/people-use-web/user-stories/">W3C WAI Stories on how people use the web.</a>
-</p>
-<h2>Physical</h2>
+<h1 id="h1_title" class="title">History of Bypass Blocks</h1>
+<table class="table table-striped" aria-labelledby="h1_title">
+        
+<thead>
+          
+<th scope="col">Year</th>
+          <th scope="col" style="min-width: 8em">Standard</th>
+          <th scope="col">Requirement and Assistive Technology</th>
+        
+</thead>
+        
+<tbody>
+          
+<tr>
+            
+<td>1999</td>
+            <td><a href="https://www.w3.org/TR/wai-aria-1.0/" target="_spec">WCAG 1.0</a></td>
+            <td>
+              
 <ul>
-        
-<li>Many types of physical disabilities limit the ability of people to use pointing and touch devices.</li>
-        
-<li>Keyboards or assistive technologies that emulate the keyboard (e.g. on-screen keyboards, voice recognition) are used to navigate and interact with web pages.</li>
-      
+                
+<li>Checkpoint 13.6 Group related links, identify the group (for user agents), and, until user agents do so, provide a way to bypass the group. [Priority 3].</li>
+                
+<li>Screen readers did not have features to navigate headers.</li>
+              
 </ul>
-<h2>Blind and Low Vision</h2>
+            
+</td>
+          
+</tr>
+          
+<tr>
+            
+<td>2000</td>
+            <td><a href="https://www.access-board.gov/ict/#original508" target="_spec">Section 508</a></td>
+            <td>
+              
 <ul>
-        
-<li>Screen reader users were the primary beneficiary of the bypass requirement.</li>
-        
-<li>Improvements in web design and screen reader support for heading and landmark navigation make the feature is less important.  For example <code>h1</code> elements and/or <code>main</code> landmarks are typically used for the main content and screen have built-in commands to navigate to these locations.</li>
-      
+                
+<li>&sect; 1194.22 (o) A method shall be provided that permits users to skip repetitive navigation links.</li>
+                
+<li>Screen readers begin to include web page navigation features like navigating headers.</li>
+              
 </ul>
+            
+</td>
+          
+</tr>
+          
+<tr>
+            
+<td>2007</td>
+            <td><a href="https://www.w3.orgTR/2007/WD-xhtml-role-20071004/" target="_spec">XHTML Role Attribute Module (Working Draft)</a>
+            </td>
+            <td>First introduction of landmark region roles:
+              <ul>
+                
+<li>banner</li>
+                
+<li>contentinfo</li>
+                
+<li>main</li>
+                
+<li>navigation</li>
+                
+<li>search</li>
+                
+<li>secondary (later changed to "complementary" in ARIA)</li>
+              
+</ul>
+            
+</td>
+          
+</tr>
+          
+<tr>
+            
+<td>2008</td>
+            <td><a href="https://www.w3.org/TR/WCAG20/" target="_spec">WCAG 2.0</a></td>
+            <td>
+              
+<ul>
+                
+<li>Success Criteria 2.4.1 Bypass Blocks: A mechanism is available to bypass blocks of content that are repeated on multiple Web pages. (Level A)</li>
+                
+<li>JAWS Screen Reader + Some Specific Version of Microsoft Internet Explore is the default standard for accessibility.</li>
+                
+<li>VoiceOver for macOS is available.</li>
+              
+</ul>
+            
+</td>
+          
+</tr>
+          
+<tr>
+            
+<td>2014</td>
+            <td>ARIA 1.0</td>
+            <td>
+              
+<ul>
+                
+<li>ARIA is first standard to define how browsers should communicate web page information to accessibility APIs for macOS, Windows and Linux</li>
+                
+<li>ARIA defines landmark region roles, although implementation in browsers has been available for years.</li>
+                
+<li>Mozilla Firefox and Google Chrome lead browser efforts to implement ARIA standard.</li>
+                
+<li>JAWS and NVDA for Windows, VoiceOver for macOS and Orca for Linux/GNOME become the dominate screen readers.</li>
+              
+</ul>
+            
+</td>
+          
+</tr>
+        
+</tbody>
+      
+</table>
 </div>
 <div class="col"></div>
 </div>

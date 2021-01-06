@@ -49,18 +49,31 @@
     <title>Overview</title>
     <contents>
       <ul>
-        <li>WCAG requirement</li>
-        <li>History of requirement</li>
+        <li>"Bypass Block" accessibility requirement</li>
+        <li>History of bypass block requirement</li>
         <li>Structural elements</li>
         <li>SkipTo design and features</li>
         <li>SkipTo installation and configuration</li>
       </ul>
+
       <script type="text/javascript">
         slideShowURL()
       </script>
     </contents>
   </slide>
 
+  <slide>
+    <title>Summary</title>
+    <contents>
+      <ul>
+        <li>Providing a mechanism to bypass blocks of content has been an accessibility requirement from the early days of the web.</li>
+        <li>Little has changed regarding the techniques used to satisfy the requirement over the past 20 years, while much has changed in the technologies of the web.</li>
+        <li><a href="https://github.com/a11y-tools/skipto" target="_website">SkipTo</a> is a major advancement in implementing the “bypass blocks” requirement using existing document structural elements.</li>
+        <li>Version 3.0 is a complete rewrite of the SkipTo code and a significant update to the user experience.</li>
+        <li>Come learn how to make your website more accessible to keyboard users and help everyone learn more about accessibility.</li>
+      </ul>
+    </contents>
+  </slide>
 
   <slide>
     <title>WCAG Requirement</title>
