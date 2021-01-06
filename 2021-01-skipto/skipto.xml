@@ -49,10 +49,11 @@
     <title>Overview</title>
     <contents>
       <ul>
-        <li>WCAG requirements</li>
-        <li>Traditional approaches</li>
+        <li>WCAG requirement</li>
+        <li>History of requirement</li>
         <li>Structural elements</li>
-        <li>SkipTo features</li>
+        <li>SkipTo design and features</li>
+        <li>SkipTo installation and configuration</li>
       </ul>
       <script type="text/javascript">
         slideShowURL()
@@ -75,24 +76,67 @@
       <table class="table table-striped" aria-labelledby="h1_title">
         <thead>
           <th scope="col">Year</th>
-          <th scope="col">Requirement</th>
-          <th scope="col">Assistive Technology</th>
+          <th scope="col" style="min-width: 8em">Standard</th>
+          <th scope="col">Requirement and Assistive Technology</th>
         </thead>
         <tbody>
           <tr>
             <td>1999</td>
-            <td>WCAG 1.0</td>
-            <td></td>
+            <td><a href="https://www.w3.org/TR/wai-aria-1.0/" target="_spec">WCAG 1.0</a></td>
+            <td>
+              <ul>
+                <li>Checkpoint 13.6 Group related links, identify the group (for user agents), and, until user agents do so, provide a way to bypass the group. [Priority 3].</li>
+                <li>Screen readers did not have features to navigate headers.</li>
+              </ul>
+            </td>
           </tr>
           <tr>
             <td>2000</td>
-            <td>Section 508</td>
-            <td></td>
+            <td><a href="https://www.access-board.gov/ict/#original508" target="_spec">Section 508</a></td>
+            <td>
+              <ul>
+                <li>§ 1194.22 (o) A method shall be provided that permits users to skip repetitive navigation links.</li>
+                <li>Screen readers begin to include web page navigation features like navigating headers.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2007</td>
+            <td><a href="https://www.w3.orgTR/2007/WD-xhtml-role-20071004/" target="_spec">XHTML Role Attribute Module (Working Draft)</a>
+            </td>
+            <td>First introduction of landmark region roles:
+              <ul>
+                <li>banner</li>
+                <li>contentinfo</li>
+                <li>main</li>
+                <li>navigation</li>
+                <li>search</li>
+                <li>secondary (later changed to "complementary" in ARIA)</li>
+              </ul>
+            </td>
           </tr>
           <tr>
             <td>2008</td>
-            <td>WCAG 2.0</td>
-            <td></td>
+            <td><a href="https://www.w3.org/TR/WCAG20/" target="_spec">WCAG 2.0</a></td>
+            <td>
+              <ul>
+                <li>Success Criteria 2.4.1 Bypass Blocks: A mechanism is available to bypass blocks of content that are repeated on multiple Web pages. (Level A)</li>
+                <li>JAWS Screen Reader + Some Specific Version of Microsoft Internet Explore is the default standard for accessibility.</li>
+                <li>VoiceOver for macOS is available.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2014</td>
+            <td>ARIA 1.0</td>
+            <td>
+              <ul>
+                <li>ARIA is first standard to define how browsers should communicate web page information to accessibility APIs for macOS, Windows and Linux</li>
+                <li>ARIA defines landmark region roles, although implementation in browsers has been available for years.</li>
+                <li>Mozilla Firefox and Google Chrome lead browser efforts to implement ARIA standard.</li>
+                <li>JAWS and NVDA for Windows, VoiceOver for macOS and Orca for Linux/GNOME become the dominate screen readers.</li>
+              </ul>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -101,26 +145,37 @@
 
 
   <slide>
-    <title>Which disabilities benefit from SC 2.4.1 Bypass Blocks?</title>
+    <title>Which disabilities benefit from ByPass Blocks?</title>
     <contents>
+
+      <p><a href="https://www.w3.org/WAI/people-use-web/user-stories/">W3C WAI Stories on how people use the web.</a></p>
+
+      <h2>Physical</h2>
       <ul>
-        <li>Keyboard only users: People with physical impairments that limit use of the mouse or users of alternative input devices.</li>
-        <li>Screen reader users: Originally the primary beneficiary of the requirement.  Improvements in web design and screen reader supporting heading and landmark navigation the feature is less important.  For example <code>h1</code> elements and/or <code>main</code> landmarks are typically used for the main content and screen have built-in commands to navigate to these locations.</li>
+        <li>Many types of physical disabilities limit the ability of people to use pointing and touch devices.</li>
+        <li>Keyboards or assistive technologies that emulate the keyboard (e.g. on-screen keyboards, voice recognition) are used to navigate and interact with web pages.</li>
+      </ul>
+
+      <h2>Blind and Low Vision</h2>
+      <ul>
+        <li>Screen reader users were the primary beneficiary of the bypass requirement.</li>
+        <li>Improvements in web design and screen reader support for heading and landmark navigation make the feature is less important.  For example <code>h1</code> elements and/or <code>main</code> landmarks are typically used for the main content and screen have built-in commands to navigate to these locations.</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>Traditional Skip To Main links</title>
+    <title>Bypass Link Implementation</title>
     <contents>
 
       <h2>Features</h2>
       <ul>
         <li>Link to internal anchor.</li>
         <li>Link is hidden until it receives focus.</li>
+        <li>No significant changes in implementation technique since 2000.</li>
       </ul>
 
-      <h2 id="id-examples">Examples of Traditional Skip To Links</h2>
+      <h2 id="id-examples">Examples</h2>
 
       <table class="table table-striped" aria-laeblledby="id-examples">
         <thead>
@@ -243,17 +298,151 @@
   </slide>
 
   <slide>
-    <title>SkipTo Structure Elements</title>
+    <title>Goals of SkipTo.js</title>
     <contents>
+      <ul>
+        <li>Improve keyboard accessibility to web page content.  Basically give keyboard users some of the header and landmark navigation features available in screen readers.</li>
+        <li>Allow authors to identify more than one important navigational point within web resources.</li>
+        <li>Make it simpler to implement Bypass Block requirement.</li>
+        <li>Make hidden header and landmark region information available to all users to help promote a better understanding of accessibility.</li>
+      </ul>
+
+      <h2>Examples</h2>
+      <ul>
+        <li><a href="https://accessibleit.disability.illinois.edu" target="_website">DRES Accessible IT Group</a></li>
+        <li><a href="https://ahs.illinois.edu" target="_website">College of Applied Health Sciences</a></li>
+        <li><a href="https://wordpress.webtheme.illinois.edu/" target="_website">Illinois Theme for WordPress</a></li>
+      </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>Making accessibility information visible</title>
+    <title>Benefits of SkipTo to Users</title>
     <contents>
+
+      <table class="table table-striped" aria-labelledby="h1_title">
+        <thead>
+          <tr>
+            <th scope="col">User</th>
+            <th scope="col">Benefits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Physical Impairment</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Blind and Low Vision</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Everyone</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+     </contents>
+  </slide>
+
+  <slide>
+    <title>SkipTo Design: Menu Button</title>
+    <contents>
+      <ul>
+        <li>Button visible (default) or invisible on load.</li>
+        <li>Button placement and styling.</li>
+        <li>Tooltip on accesskey information</li>
+      </ul>
+      <p><img src="skipto-menu-highlight-button.png" alt="Screenshot of SkipTo menu open with highlight around the menu button"/></p>
     </contents>
   </slide>
 
+  <slide>
+    <title>SkipTo Design: Landmarks</title>
+    <contents>
+      <ul>
+        <li>List of filtered landmarks, by default:
+          <ul>
+            <li>main</li>
+            <li>search</li>
+            <li>naviation</li>
+          </ul>
+        </li>
+        <li>Group label "Landmarks" to provide context.</li>
+        <li>Menu items include:
+          <ul>
+            <li>Name of landmark region.</li>
+            <li>If defined, accessible name of landmark region.</li>
+          </ul>
+        </li>
+      </ul>
+      <p><img src="skipto-menu-highlight-landmarks.png" alt="Screenshot of SkipTo menu open with highlight around the landmark section of the menu"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>SkipTo Design: Headings</title>
+    <contents>
+      <ul>
+        <li>List of filtered headings, by default:
+          <ul>
+            <li>h1</li>
+            <li>h2</li>
+          </ul>
+        </li>
+        <li>Group label "headings" to provide context.</li>
+        <li>Menu items include:
+          <ul>
+            <li>Level of heading and also indented by level.</li>
+            <li>Accessible name of heading.</li>
+          </ul>
+        </li>
+      </ul>
+      <p><img src="skipto-menu-highlight-headings.png" alt="Screenshot of SkipTo menu open with highlight around the headings section of the menu"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>SkipTo Design: Actions</title>
+    <contents>
+      <ul>
+        <li>Concerns that only filtered landmarks and headings are visible and want to give users full information.</li>
+        <li>Actions allow all landmarks or headings to be included in the menu.</li>
+        <li>Actions are removed if their is no difference in the filtered and all items.</li>
+      </ul>
+      <p><img src="skipto-menu-highlight-actions.png" alt="Screenshot of SkipTo menu open with highlight around the actions section of the menu"/></p>
+
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>SkipTo: Installing and Configuration</title>
+    <contents>
+      <ul>
+        <li>Include reference to <code>skipto.js</code> script.</li>
+        <li>To change default settings use the <code>SkipToCongig</code> object.</li>
+        <li><a href="https://github.com/a11y-tools/skipto" target="_website">Full list of configuration options.</a></li>
+      </ul>
+    <div>
+      <code><pre>
+  &lt;script src="https://accessibleit.disability.illinois.edu/wp-content/themes/aitg-wordpress-theme/js/skipto.js">&lt;/script>
+  &lt;script>
+      var SkipToConfig =  {
+          'settings': {
+              'skipTo': {
+                  landmarks: 'main, [role="main"], [role="search"], nav',
+                  headings: 'main h1, main h2',
+                  colorTheme: 'illinois',
+                  customClass: 'aitg'
+              }
+          }
+      };
+      &lt;/script>
+      </pre></code>
+    </div>
+    </contents>
+  </slide>
 
   <slide>
     <title>Questions and Discussion</title>
