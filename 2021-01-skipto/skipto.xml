@@ -60,6 +60,7 @@
     </contents>
   </slide>
 
+
   <slide>
     <title>WCAG Requirement</title>
     <contents>
@@ -67,6 +68,37 @@
       <iframe title="Success Criterion 2.4.1 Bypass Blocks" src="https://www.w3.org/TR/WCAG/#bypass-blocks" width="98%" height="600px"/>
     </contents>
   </slide>
+
+  <slide>
+    <title>History of Bypass Blocks</title>
+    <contents>
+      <table class="table table-striped" aria-labelledby="h1_title">
+        <thead>
+          <th scope="col">Year</th>
+          <th scope="col">Requirement</th>
+          <th scope="col">Assistive Technology</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1999</td>
+            <td>WCAG 1.0</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2000</td>
+            <td>Section 508</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2008</td>
+            <td>WCAG 2.0</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
 
   <slide>
     <title>Which disabilities benefit from SC 2.4.1 Bypass Blocks?</title>
@@ -81,8 +113,16 @@
   <slide>
     <title>Traditional Skip To Main links</title>
     <contents>
-      <table class="table table-striped">
-        <caption>Examples of Traditional Skip To Links</caption>
+
+      <h2>Features</h2>
+      <ul>
+        <li>Link to internal anchor.</li>
+        <li>Link is hidden until it receives focus.</li>
+      </ul>
+
+      <h2 id="id-examples">Examples of Traditional Skip To Links</h2>
+
+      <table class="table table-striped" aria-laeblledby="id-examples">
         <thead>
           <th scope="col">Website</th>
           <th scope="col">Visible on load?</th>
