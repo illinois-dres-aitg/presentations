@@ -50,7 +50,7 @@
     <contents>
       <ul>
         <li>"Bypass Blocks" accessibility requirement</li>
-        <li>History of bypass block requirement</li>
+        <li>History of bypass blocks requirement</li>
         <li>Structural elements</li>
         <li>SkipTo design and features</li>
         <li>SkipTo installation and configuration</li>
@@ -158,7 +158,7 @@
 
 
   <slide>
-    <title>Which disabilities benefit from ByPass Blocks?</title>
+    <title>Which disabilities benefit from Bypass Blocks?</title>
     <contents>
 
       <p><a href="https://www.w3.org/WAI/people-use-web/user-stories/">W3C WAI Stories on how people use the web.</a></p>
