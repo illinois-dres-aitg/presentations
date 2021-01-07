@@ -387,7 +387,7 @@
     <title>SkipTo Design: Menu Button</title>
     <contents>
       <ul>
-        <li>Button visible (default) or invisible on load.</li>
+        <li>Button visible by default.</li>
         <li>Button placement and styling.</li>
         <li>Tooltip on accesskey information</li>
       </ul>
