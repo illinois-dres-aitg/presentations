@@ -373,7 +373,7 @@
             <td>
               <ul>
                 <li>Use existing landmarks and headings to identify important sections of a web page.</li>
-                <li>Provide an high level and detailed outlines of the sections of a web page to all users.</li>
+                <li>Provide a high level and detailed outlines of the sections of a web page to all users.</li>
                 <li>Support manual testing of the proper use of landmarks and headings for accessibility.</li>
               </ul>
             </td>
