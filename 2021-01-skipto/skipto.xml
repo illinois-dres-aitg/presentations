@@ -162,7 +162,7 @@
 
       <h2><q>Skip to Main Content</q> Link</h2>
       <ul>
-        <li>Early implementations used 1 pixel images for the link with ALT text attribute, current implementation uses visible text.</li>
+        <li>Early implementations used 1 pixel images for the link with ALT text attribute, current implementations use visible text.</li>
         <li>Link at beginning of page to internal anchor.</li>
         <li>Link is hidden until it receives keyboard focus.</li>
         <li>No significant change in technique in over 20 years.</li>
