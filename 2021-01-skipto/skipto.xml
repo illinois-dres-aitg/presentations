@@ -49,7 +49,7 @@
     <title>Overview</title>
     <contents>
       <ul>
-        <li>"Bypass Block" accessibility requirement</li>
+        <li>"Bypass Blocks" accessibility requirement</li>
         <li>History of bypass block requirement</li>
         <li>Structural elements</li>
         <li>SkipTo design and features</li>
@@ -171,14 +171,14 @@
 
       <h2>Blind and Low Vision</h2>
       <ul>
-        <li>Screen reader users were the primary beneficiary of the bypass requirement.</li>
-        <li>Improvements in web design and screen reader support for heading and landmark navigation make the feature is less important.  For example <code>h1</code> elements and/or <code>main</code> landmarks are typically used for the main content and screen have built-in commands to navigate to these locations.</li>
+        <li>Screen reader users were the primary advocates of the original bypass blocks requirement.</li>
+        <li>Improvements in web design and screen reader support for heading and landmark navigation have helped in satisfying the requirement, making the feature less important to screen reader users.  For example <code>h1</code> elements and/or <code>main</code> landmarks are typically used for the main content and screen readers have built-in commands to navigate to these locations.</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>Current Bypass Block Techniques</title>
+    <title>Current Bypass Blocks Techniques</title>
     <contents>
 
       <h2>Features</h2>
@@ -228,13 +228,13 @@
   </slide>
 
   <slide>
-    <title>HTML Structural Elements</title>
+    <title>HTML Heading and Landmark Elements</title>
     <contents>
-      <h2 id="id-Headings-label">Headings</h2>
+      <h2 id="id-Headings-label">Heading Elements</h2>
       <table class="table table-striped" aria-labelledby="id-headings-label">
         <thead>
           <tr>
-            <th scope="col">HTML element</th>
+            <th scope="col">Element</th>
             <th scope="col">Description</th>
           </tr>
         </thead>
@@ -247,7 +247,7 @@
             <td><code>h2</code></td>
             <td>
               <ul>
-                <li>Identify Subsections of main region.</li>
+                <li>Identify subsections of main region.</li>
                 <li>Identify title for complementary region.</li>
                 <li>Labels for top-level navigation and complementary landmark regions.</li>
               </ul>
@@ -260,12 +260,12 @@
         </tbody>
       </table>
 
-      <h2 id="id-landmarks-label">Landmarks</h2>
+      <h2 id="id-landmarks-label">Landmark Elements</h2>
       <table class="table table-striped" aria-labelledby="id-landmarks-label">
         <thead>
           <tr>
             <th scope="col">Role</th>
-            <th scope="col">HTML element</th>
+            <th scope="col">Element</th>
             <th scope="col">Description</th>
           </tr>
         </thead>
@@ -302,7 +302,7 @@
           </tr>
           <tr>
             <td><code>search</code></td>
-            <td></td>
+            <td><code>[role=<q>search</q>]</code></td>
             <td>Identifies search forms on a web page.</td>
           </tr>
         </tbody>
@@ -316,7 +316,7 @@
       <ul>
         <li>Improve keyboard accessibility to web page content.  Basically give keyboard users some of the header and landmark navigation features available in screen readers.</li>
         <li>Allow authors to identify more than one important navigational point within web resources.</li>
-        <li>Make it simpler to implement Bypass Block requirement.</li>
+        <li>Make it simpler to implement Bypass Blocks requirement.</li>
         <li>Make hidden header and landmark region information available to all users to help promote a better understanding of accessibility.</li>
       </ul>
 
@@ -355,7 +355,7 @@
             <td>Blind and Low Vision</td>
             <td>
               <ul>
-                <li>Get a filtered list of landmarks and headings to find author identified important sections of a webs page.</li>
+                <li>Get a filtered list of landmarks and headings to find author identified important sections of a web page.</li>
               </ul>
             </td>
           </tr>
@@ -429,10 +429,10 @@
             <li>h2</li>
           </ul>
         </li>
-        <li>Group label "headings" to provide context.</li>
+        <li>Group label "Headings" to provide context.</li>
         <li>Menu items include:
           <ul>
-            <li>Level of heading and also indented by level.</li>
+            <li>Level of the heading is indicated by number and indentation.</li>
             <li>Accessible name of heading.</li>
           </ul>
         </li>
@@ -447,7 +447,7 @@
       <ul>
         <li>Concerns that only filtered landmarks and headings are visible and want to give users full information.</li>
         <li>Actions allow all landmarks or headings to be included in the menu.</li>
-        <li>Actions are removed if their is no difference in the filtered and all items.</li>
+        <li>Actions are removed if there is no difference in the filtered and all items.</li>
       </ul>
       <div class="screenshot"><img src="skipto-menu-highlight-actions.png" alt="Screenshot of SkipTo menu open with highlight around the actions section of the menu"/></div>
 
@@ -458,9 +458,15 @@
     <title>SkipTo: Installing and Configuration</title>
     <contents>
       <ul>
-        <li>Include reference to <a href="https://github.com/a11y-tools/skipto/tree/master/compiled/js" target="_code"><code>skipto.js</code></a> script in yout page template.</li>
-        <li>To change default settings use the <code>SkipToCongig</code> object.</li>
-        <li><a href="https://github.com/a11y-tools/skipto" target="_website">Full list of configuration options.</a></li>
+        <li>Include reference to <a href="https://github.com/a11y-tools/skipto/tree/master/compiled/js" target="_code"><code>skipto.js</code></a> script in the page template.</li>
+        <li>To change default settings use the <code>SkipToCongig</code> object.
+          <ul>
+            <li>CSS Selectors are used for defining which elements are included in the Landmarks and Headings groups.</li>
+            <li>The CSS selectors can be modified through configuration from the default settings.</li>
+            <li>Colors can also be customized and there is also a theme option, including an "Illinois" theme.</li>
+            <li><a href="https://github.com/a11y-tools/skipto" target="_website">Full list of configuration options.</a></li>
+          </ul>
+        </li>
       </ul>
     <div>
       <code><pre>
