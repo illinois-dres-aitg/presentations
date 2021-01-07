@@ -467,6 +467,7 @@
           </ul>
         </li>
       </ul>
+      <h2>Example Configuration</h2>
     <div>
       <code><pre>
   &lt;script src="https://accessibleit.disability.illinois.edu/wp-content/themes/aitg-wordpress-theme/js/skipto.js">&lt;/script>
