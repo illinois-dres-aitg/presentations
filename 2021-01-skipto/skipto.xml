@@ -160,7 +160,7 @@
     <title>Current Bypass Blocks Techniques</title>
     <contents>
 
-      <h2>Skip to Main Content Link</h2>
+      <h2><q>Skip to Main Content</q> Link</h2>
       <ul>
         <li>Link at beginning of page to internal anchor.</li>
         <li>Link is hidden until it receives keyboard focus.</li>
