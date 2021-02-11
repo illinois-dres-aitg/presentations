@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Slide 14: SkipTo: Installing and Configuration</title>
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
+   </head>
+   <body>
+      <nav id="nav" class="navbar navbar-default">
+         <div class="container">
+            <div class="navbar-header"><button class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#slide-nav"><span class="sr-only">
+                  Toggle navigation
+                </span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
+            <div id="slide-nav" class="collapse navbar-collapse">
+               <ul class="nav navbar-nav">
+                  <li><a id="ID_SLIDE_INDEX" href="index.html">
+                        Index
+                      </a></li>
+                  <li><a id="ID_SLIDE_FIRST" href="slide1.html" title="Slide 1">
+                        First
+                      </a></li>
+                  <li><a id="ID_SLIDE_PREVIOUS" href="slide13.html" title="Slide 13">
+                        Previous
+                      </a></li>
+                  <li><a id="ID_SLIDE_NEXT" href="slide15.html" title="Slide 15">
+                        Next
+                      </a></li>
+                  <li><a id="ID_SLIDE_LAST" href="slide15.html" title="Slide 15">
+                        Last
+                      </a></li>
+               </ul>
+               <ul class="nav navbar-nav pull-right">
+                  <li class="nav navbar-text">Slide 14 of 15</li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <main id="content" class="container">
+         <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-9">
+               <h1 id="h1_title" class="title">SkipTo: Installing and Configuration</h1>
+               <ul>
+                  <li>Include a reference to the CDN version of the script: <a href="https://cdn.disability.illinois.edu/skipt0-min.js">https://cdn.disability.illinois.edu/skipt0-min.js</a>.</li>
+                  <li>Alternatively you can include reference a local copy of the <a href="https://github.com/a11y-tools/skipto/tree/master/compiled/js" target="_code"><code>skipto.js</code></a> script in the page or page template.</li>
+                  <li>To change default settings use the <code>SkipToConfig</code> object.
+          <ul>
+                        <li>CSS Selectors are used for defining which elements are included in the Landmarks and Headings groups.</li>
+                        <li>The CSS selectors can be modified through configuration from the default settings.</li>
+                        <li>Colors can also be customized and there is also a theme option, including an "Illinois" theme.</li>
+                        <li><a href="https://github.com/a11y-tools/skipto" target="_website">Full list of configuration options.</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <h2>Example Configuration</h2>
+               <div>
+      <code>
+                     <pre>
+  &lt;script src="https://cdn.disability.illinois.edu/skipto-min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+      var SkipToConfig =  {
+          'settings': {
+              'skipTo': {
+                  landmarks: 'main, [role="main"], [role="search"], nav',
+                  headings: 'main h1, main h2',
+                  colorTheme: 'illinois',
+                  customClass: 'aitg'
+              }
+          }
+      };
+  &lt;/script&gt;
+      </pre>
+                  </code>
+    </div>
+            </div>
+            <div class="col"></div>
+         </div>
+      </main>
+      <footer class="container">
+         <div id="footer" class="well well-sm"><a href="https://illinois.edu" alt="University of Illinois">
+      <img src="../images/block-i.png">
+    </a>
+    
+      
+    
+    Copyright © 2021 University of Illinois
+  <span class="highlight-icon">
+          ↖
+        </span></div>
+      </footer>
+   </body>
+</html>
