@@ -469,14 +469,14 @@
             <li>CSS Selectors are used for defining which elements are included in the Landmarks and Headings groups.</li>
             <li>The CSS selectors can be modified through configuration from the default settings.</li>
             <li>Colors can also be customized and there is also a theme option, including an "Illinois" theme.</li>
-            <li><a href="https://github.com/a11y-tools/skipto" target="_website">Full list of configuration options.</a></li>
+            <li><a href="https://github.com/a11y-tools/skipto/blob/master/README.md" target="_website">Full list of configuration options.</a></li>
           </ul>
         </li>
       </ul>
       <h2>Example Configuration</h2>
     <div>
       <code><pre>
-  &lt;script src="https://cdn.disability.illinois.edu/skipto-min.js">&lt;/script>
+  &lt;script src="https://cdn.disability.illinois.edu/skipto.min.js">&lt;/script>
   &lt;script>
       var SkipToConfig =  {
           'settings': {
@@ -485,6 +485,53 @@
                   headings: 'main h1, main h2',
                   colorTheme: 'illinois',
                   customClass: 'aitg'
+              }
+          }
+      };
+  &lt;/script>
+      </pre></code>
+    </div>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>SkipTo: Creating a University of Washington Color Theme</title>
+    <contents>
+
+    <h2>Example configuration using University of Washington color pallette</h2>
+    <p>Colors of the SkipTo button and menu can be set through explicit configuration.</p>
+    <div>
+      <code><pre>
+  &lt;script src="https://cdn.disability.illinois.edu/skipto.min.js">&lt;/script>
+  &lt;script>
+      var SkipToConfig =  {
+          'settings': {
+              'skipTo': {
+                  positionLeft: '46%',
+                  menuTextColor: '#707070',
+                  menuBackgroundColor: '#ffffff',
+                  menuitemFocusTextColor: '#ffffff',
+                  menuitemFocusBackgroundColor: '#4b2e83',
+                  focusBorderColor: '#4b2e83',
+                  buttonTextColor: '#ffffff',
+                  buttonBackgroundColor: '#85754d',
+              }
+          }
+      };
+  &lt;/script>
+      </pre></code>
+    </div>
+
+    <h2>University of Washington theme configuration</h2>
+    <p>Another way to specify the colros for the button and menu is to add the SkipTo script a <q>University of Washington</q> theme, making it easier for developers to configure.</p>
+    <div>
+      <code><pre>
+  &lt;script src="https://cdn.disability.illinois.edu/skipto.min.js">&lt;/script>
+  &lt;script>
+      var SkipToConfig =  {
+          'settings': {
+              'skipTo': {
+                  colorTheme: 'uwashington',
               }
           }
       };
