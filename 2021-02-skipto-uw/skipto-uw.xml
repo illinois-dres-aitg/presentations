@@ -523,7 +523,7 @@
     </div>
 
     <h2>University of Washington theme configuration</h2>
-    <p>Another way to specify the colros for the button and menu is to add the SkipTo script a <q>University of Washington</q> theme, making it easier for developers to configure.</p>
+    <p>Another way to specify the colors for the button and menu is to <em>add</em> the color styling information as a built-in color theme to the SkipTo script.  A <q>University of Washington</q> theme makes it easier for developers to configure.</p>
     <div>
       <code><pre>
   &lt;script src="https://cdn.disability.illinois.edu/skipto.min.js">&lt;/script>
