@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+ <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu"
+      alt="University of Illinois">
+      <img src="../images/block-i.png"/>
+    </a>
+    Copyright &#169; 2022 University of Illinois
+  </footer>
+  <title>AITG Navigation Menu for WordPress</title>
+  <person>
+    <name>Jon Gunderson</name>
+    <desc>Coordinator of Accessible IT Group</desc>
+    <desc>Division of Disability Resources and Educational Services</desc>
+    <desc>College of Applied Health Sciences</desc>
+    <desc>University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  </person>
+
+  <person>
+    <name>Nicholas Hoyt</name>
+    <desc>Software Development and Interaction Design Specialist
+</desc>
+    <desc>Division of Disability Resources and Educational Services</desc>
+    <desc>College of Applied Health Sciences</desc>
+    <desc>University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:nhoyt@illinois.edu">nhoyt@illinois.edu</desc>
+  </person>
+
+  <conference>
+   <name href="https://accessibility.mste.illinois.edu/explore">Explore with Hadi</name>
+    <desc>Online</desc>
+    <desc>March 9th, 2021</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/html-slides.js</script>
+
+  <slide>
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li>Keyboard support</li>
+        <li>HTML markup from WordPress</li>
+        <li>ARIA roles, properties and states</li>
+        <li>Use of SVG inline images</li>
+        <li>Configuration of the menu</li>
+        <li>Update on SkipTo.js</li>
+      </ul>
+
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title></title>
+    <contents>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>WCAG Requirements</title>
+    <contents>
+      <p><a href="https://www.w3.org/TR/WCAG/#bypass-blocks" target="_spec">Success Criterion 2.4.1 Bypass Blocks</a></p>
+      <iframe title="Success Criterion 2.4.1 Bypass Blocks" src="https://www.w3.org/TR/WCAG/#bypass-blocks" width="98%" height="600px"/>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>HTML Heading and Landmark Elements</title>
+    <contents>
+      <h2 id="id-table-label-1">Heading Elements</h2>
+      <table class="table table-striped" aria-labelledby="id-table-label-1">
+        <thead>
+          <tr>
+            <th scope="col">Column 1</th>
+            <th scope="col">Column 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Update on SkipTo:.js: CDN and default configuration</title>
+    <contents>
+      <ul>
+        <li>Referencing the <code>SkipTo.js</code> script:
+          <ul>
+            <li>Include a reference to the CDN version of the script: <a  target="_code" href="https://cdn.disability.illinois.edu/skipto.min.js">https://cdn.disability.illinois.edu/skipto.min.js</a>.</li>
+            <li>Alternatively you can include reference a local copy of the <a href="https://github.com/a11y-tools/skipto/tree/master/compiled/js" target="_code"><code>skipto.js</code></a> script in the page or page template.</li>
+          </ul>
+        </li>
+        <li>Changes to default configuration:
+          <ul>
+            <li>Action menu items are now disabled by default.</li>
+            <li>Tooltip appears on keyboard focus in addition to pointer hover on shortcut key information.</li>
+          </ul>
+        </li>
+        <li>Websites using SkipTo.js on campus:
+          <ul>
+            <li><a href="https://accessibleit.disability.illinois.edu/" rel="nofollow">DRES Accessible IT Group</a></li>
+            <li><a href="https://ahs.illinois.edu/" rel="nofollow">College of Applied Health Sciences</a></li>
+          </ul>
+        </li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Questions and Discussion</title>
+    <contents>
+    </contents>
+  </slide>
+
+</slides>
+
+
