@@ -98,7 +98,12 @@
         </li>
         <li>Pointer behavior:
           <ul>
-            <li>Submenus do <strong>not</strong> open on hover, require a click.</li>
+            <li>Submenus do <strong>not</strong> open on hover, require a click</li>
+          </ul>
+        </li>
+        <li>Animation:
+          <ul>
+            <li>When a submenu opens or closes, the animation provides relaxed way to show the change instate.</li>
           </ul>
         </li>
         <li>Responsive design:
