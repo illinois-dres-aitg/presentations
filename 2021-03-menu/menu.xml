@@ -52,6 +52,7 @@
     <title>Overview</title>
     <contents>
       <ul>
+        <li>WCAG Requirements</li>
         <li>Keyboard support</li>
         <li>HTML markup from WordPress</li>
         <li>ARIA roles, properties and states</li>
@@ -67,7 +68,37 @@
   </slide>
 
   <slide>
-    <title></title>
+    <title>WCAG Requirements for Navigation Menus</title>
+    <contents>
+
+      <table class="table table-striped" aria-labelledby="h1_title">
+        <thead>
+          <tr>
+            <th scope="col">Success Criterion</th>
+            <th scope="col">Requirement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/" target="_spec">Success Criterion 2.4.1 Bypass Blocks</a>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><a href="https://www.w3.org/TR/WCAG/#bypass-blocks" target="_spec">Success Criterion 2.4.1 Bypass Blocks</a></p>
+      <iframe title="Success Criterion 2.4.1 Bypass Blocks" src="https://www.w3.org/TR/WCAG/#bypass-blocks" width="98%" height="600px"/>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Keyboard Support</title>
     <contents>
       <ul>
         <li></li>
@@ -77,18 +108,9 @@
   </slide>
 
   <slide>
-    <title>WCAG Requirements</title>
+    <title>HTML Markup from WordPress</title>
     <contents>
-      <p><a href="https://www.w3.org/TR/WCAG/#bypass-blocks" target="_spec">Success Criterion 2.4.1 Bypass Blocks</a></p>
-      <iframe title="Success Criterion 2.4.1 Bypass Blocks" src="https://www.w3.org/TR/WCAG/#bypass-blocks" width="98%" height="600px"/>
-    </contents>
-  </slide>
-
-  <slide>
-    <title>HTML Heading and Landmark Elements</title>
-    <contents>
-      <h2 id="id-table-label-1">Heading Elements</h2>
-      <table class="table table-striped" aria-labelledby="id-table-label-1">
+      <table class="table table-striped" aria-labelledby="h1_title">
         <thead>
           <tr>
             <th scope="col">Column 1</th>
