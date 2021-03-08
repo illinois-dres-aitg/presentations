@@ -71,7 +71,7 @@
   <slide>
     <title>WordPress Menu Configuration</title>
     <contents>
-      <p>Website with Disclsoure Menu: <a href="https://accessibleit.disability.illinois.edu/">DRES Accessible IT Group Website</a></p>
+      <p>Website with Disclosure Menu: <a href="https://accessibleit.disability.illinois.edu/">DRES Accessible IT Group Website</a></p>
 
       <p class="center"><img src="accessible-it-group-home-page.png" alt="screen shot of the DRES accessible IT griup home page with disclosure menu"/></p>
     </contents>
@@ -83,18 +83,22 @@
       <ul>
         <li>Accessibility
           <ul>
-            <li>Keyboard support.</li>
-            <li>Operating system high contrast support.</li>
-            <li>Proper use of of native HTML semantics and ARIA markup.</li>
+            <li>Keyboard support</li>
+            <li>Operating system high contrast support</li>
+            <li>Proper use of of native HTML semantics and ARIA markup</li>
           </ul>
         </li>
-        <li>University of Illinois branding.</li>
-        <li>Features similar to other campus websites.</li>
-        <li>Visual affordances for keyboard and pointer interaction.</li>
+        <li>University of Illinois branding</li>
+        <li>Features similar to other campus websites</li>
+        <li>Visual affordances for keyboard and pointer interaction
+          <ul>
+            <li>Graphics to indicate submenus</li>>
+          </ul>
+        </li>
         <li>Responsive design:
           <ul>
-            <li>Hamburger menu when screen narrows.</li>
-            <li>Update menu styling based on screen width.</li>
+            <li>Hamburger menu when screen narrows</li>
+            <li>Update menu styling based on screen width</li>
           </ul>
         </li>
       </ul>
@@ -195,7 +199,7 @@
           </tr>
           <tr>
             <td><kbd>Esc</kbd></td>
-            <td>If focus is on a subemenu item, closes the submenu and places focus on the top level menu item.
+            <td>If focus is on a submenu item, closes the submenu and places focus on the top level menu item.
             </td>
           </tr>
         </tbody>
