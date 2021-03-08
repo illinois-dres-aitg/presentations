@@ -101,7 +101,7 @@
             <li>Submenus do <strong>not</strong> open on hover, require a click</li>
           </ul>
         </li>
-        <li>Animation of menus opening and closing provides a more relaxed visual experience:
+        <li>Animations provide a more relaxed visual experience:
           <ul>
             <li>Menus are opened and closed using fade-in and fade-out animations to make the transitions less abrupt</li>
             <li>Animation is also used when the menu button chevrons change direction to similar effect</li>
