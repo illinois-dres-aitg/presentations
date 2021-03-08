@@ -103,8 +103,8 @@
         </li>
         <li>Animation of menus opening and closing provides a more relaxed visual experience:
           <ul>
-            <li>The cheveron slowly rotating to show the change in state.</li>
-            <li>The group of submenu links fading in or fading out.</li>
+            <li>Menus are opened and closed using fade-in and fade-out animations to make the transitions less abrupt</li>
+            <li>Animation is also used when the menu button chevrons change direction to similar effect</li>
           </ul>
         </li>
         <li>Responsive design:
