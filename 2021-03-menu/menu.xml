@@ -495,10 +495,11 @@
   </slide>
 
   <slide>
-    <title>Support for Campus Accessible Menu Development</title>
+    <title>Campus Accessible Menu Implementation</title>
     <contents>
       <ul>
-        <li></li>
+        <li>Document accessible navigation menu code used on campus.</li>
+        <li>Technical support for people who are building their own accessible navigation systems or adapt this code to their system.</li>
       </ul>
     </contents>
   </slide>
