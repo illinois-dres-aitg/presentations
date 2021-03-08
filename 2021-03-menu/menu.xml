@@ -52,6 +52,7 @@
     <title>Overview</title>
     <contents>
       <ul>
+        <li>Design Considerations</li>
         <li>WCAG Requirements</li>
         <li>Keyboard support</li>
         <li>HTML markup from WordPress</li>
@@ -68,63 +69,185 @@
   </slide>
 
   <slide>
-    <title>WCAG Requirements for Navigation Menus</title>
+    <title>WordPress Menu Configuration</title>
+    <contents>
+      <p>Website with Disclsoure Menu: <a href="https://accessibleit.disability.illinois.edu/">DRES Accessible IT Group Website</a></p>
+
+      <p class="center"><img src="accessible-it-group-home-page.png" alt="screen shot of the DRES accessible IT griup home page with disclosure menu"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Design Considerations</title>
+    <contents>
+      <ul>
+        <li>Accessibility
+          <ul>
+            <li>Keyboard support.</li>
+            <li>Operating system high contrast support.</li>
+            <li>Proper use of of native HTML semantics and ARIA markup.</li>
+          </ul>
+        </li>
+        <li>University of Illinois branding.</li>
+        <li>Features similar to other campus websites.</li>
+        <li>Visual affordances for keyboard and pointer interaction.</li>
+        <li>Responsive design:
+          <ul>
+            <li>Hamburger menu when screen narrows.</li>
+            <li>Update menu styling based on screen width.</li>
+          </ul>
+        </li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>WCAG Requirements related to Navigation Menus</title>
     <contents>
 
       <table class="table table-striped" aria-labelledby="h1_title">
         <thead>
           <tr>
             <th scope="col">Success Criterion</th>
+            <th scope="col">Level</th>
             <th scope="col">Requirement</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td scope="row">
-              <a href="https://www.w3.org/TR/WCAG/" target="_spec">Success Criterion 2.4.1 Bypass Blocks</a>
+              <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_spec">1.3.1 Info and Relationships</a>
             </td>
-            <td></td>
+            <td>A</td>
+            <td>Use of <code>nav</code> element to create a navigation landmark region to identify the menu of links.</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#keyboard" target="_spec">2.1.1 Keyboard</a>
+            </td>
+            <td>A</td>
+            <td>The buttons and links in the menu can be accessed and operated using only the keyboard.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#location" target="_spec">2.5.3 Label in Name</a>
+            </td>
+            <td>A</td>
+            <td>The text content of the links is used as the accessible name for the buttons and links.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_spec">4.1.2 Name, Role, Value</a>
+            </td>
+            <td>A</td>
+            <td>The buttons to show the popup links use the <code>button</code> role and the <code>aria-expanded</code> attribute.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#focus-visible" target="_spec">2.4.7 Focus Visible</a>
+            </td>
+            <td>AA</td>
+            <td>The link or button with keyboard focus can easily determined visually.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#location" target="_spec">2.4.8 Location</a>
+            </td>
+            <td>AAA</td>
+            <td>Using the <code>aria-current</code> property to identify the link to the current page.</td>
           </tr>
         </tbody>
       </table>
-
-      <p><a href="https://www.w3.org/TR/WCAG/#bypass-blocks" target="_spec">Success Criterion 2.4.1 Bypass Blocks</a></p>
-      <iframe title="Success Criterion 2.4.1 Bypass Blocks" src="https://www.w3.org/TR/WCAG/#bypass-blocks" width="98%" height="600px"/>
     </contents>
   </slide>
 
   <slide>
     <title>Keyboard Support</title>
     <contents>
-      <ul>
-        <li></li>
-        <li></li>
-      </ul>
-    </contents>
-  </slide>
+      <h2 id="id-key-prim">Primary Keyboard Commands</h2>
+      <p id="id-desc-prim">Primary keyboard commands are the keyboard commands that are supported by the native HTML semantics and the ARIA markup for the menu items.</p>
 
-  <slide>
-    <title>HTML Markup from WordPress</title>
-    <contents>
-      <table class="table table-striped" aria-labelledby="h1_title">
+      <table class="table table-striped" aria-labelledby="id-key-prim" aria-describedby="id-desc-prim">
         <thead>
           <tr>
-            <th scope="col">Column 1</th>
-            <th scope="col">Column 2</th>
+            <th scope="col">Key</th>
+            <th scope="col">Function</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td></td>
-            <td></td>
+            <td><kbd>Tab</kbd></td>
+            <td>Moves focus to the next visible item in the top level menu or a submenu.
+            </td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td><kbd>Space</kbd></td>
+            <td>If focus is on a top level menu item with a submenu, the sub menu is opened.</td>
+          </tr>
+          <tr>
+            <td><kbd>Enter</kbd></td>
+            <td>
+              <ul>
+                <li>If focus is on a top level menu item with a submenu, the sub menu is opened.</li>
+                <li>If focus is on a menu item that is a link, it follows the link.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><kbd>Esc</kbd></td>
+            <td>If focus is on a subemenu item, closes the submenu and places focus on the top level menu item.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="id-key-enhance">Keyboard Enhancements</h2>
+
+      <p id="id-desc-enhance">Keyboard enhancements are keyboard commands that are discovered through inspection (e.g. people just trying the keys due to visual affordances of the menu).  There <strong style="text-decoration: underline">no</strong> native HTML or ARIA semantics provided to assistive technologies to identify these keys as supported features of the menu.</p>
+
+      <table class="table table-striped" aria-labelledby="id-key-enhance" aria-describedby="id-desc-enhance">
+        <thead>
+          <tr>
+            <th scope="col">Key</th>
+            <th scope="col">Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><kbd>Left Arrow</kbd></td>
+            <td>
+              <ul>
+                <li>Moves focus to the previous menu item in the top level menu.</li>
+                <li>If a submenu was open, it is closed.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><kbd>Right Arrow</kbd></td>
+            <td>
+              <ul>
+                <li>Moves focus to the next item in the top level menu.</li>
+                <li>If a submenu was open, it is closed.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><kbd>Down Arrow</kbd></td>
+            <td>
+              <ul>
+                <li>If focus is on a top level menu item with a submenu, opens the submenu and puts focus on the first submenu item.</li>
+                <li>If focus is on a submenu item moves to the next submenu item.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><kbd>Up Arrow</kbd></td>
+            <td>
+              <ul>
+                <li>If focus is on a top level menu item with a submenu, opens the submeu and puts focus on the last submenu item.</li>
+                <li>If focus is on a submenu item moves to the previous submenu item.</li>
+              </ul>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -132,6 +255,171 @@
     </contents>
   </slide>
 
+  <slide>
+    <title>HTML Markup from WordPress</title>
+    <contents>
+
+      <h2>Source Code</h2>
+
+      <div class="code">
+        <pre>
+&lt;nav class="banner-menu">
+  &lt;ul id="banner-menu" class="menu">
+    &lt;li id="menu-item-1102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1102">
+      &lt;a href="https://accessibleit.disability.illinois.edu/courses/">
+        Courses
+      &lt;/a>
+      &lt;ul class="sub-menu">
+        &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-707">
+          &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses">
+            Badging Courses
+          &lt;/a>
+          &lt;ul class="sub-menu">
+            &lt;li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-709">
+              &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/">
+                Accessibility 101
+              &lt;/a>
+            &lt;/li>
+            &lt;li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722">
+              &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/">
+                Captioning: Knowing How
+              &lt;/a>
+            &lt;/li>
+          &lt;/ul>
+        &lt;/li>
+......
+        </pre>
+      </div>
+
+      <h2>Changes to WordPress Markup</h2>
+
+      <h3 id="h3-top-level">Changes to top level menu item with sub menus</h3>
+      <p id="id-desc-top">The top level menu items with submenus are updated by the disclosure menu script to support the behaviors and markup for the <a href="https://w3c.github.io/aria-practices/#disclosure">ARIA disclosure pattern</a>.  The disclosure pattern is the most popular way to implement navigation menus with submenus.  Top level menu items that <em>do not</em> have submenus do not have the following changes.</p>
+      <table class="table table-striped" aria-labelledby="h3-top-level" aria-describedby="id-desc-top">
+        <thead>
+          <tr>
+            <th scope="col">Change</th>
+            <th scope="col">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>role=<q>button</q></code>
+            </td>
+            <td>
+              The <code>a</code> element will no longer act as a link, but a button to open and close the submenu.   This requires change the <code>a</code> element semantics from "link" to "button" by adding the <code>role</code> attribute with the value of <code>button</code>.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>href=<q>#</q></code>
+            </td>
+            <td>
+              To change the behavior of the <code>a</code> element to no longer behave as a link, the <code>href</code> is set to <code>#</code> character.  This change keeps the <code>a</code> element from changing the page if activated and also keeps the <code>a</code> element in the tab sequence of the page.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>aria-expanded=<q>false</q></code>
+            </td>
+            <td>
+              The <code>aria-expanded</code> attribute identifies if the group of submenu links are visible or hidden.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>aria-controls=<q>IDREF</q></code>
+            </td>
+            <td>
+              The <code>aria-controls</code> attribute defines a relationship between the button and the group of submenu links.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>aria-label=<q>Site Menu</q></code>
+            </td>
+            <td>
+              Adds an accessible name to the <code>nav</code> element.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>button</code>
+            </td>
+            <td>
+              Adds a hamburger button with to open and close the navigation menu when screen width is narrow or on a small device.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Inline SVG graphic
+            </td>
+            <td>
+              The SVG gaphics is used to indicate the action of the menu item:
+              <ul>
+                <li>If the menu item has a submenu, the SVG graphic indicates that the menu item has a submenu and whether the submenu is opened or closed. </li>
+                <li>If the menu item is a link, the SVG graphic indicates the menu is a link.</li>
+                <li>Inline SVG graphics are used to support the use of the <code>currentColor</code> property to make sure the graphic is visible and hsa enough contrast in operating system high contrast modes.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 id="h3-page-link">Restoring the current page link</h3>
+      <p id="id-pagelink">WordPress menus do not render the link to the current page as an <code>a</code> element and this must be restored so that the link is part of the tab sequence of the page and the <code>aria-current</code> attribute can be used to indicate the link is to the current page.</p>
+      <table class="table table-striped" aria-labelledby="h3-page-link" aria-describedby="id-page-link">
+        <thead>
+          <tr>
+            <th scope="col">Change</th>
+            <th scope="col">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>a</code>
+            </td>
+            <td>
+              WordPress does not render the current page link in the menu as an <code>a</code> element, but as a <code>span</code> element.  The disclosure menu script changes to a <code>a</code> element.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>href=<q>URL</q></code>
+            </td>
+            <td>
+              The <code>href</code> attribute is added to the <code>a</code> element using the current page URL.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>aria-current=<q>page</q></code>
+            </td>
+            <td>
+              To identify the link as the link to the current page the <code>aria-current</code> attribute is added to the <code>a</code> element.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Script and CSS</h2>
+      <ul>
+        <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/js/DisclosureMenu.js">DisclosureMenu.js</a></li>
+        <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/style.css">AITG WordPress Theme CSS</a> that includes styling for the disclosure menu.</li>
+        <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-design/blob/master/banner-menu.scss">SASS file for the banner menu styling.</a></li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>WordPress Menu Configuration</title>
+    <contents>
+      <p class="center"><img src="menu-configuration.png" alt="screen shot of the menu configuration interface of WordPress"/></p>
+    </contents>
+  </slide>
 
   <slide>
     <title>Update on SkipTo:.js: CDN and default configuration</title>
