@@ -269,11 +269,9 @@ main.highlight table.table dd:hover {
     outline: none;
 }
 
-
 main.highlight li:hover * {
     outline: none;
 }
-
 
 main .code {
     font-family: monospace;
@@ -288,6 +286,7 @@ main .code {
 
 main .code .highlight {
     background-color: #80d8ff;
+    font-weight: bold;
 }
 
 main summary h2 {
