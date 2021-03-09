@@ -357,6 +357,27 @@
 
       <div class="code">
   ......
+<span class="highlight">  &lt;button type="button" aria-label="Main Menu" class="banner-hamburger" aria-expanded="false">
+     &lt;svg class="menu-open" aria-hidden="true" preserveAspectRatio="xMidYMid meet" width="34px" height="32px" viewBox="0 0 32 32" version="1.1">
+        &lt;title>Open Menu&lt;/title>
+        &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+           &lt;rect fill="#FFFFFF" x="0" y="0" width="32" height="32" />
+           &lt;g transform="translate(4.000000, 6.000000)" fill="#13294b">
+              &lt;rect x="0" y="0" width="24" height="4" rx="2" />
+              &lt;rect x="0" y="8" width="24" height="4" rx="2" />
+              &lt;rect x="0" y="16" width="24" height="4" rx="2" />
+           &lt;/g>
+        &lt;/g>
+     &lt;/svg></span>
+     &lt;svg class="menu-close" aria-hidden="true" preserveAspectRatio="xMidYMid meet" width="34px" height="32px" viewBox="0 0 32 32" version="1.1">
+        &lt;title>Close Menu&lt;/title>
+        &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+           &lt;rect fill="#FFFFFF" x="0" y="0" width="32" height="32" />
+           &lt;path d="M6.10050506,23.0710678 L23.0710678,6.10050506 C23.8521164,5.31945648 25.1184464,5.31945648 25.8994949,6.10050506 C26.6805435,6.88155365 26.6805435,8.1478836 25.8994949,8.92893219 L8.92893219,25.8994949 C8.1478836,26.6805435 6.88155365,26.6805435 6.10050506,25.8994949 C5.31945648,25.1184464 5.31945648,23.8521164 6.10050506,23.0710678 Z" fill="#13294b" />
+           &lt;path d="M8.93264069,6.10421356 L25.9032034,23.0747763 C26.684252,23.8558249 26.684252,25.1221549 25.9032034,25.9032034 C25.1221549,26.684252 23.8558249,26.684252 23.0747763,25.9032034 L6.10421356,8.93264069 C5.32316498,8.1515921 5.32316498,6.88526215 6.10421356,6.10421356 C6.88526215,5.32316498 8.1515921,5.32316498 8.93264069,6.10421356 Z" fill="#13294b" />
+        &lt;/g>
+     &lt;/svg>
+  &lt;/button>
   &lt;nav class="banner-menu" <span class="highlight">aria-label="Site Menu"</span>>
     &lt;ul id="banner-menu" class="menu">
       &lt;li id="menu-item-1102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1102">
