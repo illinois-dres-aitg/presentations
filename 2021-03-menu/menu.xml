@@ -381,7 +381,7 @@
   ......
       </div>
 
-      <h2 id="h2-top-level">Changes to top level menu item with sub menus</h2>
+      <h2 id="h2-top-level">Changes to the DOM</h2>
       <p id="id-desc-top">The top level menu items with submenus are updated by the disclosure menu script to support the behaviors and markup for the <a href="https://w3c.github.io/aria-practices/#disclosure">ARIA disclosure pattern</a>.  The disclosure pattern is the most popular way to implement navigation menus with submenus.  Top level menu items that <em>do not</em> have submenus do not have the following changes.</p>
       <table class="table table-striped" aria-labelledby="h3-top-level" aria-describedby="id-desc-top">
         <thead>
@@ -507,7 +507,7 @@
   ......
       </div>
 
-      <h2 id="h2-page-link">Restoring the current page link</h2>
+      <h2 id="h2-page-link">Changes to the DOM</h2>
       <p id="id-pagelink">WordPress menus do not render the link to the current page as an <code>a</code> element and this must be restored so that the link is part of the tab sequence of the page and the <code>aria-current</code> attribute can be used to indicate the link is to the current page.</p>
       <table class="table table-striped" aria-labelledby="h2-page-link" aria-describedby="id-page-link">
         <thead>
