@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 7: HTML Markup from WordPress</title>
+      <title>Slide 7: HTML Markup from WordPress: Top Level Menu Items</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -29,12 +29,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide8.html" title="Slide 8">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide11.html" title="Slide 11">
+                  <li><a id="ID_SLIDE_LAST" href="slide12.html" title="Slide 12">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 7 of 11</li>
+                  <li class="nav navbar-text">Slide 7 of 12</li>
                </ul>
             </div>
          </div>
@@ -43,39 +43,53 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">HTML Markup from WordPress</h1>
-               <h2>Source Code</h2>
+               <h1 id="h1_title" class="title">HTML Markup from WordPress: Top Level Menu Items</h1>
+               <h2>WordPress Source Code</h2>
                <div class="code">
-                  <pre>
-&lt;nav class="banner-menu"&gt;
-  &lt;ul id="banner-menu" class="menu"&gt;
-    &lt;li id="menu-item-1102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1102"&gt;
-      &lt;a href="https://accessibleit.disability.illinois.edu/courses/"&gt;
-        Courses
-      &lt;/a&gt;
-      &lt;ul class="sub-menu"&gt;
-        &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-707"&gt;
-          &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses"&gt;
-            Badging Courses
-          &lt;/a&gt;
-          &lt;ul class="sub-menu"&gt;
-            &lt;li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-709"&gt;
-              &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/"&gt;
-                Accessibility 101
-              &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"&gt;
-              &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/"&gt;
-                Captioning: Knowing How
-              &lt;/a&gt;
-            &lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/li&gt;
-......
-        </pre>
-               </div>
-               <h2>Changes to WordPress Markup</h2>
-               <h3 id="h3-top-level">Changes to top level menu item with sub menus</h3>
+  ......
+  &lt;nav class="banner-menu"&gt;
+    &lt;ul id="banner-menu" class="menu"&gt;
+      &lt;li id="menu-item-1102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1102"&gt;
+        <span class="highlight">&lt;a href="https://accessibleit.disability.illinois.edu/courses/"&gt;</span>
+          Courses
+        &lt;/a&gt;
+        &lt;ul class="sub-menu"&gt;
+          &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-707"&gt;
+            &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses"&gt;
+              Badging Courses
+            &lt;/a&gt;
+            &lt;ul class="sub-menu"&gt;
+  ......
+      </div>
+               <h2>DOM after DisclosureMenu.js script</h2>
+               <div class="code">
+  ......
+  &lt;nav class="banner-menu" <span class="highlight">aria-label="Site Menu"</span>&gt;
+    &lt;ul id="banner-menu" class="menu"&gt;
+      &lt;li id="menu-item-1102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1102"&gt;
+        <span class="highlight">&lt;a role="button" href="#" aria-expanded="false" aria-controls="banner-sub-menu-0"&gt;</span>
+          Courses
+<span class="highlight">          &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+          &lt;svg aria-hidden="true" width="11px" height="11px" viewBox="0 0 133 79" version="1.1"&gt;
+             &lt;title&gt;menu open/close icon&lt;/title&gt;
+             &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;
+                &lt;g transform="translate(-50.000000, -122.000000)" fill="currentColor"&gt;
+                   &lt;g transform="translate(45.000000, 64.000000)"&gt;
+                      &lt;path d="M33.5,21 C40.4035594,21 46,26.5964406 46,33.5 L46,96.5 L109,96.5 C115.903559,96.5 121.5,102.096441 121.5,109 C121.5,115.903559 115.903559,121.5 109,121.5 L34,121.5 C30.4210403,121.5 27.1933842,119.995891 24.9146718,117.585313 C22.5041093,115.306616 21,112.07896 21,108.5 L21,33.5 C21,26.5964406 26.5964406,21 33.5,21 Z" transform="translate(71.250000, 71.250000) rotate(-45.000000) translate(-71.250000, -71.250000) " /&gt;
+                   &lt;/g&gt;
+                &lt;/g&gt;
+             &lt;/g&gt;
+          &lt;/svg&gt;</span>
+        &lt;/a&gt;
+        &lt;ul <span class="highlight">id="banner-sub-menu-0"</span> class="sub-menu"&gt;
+          &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-707"&gt;
+            &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses"&gt;
+              Badging Courses
+            &lt;/a&gt;
+            &lt;ul class="sub-menu"&gt;
+  ......
+      </div>
+               <h2 id="h2-top-level">Changes to top level menu item with sub menus</h2>
                <p id="id-desc-top">The top level menu items with submenus are updated by the disclosure menu script to support the behaviors and markup for the <a href="https://w3c.github.io/aria-practices/#disclosure">ARIA disclosure pattern</a>.  The disclosure pattern is the most popular way to implement navigation menus with submenus.  Top level menu items that <em>do not</em> have submenus do not have the following changes.</p>
                <table class="table table-striped" aria-labelledby="h3-top-level" aria-describedby="id-desc-top">
                   <thead>
@@ -145,42 +159,6 @@
                               <li>Inline SVG graphics are used to support the use of the <code>currentColor</code> property to make sure the graphic is visible and has enough contrast in operating system high contrast modes.</li>
                            </ul>
                         </td>
-                     </tr>
-                  </tbody>
-               </table>
-               <h3 id="h3-page-link">Restoring the current page link</h3>
-               <p id="id-pagelink">WordPress menus do not render the link to the current page as an <code>a</code> element and this must be restored so that the link is part of the tab sequence of the page and the <code>aria-current</code> attribute can be used to indicate the link is to the current page.</p>
-               <table class="table table-striped" aria-labelledby="h3-page-link" aria-describedby="id-page-link">
-                  <thead>
-                     <tr>
-                        <th scope="col">Change</th>
-                        <th scope="col">Purpose</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td>
-              <code>a</code>
-            </td>
-                        <td>
-              WordPress does not render the current page link in the menu as an <code>a</code> element, but as an <code>span</code> element.  The disclosure menu script changes to a <code>a</code> element.
-            </td>
-                     </tr>
-                     <tr>
-                        <td>
-              <code>href=<q>URL</q></code>
-            </td>
-                        <td>
-              The <code>href</code> attribute is added to the <code>a</code> element using the current page URL.
-            </td>
-                     </tr>
-                     <tr>
-                        <td>
-              <code>aria-current=<q>page</q></code>
-            </td>
-                        <td>
-              To identify the link as the link to the current page the <code>aria-current</code> attribute is added to the <code>a</code> element.
-            </td>
                      </tr>
                   </tbody>
                </table>
