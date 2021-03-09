@@ -186,6 +186,7 @@
           <tr>
             <th scope="col">Pattern</th>
             <th scope="col"><code>tab</code> key</th>
+            <th scope="col">Cursor Keys</th>
             <th scope="col">Other Keys</th>
           </tr>
         </thead>
@@ -195,6 +196,7 @@
               <a href="https://w3c.github.io/aria-practices/#disclosure" target="_spec">Disclosure Menu</a><br/>(Most Popular)
             </td>
             <td>Every item is in the tab sequence</td>
+            <td>Not supported</td>
             <td>
               <ul>
                 <li><kbd>Space</kbd>: Used to open or close submenus.</li>
@@ -206,12 +208,12 @@
             <td scope="row">
               <a href="https://w3c.github.io/aria-practices/#menu" target="_spec">Menubar</a>
             </td>
-            <td>One stop in the tab sequence</td>
+            <td>Menubar is one stop in the tab sequence</td>
+            <td>Navigation between menu items</td>
             <td>
               <ul>
                 <li><kbd>Space</kbd>: Used to open or close submenus</li>
                 <li><kbd>Enter</kbd>: Used to open or close submenus or follow a link</li>
-                <li>Cursor keys open and close submenus and to navigate to individual links in the menus.</li>
               </ul>
             </td>
           </tr>
@@ -219,12 +221,13 @@
             <td scope="row">
               <a href="https://w3c.github.io/aria-practices/#TreeView" target="_spec">Tree View</a>
             </td>
-            <td>One stop in the tab sequence</td>
+            <td>Treeview is one stop in the tab sequence</td>
+            <td>Navigation between menu items</td>
             <td>
               <ul>
                 <li><kbd>Space</kbd>: Used to open or close submenus</li>
                 <li><kbd>Enter</kbd>: Used to open or close submenus or follow a link</li>
-                <li>Cursor keys used to open and close leafs in the tree and to navigate to individual links</li>
+>
               </ul>
             </td>
           </tr>
