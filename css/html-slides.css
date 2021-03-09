@@ -273,12 +273,18 @@ main.highlight li:hover * {
 
 main .code {
     font-family: monospace;
+    font-size: 11pt;
     background-color: #EEE;
     border: thin solid #DDD;
     padding: 0.25em;
     border-radius: 6px;
+    white-space: pre;
+    overflow: scroll;
 }
 
+main .code .highlight {
+    background-color: #80d8ff;
+}
 
 main summary h2 {
     margin: 0;
