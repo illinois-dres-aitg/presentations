@@ -357,7 +357,7 @@
 
       <div class="code">
   ......
-  <span class="highlight">     &lt;button type="button" aria-label="Main Menu" class="banner-hamburger" aria-expanded="false">
+  <span class="highlight">   &lt;button type="button" aria-label="Main Menu" class="banner-hamburger" aria-expanded="false">
        &lt;svg class="menu-open" aria-hidden="true" preserveAspectRatio="xMidYMid meet" width="34px" height="32px" viewBox="0 0 32 32" version="1.1">
           &lt;title>Open Menu&lt;/title>
           &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
