@@ -104,6 +104,10 @@ nav ul li {
 .navbar-default {
     background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
     background-color: #e0e0e0;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .navbar-default .navbar-nav > li > a,
