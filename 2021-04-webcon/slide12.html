@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Slide 12: Accessible Object Model (AOM): Test Page</title>
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
+   </head>
+   <body>
+      <nav id="nav" class="navbar navbar-default">
+         <div class="container">
+            <div class="navbar-header"><button class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#slide-nav"><span class="sr-only">
+                  Toggle navigation
+                </span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
+            <div id="slide-nav" class="collapse navbar-collapse">
+               <ul class="nav navbar-nav">
+                  <li><a id="ID_SLIDE_INDEX" href="index.html">
+                        Index
+                      </a></li>
+                  <li><a id="ID_SLIDE_FIRST" href="slide1.html" title="Slide 1">
+                        First
+                      </a></li>
+                  <li><a id="ID_SLIDE_PREVIOUS" href="slide11.html" title="Slide 11">
+                        Previous
+                      </a></li>
+                  <li><a id="ID_SLIDE_NEXT" href="slide13.html" title="Slide 13">
+                        Next
+                      </a></li>
+                  <li><a id="ID_SLIDE_LAST" href="slide19.html" title="Slide 19">
+                        Last
+                      </a></li>
+               </ul>
+               <ul class="nav navbar-nav pull-right">
+                  <li class="nav navbar-text">Slide 12 of 19</li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <main id="content" class="container">
+         <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-9">
+               <h1 id="h1_title" class="title">Accessible Object Model (AOM): Test Page</h1>
+               <table class="table table-striped">
+                  <caption>Getting value with DOM <code>role</code> property</caption>
+                  <thead>
+                     <tr>
+                        <th>Setting Code</th>
+                        <th>Return value of <code>.role</code></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="sourcecode">&lt;input type="checkbox"/&gt;</td>
+                        <td id="aom-11-role"></td>
+                     </tr>
+                     <tr>
+                        <td class="sourcecode">&lt;div role="checkbox"&gt;</td>
+                        <td id="aom-12-role"></td>
+                     </tr>
+                     <tr>
+                        <td class="sourcecode">e.setAttribute('role', 'checkbox');</td>
+                        <td id="aom-13-role"></td>
+                     </tr>
+                     <tr>
+                        <td class="sourcecode">e.role = 'checkbox';</td>
+                        <td id="aom-14-role"></td>
+                     </tr>
+                  </tbody>
+               </table>
+               <table class="table table-striped">
+                  <caption>Getting value with DOM <code>ariaChecked</code> property</caption>
+                  <thead>
+                     <tr>
+                        <th>Setting Code</th>
+                        <th>Return value of <code>.ariaChecked</code></th>
+                        <th>typeof<code>.ariaChecked</code></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="sourcecode">&lt;div role='checkbox'  aria-checked='true'&gt;</td>
+                        <td id="aom-22-checked"></td>
+                        <td id="aom-22-type"></td>
+                     </tr>
+                     <tr>
+                        <td class="sourcecode">e.setAttribute('aria-checked', 'true');</td>
+                        <td id="aom-23-checked"></td>
+                        <td id="aom-23-type"></td>
+                     </tr>
+                     <tr>
+                        <td class="sourcecode">e.ariaChecked = 'true';</td>
+                        <td id="aom-24-checked"></td>
+                        <td id="aom-24-type"></td>
+                     </tr>
+                     <tr>
+                        <td class="sourcecode">e.ariaChecked = true;</td>
+                        <td id="aom-25-checked"></td>
+                        <td id="aom-25-type"></td>
+                     </tr>
+                  </tbody>
+               </table>
+               <div hidden="">
+                  <div id="aom-11"><input type="checkbox"></div>
+                  <div id="aom-12">
+                     <div role="checkbox"></div>
+                  </div>
+                  <div id="aom-13">
+                     <div></div>
+                  </div>
+                  <div id="aom-14">
+                     <div></div>
+                  </div>
+                  <div id="aom-22">
+                     <div role="checkbox" aria-checked="true"></div>
+                  </div>
+                  <div id="aom-23">
+                     <div></div>
+                  </div>
+                  <div id="aom-24">
+                     <div></div>
+                  </div>
+                  <div id="aom-25">
+                     <div></div>
+                  </div>
+
+        <script>
+          function setAttribute(id, attr, value) {
+            document.getElementById(id).setAttribute(attr, value);
+          }
+
+          function setProperty(id, prop, value) {
+            document.getElementById(id)[prop] = value;
+          }
+
+          function getValue(id1, id2, attr) {
+            var value = document.getElementById(id2)[attr];
+            if (value) {
+              if (typeof value === 'string') {
+                value = "'" + value + "'";
+              }
+            }
+            else {
+              value = "undefined";
+            }
+
+            document.getElementById(id1).textContent = value;
+          }
+
+          function getType(id1, id2, attr) {
+            var value = document.getElementById(id2)[attr];
+            var type = typeof document.getElementById(id2)[attr];
+
+            if (!value) {
+              type = '';
+            }
+            document.getElementById(id1).textContent = type;
+          }
+
+          getValue('aom-11-role', 'aom-11', 'role');
+          getValue('aom-12-role', 'aom-12', 'role');
+
+          setAttribute(`aom-13`, 'role', 'checkbox');
+          getValue('aom-13-role', 'aom-13', 'role');
+
+          setProperty(`aom-14`, 'role', 'checkbox');
+          getValue('aom-14-role', 'aom-14', 'role');
+
+          getValue('aom-22-checked', 'aom-22', 'ariaChecked');
+          getType('aom-22-type', 'aom-22', 'ariaChecked');
+
+          setAttribute(`aom-23`, 'aria-checked', 'true');
+          getValue('aom-23-checked', 'aom-23', 'ariaChecked');
+          getType('aom-23-type', 'aom-23', 'ariaChecked');
+
+          setProperty(`aom-24`, 'ariaChecked', 'true');
+          getValue('aom-24-checked', 'aom-24', 'ariaChecked');
+          getType('aom-24-type', 'aom-24', 'ariaChecked');
+
+          setProperty(`aom-25`, 'ariaChecked', true);
+          getValue('aom-25-checked', 'aom-25', 'ariaChecked');
+          getType('aom-25-type', 'aom-25', 'ariaChecked');
+        </script>
+
+      </div>
+            </div>
+            <div class="col"></div>
+         </div>
+      </main>
+      <footer class="container">
+         <div id="footer" class="well well-sm"><a href="https://illinois.edu" alt="University of Illinois">
+      <img src="../images/block-i.png">
+    </a>
+    
+      
+    
+    Copyright © 2021 University of Illinois
+  <span class="highlight-icon">
+          ↖
+        </span></div>
+      </footer>
+   </body>
+</html>
