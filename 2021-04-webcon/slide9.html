@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 9: ARIA 1.2 Combobox Design Pattern</title>
+      <title>Slide 9: HTML harmonization</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -29,12 +29,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide10.html" title="Slide 10">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide19.html" title="Slide 19">
+                  <li><a id="ID_SLIDE_LAST" href="slide20.html" title="Slide 20">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 9 of 19</li>
+                  <li class="nav navbar-text">Slide 9 of 20</li>
                </ul>
             </div>
          </div>
@@ -43,15 +43,12 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">ARIA 1.2 Combobox Design Pattern</h1>
+               <h1 id="h1_title" class="title">HTML harmonization</h1>
                <ul>
-                  <li><code>combobox</code> role is on the <code>input</code> element.</li>
-                  <li><code>aria-expanded</code> attribute is on the <code>input</code> element.</li>
-                  <li><code>aria-haspopup</code> attribute is on the <code>input</code> element.</li>
-                  <li><code>aria-controls</code> references the popup widget (e.g. listbox, grid or tree).</li>
+                  <li>Define roles appropriate for every HTML element.</li>
+                  <li>Allows assignment of default <a href="https://www.w3.org/TR/html-aria/" target="_spec">ARIA role mappings to every HTML element</a>.</li>
+                  <li>Some new roles, like <code>generic</code> role for elements with no semantics like <code>div</code> and <code>span</code>, should not be used by developers.</li>
                </ul>
-               <h2>Legacy Combobox Patterns</h2>
-               <p>ARIA 1.2 pattern is similar to the ARIA 1.0 combobox pattern, but instead of using <code>aria-owns</code> uses <code>aria-controls</code> to reference associated popup widget and has good AT support.  ARIA 1.1 pattern was never supported by assistive technologies and used a container model of having the <code>input</code> element and popup widget as  descendants of an element with the role <code>combobox</code>.  The 1.1 pattern change was made to support of UIAutomation model of a combobox.</p>
             </div>
             <div class="col"></div>
          </div>

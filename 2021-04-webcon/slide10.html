@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 10: Accessible Object Model (AOM): Setting Roles, Properties and States</title>
+      <title>Slide 10: ARIA 1.2 Combobox Design Pattern</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -29,12 +29,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide11.html" title="Slide 11">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide19.html" title="Slide 19">
+                  <li><a id="ID_SLIDE_LAST" href="slide20.html" title="Slide 20">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 10 of 19</li>
+                  <li class="nav navbar-text">Slide 10 of 20</li>
                </ul>
             </div>
          </div>
@@ -43,72 +43,15 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Accessible Object Model (AOM): Setting Roles, Properties and States</h1>
-               <p>In addition to using in-line HTML code and the <code>setAttribute</code> and <code>getAttribute</code> DOM methods for setting ARIA roles, properties and states, new DOM properties will also be available through the <a href="https://w3c.github.io/aria/#idl-interface" target="_spec">IDL Interface</a> requirements defined in <a href="https://w3c.github.io/aria/" target="_spec">ARIA 1.2 Editor's Working Draft</a>.</p>
-               <table class="table table-striped">
-                  <caption>Setting ARIA Role</caption>
-                  <tbody>
-                     <tr>
-                        <th>Role</th>
-                        <td><code>tablist</code></td>
-                     </tr>
-                     <tr>
-                        <th>Inline</th>
-                        <td><code>&lt;div role="tablist"&gt;</code></td>
-                     </tr>
-                     <tr>
-                        <th>setAttribute</th>
-                        <td><code>e.setAttribute("role", "tablist");</code></td>
-                     </tr>
-                     <tr>
-                        <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-                        <td><code>e.role = tablist";</code></td>
-                     </tr>
-                  </tbody>
-               </table>
-               <table class="table table-striped">
-                  <caption>Setting Accessible Name</caption>
-                  <tbody>
-                     <tr>
-                        <th>Attribute</th>
-                        <td><code>aria-label</code></td>
-                     </tr>
-                     <tr>
-                        <th>Inline</th>
-                        <td><code>&lt;div role="button" aria-label="Play"&gt;</code></td>
-                     </tr>
-                     <tr>
-                        <th>setAttribute</th>
-                        <td><code>e.setAttribute("aria-label", "play");</code></td>
-                     </tr>
-                     <tr>
-                        <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-                        <td><code>e.ariaLabel = "Play";</code></td>
-                     </tr>
-                  </tbody>
-               </table>
-               <table class="table table-striped">
-                  <caption>Setting State</caption>
-                  <tbody>
-                     <tr>
-                        <th>Attribute</th>
-                        <td><code>aria-checked</code></td>
-                     </tr>
-                     <tr>
-                        <th>Inline</th>
-                        <td><code>&lt;div role="checkbox" aria-checked="mixed"&gt;</code></td>
-                     </tr>
-                     <tr>
-                        <th>setAttribute</th>
-                        <td><code>e.setAttribute("aria-checked", "mixed");</code></td>
-                     </tr>
-                     <tr>
-                        <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-                        <td><code>e.ariaChecked = "mixed";</code></td>
-                     </tr>
-                  </tbody>
-               </table>
-               <p>NOTE: AOM is only available on the most recent browser releases.</p>
+               <h1 id="h1_title" class="title">ARIA 1.2 Combobox Design Pattern</h1>
+               <ul>
+                  <li><code>combobox</code> role is on the <code>input</code> element.</li>
+                  <li><code>aria-expanded</code> attribute is on the <code>input</code> element.</li>
+                  <li><code>aria-haspopup</code> attribute is on the <code>input</code> element.</li>
+                  <li><code>aria-controls</code> references the popup widget (e.g. listbox, grid or tree).</li>
+               </ul>
+               <h2>Legacy Combobox Patterns</h2>
+               <p>ARIA 1.2 pattern is similar to the ARIA 1.0 combobox pattern, but instead of using <code>aria-owns</code> uses <code>aria-controls</code> to reference associated popup widget and has good AT support.  ARIA 1.1 pattern was never supported by assistive technologies and used a container model of having the <code>input</code> element and popup widget as  descendants of an element with the role <code>combobox</code>.  The 1.1 pattern change was made to support of UIAutomation model of a combobox.</p>
             </div>
             <div class="col"></div>
          </div>

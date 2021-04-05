@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 16: SkipTo.js for Keyboard Navigation</title>
+      <title>Slide 16: Combobox Design Pattern and Examples</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -29,12 +29,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide17.html" title="Slide 17">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide19.html" title="Slide 19">
+                  <li><a id="ID_SLIDE_LAST" href="slide20.html" title="Slide 20">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 16 of 19</li>
+                  <li class="nav navbar-text">Slide 16 of 20</li>
                </ul>
             </div>
          </div>
@@ -43,53 +43,21 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">SkipTo.js for Keyboard Navigation</h1>
-               <h2>Goals</h2>
+               <h1 id="h1_title" class="title">Combobox Design Pattern and Examples</h1>
+               <p><a href="https://w3c.github.io/aria-practices/#combobox" target="_spec">Editors Draft of Combobox Design Pattern</a></p>
                <ul>
-                  <li>Improve keyboard accessibility to web page content.  Basically give keyboard users some of the header and landmark navigation features available in screen readers.</li>
-                  <li>Allow authors to identify more than one important navigational point within web resources.</li>
-                  <li>Make it simpler to implement Bypass Blocks requirement.</li>
-                  <li>Make <q>hidden</q> header and landmark region information available to all users to help promote a better understanding of accessibility.</li>
-               </ul>
-               <h2>Examples</h2>
-               <ul>
-                  <li><a href="https://accessibleit.disability.illinois.edu" target="_website">DRES Accessible IT Group</a></li>
-                  <li><a href="https://ahs.illinois.edu" target="_website">College of Applied Health Sciences</a></li>
-                  <li><a href="https://wordpress.webtheme.illinois.edu/" target="_website">Illinois Theme for WordPress</a></li>
-               </ul>
-               <h2>Configuration Information</h2>
-               <ul>
-                  <li>Include reference to <a href="https://github.com/a11y-tools/skipto/tree/master/compiled/js" target="_code"><code>skipto.js</code></a> script in the page template.</li>
-                  <li>To change default settings use the <code>SkipToConfig</code> object.
+                  <li>Keyboard interaction.</li>
+                  <li>Proper use of ARIA roles.</li>
+                  <li>Proper use of ARIA properties and states.</li>
+                  <li>Examples:
           <ul>
-                        <li>CSS Selectors are used for defining which elements are included in the Landmarks and Headings groups.</li>
-                        <li>The CSS selectors can be modified through configuration from the default settings.</li>
-                        <li>Colors can also be customized and there is also a theme option, including an "Illinois" theme.</li>
-                        <li>NEW: CDN reference to the script file: <a href="https://cdn.disability.illinois.edu/skipto.min.js" target="_script">https://cdn.disability.illinois.edu/skipto.min.js</a></li>
-                        <li><a href="https://github.com/a11y-tools/skipto" target="_website">Full list of configuration options</a>.</li>
+                        <li><a href="https://w3c.github.io/aria-practices/examples/combobox/combobox-autocomplete-both.html" target="_example">Combobox with auto-complete</a></li>
+                        <li><a href="https://raw.githack.com/w3c/aria-practices/issue34-add-combobox-datepicker/examples/combobox/combobox-datepicker.html" target="_example">Date picker combobox</a> (Note: raw.githack link to pull request)</li>
+                        <li>Newer examples support high contrast modes on Windows 10 and macOS.</li>
+                        <li><a href="https://github.com/w3c/aria-practices/blob/master/test/tests/combobox_autocomplete-both.js" target="_example">Regression tests for quality assurance</a> and can be used as models for in-house regression testing.</li>
                      </ul>
                   </li>
                </ul>
-               <h2>Example Configuration</h2>
-               <div>
-        <code>
-                     <pre>
-    &lt;script src="https://cdn.disability.illinois.edu/skipto.min.js"&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var SkipToConfig =  {
-            'settings': {
-                'skipTo': {
-                    landmarks: 'main, [role="main"], [role="search"], nav',
-                    headings: 'main h1, main h2',
-                    colorTheme: 'illinois',
-                    customClass: 'aitg'
-                }
-            }
-        };
-    &lt;/script&gt;
-        </pre>
-                  </code>
-      </div>
             </div>
             <div class="col"></div>
          </div>

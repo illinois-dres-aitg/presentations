@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 7: New features in ARIA 1.2</title>
+      <title>Slide 7: Navigation to descriptive or related content on a page</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -29,12 +29,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide8.html" title="Slide 8">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide19.html" title="Slide 19">
+                  <li><a id="ID_SLIDE_LAST" href="slide20.html" title="Slide 20">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 7 of 19</li>
+                  <li class="nav navbar-text">Slide 7 of 20</li>
                </ul>
             </div>
          </div>
@@ -43,13 +43,12 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">New features in ARIA 1.2</h1>
-               <p><a href="https://www.w3.org/TR/wai-aria-1.2/" target="_spec">Accessible Rich Internet Applications  1.2 Candidate Recommendation</a> (March 2021)</p>
-               <h2>Major Changes</h2>
+               <h1 id="h1_title" class="title">Navigation to descriptive or related content on a page</h1>
                <ul>
-                  <li>HTML harmonization</li>
-                  <li>Combobox design pattern 1.2 that works with assistive technologies.</li>
-                  <li>Accessible Object Model (AOM) to reflect some ARIA properties.</li>
+                  <li>When a string in not sufficient not provide a description of an image, the <a href="https://w3c.github.io/aria/#aria-details"><code>aria-details</code></a> property is designed to provide a reference to another section of the current document to provide more information about an image.</li>
+                  <li><code>aria-details</code> was added to ARIA 1.0 at the request of the DPUB accessibility working group that needed a way for assistive technologies to provide navigation to more robust descriptions than can be communicated through simple strings of text (e.g. accessible description on previous slide).</li>
+                  <li>Major issue with <code>aria-details</code> for the web is the <strong>poor</strong> of assistive technology support in main stream screen readers.  Most ignore it or at the best say there is a description on the page for this image, but no information on where on the page.</li>
+                  <li>Assistive technology support may improve with the implementation of ARIA 1.3 and the new attributes related to annotating online documents.  For example, online tools like Google documents will support the annotation attributes and these new attributes will use <code>aria-details</code> attribute as way to reference the annotation information.</li>
                </ul>
             </div>
             <div class="col"></div>

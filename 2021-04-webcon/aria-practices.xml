@@ -170,9 +170,10 @@
     <contents>
         <ul>
           <li><a href="https://w3c.github.io/aria-practices/#names_and_descriptions">Section 5: Providing Accessible Names and Descriptions</a></li>
-          <li>Accessible description provides more information about a form control, link or ARIA widget.</li>
+          <li>Accessible description is a string that provides more information about a image, form control, link or ARIA widget.</li>
           <li>Screen readers each have their own ways of rendering and sometimes ignoring the <em>description information</em> information.</li>
         </ul>
+
         <h2 id="heading_ant">Accessible Description Techniques</h2>
         <table class="table table-striped table-hover" aria-labelledby="heading_ant">
           <thead>
@@ -188,6 +189,7 @@
               <td><code>aria-describedby</code></td>
               <td>
                 <ul>
+                  <li>Creates a string description of an item on the web page, typically called the <q>Accessible Description</q> in the accessibility API.</li>
                   <li>The <code>aria-describedby</code> attribute contains a list of <code>IDREF</code>s to elements on the page.</li>
                   <li>Text content of referenced elements are concatenated to compute the <em>accessible description</em>.</li>
                   <li>Designed to reference visible text on the screen, like instructions and error feedback.</li>
@@ -199,22 +201,36 @@
               <td><code>title</code></td>
               <td>
                 <ul>
+                  <li>Creates a string description of an item on the web page, typically called the <q>Accessible Description</q> in the accessibility API.</li>
                   <li>If no other source of an <em>accessible description</em> is found and the element has a <code>title</code> attribute that is <strong>not</strong> being used to define an accessible name, the content of the <code>title</code> attribute is used to define the <em>accessible description</em>.</li>
                 </ul>
               </td>
             </tr>
             <tr>
-              <td><span class="postponed">ARIA 1.3</span></td>
+              <td><span class="postponed">ARIA 1.3 (future)</span></td>
               <td><code>aria-description</code></td>
               <td>
                 <ul>
                   <li>Similar to <code>aria-label</code> attribute, text content is used to define an accessible description.</li>
-                  <li>The <code>aria-description</code> attribute is in the current <a href="https://w3c.github.io/aria/#aria-description" target="_spec">editors working draft for ARIA 1.2</a>, but will be removed and will most likely be included in ARIA 1.3.</li>
+                  <li>The <code>aria-description</code> attribute is in the current <a href="https://w3c.github.io/aria/#aria-description" target="_spec">editors working draft for ARIA 1.3</a>, but will be removed and will most likely be included in ARIA 1.3.</li>
                 </ul>
               </td>
             </tr>
           </tbody>
         </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Navigation to descriptive or related content on a page</title>
+    <contents>
+      <ul>
+        <li>When a string in not sufficient not provide a description of an image, the <a href="https://w3c.github.io/aria/#aria-details"><code>aria-details</code></a> property is designed to provide a reference to another section of the current document to provide more information about an image.</li>
+        <li><code>aria-details</code> was added to ARIA 1.0 at the request of the DPUB accessibility working group that needed a way for assistive technologies to provide navigation to more robust descriptions than can be communicated through simple strings of text (e.g. accessible description on previous slide).</li>
+        <li>Major issue with <code>aria-details</code> for the web is the <strong>poor</strong> of assistive technology support in main stream screen readers.  Most ignore it or at the best say there is a description on the page for this image, but no information on where on the page.</li>
+        <li>Assistive technology support may improve with the implementation of ARIA 1.3 and the new attributes related to annotating online documents.  For example, online tools like Google documents will support the annotation attributes and these new attributes will use <code>aria-details</code> attribute as way to reference the annotation information.</li>
+      </ul>
+
     </contents>
   </slide>
 
@@ -350,13 +366,13 @@
             </tr>
             <tr>
               <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-              <td><code>var role = e.role;</code><sup>1</sup></td>
+              <td><code>var role = e.role;</code></td>
             </tr>
           </tbody>
         </table>
 
         <table class="table table-striped">
-          <caption>Getting Accessible Name</caption>
+          <caption>Getting <code>aria-label</code> attribute.</caption>
           <tbody>
             <tr>
               <th>Attribute</th>
@@ -368,10 +384,12 @@
             </tr>
             <tr>
               <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-              <td><code>var label = e.ariaLabel;</code><sup>1</sup></td>
+              <td><code>var label = e.ariaLabel;</code></td>
             </tr>
           </tbody>
         </table>
+
+        <p>NOTE: Getting the <code>aria-label</code> attribute is <strong>not</strong> the same as getting the <em>computed accessible name</em>.</p>
 
         <table class="table table-striped">
           <caption>Getting State</caption>
@@ -386,12 +404,10 @@
             </tr>
             <tr>
               <th>DOM Property (<span class="new">ARIA 1.2</span>)</th>
-              <td><code>var value = e.ariaChecked;</code><sup>1</sup></td>
+              <td><code>var value = e.ariaChecked;</code></td>
             </tr>
           </tbody>
         </table>
-
-        <p><sup>1</sup>NOTE: Currently must be set using the AOM DOM property to return a value reliably and as in setting only available on the most recent browser releases.</p>
 
     </contents>
   </slide>
