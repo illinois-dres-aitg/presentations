@@ -45,9 +45,9 @@
             <div class="col-md-9">
                <h1 id="h1_title" class="title">Accessible Object Model (AOM): Gotchas</h1>
                <ul>
-                  <li>Only values that have been set using the DOM property can be read using the DOM property.</li>
+                  <li>For now only values that have been set using the DOM property can be read using the DOM property.</li>
                   <li>Not all ARIA properties will be implemented, notably ARIA properties related to <code>ID</code> references, like <code>aria-labelledby</code>, <code>aria-controls</code>, etc..., since the HTML specification is still defining how properties using <code>ID</code> references will be implemented in the DOM.</li>
-                  <li>Still determining whether string versus boolean values (or depends on how it was set) will be returned for some states with boolean values (e.g. <code>aria-checked</code>).</li>
+                  <li>The value returned from a <a href="">DOM property should be a string</a>, but if it was set with a boolean value it may be returned as boolean value (e.g. <code>aria-checked</code>).</li>
                </ul>
             </div>
             <div class="col"></div>
