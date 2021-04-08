@@ -212,7 +212,7 @@
               <td>
                 <ul>
                   <li>Similar to <code>aria-label</code> attribute, text content is used to define an accessible description.</li>
-                  <li>The <code>aria-description</code> attribute is in the current <a href="https://w3c.github.io/aria/#aria-description" target="_spec">editors working draft for ARIA 1.3</a>, but will be removed and will most likely be included in ARIA 1.3.</li>
+                  <li>The <code>aria-description</code> attribute is in the current <a href="https://w3c.github.io/aria/#aria-description" target="_spec">editors working draft for ARIA 1.3</a>.</li>
                 </ul>
               </td>
             </tr>
@@ -242,7 +242,7 @@
       <ul>
         <li>HTML harmonization</li>
         <li>Combobox design pattern 1.2 that works with assistive technologies.</li>
-        <li>Accessible Object Model (AOM) to reflect some ARIA properties.</li>
+        <li>Interface Description Language (IDL) to reflect some ARIA properties.</li>
       </ul>
     </contents>
   </slide>
@@ -274,7 +274,7 @@
   </slide>
 
   <slide>
-    <title>Accessible Object Model (AOM): Setting Roles, Properties and States</title>
+    <title>Interface Description Language (IDL): Setting Roles, Properties and States</title>
     <contents>
 
        <p>In addition to using in-line HTML code and the <code>setAttribute</code> and <code>getAttribute</code> DOM methods for setting ARIA roles, properties and states, new DOM properties will also be available through the <a href="https://w3c.github.io/aria/#idl-interface" target="_spec">IDL Interface</a> requirements defined in <a href="https://www.w3.org/TR/wai-aria-1.2/" target="_spec">ARIA 1.2 Candidate Recommendation</a>.</p>
@@ -345,13 +345,13 @@
           </tbody>
         </table>
 
-        <p>NOTE: AOM is only available on the most recent browser releases.</p>
+        <p>NOTE: IDL is only available on the most recent browser releases.</p>
 
     </contents>
   </slide>
 
   <slide>
-    <title>Accessible Object Model (AOM): Getting Values</title>
+    <title>Interface Description Language (IDL): Getting Values</title>
     <contents>
         <table class="table table-striped">
           <caption>Getting ARIA Role</caption>
@@ -413,7 +413,7 @@
   </slide>
 
   <slide>
-    <title>Accessible Object Model (AOM): Test Page</title>
+    <title>Interface Description Language (IDL): Test Page</title>
     <contents>
 
       <table class="table table-striped">
@@ -427,19 +427,19 @@
         <tbody>
           <tr>
             <td class="sourcecode">&lt;input type="checkbox"/></td>
-            <td id="aom-11-role"></td>
+            <td id="idl-11-role"></td>
           </tr>
           <tr>
             <td class="sourcecode">&lt;div role="checkbox"></td>
-            <td id="aom-12-role"></td>
+            <td id="idl-12-role"></td>
           </tr>
           <tr>
             <td class="sourcecode">e.setAttribute('role', 'checkbox');</td>
-            <td id="aom-13-role"></td>
+            <td id="idl-13-role"></td>
           </tr>
           <tr>
             <td class="sourcecode">e.role = 'checkbox';</td>
-            <td id="aom-14-role"></td>
+            <td id="idl-14-role"></td>
           </tr>
         </tbody>
       </table>
@@ -456,37 +456,37 @@
         <tbody>
           <tr>
             <td class="sourcecode">&lt;div role='checkbox'  aria-checked='true'></td>
-            <td id="aom-22-checked"></td>
-            <td id="aom-22-type"></td>
+            <td id="idl-22-checked"></td>
+            <td id="idl-22-type"></td>
           </tr>
           <tr>
             <td class="sourcecode">e.setAttribute('aria-checked', 'true');</td>
-            <td id="aom-23-checked"></td>
-            <td id="aom-23-type"></td>
+            <td id="idl-23-checked"></td>
+            <td id="idl-23-type"></td>
           </tr>
           <tr>
             <td class="sourcecode">e.ariaChecked = 'true';</td>
-            <td id="aom-24-checked"></td>
-            <td id="aom-24-type"></td>
+            <td id="idl-24-checked"></td>
+            <td id="idl-24-type"></td>
           </tr>
           <tr>
             <td class="sourcecode">e.ariaChecked = true;</td>
-            <td id="aom-25-checked"></td>
-            <td id="aom-25-type"></td>
+            <td id="idl-25-checked"></td>
+            <td id="idl-25-type"></td>
           </tr>
         </tbody>
       </table>
 
       <div hidden="">
-        <div id="aom-11"><input type="checkbox"/></div>
-        <div id="aom-12"><div role="checkbox"></div></div>
-        <div id="aom-13"><div></div></div>
-        <div id="aom-14"><div></div></div>
+        <div id="idl-11"><input type="checkbox"/></div>
+        <div id="idl-12"><div role="checkbox"></div></div>
+        <div id="idl-13"><div></div></div>
+        <div id="idl-14"><div></div></div>
 
-        <div id="aom-22"><div role="checkbox" aria-checked="true"></div></div>
-        <div id="aom-23"><div></div></div>
-        <div id="aom-24"><div></div></div>
-        <div id="aom-25"><div></div></div>
+        <div id="idl-22"><div role="checkbox" aria-checked="true"></div></div>
+        <div id="idl-23"><div></div></div>
+        <div id="idl-24"><div></div></div>
+        <div id="idl-25"><div></div></div>
 
         <script>
           function setAttribute(id, attr, value) {
@@ -521,29 +521,29 @@
             document.getElementById(id1).textContent = type;
           }
 
-          getValue('aom-11-role', 'aom-11', 'role');
-          getValue('aom-12-role', 'aom-12', 'role');
+          getValue('idl-11-role', 'idl-11', 'role');
+          getValue('idl-12-role', 'idl-12', 'role');
 
-          setAttribute(`aom-13`, 'role', 'checkbox');
-          getValue('aom-13-role', 'aom-13', 'role');
+          setAttribute(`idl-13`, 'role', 'checkbox');
+          getValue('idl-13-role', 'idl-13', 'role');
 
-          setProperty(`aom-14`, 'role', 'checkbox');
-          getValue('aom-14-role', 'aom-14', 'role');
+          setProperty(`idl-14`, 'role', 'checkbox');
+          getValue('idl-14-role', 'idl-14', 'role');
 
-          getValue('aom-22-checked', 'aom-22', 'ariaChecked');
-          getType('aom-22-type', 'aom-22', 'ariaChecked');
+          getValue('idl-22-checked', 'idl-22', 'ariaChecked');
+          getType('idl-22-type', 'idl-22', 'ariaChecked');
 
-          setAttribute(`aom-23`, 'aria-checked', 'true');
-          getValue('aom-23-checked', 'aom-23', 'ariaChecked');
-          getType('aom-23-type', 'aom-23', 'ariaChecked');
+          setAttribute(`idl-23`, 'aria-checked', 'true');
+          getValue('idl-23-checked', 'idl-23', 'ariaChecked');
+          getType('idl-23-type', 'idl-23', 'ariaChecked');
 
-          setProperty(`aom-24`, 'ariaChecked', 'true');
-          getValue('aom-24-checked', 'aom-24', 'ariaChecked');
-          getType('aom-24-type', 'aom-24', 'ariaChecked');
+          setProperty(`idl-24`, 'ariaChecked', 'true');
+          getValue('idl-24-checked', 'idl-24', 'ariaChecked');
+          getType('idl-24-type', 'idl-24', 'ariaChecked');
 
-          setProperty(`aom-25`, 'ariaChecked', true);
-          getValue('aom-25-checked', 'aom-25', 'ariaChecked');
-          getType('aom-25-type', 'aom-25', 'ariaChecked');
+          setProperty(`idl-25`, 'ariaChecked', true);
+          getValue('idl-25-checked', 'idl-25', 'ariaChecked');
+          getType('idl-25-type', 'idl-25', 'ariaChecked');
         </script>
 
       </div>
@@ -552,7 +552,7 @@
   </slide>
 
   <slide>
-    <title>Accessible Object Model (AOM): Gotchas</title>
+    <title>Interface Description Language (IDL): Gotchas</title>
     <contents>
         <ul>
           <li>For now only values that have been set using the DOM property can be read using the DOM property.</li>
@@ -663,7 +663,7 @@
     <contents>
       <p><a href="https://www.w3.org/community/aria-at/" target="_group">ARIA-AT Community group</a> goals:</p>
       <ul>
-        <li>Provide information on who ARIA changes the user experience for people with disabilities.</li>
+        <li>Provide information on how ARIA changes the user experience for people with disabilities.</li>
         <li>Provide feedback to screen reader developers on how they provide ARIA information and expectations on what they should be providing.</li>
         <li>Improve consistency of information provided by different assistive technologies.</li>
         <li>Long term goal is to have tests for each ARIA Practices code example.</li>

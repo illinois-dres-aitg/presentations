@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 13: Accessible Object Model (AOM): Test Page</title>
+      <title>Slide 13: Interface Description Language (IDL): Test Page</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -43,7 +43,7 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Accessible Object Model (AOM): Test Page</h1>
+               <h1 id="h1_title" class="title">Interface Description Language (IDL): Test Page</h1>
                <table class="table table-striped">
                   <caption>Getting value with DOM <code>role</code> property</caption>
                   <thead>
@@ -55,19 +55,19 @@
                   <tbody>
                      <tr>
                         <td class="sourcecode">&lt;input type="checkbox"/&gt;</td>
-                        <td id="aom-11-role"></td>
+                        <td id="idl-11-role"></td>
                      </tr>
                      <tr>
                         <td class="sourcecode">&lt;div role="checkbox"&gt;</td>
-                        <td id="aom-12-role"></td>
+                        <td id="idl-12-role"></td>
                      </tr>
                      <tr>
                         <td class="sourcecode">e.setAttribute('role', 'checkbox');</td>
-                        <td id="aom-13-role"></td>
+                        <td id="idl-13-role"></td>
                      </tr>
                      <tr>
                         <td class="sourcecode">e.role = 'checkbox';</td>
-                        <td id="aom-14-role"></td>
+                        <td id="idl-14-role"></td>
                      </tr>
                   </tbody>
                </table>
@@ -83,47 +83,47 @@
                   <tbody>
                      <tr>
                         <td class="sourcecode">&lt;div role='checkbox'  aria-checked='true'&gt;</td>
-                        <td id="aom-22-checked"></td>
-                        <td id="aom-22-type"></td>
+                        <td id="idl-22-checked"></td>
+                        <td id="idl-22-type"></td>
                      </tr>
                      <tr>
                         <td class="sourcecode">e.setAttribute('aria-checked', 'true');</td>
-                        <td id="aom-23-checked"></td>
-                        <td id="aom-23-type"></td>
+                        <td id="idl-23-checked"></td>
+                        <td id="idl-23-type"></td>
                      </tr>
                      <tr>
                         <td class="sourcecode">e.ariaChecked = 'true';</td>
-                        <td id="aom-24-checked"></td>
-                        <td id="aom-24-type"></td>
+                        <td id="idl-24-checked"></td>
+                        <td id="idl-24-type"></td>
                      </tr>
                      <tr>
                         <td class="sourcecode">e.ariaChecked = true;</td>
-                        <td id="aom-25-checked"></td>
-                        <td id="aom-25-type"></td>
+                        <td id="idl-25-checked"></td>
+                        <td id="idl-25-type"></td>
                      </tr>
                   </tbody>
                </table>
                <div hidden="">
-                  <div id="aom-11"><input type="checkbox"></div>
-                  <div id="aom-12">
+                  <div id="idl-11"><input type="checkbox"></div>
+                  <div id="idl-12">
                      <div role="checkbox"></div>
                   </div>
-                  <div id="aom-13">
+                  <div id="idl-13">
                      <div></div>
                   </div>
-                  <div id="aom-14">
+                  <div id="idl-14">
                      <div></div>
                   </div>
-                  <div id="aom-22">
+                  <div id="idl-22">
                      <div role="checkbox" aria-checked="true"></div>
                   </div>
-                  <div id="aom-23">
+                  <div id="idl-23">
                      <div></div>
                   </div>
-                  <div id="aom-24">
+                  <div id="idl-24">
                      <div></div>
                   </div>
-                  <div id="aom-25">
+                  <div id="idl-25">
                      <div></div>
                   </div>
 
@@ -160,29 +160,29 @@
             document.getElementById(id1).textContent = type;
           }
 
-          getValue('aom-11-role', 'aom-11', 'role');
-          getValue('aom-12-role', 'aom-12', 'role');
+          getValue('idl-11-role', 'idl-11', 'role');
+          getValue('idl-12-role', 'idl-12', 'role');
 
-          setAttribute(`aom-13`, 'role', 'checkbox');
-          getValue('aom-13-role', 'aom-13', 'role');
+          setAttribute(`idl-13`, 'role', 'checkbox');
+          getValue('idl-13-role', 'idl-13', 'role');
 
-          setProperty(`aom-14`, 'role', 'checkbox');
-          getValue('aom-14-role', 'aom-14', 'role');
+          setProperty(`idl-14`, 'role', 'checkbox');
+          getValue('idl-14-role', 'idl-14', 'role');
 
-          getValue('aom-22-checked', 'aom-22', 'ariaChecked');
-          getType('aom-22-type', 'aom-22', 'ariaChecked');
+          getValue('idl-22-checked', 'idl-22', 'ariaChecked');
+          getType('idl-22-type', 'idl-22', 'ariaChecked');
 
-          setAttribute(`aom-23`, 'aria-checked', 'true');
-          getValue('aom-23-checked', 'aom-23', 'ariaChecked');
-          getType('aom-23-type', 'aom-23', 'ariaChecked');
+          setAttribute(`idl-23`, 'aria-checked', 'true');
+          getValue('idl-23-checked', 'idl-23', 'ariaChecked');
+          getType('idl-23-type', 'idl-23', 'ariaChecked');
 
-          setProperty(`aom-24`, 'ariaChecked', 'true');
-          getValue('aom-24-checked', 'aom-24', 'ariaChecked');
-          getType('aom-24-type', 'aom-24', 'ariaChecked');
+          setProperty(`idl-24`, 'ariaChecked', 'true');
+          getValue('idl-24-checked', 'idl-24', 'ariaChecked');
+          getType('idl-24-type', 'idl-24', 'ariaChecked');
 
-          setProperty(`aom-25`, 'ariaChecked', true);
-          getValue('aom-25-checked', 'aom-25', 'ariaChecked');
-          getType('aom-25-type', 'aom-25', 'ariaChecked');
+          setProperty(`idl-25`, 'ariaChecked', true);
+          getValue('idl-25-checked', 'idl-25', 'ariaChecked');
+          getType('idl-25-type', 'idl-25', 'ariaChecked');
         </script>
 
       </div>
