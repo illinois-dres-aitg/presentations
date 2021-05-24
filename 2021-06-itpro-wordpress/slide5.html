@@ -7,7 +7,31 @@
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
-      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style">
+      .sample {
+        display: inline-block;
+        margin: 0.25em;
+        padding: 0.25em;
+        font-weight: normal;
+        }
+      .banner {
+        color: #ffffff;
+        background: #13294b;
+      }
+      .link {
+        color: #00132c;
+        background: #cad9ef;
+      }
+      .focus-ring {
+        border: 2px solid #ff552e;
+        color: #ffffff;
+        background: #13294b;
+      }
+      .calendar-row {
+        color: #1d4b90;
+        background: #e8e9eb;
+      }
+    </style>
    </head>
    <body>
       <nav id="nav" class="navbar navbar-default">
@@ -48,30 +72,40 @@
                   <thead>
                      <tr>
                         <th>Feature</th>
-                        <th>Color Contrast</th>
+                        <th class="num">Color 1</th>
+                        <th class="num">Color 2</th>
+                        <th class="num" abbr="Color Contrast Ratio">CCR</th>
                         <th>WCAG Level</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
-                        <th scope="row">Search Icon/Banner Menu Text</th>
-                        <td></td>
-                        <td></td>
+                        <th scope="row"><span class="sample banner">Banner Menu Text</span></th>
+                        <td class="num"><code>#ffffff</code></td>
+                        <td class="num"><code>#13294b</code></td>
+                        <td class="num"><a href="https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&amp;bcolor=13294B" target="_webaim">15.51</a></td>
+                        <td>AAA</td>
                      </tr>
                      <tr>
-                        <th scope="row">Link focus/hover colors</th>
-                        <td></td>
-                        <td></td>
+                        <th scope="row"><span class="sample link">Link Focus</span></th>
+                        <td class="num">#00132c</td>
+                        <td class="num">#cad9ef</td>
+                        <td class="num"><a href="https://webaim.org/resources/contrastchecker/?fcolor=00132c&amp;bcolor=cad9ef" target="_webaim">12.99:1</a></td>
+                        <td>AAA</td>
                      </tr>
                      <tr>
-                        <th scope="row">Focus ring</th>
-                        <td></td>
-                        <td></td>
+                        <th scope="row"><span class="sample focus-ring">Focus ring</span></th>
+                        <td class="num">#ff552e<br>(border)</td>
+                        <td class="num">#13294b</td>
+                        <td class="num"><a href="https://webaim.org/resources/contrastchecker/?fcolor=FF552e&amp;bcolor=13294B" target="_webaim">4.55:1</a></td>
+                        <td>AA</td>
                      </tr>
                      <tr>
-                        <th scope="row">Calendar Row Text</th>
-                        <td></td>
-                        <td></td>
+                        <th scope="row"><span class="sample calendar-row">Calendar row link text</span></th>
+                        <td class="num">#1d4b90</td>
+                        <td class="num">#e8e9eb</td>
+                        <td class="num"><a href="https://webaim.org/resources/contrastchecker/?fcolor=1d4b90&amp;bcolor=e8e9eb" target="_webaim">7.02</a></td>
+                        <td>AA<br>(almost AAA)</td>
                      </tr>
                   </tbody>
                </table>
