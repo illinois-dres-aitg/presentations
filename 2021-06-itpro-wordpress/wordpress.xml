@@ -42,6 +42,7 @@
    <name href="https://www.itproforum.illinois.edu/sessions">Illinois IT Pro Forum</name>
     <desc>Online</desc>
     <desc>June 3rd, 2021</desc>
+    <desc>2:00pm-2:45pm</desc>
   </conference>
 
   <desc href="../">Presentations</desc>
@@ -380,7 +381,7 @@
       <table class="table table-striped" aria-labelledby="h1_title">
         <thead>
           <tr>
-            <th scope="col">Pattern</th>
+            <th scope="col" style="min-width: 10em">Pattern</th>
             <th scope="col"><code>tab</code> key</th>
             <th scope="col">Cursor Keys</th>
             <th scope="col">Other Keys</th>
