@@ -22,8 +22,7 @@
 
   <person>
     <name>Nicholas Hoyt</name>
-    <desc>Software Development and Interaction Design Specialist
-</desc>
+    <desc>Software Development and Interaction Design Specialist</desc>
     <desc>Division of Disability Resources and Educational Services</desc>
     <desc>College of Applied Health Sciences</desc>
     <desc>University of Illinois at Urbana-Champaign</desc>
@@ -59,14 +58,11 @@
     <title>Overview</title>
     <contents>
       <ul>
-        <li>Design Considerations</li>
-        <li>WCAG Requirements</li>
-        <li>Keyboard support</li>
-        <li>HTML markup from WordPress</li>
-        <li>ARIA roles, properties and states</li>
-        <li>Use of SVG inline images</li>
-        <li>Configuration of the menu</li>
-        <li>Update on SkipTo.js</li>
+        <li>Markup skeleton</li>
+        <li>Color palette</li>
+        <li>Focus styling</li>
+        <li>Disclosure menu</li>
+        <li>Bypass blocks (e.g. Skipto)</li>
       </ul>
 
       <script type="text/javascript">
@@ -80,7 +76,7 @@
     <contents>
       <p>WordPress Banner Menu: <a href="https://accessibleit.disability.illinois.edu/">DRES Accessible IT Group Website</a></p>
 
-      <p class="center"><img src="accessible-it-group-home-page.png" alt="screen shot of the DRES accessible IT griup home page with disclosure menu"/></p>
+      <p class="center"><img src="accessible-it-group-home-page.png" alt="screen shot of the DRES Accessible IT group home page with disclosure menu"/></p>
     </contents>
   </slide>
 
