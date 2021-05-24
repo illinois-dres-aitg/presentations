@@ -29,12 +29,14 @@
     <desc href="mailto:nhoyt@illinois.edu">nhoyt@illinois.edu</desc>
   </person>
 
+<!--
   <person>
     <name>Robert Slater</name>
     <desc>Lead Application Services Specialist</desc>
     <desc>Technology Services</desc>
     <desc href="mailto:rslater@illinois.edu">rslater@illinois.edu</desc>
   </person>
+-->
 
   <conference>
    <name href="https://www.itproforum.illinois.edu/sessions">Illinois IT Pro Forum</name>
@@ -55,14 +57,13 @@
   <script>../js/html-slides.js</script>
 
   <slide>
-    <title>Overview</title>
+    <title>Design Considerations</title>
     <contents>
       <ul>
-        <li>Markup skeleton</li>
-        <li>Color palette</li>
-        <li>Focus styling</li>
-        <li>Disclosure menu</li>
-        <li>Bypass blocks (e.g. Skipto)</li>
+        <li>Markup Skeleton</li>
+        <li>Color Contrast</li>
+        <li>Disclosure Menu</li>
+        <li>Bypass Blocks (e.g. SkipTo)</li>
       </ul>
 
       <script type="text/javascript">
@@ -72,56 +73,140 @@
   </slide>
 
   <slide>
-    <title>WordPress Banner Menu</title>
+    <title>Landmark, Headings and Title: Accessibility Requirements</title>
     <contents>
-      <p>WordPress Banner Menu: <a href="https://accessibleit.disability.illinois.edu/">DRES Accessible IT Group Website</a></p>
 
-      <p class="center"><img src="accessible-it-group-home-page.png" alt="screen shot of the DRES Accessible IT group home page with disclosure menu"/></p>
-    </contents>
-  </slide>
-
-  <slide>
-    <title>Design Considerations</title>
-    <contents>
+      <h2>Landmarks</h2>
       <ul>
-        <li>Accessibility
+        <li>All rendered content in a landmark</li>
+        <li>Properly identify the following landmark regions:
           <ul>
-            <li>Keyboard support</li>
-            <li>Operating system high contrast support</li>
-            <li>Proper use of of native HTML semantics and ARIA markup</li>
+            <li><code>banner</code></li>
+            <li><code>contentinfo</code></li>
+            <li><code>main</code></li>
+            <li><code>navigation</code></li>
+            <li><code>search</code></li>
           </ul>
         </li>
-        <li>University of Illinois branding</li>
-        <li>Features similar to other campus websites</li>
-        <li>Visual affordances for keyboard and pointer interaction
-          <ul>
-            <li>Graphics to indicate submenus and links</li>
-            <li>Focus and hover styling</li>
-          </ul>
-        </li>
-        <li>Pointer behavior:
-          <ul>
-            <li>Submenus do <strong>not</strong> open on hover, require a click</li>
-          </ul>
-        </li>
-        <li>Animations provide a more relaxed visual experience:
-          <ul>
-            <li>Menus are opened and closed using fade-in and fade-out animations to make the transitions less abrupt</li>
-            <li>Animation is also used when the menu button chevrons change direction to similar effect</li>
-          </ul>
-        </li>
-        <li>Responsive design:
-          <ul>
-            <li>Hamburger menu when screen narrows</li>
-            <li>Update menu styling based on screen width</li>
-          </ul>
-        </li>
+      </ul>
+
+      <h2>Headings</h2>
+      <ul>
+        <li><code>h1</code>: Is the first heading in the main landmark to identify the main content of the page and contains the page title.</li>
+        <li><code>h2-h3</code>: Identify the sections and sub-sections of the main content.</li>
+      </ul>
+
+      <h2>Title</h2>
+      <ul>
+        <li><code>title</code>: Contains the title of the page first and then uses a separator character (.e.g. - ) and then the name of the website.</li>
+        <li><code>h1</code>: Contains a title for the page content.</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>WCAG Requirements related to Navigation Menus</title>
+    <title>Landmark, Headings and Title: Markup Skeleton</title>
+    <contents>
+      <ul>
+        <li>header with banner menu</li>
+        <li>three-column layout</li>
+        <li>main element with H1</li>
+        <li>sidebar (aside) with blog post menu</li>
+        <li>footer (contentinfo) links</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Color Contrast: Accessibility Requirements</title>
+    <contents>
+
+      <table class="table table-striped" aria-labelledby="h1_title">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>WCAG 2.x Level AA</th>
+            <th>WCAG 2.x Level AAA</th>
+            <th>WCAG 2.1 Level AA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Normal Text</th>
+            <td>4.5:1</td>
+            <td>7:1</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Large Text</th>
+            <td>3:1</td>
+            <td>4.5:1</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Graphics</th>
+            <td></td>
+            <td></td>
+            <td>3:1</td>
+          </tr>
+          <tr>
+            <th scope="row">User Interface Components</th>
+            <td></td>
+            <td></td>
+            <td>3:1</td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Color Contrast: Accessible IT Group</title>
+    <contents>
+
+      <table class="table table-striped" aria-labelledby="h1_title">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Color Contrast</th>
+            <th>WCAG Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Search Icon/Banner Menu Text</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Link focus/hover colors</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Focus ring</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Calendar Row Text</th>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Color Contrast: SVG and High Contrast Mode</title>
+    <contents>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Disclosure Menu: Accessibility Requirements</title>
     <contents>
 
       <table class="table table-striped" aria-labelledby="h1_title">
@@ -181,7 +266,34 @@
   </slide>
 
   <slide>
-    <title>ARIA Patterns for Navigation Menus</title>
+    <title>Disclosure Menu: Screenshot</title>
+    <contents>
+      <p>WordPress Banner Menu: <a href="https://accessibleit.disability.illinois.edu/">DRES Accessible IT Group Website</a></p>
+
+      <p class="center"><img src="accessible-it-group-home-page.png" alt="screen shot of the DRES Accessible IT group home page with disclosure menu"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Disclosure Menu: Design Considerations</title>
+    <contents>
+      <ul>
+        <li>Keyboard support.</li>
+        <li>Proper use of of native HTML semantics and ARIA markup.</li>
+        <li>Visual affordance for keyboard and pointer interaction.</li>
+        <li>Focus and hover styling.</li>
+        <li>Responsive design:
+          <ul>
+            <li>Hamburger menu when screen narrows.</li>
+            <li>Update menu styling based on screen width.</li>
+          </ul>
+        </li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Disclosure Menu: ARIA Design Patterns for Navigation Menus</title>
     <contents>
 
       <table class="table table-striped" aria-labelledby="h1_title">
@@ -239,7 +351,7 @@
   </slide>
 
   <slide>
-    <title>Keyboard Support: Disclosure Menu Pattern</title>
+    <title>Disclosure Menu: Keyboard Support</title>
     <contents>
 
       <h2 id="id-key-prim">Primary Keyboard Commands</h2>
@@ -334,7 +446,7 @@
   </slide>
 
   <slide>
-    <title>HTML Markup from WordPress: Top Level Menu Items</title>
+    <title>Disclosure Menu: Top Level HTML Markup from WordPress</title>
     <contents>
 
       <h2>WordPress Source Code</h2>
@@ -492,7 +604,7 @@
   </slide>
 
   <slide>
-    <title>HTML Markup from WordPress: Current Link</title>
+    <title>Disclosure Menu: Identifying Current Link</title>
     <contents>
 
       <h2>WordPress Source Code</h2>
@@ -581,43 +693,53 @@
   </slide>
 
   <slide>
-    <title>WordPress Menu Configuration</title>
+    <title>Disclosure Menu: Menu Configuration</title>
     <contents>
       <p class="center"><img src="menu-configuration.png" alt="screen shot of the menu configuration interface of WordPress"/></p>
     </contents>
   </slide>
 
   <slide>
-    <title>Campus Accessible Menu Implementation</title>
+    <title>Bypass Blocks: Accessibility Requirements</title>
     <contents>
       <ul>
-        <li>Document accessible navigation menu code used on campus.</li>
-        <li>Technical support for people who are building their own accessible navigation systems or adapt this code to their system.</li>
+        <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks">2.4.1: Bypass Blocks</a> requires a means for keyboard only used to navigate to the main content of the page, essentially bypassing navigational and other links that appear before the main content.</li>
+        <li>Typically bypass blocks is achieved with a "Skip To Main" link that is initially invisible, but appears when it receives keyboard focus.</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>Update on SkipTo.js: CDN and default configuration</title>
+    <title>Bypass Blocks: SkipTo Script</title>
     <contents>
       <ul>
-        <li>Referencing the <code>SkipTo.js</code> script:
+        <li>The <a href="https://github.com/a11y-tools/skipto/blob/master/README.md">SkipTo</a> script is the modern way to conform to the "<a href="https://www.w3.org/TR/WCAG/#bypass-blocks" rel="nofollow">Bypass Blocks</a>" requirement of the <a href="https://www.w3.org/TR/WCAG/" rel="nofollow">Web Content Accessibility Guidelines</a>.</li>
+        <li><em>All users</em> can get an outline of the major content areas on the page.</li>
+        <li><em>Screen reader</em> users can get a higher level navigation menu without having to use the screen reader landmark and header navigation commands which typically include longer lists of lower level headings and less used landmarks.</li>
+        <li><em>Keyboard only</em> users can more efficiently navigate to content on a page.</li>
+        <li><em>Speech recognition</em> users can use the menu to more efficiently navigate to content on a page.</li>
+        <li><em>Authors</em> can configure SkipTo to identify the most important regions, ideally about 7-12 items to make it easier for people to read the list and choose an option.  Remember the more items, the longer it will take for the user to identify which item they want to choose.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>ByPass Blocks: SkipTo CDN and default configuration</title>
+    <contents>
+      <ul>
+        <li>Referencing the <a href="https://github.com/a11y-tools/skipto/blob/master/README.md"><code>SkipTo.js</code></a> script:
           <ul>
             <li>Include a reference to the CDN version of the script: <a  target="_code" href="https://cdn.disability.illinois.edu/skipto.min.js">https://cdn.disability.illinois.edu/skipto.min.js</a>.</li>
             <li>Alternatively you can include reference a local copy of the <a href="https://github.com/a11y-tools/skipto/tree/master/compiled/js" target="_code"><code>skipto.min.js</code></a> script in the page or page template.</li>
           </ul>
         </li>
-        <li>Changes to default configuration:
-          <ul>
-            <li>The "Action menu items" are now disabled by default.</li>
-          </ul>
-        </li>
          <li>Tooltip appears on keyboard focus in addition to pointer hover on shortcut key information.</li>
         <li>Websites using SkipTo.js on campus:
           <ul>
-            <li><a href="https://accessibleit.disability.illinois.edu/" target="example">DRES Accessible IT Group</a></li>
             <li><a href="https://ahs.illinois.edu/" target="example">College of Applied Health Sciences</a></li>
-            <li><a href="https://rslater.web.illinois.edu/">Tutoring at Illinois</a></li>
+            <li><a href="https://webcon.illinois.edu/">Illinois Webcon</a></li>
+            <li><a href="http://cpanel.web.illinois.edu/">Cpanel Web Hosting Service @ Illinois</a></li>
+            <li><a href="https://nightingaledesignresearch.com/">Nightingale Design Research</a></li>
           </ul>
         </li>
       </ul>

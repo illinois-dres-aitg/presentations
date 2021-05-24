@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 12: Questions and Discussion</title>
+      <title>Slide 12: Disclosure Menu: Top Level HTML Markup from WordPress</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -26,15 +26,15 @@
                   <li><a id="ID_SLIDE_PREVIOUS" href="slide11.html" title="Slide 11">
                         Previous
                       </a></li>
-                  <li class="disabled"><a id="ID_SLIDE_NEXT" href="#" title="On Last Slide">
+                  <li><a id="ID_SLIDE_NEXT" href="slide13.html" title="Slide 13">
                         Next
                       </a></li>
-                  <li class="disabled"><a id="ID_SLIDE_LAST" href="#" name="On Last Slide">
+                  <li><a id="ID_SLIDE_LAST" href="slide18.html" title="Slide 18">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 12 of 12</li>
+                  <li class="nav navbar-text">Slide 12 of 18</li>
                </ul>
             </div>
          </div>
@@ -43,7 +43,152 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Questions and Discussion</h1>
+               <h1 id="h1_title" class="title">Disclosure Menu: Top Level HTML Markup from WordPress</h1>
+               <h2>WordPress Source Code</h2>
+               <div class="code">
+  ......
+  &lt;nav class="banner-menu"&gt;
+    &lt;ul id="banner-menu" class="menu"&gt;
+      &lt;li id="menu-item-1102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1102"&gt;
+        <span class="highlight">&lt;a href="https://accessibleit.disability.illinois.edu/courses/"&gt;</span>
+          Courses
+        &lt;/a&gt;
+        &lt;ul class="sub-menu"&gt;
+          &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-707"&gt;
+            &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses"&gt;
+              Badging Courses
+            &lt;/a&gt;
+            &lt;ul class="sub-menu"&gt;
+  ......
+      </div>
+               <h2>DOM after DisclosureMenu.js script</h2>
+               <div class="code">
+  ......
+  <span class="highlight">   &lt;button type="button" aria-label="Main Menu" class="banner-hamburger" aria-expanded="false"&gt;
+       &lt;svg class="menu-open" aria-hidden="true" preserveAspectRatio="xMidYMid meet" width="34px" height="32px" viewBox="0 0 32 32" version="1.1"&gt;
+          &lt;title&gt;Open Menu&lt;/title&gt;
+          &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;
+             &lt;rect fill="#FFFFFF" x="0" y="0" width="32" height="32" /&gt;
+             &lt;g transform="translate(4.000000, 6.000000)" fill="#13294b"&gt;
+                &lt;rect x="0" y="0" width="24" height="4" rx="2" /&gt;
+                &lt;rect x="0" y="8" width="24" height="4" rx="2" /&gt;
+                &lt;rect x="0" y="16" width="24" height="4" rx="2" /&gt;
+             &lt;/g&gt;
+          &lt;/g&gt;
+       &lt;/svg&gt;
+     &lt;/button&gt;</span>
+     &lt;svg class="menu-close" aria-hidden="true" preserveAspectRatio="xMidYMid meet" width="34px" height="32px" viewBox="0 0 32 32" version="1.1"&gt;
+        &lt;title&gt;Close Menu&lt;/title&gt;
+        &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;
+           &lt;rect fill="#FFFFFF" x="0" y="0" width="32" height="32" /&gt;
+           &lt;path d="M6.10050506,23.0710678 L23.0710678,6.10050506 C23.8521164,5.31945648 25.1184464,5.31945648 25.8994949,6.10050506 C26.6805435,6.88155365 26.6805435,8.1478836 25.8994949,8.92893219 L8.92893219,25.8994949 C8.1478836,26.6805435 6.88155365,26.6805435 6.10050506,25.8994949 C5.31945648,25.1184464 5.31945648,23.8521164 6.10050506,23.0710678 Z" fill="#13294b" /&gt;
+           &lt;path d="M8.93264069,6.10421356 L25.9032034,23.0747763 C26.684252,23.8558249 26.684252,25.1221549 25.9032034,25.9032034 C25.1221549,26.684252 23.8558249,26.684252 23.0747763,25.9032034 L6.10421356,8.93264069 C5.32316498,8.1515921 5.32316498,6.88526215 6.10421356,6.10421356 C6.88526215,5.32316498 8.1515921,5.32316498 8.93264069,6.10421356 Z" fill="#13294b" /&gt;
+        &lt;/g&gt;
+     &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;nav class="banner-menu" <span class="highlight">aria-label="Site Menu"</span>&gt;
+    &lt;ul id="banner-menu" class="menu"&gt;
+      &lt;li id="menu-item-1102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1102"&gt;
+        <span class="highlight">&lt;a role="button" href="#" aria-expanded="false" aria-controls="banner-sub-menu-0"&gt;</span>
+          Courses
+<span class="highlight">          &lt;svg aria-hidden="true" width="11px" height="11px" viewBox="0 0 133 79" version="1.1"&gt;
+             &lt;title&gt;menu open/close icon&lt;/title&gt;
+             &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;
+                &lt;g transform="translate(-50.000000, -122.000000)" fill="currentColor"&gt;
+                   &lt;g transform="translate(45.000000, 64.000000)"&gt;
+                      &lt;path d="M33.5,21 C40.4035594,21 46,26.5964406 46,33.5 L46,96.5 L109,96.5 C115.903559,96.5 121.5,102.096441 121.5,109 C121.5,115.903559 115.903559,121.5 109,121.5 L34,121.5 C30.4210403,121.5 27.1933842,119.995891 24.9146718,117.585313 C22.5041093,115.306616 21,112.07896 21,108.5 L21,33.5 C21,26.5964406 26.5964406,21 33.5,21 Z" transform="translate(71.250000, 71.250000) rotate(-45.000000) translate(-71.250000, -71.250000) " /&gt;
+                   &lt;/g&gt;
+                &lt;/g&gt;
+             &lt;/g&gt;
+          &lt;/svg&gt;</span>
+        &lt;/a&gt;
+        &lt;ul <span class="highlight">id="banner-sub-menu-0"</span> class="sub-menu"&gt;
+          &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-707"&gt;
+            &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses"&gt;
+              Badging Courses
+            &lt;/a&gt;
+            &lt;ul class="sub-menu"&gt;
+  ......
+      </div>
+               <h2 id="h2-top-level">Changes to the DOM</h2>
+               <p id="id-desc-top">The top level menu items with submenus are updated by the disclosure menu script to support the behaviors and markup for the <a href="https://w3c.github.io/aria-practices/#disclosure">ARIA disclosure pattern</a>.  The disclosure pattern is the most popular way to implement navigation menus with submenus.  Top level menu items that <em>do not</em> have submenus do not have the following changes.</p>
+               <table class="table table-striped" aria-labelledby="h3-top-level" aria-describedby="id-desc-top">
+                  <thead>
+                     <tr>
+                        <th scope="col">Change</th>
+                        <th scope="col">Purpose</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+              <code>role=<q>button</q></code>
+            </td>
+                        <td>
+              The <code>a</code> element will no longer act as a link, but a button to open and close the submenu.   This requires change the <code>a</code> element semantics from "link" to "button" by adding the <code>role</code> attribute with the value of <code>button</code>.
+            </td>
+                     </tr>
+                     <tr>
+                        <td>
+              <code>href=<q>#</q></code>
+            </td>
+                        <td>
+              To change the behavior of the <code>a</code> element to no longer reload or scroll the page, the <code>href</code> is set to <code>#</code> character.  This also keeps the <code>a</code> element in the tab sequence of the page.
+            </td>
+                     </tr>
+                     <tr>
+                        <td>
+              <code>aria-expanded=<q>false</q></code>
+            </td>
+                        <td>
+              The <code>aria-expanded</code> attribute identifies if the group of submenu links are visible or hidden.
+            </td>
+                     </tr>
+                     <tr>
+                        <td>
+              <code>aria-controls=<q>IDREF</q></code>
+            </td>
+                        <td>
+              The <code>aria-controls</code> attribute defines a relationship between the button and the group of submenu links.
+            </td>
+                     </tr>
+                     <tr>
+                        <td>
+              <code>aria-label=<q>Site Menu</q></code>
+            </td>
+                        <td>
+              Adds an accessible name to the <code>nav</code> element.
+            </td>
+                     </tr>
+                     <tr>
+                        <td>
+              <code>button</code>
+            </td>
+                        <td>
+              Adds a hamburger button to open and close the navigation menu when screen is narrow or on a small device.
+            </td>
+                     </tr>
+                     <tr>
+                        <td>
+              Inline SVG graphic
+            </td>
+                        <td>
+              The SVG graphics is used to indicate the action of the menu item:
+              <ul>
+                              <li>If the menu item has a submenu, the SVG graphic indicates using up and down chevrons that the menu item has a submenu and whether the submenu is opened or closed.</li>
+                              <li>If the menu item is a link, a right pointing chevron is used to differentiate the menu item from menu items with a submenu.</li>
+                              <li>Inline SVG graphics are used to support the use of the <code>currentColor</code> property to make sure the graphic is visible and has enough contrast in operating system high contrast modes.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <h2>Script and CSS</h2>
+               <ul>
+                  <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/js/DisclosureMenu.js">DisclosureMenu.js</a></li>
+                  <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/style.css">AITG WordPress Theme CSS</a> that includes styling for the disclosure menu.</li>
+                  <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-design/blob/master/banner-menu.scss">SASS file for the banner menu styling</a></li>
+               </ul>
             </div>
             <div class="col"></div>
          </div>
