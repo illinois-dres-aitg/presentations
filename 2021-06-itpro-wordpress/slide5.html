@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Slide 5: ARIA Patterns for Navigation Menus</title>
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
+   </head>
+   <body>
+      <nav id="nav" class="navbar navbar-default">
+         <div class="container">
+            <div class="navbar-header"><button class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#slide-nav"><span class="sr-only">
+                  Toggle navigation
+                </span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
+            <div id="slide-nav" class="collapse navbar-collapse">
+               <ul class="nav navbar-nav">
+                  <li><a id="ID_SLIDE_INDEX" href="index.html">
+                        Index
+                      </a></li>
+                  <li><a id="ID_SLIDE_FIRST" href="slide1.html" title="Slide 1">
+                        First
+                      </a></li>
+                  <li><a id="ID_SLIDE_PREVIOUS" href="slide4.html" title="Slide 4">
+                        Previous
+                      </a></li>
+                  <li><a id="ID_SLIDE_NEXT" href="slide6.html" title="Slide 6">
+                        Next
+                      </a></li>
+                  <li><a id="ID_SLIDE_LAST" href="slide12.html" title="Slide 12">
+                        Last
+                      </a></li>
+               </ul>
+               <ul class="nav navbar-nav pull-right">
+                  <li class="nav navbar-text">Slide 5 of 12</li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <main id="content" class="container">
+         <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-9">
+               <h1 id="h1_title" class="title">ARIA Patterns for Navigation Menus</h1>
+               <table class="table table-striped" aria-labelledby="h1_title">
+                  <thead>
+                     <tr>
+                        <th scope="col">Pattern</th>
+                        <th scope="col"><code>tab</code> key</th>
+                        <th scope="col">Cursor Keys</th>
+                        <th scope="col">Other Keys</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td scope="row">
+              <a href="https://w3c.github.io/aria-practices/#disclosure" target="_spec">Disclosure Menu</a><br>(Most Popular)
+            </td>
+                        <td>Every item is in the tab sequence</td>
+                        <td>Not supported</td>
+                        <td>
+                           <ul>
+                              <li><kbd>Space</kbd>: Used to open or close submenus.</li>
+                              <li><kbd>Enter</kbd>: Used to open or close submenus or follow a link.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td scope="row">
+              <a href="https://w3c.github.io/aria-practices/#menu" target="_spec">Menubar</a>
+            </td>
+                        <td>Menubar is one stop in the tab sequence</td>
+                        <td>Navigation between menu items</td>
+                        <td>
+                           <ul>
+                              <li><kbd>Space</kbd>: Used to open or close submenus</li>
+                              <li><kbd>Enter</kbd>: Used to open or close submenus or follow a link</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td scope="row">
+              <a href="https://w3c.github.io/aria-practices/#TreeView" target="_spec">Tree View</a>
+            </td>
+                        <td>Treeview is one stop in the tab sequence</td>
+                        <td>Navigation between menu items</td>
+                        <td>
+                           <ul>
+                              <li><kbd>Space</kbd>: Used to open or close submenus</li>
+                              <li><kbd>Enter</kbd>: Used to open or close submenus or follow a link</li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <div class="col"></div>
+         </div>
+      </main>
+      <footer class="container">
+         <div id="footer" class="well well-sm"><a href="https://illinois.edu" alt="University of Illinois">
+      <img src="../images/block-i.png">
+    </a>
+    
+      
+    
+    Copyright © 2021 University of Illinois
+  <span class="highlight-icon">
+          ↖
+        </span></div>
+      </footer>
+   </body>
+</html>

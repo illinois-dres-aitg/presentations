@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Slide 8: HTML Markup from WordPress: Current Link</title>
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
+   </head>
+   <body>
+      <nav id="nav" class="navbar navbar-default">
+         <div class="container">
+            <div class="navbar-header"><button class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#slide-nav"><span class="sr-only">
+                  Toggle navigation
+                </span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
+            <div id="slide-nav" class="collapse navbar-collapse">
+               <ul class="nav navbar-nav">
+                  <li><a id="ID_SLIDE_INDEX" href="index.html">
+                        Index
+                      </a></li>
+                  <li><a id="ID_SLIDE_FIRST" href="slide1.html" title="Slide 1">
+                        First
+                      </a></li>
+                  <li><a id="ID_SLIDE_PREVIOUS" href="slide7.html" title="Slide 7">
+                        Previous
+                      </a></li>
+                  <li><a id="ID_SLIDE_NEXT" href="slide9.html" title="Slide 9">
+                        Next
+                      </a></li>
+                  <li><a id="ID_SLIDE_LAST" href="slide12.html" title="Slide 12">
+                        Last
+                      </a></li>
+               </ul>
+               <ul class="nav navbar-nav pull-right">
+                  <li class="nav navbar-text">Slide 8 of 12</li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <main id="content" class="container">
+         <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-9">
+               <h1 id="h1_title" class="title">HTML Markup from WordPress: Current Link</h1>
+               <h2>WordPress Source Code</h2>
+               <div class="code">
+  ......
+  &lt;ul class="sub-menu"&gt;
+    &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-707"&gt;
+      &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses"&gt;Badging Courses&lt;/a&gt;
+      &lt;ul class="sub-menu"&gt;
+        &lt;li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-137 current_page_item menu-item-709"&gt;
+          <span class="highlight">&lt;span&gt;Accessibility 101&lt;/span&gt;</span>
+        &lt;/li&gt;
+        &lt;li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"&gt;
+          &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/"&gt;Captioning: Knowing How&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  ......
+      </div>
+               <h2>DOM after DisclosureMenu.js script</h2>
+               <div class="code">
+  ......
+  &lt;ul class="sub-menu"&gt;
+    &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-707"&gt;
+      &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses"&gt;Badging Courses&lt;/a&gt;
+      &lt;ul class="sub-menu"&gt;
+        &lt;li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-137 current_page_item menu-item-709"&gt;
+          <span class="highlight">&lt;a aria-current="page" href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/" &gt;Accessibility 101&lt;/a&gt;</span>
+        &lt;/li&gt;
+        &lt;li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"&gt;
+          &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/"&gt;Captioning: Knowing How&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  ......
+      </div>
+               <h2 id="h2-page-link">Changes to the DOM</h2>
+               <p id="id-pagelink">WordPress menus do not render the link to the current page as an <code>a</code> element and this must be restored so that the link is part of the tab sequence of the page and the <code>aria-current</code> attribute can be used to indicate the link is to the current page.</p>
+               <table class="table table-striped" aria-labelledby="h2-page-link" aria-describedby="id-page-link">
+                  <thead>
+                     <tr>
+                        <th scope="col">Change</th>
+                        <th scope="col">Purpose</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+              <code>a</code>
+            </td>
+                        <td>
+              WordPress does not render the current page link in the menu as an <code>a</code> element, but as an <code>span</code> element.  The disclosure menu script changes to a <code>a</code> element.
+            </td>
+                     </tr>
+                     <tr>
+                        <td>
+              <code>href=<q>URL</q></code>
+            </td>
+                        <td>
+              The <code>href</code> attribute is added to the <code>a</code> element using the current page URL.
+            </td>
+                     </tr>
+                     <tr>
+                        <td>
+              <code>aria-current=<q>page</q></code>
+            </td>
+                        <td>
+              To identify the link as the link to the current page the <code>aria-current</code> attribute is added to the <code>a</code> element.
+            </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <h2>Script and CSS</h2>
+               <ul>
+                  <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/js/DisclosureMenu.js">DisclosureMenu.js</a></li>
+                  <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/style.css">AITG WordPress Theme CSS</a> that includes styling for the disclosure menu.</li>
+                  <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-design/blob/master/banner-menu.scss">SASS file for the banner menu styling</a></li>
+               </ul>
+            </div>
+            <div class="col"></div>
+         </div>
+      </main>
+      <footer class="container">
+         <div id="footer" class="well well-sm"><a href="https://illinois.edu" alt="University of Illinois">
+      <img src="../images/block-i.png">
+    </a>
+    
+      
+    
+    Copyright © 2021 University of Illinois
+  <span class="highlight-icon">
+          ↖
+        </span></div>
+      </footer>
+   </body>
+</html>
