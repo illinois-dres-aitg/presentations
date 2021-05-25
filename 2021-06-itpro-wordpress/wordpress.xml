@@ -76,7 +76,6 @@
   <slide>
     <title>Landmarks, Headings and Title: Accessibility Requirements</title>
     <contents>
-
       <h2>Landmarks</h2>
       <ul>
         <li>All rendered content in a landmark</li>
@@ -108,13 +107,14 @@
   <slide>
     <title>Landmarks, Headings and Title: Markup Skeleton</title>
     <contents>
-      <ul>
-        <li>header with banner menu</li>
-        <li>three-column layout</li>
-        <li>main element with H1</li>
-        <li>sidebar (aside) with blog post menu</li>
-        <li>footer (contentinfo) links</li>
-      </ul>
+      <p><em>Nick add content</em></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Color Contrast: Color Palette</title>
+    <contents>
+      <p><em>Nick add content</em></p>
     </contents>
   </slide>
 
@@ -267,6 +267,7 @@
       }
     </style>
     <contents>
+      <p><em>Nick add content</em></p>
       <div class="svg-background">
         <svg width="21px" height="21px" viewBox="0 0 241 243" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" color="rgb(255, 255, 255)">
           <title>Search Icon: Magnifying Glass</title>
@@ -825,6 +826,36 @@
           </ul>
         </li>
       </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Working with Third Party Vendors</title>
+    <contents>
+      <table class="table table-striped" aria-labelledby="h1_title">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Plugin</th>
+            <th>Accessibility Issue</th>
+            <th>How Accessibility Improved</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Table Creation</td>
+            <td><a href="https://tablepress.org/">TablePress</a></td>
+            <td>Providing an accessible name and description for the table for users of assistive technology.</td>
+            <td>Added the used of <code>aria-labelledby</code> and <code>aria-describedby</code> to the <code>table</code> element to point to use the heading and caption elements associated with the table.  See example on the <a href="https://accessibleit.disability.illinois.edu/universal-design/what-is-universal-design/">Survey: UDL Principles are Vital to Learning</a> table.</td>
+          </tr>
+          <tr>
+            <td>Calendar</td>
+            <td><a href="https://wordpress.org/plugins/my-calendar/">My Calendar</a></td>
+            <td>Consistency of header usage for list, Month, week and day views of the calendar.</td>
+            <td>See example on the <a href="https://accessibleit.disability.illinois.edu/my-calendar/">full calendar page</a>.</td>
+          </tr>
+        </tbody>
+      </table>
     </contents>
   </slide>
 

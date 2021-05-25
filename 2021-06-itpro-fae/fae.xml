@@ -245,15 +245,29 @@
   </slide>
 
   <slide>
-    <title>FAE Auditor (Beta)</title>
+    <title>Functional Accessibility Evaluator (FAE) 2.1</title>
     <contents>
       <ul>
-        <li><a href="https://fae-auditor.disability.illinois.edu/rules/2018-bb-conf-2-2018-10-17/rc/"  target="_fae_auditor">Athletic Conferences Report</a> (<a href="https://github.com/opena11y/faeAuditor">Source Code</a>)</li>
-        <li>Identify strengths and weaknesses of accessibility implementation</li>
-        <li>Compare websites and groups of websites</li>
-        <li>Support creating accessibility dashboard</li>
+        <li>Two versions of Functional Accessibility Evaluator
+          <ul>
+            <li><a href="https://fae.disability.illinois.edu">FAE 2.1 Indidvidual License Version</a></li>
+            <li><a href="https://fae.illinois.edu">FAE 2.1 Institutional License Version</a> using <a href="https://www.incommon.org/">InCommon</a></li>
+          </ul>
+        </li>
+        <li>Designed for:
+          <ul>
+            <li>Managers</li>
+            <li>Web designers</li>
+            <li>Software developers</li>
+            <li>Quality assurance testers</li>
+            <li>IT Auditors</li>
+          </ul>
+        </li>
+        <li>Website rule result summaries and implementation status</li>
+        <li>Page rule result summaries</li>
+        <li>Organizes rules by Rule Categories, Rule Scope and WCAG Guidelines</li>
+        <li>Archive and share reports</li>
       </ul>
-
     </contents>
   </slide>
 

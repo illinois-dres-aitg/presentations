@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 16: Bypass Blocks: Accessibility Requirements</title>
+      <title>Slide 19: Working with Third Party Vendors</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -23,10 +23,10 @@
                   <li><a id="ID_SLIDE_FIRST" href="slide1.html" title="Slide 1">
                         First
                       </a></li>
-                  <li><a id="ID_SLIDE_PREVIOUS" href="slide15.html" title="Slide 15">
+                  <li><a id="ID_SLIDE_PREVIOUS" href="slide18.html" title="Slide 18">
                         Previous
                       </a></li>
-                  <li><a id="ID_SLIDE_NEXT" href="slide17.html" title="Slide 17">
+                  <li><a id="ID_SLIDE_NEXT" href="slide20.html" title="Slide 20">
                         Next
                       </a></li>
                   <li><a id="ID_SLIDE_LAST" href="slide20.html" title="Slide 20">
@@ -34,7 +34,7 @@
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 16 of 20</li>
+                  <li class="nav navbar-text">Slide 19 of 20</li>
                </ul>
             </div>
          </div>
@@ -43,11 +43,31 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Bypass Blocks: Accessibility Requirements</h1>
-               <ul>
-                  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks">2.4.1: Bypass Blocks</a> requires a means for keyboard only used to navigate to the main content of the page, essentially bypassing navigational and other links that appear before the main content.</li>
-                  <li>Typically bypass blocks is achieved with a "Skip To Main" link that is initially invisible, but appears when it receives keyboard focus.</li>
-               </ul>
+               <h1 id="h1_title" class="title">Working with Third Party Vendors</h1>
+               <table class="table table-striped" aria-labelledby="h1_title">
+                  <thead>
+                     <tr>
+                        <th>Feature</th>
+                        <th>Plugin</th>
+                        <th>Accessibility Issue</th>
+                        <th>How Accessibility Improved</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>Table Creation</td>
+                        <td><a href="https://tablepress.org/">TablePress</a></td>
+                        <td>Providing an accessible name and description for the table for users of assistive technology.</td>
+                        <td>Added the used of <code>aria-labelledby</code> and <code>aria-describedby</code> to the <code>table</code> element to point to use the heading and caption elements associated with the table.  See example on the <a href="https://accessibleit.disability.illinois.edu/universal-design/what-is-universal-design/">Survey: UDL Principles are Vital to Learning</a> table.</td>
+                     </tr>
+                     <tr>
+                        <td>Calendar</td>
+                        <td><a href="https://wordpress.org/plugins/my-calendar/">My Calendar</a></td>
+                        <td>Consistency of header usage for list, Month, week and day views of the calendar.</td>
+                        <td>See example on the <a href="https://accessibleit.disability.illinois.edu/my-calendar/">full calendar page</a>.</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>

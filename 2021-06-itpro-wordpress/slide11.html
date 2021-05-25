@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 11: Disclosure Menu: Keyboard Support</title>
+      <title>Slide 11: Disclosure Menu: ARIA Design Patterns for Navigation Menus</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -29,12 +29,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide12.html" title="Slide 12">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide18.html" title="Slide 18">
+                  <li><a id="ID_SLIDE_LAST" href="slide20.html" title="Slide 20">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 11 of 18</li>
+                  <li class="nav navbar-text">Slide 11 of 20</li>
                </ul>
             </div>
          </div>
@@ -43,85 +43,53 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Disclosure Menu: Keyboard Support</h1>
-               <h2 id="id-key-prim">Primary Keyboard Commands</h2>
-               <p id="id-desc-prim">The navigation menu used in the AITG WordPress Theme is the disclosure pattern.  Primary keyboard commands are the disclosure keyboard commands that are supported by the native HTML semantics and the ARIA markup for the menu items.</p>
-               <table class="table table-striped" aria-labelledby="id-key-prim" aria-describedby="id-desc-prim">
+               <h1 id="h1_title" class="title">Disclosure Menu: ARIA Design Patterns for Navigation Menus</h1>
+               <table class="table table-striped" aria-labelledby="h1_title">
                   <thead>
                      <tr>
-                        <th scope="col">Key</th>
-                        <th scope="col">Function</th>
+                        <th scope="col" style="min-width: 10em">Pattern</th>
+                        <th scope="col"><code>tab</code> key</th>
+                        <th scope="col">Cursor Keys</th>
+                        <th scope="col">Other Keys</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
-                        <td><kbd>Tab</kbd></td>
-                        <td>Moves focus to the next visible item in the top level menu or a submenu.
+                        <td scope="row">
+              <a href="https://w3c.github.io/aria-practices/#disclosure" target="_spec">Disclosure Menu</a><br>(Most Popular)
             </td>
-                     </tr>
-                     <tr>
-                        <td><kbd>Space</kbd></td>
-                        <td>If focus is on a top level menu item with a submenu, the sub menu is opened.</td>
-                     </tr>
-                     <tr>
-                        <td><kbd>Enter</kbd></td>
+                        <td>Every item is in the tab sequence</td>
+                        <td>Not supported</td>
                         <td>
                            <ul>
-                              <li>If focus is on a top level menu item with a submenu, the sub menu is opened.</li>
-                              <li>If focus is on a menu item that is a link, it follows the link.</li>
+                              <li><kbd>Space</kbd>: Used to open or close submenus.</li>
+                              <li><kbd>Enter</kbd>: Used to open or close submenus or follow a link.</li>
                            </ul>
                         </td>
                      </tr>
                      <tr>
-                        <td><kbd>Esc</kbd></td>
-                        <td>If focus is on a submenu item, closes the submenu and places focus on the top level menu item.
+                        <td scope="row">
+              <a href="https://w3c.github.io/aria-practices/#menu" target="_spec">Menubar</a>
             </td>
-                     </tr>
-                  </tbody>
-               </table>
-               <h2 id="id-key-enhance">Keyboard Enhancements</h2>
-               <p id="id-desc-enhance">Keyboard enhancements are keyboard commands that are discovered through inspection (e.g. people just trying the keys due to visual affordances of the menu).  There are <strong style="text-decoration: underline">no</strong> native HTML or ARIA semantics provided to assistive technologies to identify these keys as supported features of the menu.</p>
-               <table class="table table-striped" aria-labelledby="id-key-enhance" aria-describedby="id-desc-enhance">
-                  <thead>
-                     <tr>
-                        <th scope="col">Key</th>
-                        <th scope="col">Function</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td><kbd>Left Arrow</kbd></td>
+                        <td>Menubar is one stop in the tab sequence</td>
+                        <td>Navigation between menu items</td>
                         <td>
                            <ul>
-                              <li>Moves focus to the previous menu item in the top level menu.</li>
-                              <li>If a submenu was open, it is closed.</li>
+                              <li><kbd>Space</kbd>: Used to open or close submenus</li>
+                              <li><kbd>Enter</kbd>: Used to open or close submenus or follow a link</li>
                            </ul>
                         </td>
                      </tr>
                      <tr>
-                        <td><kbd>Right Arrow</kbd></td>
+                        <td scope="row">
+              <a href="https://w3c.github.io/aria-practices/#TreeView" target="_spec">Tree View</a>
+            </td>
+                        <td>Treeview is one stop in the tab sequence</td>
+                        <td>Navigation between menu items</td>
                         <td>
                            <ul>
-                              <li>Moves focus to the next item in the top level menu.</li>
-                              <li>If a submenu was open, it is closed.</li>
-                           </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td><kbd>Down Arrow</kbd></td>
-                        <td>
-                           <ul>
-                              <li>If focus is on a top level menu item with a submenu, opens the submenu and puts focus on the first submenu item.</li>
-                              <li>If focus is on a submenu item moves to the next submenu item.</li>
-                           </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td><kbd>Up Arrow</kbd></td>
-                        <td>
-                           <ul>
-                              <li>If focus is on a top level menu item with a submenu, opens the submeu and puts focus on the last submenu item.</li>
-                              <li>If focus is on a submenu item moves to the previous submenu item.</li>
+                              <li><kbd>Space</kbd>: Used to open or close submenus</li>
+                              <li><kbd>Enter</kbd>: Used to open or close submenus or follow a link</li>
                            </ul>
                         </td>
                      </tr>

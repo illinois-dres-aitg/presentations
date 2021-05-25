@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 17: ByPass Blocks: SkipTo CDN and default configuration</title>
+      <title>Slide 17: Bypass Blocks: SkipTo Script</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -29,12 +29,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide18.html" title="Slide 18">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide18.html" title="Slide 18">
+                  <li><a id="ID_SLIDE_LAST" href="slide20.html" title="Slide 20">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 17 of 18</li>
+                  <li class="nav navbar-text">Slide 17 of 20</li>
                </ul>
             </div>
          </div>
@@ -43,23 +43,14 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">ByPass Blocks: SkipTo CDN and default configuration</h1>
+               <h1 id="h1_title" class="title">Bypass Blocks: SkipTo Script</h1>
                <ul>
-                  <li>Referencing the <a href="https://github.com/a11y-tools/skipto/blob/master/README.md"><code>SkipTo.js</code></a> script:
-          <ul>
-                        <li>Include a reference to the CDN version of the script: <a target="_code" href="https://cdn.disability.illinois.edu/skipto.min.js">https://cdn.disability.illinois.edu/skipto.min.js</a>.</li>
-                        <li>Alternatively you can include reference a local copy of the <a href="https://github.com/a11y-tools/skipto/tree/master/compiled/js" target="_code"><code>skipto.min.js</code></a> script in the page or page template.</li>
-                     </ul>
-                  </li>
-                  <li>Tooltip appears on keyboard focus in addition to pointer hover on shortcut key information.</li>
-                  <li>Websites using SkipTo.js on campus:
-          <ul>
-                        <li><a href="https://ahs.illinois.edu/" target="example">College of Applied Health Sciences</a></li>
-                        <li><a href="https://webcon.illinois.edu/">Illinois Webcon</a></li>
-                        <li><a href="http://cpanel.web.illinois.edu/">Cpanel Web Hosting Service @ Illinois</a></li>
-                        <li><a href="https://nightingaledesignresearch.com/">Nightingale Design Research</a></li>
-                     </ul>
-                  </li>
+                  <li>The <a href="https://github.com/a11y-tools/skipto/blob/master/README.md">SkipTo</a> script is the modern way to conform to the "<a href="https://www.w3.org/TR/WCAG/#bypass-blocks" rel="nofollow">Bypass Blocks</a>" requirement of the <a href="https://www.w3.org/TR/WCAG/" rel="nofollow">Web Content Accessibility Guidelines</a>.</li>
+                  <li><em>All users</em> can get an outline of the major content areas on the page.</li>
+                  <li><em>Screen reader</em> users can get a higher level navigation menu without having to use the screen reader landmark and header navigation commands which typically include longer lists of lower level headings and less used landmarks.</li>
+                  <li><em>Keyboard only</em> users can more efficiently navigate to content on a page.</li>
+                  <li><em>Speech recognition</em> users can use the menu to more efficiently navigate to content on a page.</li>
+                  <li><em>Authors</em> can configure SkipTo to identify the most important regions, ideally about 7-12 items to make it easier for people to read the list and choose an option.  Remember the more items, the longer it will take for the user to identify which item they want to choose.</li>
                </ul>
             </div>
             <div class="col"></div>
