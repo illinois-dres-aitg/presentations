@@ -1104,7 +1104,7 @@
         <li>Use of a <a href="https://w3c.github.io/aria-practices/examples/disclosure/disclosure-navigation.html">ARIA disclosure menu pattern</a> for banner menu.</li>
         <li>Uses SkipTo script for Bypass blocks, but configuration differences:
           <ul>
-            <li>Configured as initially hidden (e.g. popup), instead of visible.</li>
+            <li>Initially menu button is hidden (e.g. &quot;popup&quot; option), instead of visible.</li>
             <li>Currently not using the CDN version of script.</li>
             <li>Currently not using the &quot;Illinois&quot; color theme option.</li>
           </ul>
