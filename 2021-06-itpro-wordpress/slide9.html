@@ -50,7 +50,21 @@
             <div class="col-md-1"></div>
             <div class="col-md-9">
                <h1 id="h1_title" class="title">Color Contrast: SVG and High Contrast Mode</h1>
-               <p><em>Nick add content</em></p>
+               <p>When an SVG image is used as a user interface component, if you specify the foreground color (usually 'stroke' or 'fill') as 'currentColor', it will inherit its color value from its nearest ancestor (in our case, the 'button' element).</p>
+               <p>The utility of doing this pays off in high contrast mode, which is controlled at the operating system level.</p>
+               <p>If HCM inverts the colors on a page, [for example from 'white foreground on dark background' to 'dark foreground on white background',] it will change the 'button' foreground and background colors, but it does not 'tamper' with the internal settings of SVG images.</p>
+               <p>Because 'currentColor' was used, the SVG image still renders correctly.</p>
+               <p>Search button icon (magnifying glass)</p>
+               <p>'button' element</p>
+               <ul>
+                  <li><code>color: $white</code></li>
+                  <li><code>background-color: $illini-blue</code></li>
+               </ul>
+               <p>'svg' image element</p>
+               <ul>
+                  <li><code>circle stroke="currentColor"</code></li>
+                  <li><code>rect fill="currentColor"</code></li>
+               </ul>
                <div class="svg-background">
                   <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="21px" height="21px" viewBox="0 0 241 243" version="1.1" color="rgb(255, 255, 255)">
                      <title>Search Icon: Magnifying Glass</title>
