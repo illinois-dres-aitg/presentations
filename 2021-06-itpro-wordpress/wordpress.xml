@@ -149,6 +149,7 @@
   <slide>
     <title>Template: header</title>
     <contents>
+      <p><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/header.php">header.php</a></p>
        <div class="code">
 
 &lt;!DOCTYPE html>
