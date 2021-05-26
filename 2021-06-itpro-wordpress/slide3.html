@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 3: Landmarks, Headings and Title: Markup Skeleton</title>
+      <title>Slide 3: Template: header</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -29,12 +29,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide4.html" title="Slide 4">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide20.html" title="Slide 20">
+                  <li><a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 3 of 20</li>
+                  <li class="nav navbar-text">Slide 3 of 22</li>
                </ul>
             </div>
          </div>
@@ -43,8 +43,108 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Landmarks, Headings and Title: Markup Skeleton</h1>
-               <p><em>Nick add content</em></p>
+               <h1 id="h1_title" class="title">Template: header</h1>
+               <div class="code">
+
+&lt;!DOCTYPE html&gt;
+&lt;!-- @ primary language of page --&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+  <span class="highlight">&lt;!-- @ important for proper text rendering --&gt;</span>
+  &lt;meta charset="utf-8"&gt;
+
+  <span class="highlight">&lt;!-- @ important for resizing: responsive menu design --&gt;</span>
+  &lt;meta name="viewport" content="width=device-width"&gt;
+
+  <span class="highlight">&lt;!-- @ uses pattern: page title, separator, website label --&gt;</span>
+  &lt;title&gt;What is Universal Design? - Accessible IT Group&lt;/title&gt;
+
+  <span class="highlight">&lt;!-- @ CSS stylesheet name required by WordPress templates --&gt;</span>
+  &lt;link type="text/css" rel="stylesheet" href="style.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- @ 'header' defines 'banner' landmark --&gt;
+  &lt;header&gt;
+    &lt;div class="banner"&gt;
+      &lt;div class="banner-row-1"&gt;
+        &lt;div class="banner-logo"&gt;
+          &lt;!-- @ UI logo with 'alt' text equiv. to image text --&gt;
+          &lt;img src="..." alt="Illinois"&gt;
+        &lt;/div&gt;
+        &lt;div class="banner-search"&gt;
+          &lt;div class="search-widget"&gt;
+            &lt;!-- @ 'search' landmark --&gt;
+            &lt;form role="search"&gt;
+              &lt;!-- @ accessible name from 'title' attribute --&gt;
+              &lt;input type="search" placeholder="SEARCH" title="Search Pages"&gt;
+              &lt;button type="submit" alt="Submit Query"&gt;
+                &lt;!-- @ SVG image --&gt;
+                &lt;svg&gt;...&lt;/svg&gt;
+              &lt;/button&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="banner-row-2"&gt;
+        &lt;div class="banner-name"&gt;
+          &lt;!-- @ link to home page of site --&gt;
+          &lt;a href="..."&gt;Accessible IT Group&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;!-- @ 'nav' defines 'navigation' landmark; 'aria-label'
+             used when there are multiple 'nav' elements --&gt;
+        &lt;nav class="banner-menu" aria-label="Site Menu"&gt;
+          &lt;ul id="banner-menu" class="menu"&gt;
+            &lt;!-- @ menu buttons as 'li &gt; a' elements --&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;!-- @ layout container for middle section (row) of page --&gt;
+  &lt;div class="flex-row"&gt;
+    &lt;div class="left-column"&gt;
+      &lt;!-- @ spacer column: narrow middle column for readability --&gt;
+    &lt;/div&gt;
+
+    &lt;div class="middle-column"&gt;
+      &lt;div class="breadcrumb"&gt;
+        &lt;!-- @ breadcrumb trail of links indicating location of
+             current page in menu structure --&gt;
+      &lt;/div&gt;
+
+      &lt;!-- @ 'main' defines 'main' landmark --&gt;
+      &lt;main class="content"&gt;
+        &lt;!-- @ 'h1' heading content is current page title --&gt;
+        &lt;h1&gt;What is Universal Design?&lt;/h1&gt;
+        &lt;!-- @ headings 'h2–h6' used to label sections of content --&gt;
+      &lt;/main&gt;
+    &lt;/div&gt;
+
+    &lt;div class="right-column"&gt;
+      &lt;!-- @ sidebar used selectively: additional 'nav' elements --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- @ 'footer' defines 'contentinfo' landmark --&gt;
+  &lt;footer&gt;
+    &lt;!-- @ three columns of footer menu links --&gt;
+    &lt;div&gt;
+      &lt;ul&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;ul&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;ul&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+       </div>
             </div>
             <div class="col"></div>
          </div>

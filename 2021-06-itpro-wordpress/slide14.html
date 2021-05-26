@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 14: Disclosure Menu: Identifying Current Link</title>
+      <title>Slide 14: Disclosure Menu: Keyboard Support</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -29,12 +29,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide15.html" title="Slide 15">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide20.html" title="Slide 20">
+                  <li><a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 14 of 20</li>
+                  <li class="nav navbar-text">Slide 14 of 22</li>
                </ul>
             </div>
          </div>
@@ -43,83 +43,90 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Disclosure Menu: Identifying Current Link</h1>
-               <h2>WordPress Source Code</h2>
-               <div class="code">
-  ......
-  &lt;ul class="sub-menu"&gt;
-    &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-707"&gt;
-      &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses"&gt;Badging Courses&lt;/a&gt;
-      &lt;ul class="sub-menu"&gt;
-        &lt;li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-137 current_page_item menu-item-709"&gt;
-          <span class="highlight">&lt;span&gt;Accessibility 101&lt;/span&gt;</span>
-        &lt;/li&gt;
-        &lt;li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"&gt;
-          &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/"&gt;Captioning: Knowing How&lt;/a&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-  ......
-      </div>
-               <h2>DOM after DisclosureMenu.js script</h2>
-               <div class="code">
-  ......
-  &lt;ul class="sub-menu"&gt;
-    &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-707"&gt;
-      &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses"&gt;Badging Courses&lt;/a&gt;
-      &lt;ul class="sub-menu"&gt;
-        &lt;li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-137 current_page_item menu-item-709"&gt;
-          <span class="highlight">&lt;a aria-current="page" href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/" &gt;Accessibility 101&lt;/a&gt;</span>
-        &lt;/li&gt;
-        &lt;li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"&gt;
-          &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/"&gt;Captioning: Knowing How&lt;/a&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-  ......
-      </div>
-               <h2 id="h2-page-link">Changes to the DOM</h2>
-               <p id="id-pagelink">WordPress menus do not render the link to the current page as an <code>a</code> element and this must be restored so that the link is part of the tab sequence of the page and the <code>aria-current</code> attribute can be used to indicate the link is to the current page.</p>
-               <table class="table table-striped" aria-labelledby="h2-page-link" aria-describedby="id-page-link">
+               <h1 id="h1_title" class="title">Disclosure Menu: Keyboard Support</h1>
+               <h2 id="id-key-prim">Primary Keyboard Commands</h2>
+               <p id="id-desc-prim">The navigation menu used in the AITG WordPress Theme is the disclosure pattern.  Primary keyboard commands are the disclosure keyboard commands that are supported by the native HTML semantics and the ARIA markup for the menu items.</p>
+               <table class="table table-striped" aria-labelledby="id-key-prim" aria-describedby="id-desc-prim">
                   <thead>
                      <tr>
-                        <th scope="col">Change</th>
-                        <th scope="col">Purpose</th>
+                        <th scope="col">Key</th>
+                        <th scope="col">Function</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
-                        <td>
-              <code>a</code>
-            </td>
-                        <td>
-              WordPress does not render the current page link in the menu as an <code>a</code> element, but as an <code>span</code> element.  The disclosure menu script changes to a <code>a</code> element.
+                        <td><kbd>Tab</kbd></td>
+                        <td>Moves focus to the next visible item in the top level menu or a submenu.
             </td>
                      </tr>
                      <tr>
-                        <td>
-              <code>href=<q>URL</q></code>
-            </td>
-                        <td>
-              The <code>href</code> attribute is added to the <code>a</code> element using the current page URL.
-            </td>
+                        <td><kbd>Space</kbd></td>
+                        <td>If focus is on a top level menu item with a submenu, the sub menu is opened.</td>
                      </tr>
                      <tr>
+                        <td><kbd>Enter</kbd></td>
                         <td>
-              <code>aria-current=<q>page</q></code>
-            </td>
-                        <td>
-              To identify the link as the link to the current page the <code>aria-current</code> attribute is added to the <code>a</code> element.
+                           <ul>
+                              <li>If focus is on a top level menu item with a submenu, the sub menu is opened.</li>
+                              <li>If focus is on a menu item that is a link, it follows the link.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><kbd>Esc</kbd></td>
+                        <td>If focus is on a submenu item, closes the submenu and places focus on the top level menu item.
             </td>
                      </tr>
                   </tbody>
                </table>
-               <h2>Script and CSS</h2>
-               <ul>
-                  <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/js/DisclosureMenu.js">DisclosureMenu.js</a></li>
-                  <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/style.css">AITG WordPress Theme CSS</a> that includes styling for the disclosure menu.</li>
-                  <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-design/blob/master/banner-menu.scss">SASS file for the banner menu styling</a></li>
-               </ul>
+               <h2 id="id-key-enhance">Keyboard Enhancements</h2>
+               <p id="id-desc-enhance">Keyboard enhancements are keyboard commands that are discovered through inspection (e.g. people just trying the keys due to visual affordances of the menu).  There are <strong style="text-decoration: underline">no</strong> native HTML or ARIA semantics provided to assistive technologies to identify these keys as supported features of the menu.</p>
+               <table class="table table-striped" aria-labelledby="id-key-enhance" aria-describedby="id-desc-enhance">
+                  <thead>
+                     <tr>
+                        <th scope="col">Key</th>
+                        <th scope="col">Function</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><kbd>Left Arrow</kbd></td>
+                        <td>
+                           <ul>
+                              <li>Moves focus to the previous menu item in the top level menu.</li>
+                              <li>If a submenu was open, it is closed.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><kbd>Right Arrow</kbd></td>
+                        <td>
+                           <ul>
+                              <li>Moves focus to the next item in the top level menu.</li>
+                              <li>If a submenu was open, it is closed.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><kbd>Down Arrow</kbd></td>
+                        <td>
+                           <ul>
+                              <li>If focus is on a top level menu item with a submenu, opens the submenu and puts focus on the first submenu item.</li>
+                              <li>If focus is on a submenu item moves to the next submenu item.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><kbd>Up Arrow</kbd></td>
+                        <td>
+                           <ul>
+                              <li>If focus is on a top level menu item with a submenu, opens the submeu and puts focus on the last submenu item.</li>
+                              <li>If focus is on a submenu item moves to the previous submenu item.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>

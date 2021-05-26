@@ -3,11 +3,39 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 8: Disclosure Menu: Accessibility Requirements</title>
+      <title>Slide 8: Color Contrast: Accessible IT Group</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
-      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style">
+      .sample {
+        display: inline-block;
+        margin: 0.25em;
+        padding: 0.25em;
+        font-weight: normal;
+        }
+      .banner {
+        color: #ffffff;
+        background: #13294b;
+      }
+      .link {
+        color: #00132c;
+        background: #cad9ef;
+      }
+      .focus-ring {
+        border: 2px solid #ff552e;
+        color: #ffffff;
+        background: #13294b;
+      }
+      .calendar-row {
+        color: #1d4b90;
+        background: #e8e9eb;
+      }
+      .icon {
+        color: #ffffff;
+        background: #13294b;
+      }
+    </style>
    </head>
    <body>
       <nav id="nav" class="navbar navbar-default">
@@ -29,12 +57,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide9.html" title="Slide 9">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide20.html" title="Slide 20">
+                  <li><a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 8 of 20</li>
+                  <li class="nav navbar-text">Slide 8 of 22</li>
                </ul>
             </div>
          </div>
@@ -43,57 +71,64 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Disclosure Menu: Accessibility Requirements</h1>
+               <h1 id="h1_title" class="title">Color Contrast: Accessible IT Group</h1>
                <table class="table table-striped" aria-labelledby="h1_title">
                   <thead>
                      <tr>
-                        <th scope="col" style="min-width: 16em">Success Criterion</th>
-                        <th scope="col">Level</th>
-                        <th scope="col">Requirement</th>
+                        <th>Feature</th>
+                        <th class="num">Color 1</th>
+                        <th class="num">Color 2</th>
+                        <th class="num" abbr="Color Contrast Ratio">CCR</th>
+                        <th>WCAG Level</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
-                        <td scope="row">
-              <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships" target="_spec">1.3.1 Info and Relationships</a>
-            </td>
-                        <td>A</td>
-                        <td>Use of <code>nav</code> element to create a navigation landmark region to identify the menu of links.</td>
-                     </tr>
-                     <tr>
-                        <td scope="row">
-              <a href="https://www.w3.org/TR/WCAG/#keyboard" target="_spec">2.1.1 Keyboard</a>
-            </td>
-                        <td>A</td>
-                        <td>The buttons and links in the menu can be accessed and operated using only the keyboard.</td>
-                     </tr>
-                     <tr>
-                        <td scope="row">
-              <a href="https://www.w3.org/TR/WCAG/#location" target="_spec">2.5.3 Label in Name</a>
-            </td>
-                        <td>A</td>
-                        <td>The text content of the links is used as the accessible name for the buttons and links.</td>
-                     </tr>
-                     <tr>
-                        <td scope="row">
-              <a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_spec">4.1.2 Name, Role, Value</a>
-            </td>
-                        <td>A</td>
-                        <td>The controls used to open and close the submenu links use the <code>button</code> role and the <code>aria-expanded</code> and <code>aria-controls</code> attributes.</td>
-                     </tr>
-                     <tr>
-                        <td scope="row">
-              <a href="https://www.w3.org/TR/WCAG/#focus-visible" target="_spec">2.4.7 Focus Visible</a>
-            </td>
-                        <td>AA</td>
-                        <td>The link or button with keyboard focus can easily determined visually.</td>
-                     </tr>
-                     <tr>
-                        <td scope="row">
-              <a href="https://www.w3.org/TR/WCAG/#location" target="_spec">2.4.8 Location</a>
-            </td>
+                        <th scope="row"><span class="sample banner">Banner Menu Text</span></th>
+                        <td class="num"><code>#ffffff</code></td>
+                        <td class="num"><code>#13294b</code></td>
+                        <td class="num"><a href="https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&amp;bcolor=13294B" target="_webaim">15.51</a></td>
                         <td>AAA</td>
-                        <td>Using the <code>aria-current</code> property to identify the link to the current page.</td>
+                     </tr>
+                     <tr>
+                        <th scope="row"><span class="sample link">Link Focus</span></th>
+                        <td class="num">#00132c</td>
+                        <td class="num">#cad9ef</td>
+                        <td class="num"><a href="https://webaim.org/resources/contrastchecker/?fcolor=00132c&amp;bcolor=cad9ef" target="_webaim">12.99:1</a></td>
+                        <td>AAA</td>
+                     </tr>
+                     <tr>
+                        <th scope="row"><span class="sample focus-ring">Focus ring</span></th>
+                        <td class="num">#ff552e<br>(border)</td>
+                        <td class="num">#13294b</td>
+                        <td class="num"><a href="https://webaim.org/resources/contrastchecker/?fcolor=FF552e&amp;bcolor=13294B" target="_webaim">4.55:1</a></td>
+                        <td>AA</td>
+                     </tr>
+                     <tr>
+                        <th scope="row"><span class="sample calendar-row">Calendar row link text</span></th>
+                        <td class="num">#1d4b90</td>
+                        <td class="num">#e8e9eb</td>
+                        <td class="num"><a href="https://webaim.org/resources/contrastchecker/?fcolor=1d4b90&amp;bcolor=e8e9eb" target="_webaim">7.02</a></td>
+                        <td>AA<br>(almost AAA)</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">
+              <span class="sample icon">
+                              <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="21px" height="21px" viewBox="0 0 241 243" version="1.1" color="rgb(255, 255, 255)">
+                                 <title>Search Icon: Magnifying Glass</title>
+                                 <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Group" transform="translate(19.000000, 19.000000)">
+                                       <circle id="Oval" stroke="currentColor" stroke-width="30" cx="75.5" cy="75.5" r="75.5"></circle>
+                                       <rect id="Rectangle" fill="currentColor" transform="translate(166.414214, 169.414214) rotate(45.000000) translate(-166.414214, -169.414214) " x="106.414214" y="149.414214" width="120" height="40" rx="16"></rect>
+                                    </g>
+                                 </g>
+                              </svg>
+                           </span>
+            </th>
+                        <td class="num"><code>#ffffff</code></td>
+                        <td class="num"><code>#13294b</code></td>
+                        <td class="num"><a href="https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&amp;bcolor=13294B" target="_webaim">15.51</a></td>
+                        <td>AAA</td>
                      </tr>
                   </tbody>
                </table>

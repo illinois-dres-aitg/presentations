@@ -3,7 +3,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 19: Working with Third Party Vendors</title>
+      <title>Slide 19: Bypass Blocks: SkipTo Script</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -29,12 +29,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide20.html" title="Slide 20">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide20.html" title="Slide 20">
+                  <li><a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 19 of 20</li>
+                  <li class="nav navbar-text">Slide 19 of 22</li>
                </ul>
             </div>
          </div>
@@ -43,31 +43,15 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Working with Third Party Vendors</h1>
-               <table class="table table-striped" aria-labelledby="h1_title">
-                  <thead>
-                     <tr>
-                        <th>Feature</th>
-                        <th>Plugin</th>
-                        <th>Accessibility Issue</th>
-                        <th>How Accessibility Improved</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td>Table Creation</td>
-                        <td><a href="https://tablepress.org/">TablePress</a></td>
-                        <td>Providing an accessible name and description for the table for users of assistive technology.</td>
-                        <td>Added the used of <code>aria-labelledby</code> and <code>aria-describedby</code> to the <code>table</code> element to point to use the heading and caption elements associated with the table.  See example on the <a href="https://accessibleit.disability.illinois.edu/universal-design/what-is-universal-design/">Survey: UDL Principles are Vital to Learning</a> table.</td>
-                     </tr>
-                     <tr>
-                        <td>Calendar</td>
-                        <td><a href="https://wordpress.org/plugins/my-calendar/">My Calendar</a></td>
-                        <td>Consistency of header usage for list, Month, week and day views of the calendar.</td>
-                        <td>See example on the <a href="https://accessibleit.disability.illinois.edu/my-calendar/">full calendar page</a>.</td>
-                     </tr>
-                  </tbody>
-               </table>
+               <h1 id="h1_title" class="title">Bypass Blocks: SkipTo Script</h1>
+               <ul>
+                  <li>The <a href="https://github.com/a11y-tools/skipto/blob/master/README.md">SkipTo</a> script is the modern way to conform to the "<a href="https://www.w3.org/TR/WCAG/#bypass-blocks" rel="nofollow">Bypass Blocks</a>" requirement of the <a href="https://www.w3.org/TR/WCAG/" rel="nofollow">Web Content Accessibility Guidelines</a>.</li>
+                  <li><em>All users</em> can get an outline of the major content areas on the page.</li>
+                  <li><em>Screen reader</em> users can get a higher level navigation menu without having to use the screen reader landmark and header navigation commands which typically include longer lists of lower level headings and less used landmarks.</li>
+                  <li><em>Keyboard only</em> users can more efficiently navigate to content on a page.</li>
+                  <li><em>Speech recognition</em> users can use the menu to more efficiently navigate to content on a page.</li>
+                  <li><em>Authors</em> can configure SkipTo to identify the most important regions, ideally about 7-12 items to make it easier for people to read the list and choose an option.  Remember the more items, the longer it will take for the user to identify which item they want to choose.</li>
+               </ul>
             </div>
             <div class="col"></div>
          </div>

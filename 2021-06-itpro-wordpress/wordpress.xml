@@ -74,40 +74,195 @@
   </slide>
 
   <slide>
-    <title>Landmarks, Headings and Title: Accessibility Requirements</title>
+    <title>Template: Accessibility Requirements</title>
     <contents>
-      <h2>Landmarks</h2>
-      <ul>
-        <li>All rendered content in a landmark</li>
-        <li>Properly identify the following landmark regions:
-          <ul>
-            <li><code>banner</code></li>
-            <li><code>contentinfo</code></li>
-            <li><code>main</code></li>
-            <li><code>navigation</code></li>
-            <li><code>search</code></li>
-          </ul>
-        </li>
-      </ul>
 
-      <h2>Headings</h2>
-      <ul>
-        <li><code>h1</code>: Is the first heading in the main landmark to identify the main content of the page and contains the page title.</li>
-        <li><code>h2-h3</code>: Identify the sections and sub-sections of the main content.</li>
-      </ul>
+      <table class="table table-striped" aria-labelledby="h1_title">
+        <thead>
+          <tr>
+            <th scope="col" style="min-width: 16em">Success Criterion</th>
+            <th scope="col">Level</th>
+            <th scope="col">Requirement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#info-and-relationships" target="_spec">1.3.1 Info and Relationships</a>
+            </td>
+            <td>A</td>
+            <td>Use of <code>nav</code> element to create a navigation landmark region to identify the menu of links.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#meaningful-sequence" target="_spec">1.3.2 Meaningful Sequence</a>
+            </td>
+            <td>A</td>
+            <td>The template implements meaningful sequence by identifying the header, main and footer information in a logical order.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#reflow" target="_spec">1.4.10 Reflow</a>
+            </td>
+            <td>AA</td>
+            <td>Using a responsive design and media queries our template works on very narrow renderings.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#bypass-blocks" target="_spec">2.4.1 Bypass Blocks</a>
+            </td>
+            <td>A</td>
+            <td>Using <a href="https://github.com/a11y-tools/skipto/blob/master/README.md">SkipTo script</a> to implement bypass requirement.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#bypass-blocks" target="_spec">2.4.2 Page Titled</a>
+            </td>
+            <td>A</td>
+            <td>The <code>php</code> script automatically updates the <code>title</code> element with the <code>h1</code> element content.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#multiple-ways" target="_spec">2.4.5 Multiple Ways</a>
+            </td>
+            <td>AA</td>
+            <td>The banner navigation menu and the search function provide two ways to find and navigate to pages in the website.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#headings-and-labels" target="_spec">2.4.6 Headings and Labels</a>
+            </td>
+            <td>AA</td>
+            <td>The landmarks are properly labelled and headings are used in a structural way.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#headings-and-labels" target="_spec">3.1.1 Language of Page</a>
+            </td>
+            <td>A</td>
+            <td>Include the <code>lang</code> attribute on the <code>html</code> element.</td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+  <slide>
+    <title>Template: header</title>
+    <contents>
+       <div class="code">
 
-      <h2>Title</h2>
-      <ul>
-        <li><code>title</code>: Contains the title of the page first and then uses a separator character (.e.g. - ) and then the name of the website.</li>
-        <li><code>h1</code>: Contains a title for the page content.</li>
-      </ul>
+&lt;!DOCTYPE html>
+&lt;!-- @ primary language of page -->
+&lt;html lang="en">
+
+&lt;head>
+  <span class="highlight">&lt;!-- @ important for proper text rendering --></span>
+  &lt;meta charset="utf-8">
+
+  <span class="highlight">&lt;!-- @ important for resizing: responsive menu design --></span>
+  &lt;meta name="viewport" content="width=device-width">
+
+  <span class="highlight">&lt;!-- @ uses pattern: page title, separator, website label --></span>
+  &lt;title>What is Universal Design? - Accessible IT Group&lt;/title>
+
+  <span class="highlight">&lt;!-- @ CSS stylesheet name required by WordPress templates --></span>
+  &lt;link type="text/css" rel="stylesheet" href="style.css" />
+&lt;/head>
+&lt;body>
+
+  &lt;!-- @ 'header' defines 'banner' landmark -->
+  &lt;header>
+    &lt;div class="banner">
+      &lt;div class="banner-row-1">
+        &lt;div class="banner-logo">
+          &lt;!-- @ UI logo with 'alt' text equiv. to image text -->
+          &lt;img src="..." alt="Illinois">
+        &lt;/div>
+        &lt;div class="banner-search">
+          &lt;div class="search-widget">
+            &lt;!-- @ 'search' landmark -->
+            &lt;form role="search">
+              &lt;!-- @ accessible name from 'title' attribute -->
+              &lt;input type="search" placeholder="SEARCH" title="Search Pages">
+              &lt;button type="submit" alt="Submit Query">
+                &lt;!-- @ SVG image -->
+                &lt;svg>...&lt;/svg>
+              &lt;/button>
+            &lt;/form>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="banner-row-2">
+        &lt;div class="banner-name">
+          &lt;!-- @ link to home page of site -->
+          &lt;a href="...">Accessible IT Group&lt;/a>
+        &lt;/div>
+        &lt;!-- @ 'nav' defines 'navigation' landmark; 'aria-label'
+             used when there are multiple 'nav' elements -->
+        &lt;nav class="banner-menu" aria-label="Site Menu">
+          &lt;ul id="banner-menu" class="menu">
+            &lt;!-- @ menu buttons as 'li > a' elements -->
+          &lt;/ul>
+        &lt;/nav>
+      &lt;/div>
+    &lt;/div>
+  &lt;/header>
+
+  &lt;!-- @ layout container for middle section (row) of page -->
+  &lt;div class="flex-row">
+    &lt;div class="left-column">
+      &lt;!-- @ spacer column: narrow middle column for readability -->
+    &lt;/div>
+
+    &lt;div class="middle-column">
+      &lt;div class="breadcrumb">
+        &lt;!-- @ breadcrumb trail of links indicating location of
+             current page in menu structure -->
+      &lt;/div>
+
+      &lt;!-- @ 'main' defines 'main' landmark -->
+      &lt;main class="content">
+        &lt;!-- @ 'h1' heading content is current page title -->
+        &lt;h1>What is Universal Design?&lt;/h1>
+        &lt;!-- @ headings 'h2–h6' used to label sections of content -->
+      &lt;/main>
+    &lt;/div>
+
+    &lt;div class="right-column">
+      &lt;!-- @ sidebar used selectively: additional 'nav' elements -->
+    &lt;/div>
+  &lt;/div>
+
+  &lt;!-- @ 'footer' defines 'contentinfo' landmark -->
+  &lt;footer>
+    &lt;!-- @ three columns of footer menu links -->
+    &lt;div>
+      &lt;ul>&lt;/ul>
+    &lt;/div>
+    &lt;div>
+      &lt;ul>&lt;/ul>
+    &lt;/div>
+    &lt;div>
+      &lt;ul>&lt;/ul>
+    &lt;/div>
+  &lt;/footer>
+&lt;/body>
+&lt;/html>
+       </div>
+
     </contents>
   </slide>
 
   <slide>
-    <title>Landmarks, Headings and Title: Markup Skeleton</title>
+    <title>Template: index and page</title>
     <contents>
-      <p><em>Nick add content</em></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Template: footer</title>
+    <contents>
     </contents>
   </slide>
 
