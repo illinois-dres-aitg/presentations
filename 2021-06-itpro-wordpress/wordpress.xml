@@ -1037,7 +1037,7 @@
     <title>ByPass Blocks: SkipTo CDN and default configuration</title>
     <contents>
 
-      <p><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/header.php">Wordpress template for footer.php</a> in our <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/">AITG theme repository</a>.</p>
+      <p>Reference to SkipTo script is in the <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/header.php">Wordpress template for footer.php</a> in our <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/">AITG theme repository</a>.</p>
 
       <ul>
         <li>Uses the default configuration of visible on load.</li>
