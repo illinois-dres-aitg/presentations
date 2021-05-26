@@ -213,116 +213,7 @@
     &lt;/div>
   &lt;/header>
 
-  <span class="highlight">&lt;!-- @ layout container for middle section (row) of page --></span>
-  &lt;div class="flex-row">
-    &lt;div class="left-column">
-      <span class="highlight">&lt;!-- @ spacer column: narrow middle column for readability --></span>
-    &lt;/div>
-
-    &lt;div class="middle-column">
-      &lt;div class="breadcrumb">
-        <span class="highlight">&lt;!-- @ breadcrumb trail of links indicating location of
-             current page in menu structure --></span>
-      &lt;/div>
-
-      <span class="highlight">&lt;!-- @ 'main' defines 'main' landmark --></span>
-      &lt;main class="content">
-        <span class="highlight">&lt;!-- @ 'h1' heading content is current page title --></span>
-        &lt;h1>What is Universal Design?&lt;/h1>
-        <span class="highlight">&lt;!-- @ headings 'h2–h6' used to label sections of content --></span>
-      &lt;/main>
-    &lt;/div>
-
-    &lt;div class="right-column">
-      <span class="highlight">&lt;!-- @ sidebar used selectively: additional 'nav' elements --></span>
-    &lt;/div>
-  &lt;/div>
-
-  <span class="highlight">&lt;!-- @ 'footer' defines 'contentinfo' landmark --></span>
-  &lt;footer>
-    <span class="highlight">&lt;!-- @ three columns of footer menu links --></span>
-    &lt;div>
-      &lt;ul>&lt;/ul>
-    &lt;/div>
-    &lt;div>
-      &lt;ul>&lt;/ul>
-    &lt;/div>
-    &lt;div>
-      &lt;ul>&lt;/ul>
-    &lt;/div>
-  &lt;/footer>
-&lt;/body>
-&lt;/html>
-       </div>
-
-    </contents>
-  </slide>
-
-  <slide>
-    <title>Template: index and page</title>
-    <contents>
-
-      <p>Wordpress template for <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/index.php">index.php</a> and  <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/page.php">page.php</a> in our <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/">AITG theme repository</a>.</p>
-      <div class="code">
-
-&lt;!DOCTYPE html>
-<span class="highlight">&lt;!-- @ primary language of page --></span>
-&lt;html lang="en">
-
-&lt;head>
-  <span class="highlight">&lt;!-- @ important for proper text rendering --></span>
-  &lt;meta charset="utf-8">
-
-  <span class="highlight">&lt;!-- @ important for resizing: responsive menu design --></span>
-  &lt;meta name="viewport" content="width=device-width">
-
-  <span class="highlight">&lt;!-- @ uses pattern: page title, separator, website label --></span>
-  &lt;title>What is Universal Design? - Accessible IT Group&lt;/title>
-
-  <span class="highlight">&lt;!-- @ CSS stylesheet name required by WordPress templates --></span>
-  &lt;link type="text/css" rel="stylesheet" href="style.css" />
-&lt;/head>
-&lt;body>
-
-  <span class="highlight">&lt;!-- @ 'header' defines 'banner' landmark --></span>
-  &lt;header>
-    &lt;div class="banner">
-      &lt;div class="banner-row-1">
-        &lt;div class="banner-logo">
-          <span class="highlight">&lt;!-- @ UI logo with 'alt' text equiv. to image text --></span>
-          &lt;img src="..." alt="Illinois">
-        &lt;/div>
-        &lt;div class="banner-search">
-          &lt;div class="search-widget">
-            <span class="highlight">&lt;!-- @ 'search' landmark --></span>
-            &lt;form role="search">
-              <span class="highlight">&lt;!-- @ accessible name from 'title' attribute --></span>
-              &lt;input type="search" placeholder="SEARCH" title="Search Pages">
-              &lt;button type="submit" alt="Submit Query">
-                <span class="highlight">&lt;!-- @ SVG image --></span>
-                &lt;svg>...&lt;/svg>
-              &lt;/button>
-            &lt;/form>
-          &lt;/div>
-        &lt;/div>
-      &lt;/div>
-
-      &lt;div class="banner-row-2">
-        &lt;div class="banner-name">
-          <span class="highlight">&lt;!-- @ link to home page of site --></span>
-          &lt;a href="...">Accessible IT Group&lt;/a>
-        &lt;/div>
-        <span class="highlight">&lt;!-- @ 'nav' defines 'navigation' landmark; 'aria-label'
-             used when there are multiple 'nav' elements --></span>
-        &lt;nav class="banner-menu" aria-label="Site Menu">
-          &lt;ul id="banner-menu" class="menu">
-            <span class="highlight">&lt;!-- @ menu buttons as 'li > a' elements --></span>
-          &lt;/ul>
-        &lt;/nav>
-      &lt;/div>
-    &lt;/div>
-  &lt;/header>
-
+<div class="obscure">
   <span class="highlight">&lt;!-- @ layout container for middle section (row) of page --></span>
   &lt;div class="flex-row">
     &lt;div class="left-column">
@@ -364,6 +255,118 @@
 &lt;/body>
 &lt;/html>
 </div>
+       </div>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Template: index and page</title>
+    <contents>
+
+      <p>Wordpress template for <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/index.php">index.php</a> and  <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/page.php">page.php</a> in our <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/">AITG theme repository</a>.</p>
+      <div class="code">
+<div class="obscure">
+&lt;!DOCTYPE html>
+<span class="highlight">&lt;!-- @ primary language of page --></span>
+&lt;html lang="en">
+
+&lt;head>
+  <span class="highlight">&lt;!-- @ important for proper text rendering --></span>
+  &lt;meta charset="utf-8">
+
+  <span class="highlight">&lt;!-- @ important for resizing: responsive menu design --></span>
+  &lt;meta name="viewport" content="width=device-width">
+
+  <span class="highlight">&lt;!-- @ uses pattern: page title, separator, website label --></span>
+  &lt;title>What is Universal Design? - Accessible IT Group&lt;/title>
+
+  <span class="highlight">&lt;!-- @ CSS stylesheet name required by WordPress templates --></span>
+  &lt;link type="text/css" rel="stylesheet" href="style.css" />
+&lt;/head>
+&lt;body>
+
+  <span class="highlight">&lt;!-- @ 'header' defines 'banner' landmark --></span>
+  &lt;header>
+    &lt;div class="banner">
+      &lt;div class="banner-row-1">
+        &lt;div class="banner-logo">
+          <span class="highlight">&lt;!-- @ UI logo with 'alt' text equiv. to image text --></span>
+          &lt;img src="..." alt="Illinois">
+        &lt;/div>
+        &lt;div class="banner-search">
+          &lt;div class="search-widget">
+            <span class="highlight">&lt;!-- @ 'search' landmark --></span>
+            &lt;form role="search">
+              <span class="highlight">&lt;!-- @ accessible name from 'title' attribute --></span>
+              &lt;input type="search" placeholder="SEARCH" title="Search Pages">
+              &lt;button type="submit" alt="Submit Query">
+                <span class="highlight">&lt;!-- @ SVG image --></span>
+                &lt;svg>...&lt;/svg>
+              &lt;/button>
+            &lt;/form>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="banner-row-2">
+        &lt;div class="banner-name">
+          <span class="highlight">&lt;!-- @ link to home page of site --></span>
+          &lt;a href="...">Accessible IT Group&lt;/a>
+        &lt;/div>
+        <span class="highlight">&lt;!-- @ 'nav' defines 'navigation' landmark; 'aria-label'
+             used when there are multiple 'nav' elements --></span>
+        &lt;nav class="banner-menu" aria-label="Site Menu">
+          &lt;ul id="banner-menu" class="menu">
+            <span class="highlight">&lt;!-- @ menu buttons as 'li > a' elements --></span>
+          &lt;/ul>
+        &lt;/nav>
+      &lt;/div>
+    &lt;/div>
+  &lt;/header>
+</div>
+  <span class="highlight">&lt;!-- @ layout container for middle section (row) of page --></span>
+  &lt;div class="flex-row">
+    &lt;div class="left-column">
+      <span class="highlight">&lt;!-- @ spacer column: narrow middle column for readability --></span>
+    &lt;/div>
+
+    &lt;div class="middle-column">
+      &lt;div class="breadcrumb">
+        <span class="highlight">&lt;!-- @ breadcrumb trail of links indicating location of
+             current page in menu structure --></span>
+      &lt;/div>
+
+      <span class="highlight">&lt;!-- @ 'main' defines 'main' landmark --></span>
+      &lt;main class="content">
+        <span class="highlight">&lt;!-- @ 'h1' heading content is current page title --></span>
+        &lt;h1>What is Universal Design?&lt;/h1>
+        <span class="highlight">&lt;!-- @ headings 'h2–h6' used to label sections of content --></span>
+      &lt;/main>
+    &lt;/div>
+
+    &lt;div class="right-column">
+      <span class="highlight">&lt;!-- @ sidebar used selectively: additional 'nav' elements --></span>
+    &lt;/div>
+  &lt;/div>
+<div class="obscure">
+  <span class="highlight">&lt;!-- @ 'footer' defines 'contentinfo' landmark --></span>
+  &lt;footer>
+    <span class="highlight">&lt;!-- @ three columns of footer menu links --></span>
+    &lt;div>
+      &lt;ul>&lt;/ul>
+    &lt;/div>
+    &lt;div>
+      &lt;ul>&lt;/ul>
+    &lt;/div>
+    &lt;div>
+      &lt;ul>&lt;/ul>
+    &lt;/div>
+  &lt;/footer>
+&lt;/body>
+&lt;/html>
+</div>
+      </div>
     </contents>
   </slide>
 
@@ -373,7 +376,7 @@
 
       <p>Wordpress template for <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/footer.php">footer.php</a> in our <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/">AITG theme repository</a>.</p>
       <div class="code">
-
+<div class="obscure">
 &lt;!DOCTYPE html>
 <span class="highlight">&lt;!-- @ primary language of page --></span>
 &lt;html lang="en">
@@ -456,7 +459,7 @@
       <span class="highlight">&lt;!-- @ sidebar used selectively: additional 'nav' elements --></span>
     &lt;/div>
   &lt;/div>
-
+</div>
   <span class="highlight">&lt;!-- @ 'footer' defines 'contentinfo' landmark --></span>
   &lt;footer>
     <span class="highlight">&lt;!-- @ three columns of footer menu links --></span>
@@ -506,35 +509,35 @@
         <thead>
           <tr>
             <th>Feature</th>
-            <th>WCAG 2.x Level AA</th>
-            <th>WCAG 2.x Level AAA</th>
-            <th>WCAG 2.1 Level AA</th>
+            <th class="num"><a href="https://www.w3.org/TR/WCAG/#contrast-enhanced">Contrast Minimum</a><br/>(Level AA)</th>
+            <th class="num"><a href="https://www.w3.org/TR/WCAG/#contrast-enhanced">Contrast Enhanced</a><br/>(Level AAA)</th>
+            <th class="num"><a href="https://www.w3.org/TR/WCAG/#non-text-contrast">Non-Text Content</a><br/>(Level AA)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">Normal Text</th>
-            <td>4.5:1</td>
-            <td>7:1</td>
-            <td></td>
+            <td class="num">4.5:1</td>
+            <td class="num">7:1</td>
+            <td class="num"></td>
           </tr>
           <tr>
             <th scope="row">Large Text</th>
-            <td>3:1</td>
-            <td>4.5:1</td>
-            <td></td>
+            <td class="num">3:1</td>
+            <td class="num">4.5:1</td>
+            <td class="num"></td>
           </tr>
           <tr>
             <th scope="row">Graphics</th>
-            <td></td>
-            <td></td>
-            <td>3:1</td>
+            <td class="num"></td>
+            <td class="num"></td>
+            <td class="num">3:1</td>
           </tr>
           <tr>
             <th scope="row">User Interface Components</th>
-            <td></td>
-            <td></td>
-            <td>3:1</td>
+            <td class="num"></td>
+            <td class="num"></td>
+            <td class="num">3:1</td>
           </tr>
         </tbody>
       </table>
@@ -1043,11 +1046,12 @@
          <li>Tooltip appears on keyboard focus in addition to pointer hover on shortcut key information.</li>
         <li>Websites using SkipTo.js on campus:
           <ul>
-            <li><a href="https://ahs.illinois.edu/" target="example">College of Applied Health Sciences</a></li>
-            <li><a href="https://itproforum.illinois.edu/">IT Pro Forum</a></li>
+            <li><a href="https://accessibleit.disability.illinois.edu/" target="_example">DRES Accessible IT Group</a></li>
+            <li><a href="https://ahs.illinois.edu/" target="_example">College of Applied Health Sciences</a></li>
+            <li><a href="https://itproforum.illinois.edu/" target="_example">IT Pro Forum</a></li>
             <li><a href="https://webcon.illinois.edu/">Illinois Webcon</a></li>
-            <li><a href="http://cpanel.web.illinois.edu/">Cpanel Web Hosting Service @ Illinois</a></li>
-            <li><a href="https://nightingaledesignresearch.com/">Nightingale Design Research</a></li>
+            <li><a href="http://cpanel.web.illinois.edu/" target="_example">Cpanel Web Hosting Service @ Illinois</a></li>
+            <li><a href="https://nightingaledesignresearch.com/" target="_example">Nightingale Design Research</a></li>
           </ul>
         </li>
       </ul>
@@ -1088,8 +1092,14 @@
     <title>Illinois Theme for WordPress</title>
     <contents>
       <p><a href="https://wordpress.webtheme.illinois.edu/home/get-the-code/#wp-install">Illinois Theme for WordPress</a></p>
+      <h2>Similar Features of AITG Website</h2>
       <ul>
-        <li></li>
+        <li>Landmark structure.</li>
+        <li>Page title and h1 synchronization.</li>
+        <li>Color contrast exceeds WCAG AAA requirements.</li>
+        <li>Use of a <a href="https://w3c.github.io/aria-practices/examples/disclosure/disclosure-navigation.html">ARIA disclosure menu pattern</a> for banner menu.</li>
+        <li>Website search feature</li>
+        <li>High contrast support, but instead of using SVG graphics it used character codes for magnifying glass and menu cheverons for search and banner menu supports operating system high contrast modes.</li>
       </ul>
     </contents>
   </slide>
@@ -1097,10 +1107,6 @@
   <slide>
     <title>Progress on WordPress Plugin for SkipTo</title>
     <contents>
-      <p><a href="#">WordPress Plugin for SkipTo script</a></p>
-      <ul>
-        <li></li>
-      </ul>
     </contents>
   </slide>
 
