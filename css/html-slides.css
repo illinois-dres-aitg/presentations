@@ -288,6 +288,12 @@ main .code .highlight {
     background-color: #fffbce;
 }
 
+main .code .obscure,
+main .code .obscure .highlight {
+    background-color: #aaa;
+    color: #555;
+}
+
 main summary h2 {
     margin: 0;
     padding;ls 0
