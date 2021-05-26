@@ -152,7 +152,7 @@
        <div class="code">
 
 &lt;!DOCTYPE html>
-&lt;!-- @ primary language of page -->
+<span class="highlight">&lt;!-- @ primary language of page --></span>
 &lt;html lang="en">
 
 &lt;head>
@@ -170,22 +170,22 @@
 &lt;/head>
 &lt;body>
 
-  &lt;!-- @ 'header' defines 'banner' landmark -->
+  <span class="highlight">&lt;!-- @ 'header' defines 'banner' landmark --></span>
   &lt;header>
     &lt;div class="banner">
       &lt;div class="banner-row-1">
         &lt;div class="banner-logo">
-          &lt;!-- @ UI logo with 'alt' text equiv. to image text -->
+          <span class="highlight">&lt;!-- @ UI logo with 'alt' text equiv. to image text --></span>
           &lt;img src="..." alt="Illinois">
         &lt;/div>
         &lt;div class="banner-search">
           &lt;div class="search-widget">
-            &lt;!-- @ 'search' landmark -->
+            <span class="highlight">&lt;!-- @ 'search' landmark --></span>
             &lt;form role="search">
-              &lt;!-- @ accessible name from 'title' attribute -->
+              <span class="highlight">&lt;!-- @ accessible name from 'title' attribute --></span>
               &lt;input type="search" placeholder="SEARCH" title="Search Pages">
               &lt;button type="submit" alt="Submit Query">
-                &lt;!-- @ SVG image -->
+                <span class="highlight">&lt;!-- @ SVG image --></span>
                 &lt;svg>...&lt;/svg>
               &lt;/button>
             &lt;/form>
@@ -195,48 +195,48 @@
 
       &lt;div class="banner-row-2">
         &lt;div class="banner-name">
-          &lt;!-- @ link to home page of site -->
+          <span class="highlight">&lt;!-- @ link to home page of site --></span>
           &lt;a href="...">Accessible IT Group&lt;/a>
         &lt;/div>
-        &lt;!-- @ 'nav' defines 'navigation' landmark; 'aria-label'
-             used when there are multiple 'nav' elements -->
+        <span class="highlight">&lt;!-- @ 'nav' defines 'navigation' landmark; 'aria-label'
+             used when there are multiple 'nav' elements --></span>
         &lt;nav class="banner-menu" aria-label="Site Menu">
           &lt;ul id="banner-menu" class="menu">
-            &lt;!-- @ menu buttons as 'li > a' elements -->
+            <span class="highlight">&lt;!-- @ menu buttons as 'li > a' elements --></span>
           &lt;/ul>
         &lt;/nav>
       &lt;/div>
     &lt;/div>
   &lt;/header>
 
-  &lt;!-- @ layout container for middle section (row) of page -->
+  <span class="highlight">&lt;!-- @ layout container for middle section (row) of page --></span>
   &lt;div class="flex-row">
     &lt;div class="left-column">
-      &lt;!-- @ spacer column: narrow middle column for readability -->
+      <span class="highlight">&lt;!-- @ spacer column: narrow middle column for readability --></span>
     &lt;/div>
 
     &lt;div class="middle-column">
       &lt;div class="breadcrumb">
-        &lt;!-- @ breadcrumb trail of links indicating location of
-             current page in menu structure -->
+        <span class="highlight">&lt;!-- @ breadcrumb trail of links indicating location of
+             current page in menu structure --></span>
       &lt;/div>
 
-      &lt;!-- @ 'main' defines 'main' landmark -->
+      <span class="highlight">&lt;!-- @ 'main' defines 'main' landmark --></span>
       &lt;main class="content">
-        &lt;!-- @ 'h1' heading content is current page title -->
+        <span class="highlight">&lt;!-- @ 'h1' heading content is current page title --></span>
         &lt;h1>What is Universal Design?&lt;/h1>
-        &lt;!-- @ headings 'h2–h6' used to label sections of content -->
+        <span class="highlight">&lt;!-- @ headings 'h2–h6' used to label sections of content --></span>
       &lt;/main>
     &lt;/div>
 
     &lt;div class="right-column">
-      &lt;!-- @ sidebar used selectively: additional 'nav' elements -->
+      <span class="highlight">&lt;!-- @ sidebar used selectively: additional 'nav' elements --></span>
     &lt;/div>
   &lt;/div>
 
-  &lt;!-- @ 'footer' defines 'contentinfo' landmark -->
+  <span class="highlight">&lt;!-- @ 'footer' defines 'contentinfo' landmark --></span>
   &lt;footer>
-    &lt;!-- @ three columns of footer menu links -->
+    <span class="highlight">&lt;!-- @ three columns of footer menu links --></span>
     &lt;div>
       &lt;ul>&lt;/ul>
     &lt;/div>
