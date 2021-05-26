@@ -24,6 +24,7 @@
 
         <xsl:call-template name="navbar">
           <xsl:with-param name="num"   select="0" />
+          <xsl:with-param name="index"   select="1" />
           <xsl:with-param name="total" select="count(/slides/slide)" />
         </xsl:call-template>
 
@@ -466,6 +467,7 @@
   <xsl:template name="navbar" >
      <xsl:param name="num" select="'0'"/>
      <xsl:param name="total" select="'0'"/>
+     <xsl:param name="index" select="'0'"/>
 
      <xsl:variable name="previous">slide<xsl:value-of select="$num - 1"/>.html</xsl:variable>
      <xsl:variable name="previousTitle">Slide <xsl:value-of select="$num - 1"/></xsl:variable>
@@ -528,7 +530,7 @@
                 </xsl:choose>
 
                 <xsl:choose>
-                  <xsl:when test="$num>1">
+                  <xsl:when test="$num>1 or $index=1">
                     <xsl:element name="li">
                       <xsl:element name="a">
                         <xsl:attribute name="id">ID_SLIDE_FIRST</xsl:attribute>
