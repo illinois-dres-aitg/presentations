@@ -44,6 +44,108 @@
             <div class="col-md-1"></div>
             <div class="col-md-9">
                <h1 id="h1_title" class="title">Template: index and page</h1>
+               <p>Wordpress template for <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/index.php">index.php</a> and  <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/page.php">page.php</a> in our <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/">AITG theme repository</a>.</p>
+               <div class="code">
+
+&lt;!DOCTYPE html&gt;
+<span class="highlight">&lt;!-- @ primary language of page --&gt;</span>
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+  <span class="highlight">&lt;!-- @ important for proper text rendering --&gt;</span>
+  &lt;meta charset="utf-8"&gt;
+
+  <span class="highlight">&lt;!-- @ important for resizing: responsive menu design --&gt;</span>
+  &lt;meta name="viewport" content="width=device-width"&gt;
+
+  <span class="highlight">&lt;!-- @ uses pattern: page title, separator, website label --&gt;</span>
+  &lt;title&gt;What is Universal Design? - Accessible IT Group&lt;/title&gt;
+
+  <span class="highlight">&lt;!-- @ CSS stylesheet name required by WordPress templates --&gt;</span>
+  &lt;link type="text/css" rel="stylesheet" href="style.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  <span class="highlight">&lt;!-- @ 'header' defines 'banner' landmark --&gt;</span>
+  &lt;header&gt;
+    &lt;div class="banner"&gt;
+      &lt;div class="banner-row-1"&gt;
+        &lt;div class="banner-logo"&gt;
+          <span class="highlight">&lt;!-- @ UI logo with 'alt' text equiv. to image text --&gt;</span>
+          &lt;img src="..." alt="Illinois"&gt;
+        &lt;/div&gt;
+        &lt;div class="banner-search"&gt;
+          &lt;div class="search-widget"&gt;
+            <span class="highlight">&lt;!-- @ 'search' landmark --&gt;</span>
+            &lt;form role="search"&gt;
+              <span class="highlight">&lt;!-- @ accessible name from 'title' attribute --&gt;</span>
+              &lt;input type="search" placeholder="SEARCH" title="Search Pages"&gt;
+              &lt;button type="submit" alt="Submit Query"&gt;
+                <span class="highlight">&lt;!-- @ SVG image --&gt;</span>
+                &lt;svg&gt;...&lt;/svg&gt;
+              &lt;/button&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="banner-row-2"&gt;
+        &lt;div class="banner-name"&gt;
+          <span class="highlight">&lt;!-- @ link to home page of site --&gt;</span>
+          &lt;a href="..."&gt;Accessible IT Group&lt;/a&gt;
+        &lt;/div&gt;
+        <span class="highlight">&lt;!-- @ 'nav' defines 'navigation' landmark; 'aria-label'
+             used when there are multiple 'nav' elements --&gt;</span>
+        &lt;nav class="banner-menu" aria-label="Site Menu"&gt;
+          &lt;ul id="banner-menu" class="menu"&gt;
+            <span class="highlight">&lt;!-- @ menu buttons as 'li &gt; a' elements --&gt;</span>
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  <span class="highlight">&lt;!-- @ layout container for middle section (row) of page --&gt;</span>
+  &lt;div class="flex-row"&gt;
+    &lt;div class="left-column"&gt;
+      <span class="highlight">&lt;!-- @ spacer column: narrow middle column for readability --&gt;</span>
+    &lt;/div&gt;
+
+    &lt;div class="middle-column"&gt;
+      &lt;div class="breadcrumb"&gt;
+        <span class="highlight">&lt;!-- @ breadcrumb trail of links indicating location of
+             current page in menu structure --&gt;</span>
+      &lt;/div&gt;
+
+      <span class="highlight">&lt;!-- @ 'main' defines 'main' landmark --&gt;</span>
+      &lt;main class="content"&gt;
+        <span class="highlight">&lt;!-- @ 'h1' heading content is current page title --&gt;</span>
+        &lt;h1&gt;What is Universal Design?&lt;/h1&gt;
+        <span class="highlight">&lt;!-- @ headings 'h2–h6' used to label sections of content --&gt;</span>
+      &lt;/main&gt;
+    &lt;/div&gt;
+
+    &lt;div class="right-column"&gt;
+      <span class="highlight">&lt;!-- @ sidebar used selectively: additional 'nav' elements --&gt;</span>
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  <span class="highlight">&lt;!-- @ 'footer' defines 'contentinfo' landmark --&gt;</span>
+  &lt;footer&gt;
+    <span class="highlight">&lt;!-- @ three columns of footer menu links --&gt;</span>
+    &lt;div&gt;
+      &lt;ul&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;ul&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;ul&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
             </div>
             <div class="col"></div>
          </div>

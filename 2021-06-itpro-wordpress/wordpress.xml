@@ -61,10 +61,12 @@
     <title>Design Considerations</title>
     <contents>
       <ul>
-        <li>Landmarks, Headings and Title</li>
+        <li>WordPress Template</li>
         <li>Color Contrast</li>
         <li>Disclosure Menu</li>
         <li>Bypass Blocks (e.g. SkipTo)</li>
+        <li>Illinois WordPress Template</li>
+        <li>WordPress Plugin for SkipTo script</li>
       </ul>
 
       <script type="text/javascript">
@@ -146,11 +148,12 @@
       </table>
     </contents>
   </slide>
+
   <slide>
     <title>Template: header</title>
     <contents>
-      <p><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/header.php">header.php</a></p>
-       <div class="code">
+      <p><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/header.php">Wordpress template for header.php</a> in our <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/">AITG theme repository</a>.</p>
+      <div class="code">
 
 &lt;!DOCTYPE html>
 <span class="highlight">&lt;!-- @ primary language of page --></span>
@@ -258,12 +261,218 @@
   <slide>
     <title>Template: index and page</title>
     <contents>
+
+      <p>Wordpress template for <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/index.php">index.php</a> and  <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/page.php">page.php</a> in our <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/">AITG theme repository</a>.</p>
+      <div class="code">
+
+&lt;!DOCTYPE html>
+<span class="highlight">&lt;!-- @ primary language of page --></span>
+&lt;html lang="en">
+
+&lt;head>
+  <span class="highlight">&lt;!-- @ important for proper text rendering --></span>
+  &lt;meta charset="utf-8">
+
+  <span class="highlight">&lt;!-- @ important for resizing: responsive menu design --></span>
+  &lt;meta name="viewport" content="width=device-width">
+
+  <span class="highlight">&lt;!-- @ uses pattern: page title, separator, website label --></span>
+  &lt;title>What is Universal Design? - Accessible IT Group&lt;/title>
+
+  <span class="highlight">&lt;!-- @ CSS stylesheet name required by WordPress templates --></span>
+  &lt;link type="text/css" rel="stylesheet" href="style.css" />
+&lt;/head>
+&lt;body>
+
+  <span class="highlight">&lt;!-- @ 'header' defines 'banner' landmark --></span>
+  &lt;header>
+    &lt;div class="banner">
+      &lt;div class="banner-row-1">
+        &lt;div class="banner-logo">
+          <span class="highlight">&lt;!-- @ UI logo with 'alt' text equiv. to image text --></span>
+          &lt;img src="..." alt="Illinois">
+        &lt;/div>
+        &lt;div class="banner-search">
+          &lt;div class="search-widget">
+            <span class="highlight">&lt;!-- @ 'search' landmark --></span>
+            &lt;form role="search">
+              <span class="highlight">&lt;!-- @ accessible name from 'title' attribute --></span>
+              &lt;input type="search" placeholder="SEARCH" title="Search Pages">
+              &lt;button type="submit" alt="Submit Query">
+                <span class="highlight">&lt;!-- @ SVG image --></span>
+                &lt;svg>...&lt;/svg>
+              &lt;/button>
+            &lt;/form>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="banner-row-2">
+        &lt;div class="banner-name">
+          <span class="highlight">&lt;!-- @ link to home page of site --></span>
+          &lt;a href="...">Accessible IT Group&lt;/a>
+        &lt;/div>
+        <span class="highlight">&lt;!-- @ 'nav' defines 'navigation' landmark; 'aria-label'
+             used when there are multiple 'nav' elements --></span>
+        &lt;nav class="banner-menu" aria-label="Site Menu">
+          &lt;ul id="banner-menu" class="menu">
+            <span class="highlight">&lt;!-- @ menu buttons as 'li > a' elements --></span>
+          &lt;/ul>
+        &lt;/nav>
+      &lt;/div>
+    &lt;/div>
+  &lt;/header>
+
+  <span class="highlight">&lt;!-- @ layout container for middle section (row) of page --></span>
+  &lt;div class="flex-row">
+    &lt;div class="left-column">
+      <span class="highlight">&lt;!-- @ spacer column: narrow middle column for readability --></span>
+    &lt;/div>
+
+    &lt;div class="middle-column">
+      &lt;div class="breadcrumb">
+        <span class="highlight">&lt;!-- @ breadcrumb trail of links indicating location of
+             current page in menu structure --></span>
+      &lt;/div>
+
+      <span class="highlight">&lt;!-- @ 'main' defines 'main' landmark --></span>
+      &lt;main class="content">
+        <span class="highlight">&lt;!-- @ 'h1' heading content is current page title --></span>
+        &lt;h1>What is Universal Design?&lt;/h1>
+        <span class="highlight">&lt;!-- @ headings 'h2–h6' used to label sections of content --></span>
+      &lt;/main>
+    &lt;/div>
+
+    &lt;div class="right-column">
+      <span class="highlight">&lt;!-- @ sidebar used selectively: additional 'nav' elements --></span>
+    &lt;/div>
+  &lt;/div>
+
+  <span class="highlight">&lt;!-- @ 'footer' defines 'contentinfo' landmark --></span>
+  &lt;footer>
+    <span class="highlight">&lt;!-- @ three columns of footer menu links --></span>
+    &lt;div>
+      &lt;ul>&lt;/ul>
+    &lt;/div>
+    &lt;div>
+      &lt;ul>&lt;/ul>
+    &lt;/div>
+    &lt;div>
+      &lt;ul>&lt;/ul>
+    &lt;/div>
+  &lt;/footer>
+&lt;/body>
+&lt;/html>
+</div>
     </contents>
   </slide>
 
   <slide>
     <title>Template: footer</title>
     <contents>
+
+      <p>Wordpress template for <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/footer.php">footer.php</a> in our <a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/">AITG theme repository</a>.</p>
+      <div class="code">
+
+&lt;!DOCTYPE html>
+<span class="highlight">&lt;!-- @ primary language of page --></span>
+&lt;html lang="en">
+
+&lt;head>
+  <span class="highlight">&lt;!-- @ important for proper text rendering --></span>
+  &lt;meta charset="utf-8">
+
+  <span class="highlight">&lt;!-- @ important for resizing: responsive menu design --></span>
+  &lt;meta name="viewport" content="width=device-width">
+
+  <span class="highlight">&lt;!-- @ uses pattern: page title, separator, website label --></span>
+  &lt;title>What is Universal Design? - Accessible IT Group&lt;/title>
+
+  <span class="highlight">&lt;!-- @ CSS stylesheet name required by WordPress templates --></span>
+  &lt;link type="text/css" rel="stylesheet" href="style.css" />
+&lt;/head>
+&lt;body>
+
+  <span class="highlight">&lt;!-- @ 'header' defines 'banner' landmark --></span>
+  &lt;header>
+    &lt;div class="banner">
+      &lt;div class="banner-row-1">
+        &lt;div class="banner-logo">
+          <span class="highlight">&lt;!-- @ UI logo with 'alt' text equiv. to image text --></span>
+          &lt;img src="..." alt="Illinois">
+        &lt;/div>
+        &lt;div class="banner-search">
+          &lt;div class="search-widget">
+            <span class="highlight">&lt;!-- @ 'search' landmark --></span>
+            &lt;form role="search">
+              <span class="highlight">&lt;!-- @ accessible name from 'title' attribute --></span>
+              &lt;input type="search" placeholder="SEARCH" title="Search Pages">
+              &lt;button type="submit" alt="Submit Query">
+                <span class="highlight">&lt;!-- @ SVG image --></span>
+                &lt;svg>...&lt;/svg>
+              &lt;/button>
+            &lt;/form>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="banner-row-2">
+        &lt;div class="banner-name">
+          <span class="highlight">&lt;!-- @ link to home page of site --></span>
+          &lt;a href="...">Accessible IT Group&lt;/a>
+        &lt;/div>
+        <span class="highlight">&lt;!-- @ 'nav' defines 'navigation' landmark; 'aria-label'
+             used when there are multiple 'nav' elements --></span>
+        &lt;nav class="banner-menu" aria-label="Site Menu">
+          &lt;ul id="banner-menu" class="menu">
+            <span class="highlight">&lt;!-- @ menu buttons as 'li > a' elements --></span>
+          &lt;/ul>
+        &lt;/nav>
+      &lt;/div>
+    &lt;/div>
+  &lt;/header>
+
+  <span class="highlight">&lt;!-- @ layout container for middle section (row) of page --></span>
+  &lt;div class="flex-row">
+    &lt;div class="left-column">
+      <span class="highlight">&lt;!-- @ spacer column: narrow middle column for readability --></span>
+    &lt;/div>
+
+    &lt;div class="middle-column">
+      &lt;div class="breadcrumb">
+        <span class="highlight">&lt;!-- @ breadcrumb trail of links indicating location of
+             current page in menu structure --></span>
+      &lt;/div>
+
+      <span class="highlight">&lt;!-- @ 'main' defines 'main' landmark --></span>
+      &lt;main class="content">
+        <span class="highlight">&lt;!-- @ 'h1' heading content is current page title --></span>
+        &lt;h1>What is Universal Design?&lt;/h1>
+        <span class="highlight">&lt;!-- @ headings 'h2–h6' used to label sections of content --></span>
+      &lt;/main>
+    &lt;/div>
+
+    &lt;div class="right-column">
+      <span class="highlight">&lt;!-- @ sidebar used selectively: additional 'nav' elements --></span>
+    &lt;/div>
+  &lt;/div>
+
+  <span class="highlight">&lt;!-- @ 'footer' defines 'contentinfo' landmark --></span>
+  &lt;footer>
+    <span class="highlight">&lt;!-- @ three columns of footer menu links --></span>
+    &lt;div>
+      &lt;ul>&lt;/ul>
+    &lt;/div>
+    &lt;div>
+      &lt;ul>&lt;/ul>
+    &lt;/div>
+    &lt;div>
+      &lt;ul>&lt;/ul>
+    &lt;/div>
+  &lt;/footer>
+&lt;/body>
+&lt;/html>
+</div>
     </contents>
   </slide>
 
@@ -442,18 +651,7 @@
       <p>The utility of doing this pays off in high contrast mode, which is controlled at the operating system level.</p>
       <p>If HCM inverts the colors on a page, [for example from 'white foreground on dark background' to 'dark foreground on white background',] it will change the 'button' foreground and background colors, but it does not 'tamper' with the internal settings of SVG images.</p>
       <p>Because 'currentColor' was used, the SVG image still renders correctly.</p>
-      <p>Search button icon (magnifying glass)</p>
-      <p>'button' element</p>
-      <ul>
-        <li><code>color: $white</code></li>
-        <li><code>background-color: $illini-blue</code></li>
-      </ul>
-      <p>'svg' image element</p>
-      <ul>
-        <li><code>circle stroke="currentColor"</code></li>
-        <li><code>rect fill="currentColor"</code></li>
-      </ul>
-
+      <p>Search button icon (magnifying glass)
       <div class="svg-background">
         <svg width="21px" height="21px" viewBox="0 0 241 243" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" color="rgb(255, 255, 255)">
           <title>Search Icon: Magnifying Glass</title>
@@ -465,10 +663,21 @@
           </g>
         </svg>
       </div>
+      </p>
+      <p>'button' element
+      </p>
+      <ul>
+        <li><code>color: $white</code></li>
+        <li><code>background-color: $illini-blue</code></li>
+      </ul>
+      <p>'svg' image element
+      </p>
+      <ul>
+        <li><code>circle stroke="currentColor"</code></li>
+        <li><code>rect fill="currentColor"</code></li>
+      </ul>
 
-      <div class="svg-background">
-        <svg aria-hidden="true" width="11px" height="11px" viewBox="0 0 133 79" version="1.1" color="rgb(255, 255, 255)"><title>menu open/close icon</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-50.000000, -122.000000)" fill="currentColor"><g transform="translate(45.000000, 64.000000)"><path d="M33.5,21 C40.4035594,21 46,26.5964406 46,33.5 L46,96.5 L109,96.5 C115.903559,96.5 121.5,102.096441 121.5,109 C121.5,115.903559 115.903559,121.5 109,121.5 L34,121.5 C30.4210403,121.5 27.1933842,119.995891 24.9146718,117.585313 C22.5041093,115.306616 21,112.07896 21,108.5 L21,33.5 C21,26.5964406 26.5964406,21 33.5,21 Z" transform="translate(71.250000, 71.250000) rotate(-45.000000) translate(-71.250000, -71.250000) "></path></g></g></g></svg>
-      </div>
+
 
     </contents>
   </slide>
@@ -503,17 +712,10 @@
           </tr>
           <tr>
             <td scope="row">
-              <a href="https://www.w3.org/TR/WCAG/#location" target="_spec">2.5.3 Label in Name</a>
+              <a href="https://www.w3.org/TR/WCAG/#multiple-ways" target="_spec">2.4.5 Multiple Ways</a>
             </td>
-            <td>A</td>
-            <td>The text content of the links is used as the accessible name for the buttons and links.</td>
-          </tr>
-          <tr>
-            <td scope="row">
-              <a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_spec">4.1.2 Name, Role, Value</a>
-            </td>
-            <td>A</td>
-            <td>The controls used to open and close the submenu links use the <code>button</code> role and the <code>aria-expanded</code> and <code>aria-controls</code> attributes.</td>
+            <td>AA</td>
+            <td>The banner navigation menu is one of the two ways to find and navigate to pages in the website, the other is the search feature.</td>
           </tr>
           <tr>
             <td scope="row">
@@ -528,6 +730,20 @@
             </td>
             <td>AAA</td>
             <td>Using the <code>aria-current</code> property to identify the link to the current page.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG/#location" target="_spec">2.5.3 Label in Name</a>
+            </td>
+            <td>A</td>
+            <td>The text content of the links is used as the accessible name for the buttons and links.</td>
+          </tr>
+          <tr>
+            <td scope="row">
+              <a href="https://www.w3.org/TR/WCAG21/#name-role-value" target="_spec">4.1.2 Name, Role, Value</a>
+            </td>
+            <td>A</td>
+            <td>The controls used to open and close the submenu links use the <code>button</code> role and the <code>aria-expanded</code> and <code>aria-controls</code> attributes.</td>
           </tr>
         </tbody>
       </table>
@@ -711,164 +927,12 @@
         </tbody>
       </table>
 
-    </contents>
-  </slide>
-
-  <slide>
-    <title>Disclosure Menu: Top Level HTML Markup from WordPress</title>
-    <contents>
-
-      <h2>WordPress Source Code</h2>
-
-      <div class="code">
-  ......
-  &lt;nav class="banner-menu">
-    &lt;ul id="banner-menu" class="menu">
-      &lt;li id="menu-item-1102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1102">
-        <span class="highlight">&lt;a href="https://accessibleit.disability.illinois.edu/courses/"></span>
-          Courses
-        &lt;/a>
-        &lt;ul class="sub-menu">
-          &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-707">
-            &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses">
-              Badging Courses
-            &lt;/a>
-            &lt;ul class="sub-menu">
-  ......
-      </div>
-
-      <h2>DOM after DisclosureMenu.js script</h2>
-
-      <div class="code">
-  ......
-  <span class="highlight">   &lt;button type="button" aria-label="Main Menu" class="banner-hamburger" aria-expanded="false">
-       &lt;svg class="menu-open" aria-hidden="true" preserveAspectRatio="xMidYMid meet" width="34px" height="32px" viewBox="0 0 32 32" version="1.1">
-          &lt;title>Open Menu&lt;/title>
-          &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-             &lt;rect fill="#FFFFFF" x="0" y="0" width="32" height="32" />
-             &lt;g transform="translate(4.000000, 6.000000)" fill="#13294b">
-                &lt;rect x="0" y="0" width="24" height="4" rx="2" />
-                &lt;rect x="0" y="8" width="24" height="4" rx="2" />
-                &lt;rect x="0" y="16" width="24" height="4" rx="2" />
-             &lt;/g>
-          &lt;/g>
-       &lt;/svg>
-     &lt;/button></span>
-     &lt;svg class="menu-close" aria-hidden="true" preserveAspectRatio="xMidYMid meet" width="34px" height="32px" viewBox="0 0 32 32" version="1.1">
-        &lt;title>Close Menu&lt;/title>
-        &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-           &lt;rect fill="#FFFFFF" x="0" y="0" width="32" height="32" />
-           &lt;path d="M6.10050506,23.0710678 L23.0710678,6.10050506 C23.8521164,5.31945648 25.1184464,5.31945648 25.8994949,6.10050506 C26.6805435,6.88155365 26.6805435,8.1478836 25.8994949,8.92893219 L8.92893219,25.8994949 C8.1478836,26.6805435 6.88155365,26.6805435 6.10050506,25.8994949 C5.31945648,25.1184464 5.31945648,23.8521164 6.10050506,23.0710678 Z" fill="#13294b" />
-           &lt;path d="M8.93264069,6.10421356 L25.9032034,23.0747763 C26.684252,23.8558249 26.684252,25.1221549 25.9032034,25.9032034 C25.1221549,26.684252 23.8558249,26.684252 23.0747763,25.9032034 L6.10421356,8.93264069 C5.32316498,8.1515921 5.32316498,6.88526215 6.10421356,6.10421356 C6.88526215,5.32316498 8.1515921,5.32316498 8.93264069,6.10421356 Z" fill="#13294b" />
-        &lt;/g>
-     &lt;/svg>
-  &lt;/button>
-  &lt;nav class="banner-menu" <span class="highlight">aria-label="Site Menu"</span>>
-    &lt;ul id="banner-menu" class="menu">
-      &lt;li id="menu-item-1102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1102">
-        <span class="highlight">&lt;a role="button" href="#" aria-expanded="false" aria-controls="banner-sub-menu-0"></span>
-          Courses
-<span class="highlight">          &lt;svg aria-hidden="true" width="11px" height="11px" viewBox="0 0 133 79" version="1.1">
-             &lt;title>menu open/close icon&lt;/title>
-             &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                &lt;g transform="translate(-50.000000, -122.000000)" fill="currentColor">
-                   &lt;g transform="translate(45.000000, 64.000000)">
-                      &lt;path d="M33.5,21 C40.4035594,21 46,26.5964406 46,33.5 L46,96.5 L109,96.5 C115.903559,96.5 121.5,102.096441 121.5,109 C121.5,115.903559 115.903559,121.5 109,121.5 L34,121.5 C30.4210403,121.5 27.1933842,119.995891 24.9146718,117.585313 C22.5041093,115.306616 21,112.07896 21,108.5 L21,33.5 C21,26.5964406 26.5964406,21 33.5,21 Z" transform="translate(71.250000, 71.250000) rotate(-45.000000) translate(-71.250000, -71.250000) " />
-                   &lt;/g>
-                &lt;/g>
-             &lt;/g>
-          &lt;/svg></span>
-        &lt;/a>
-        &lt;ul <span class="highlight">id="banner-sub-menu-0"</span> class="sub-menu">
-          &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-707">
-            &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses">
-              Badging Courses
-            &lt;/a>
-            &lt;ul class="sub-menu">
-  ......
-      </div>
-
-      <h2 id="h2-top-level">Changes to the DOM</h2>
-      <p id="id-desc-top">The top level menu items with submenus are updated by the disclosure menu script to support the behaviors and markup for the <a href="https://w3c.github.io/aria-practices/#disclosure">ARIA disclosure pattern</a>.  The disclosure pattern is the most popular way to implement navigation menus with submenus.  Top level menu items that <em>do not</em> have submenus do not have the following changes.</p>
-      <table class="table table-striped" aria-labelledby="h3-top-level" aria-describedby="id-desc-top">
-        <thead>
-          <tr>
-            <th scope="col">Change</th>
-            <th scope="col">Purpose</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <code>role=<q>button</q></code>
-            </td>
-            <td>
-              The <code>a</code> element will no longer act as a link, but a button to open and close the submenu.   This requires change the <code>a</code> element semantics from "link" to "button" by adding the <code>role</code> attribute with the value of <code>button</code>.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>href=<q>#</q></code>
-            </td>
-            <td>
-              To change the behavior of the <code>a</code> element to no longer reload or scroll the page, the <code>href</code> is set to <code>#</code> character.  This also keeps the <code>a</code> element in the tab sequence of the page.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>aria-expanded=<q>false</q></code>
-            </td>
-            <td>
-              The <code>aria-expanded</code> attribute identifies if the group of submenu links are visible or hidden.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>aria-controls=<q>IDREF</q></code>
-            </td>
-            <td>
-              The <code>aria-controls</code> attribute defines a relationship between the button and the group of submenu links.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>aria-label=<q>Site Menu</q></code>
-            </td>
-            <td>
-              Adds an accessible name to the <code>nav</code> element.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>button</code>
-            </td>
-            <td>
-              Adds a hamburger button to open and close the navigation menu when screen is narrow or on a small device.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Inline SVG graphic
-            </td>
-            <td>
-              The SVG graphics is used to indicate the action of the menu item:
-              <ul>
-                <li>If the menu item has a submenu, the SVG graphic indicates using up and down chevrons that the menu item has a submenu and whether the submenu is opened or closed.</li>
-                <li>If the menu item is a link, a right pointing chevron is used to differentiate the menu item from menu items with a submenu.</li>
-                <li>Inline SVG graphics are used to support the use of the <code>currentColor</code> property to make sure the graphic is visible and has enough contrast in operating system high contrast modes.</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
       <h2>Script and CSS</h2>
       <ul>
         <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/js/DisclosureMenu.js">DisclosureMenu.js</a></li>
         <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/style.css">AITG WordPress Theme CSS</a> that includes styling for the disclosure menu.</li>
         <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-design/blob/master/banner-menu.scss">SASS file for the banner menu styling</a></li>
       </ul>
-
     </contents>
   </slide>
 
@@ -876,45 +940,6 @@
     <title>Disclosure Menu: Identifying Current Link</title>
     <contents>
 
-      <h2>WordPress Source Code</h2>
-
-      <div class="code">
-  ......
-  &lt;ul class="sub-menu">
-    &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-707">
-      &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses">Badging Courses&lt;/a>
-      &lt;ul class="sub-menu">
-        &lt;li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-137 current_page_item menu-item-709">
-          <span class="highlight">&lt;span>Accessibility 101&lt;/span></span>
-        &lt;/li>
-        &lt;li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722">
-          &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/">Captioning: Knowing How&lt;/a>
-        &lt;/li>
-      &lt;/ul>
-    &lt;/li>
-  ......
-      </div>
-
-      <h2>DOM after DisclosureMenu.js script</h2>
-
-      <div class="code">
-  ......
-  &lt;ul class="sub-menu">
-    &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-707">
-      &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses">Badging Courses&lt;/a>
-      &lt;ul class="sub-menu">
-        &lt;li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-137 current_page_item menu-item-709">
-          <span class="highlight">&lt;a aria-current="page" href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/" >Accessibility 101&lt;/a></span>
-        &lt;/li>
-        &lt;li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722">
-          &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/">Captioning: Knowing How&lt;/a>
-        &lt;/li>
-      &lt;/ul>
-    &lt;/li>
-  ......
-      </div>
-
-      <h2 id="h2-page-link">Changes to the DOM</h2>
       <p id="id-pagelink">WordPress menus do not render the link to the current page as an <code>a</code> element and this must be restored so that the link is part of the tab sequence of the page and the <code>aria-current</code> attribute can be used to indicate the link is to the current page.</p>
       <table class="table table-striped" aria-labelledby="h2-page-link" aria-describedby="id-page-link">
         <thead>
@@ -951,6 +976,26 @@
         </tbody>
       </table>
 
+      <h2>WordPress Inspected Code</h2>
+
+      <div class="code">
+  ......
+  &lt;ul class="sub-menu">
+    &lt;li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-707">
+      &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging-courses">Badging Courses&lt;/a>
+      &lt;ul class="sub-menu">
+        &lt;li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-137 current_page_item menu-item-709">
+          <span class="highlight">&lt;a aria-current="page"</span> href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/" >Accessibility 101&lt;/a>
+        &lt;/li>
+        &lt;li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722">
+          &lt;a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/">Captioning: Knowing How&lt;/a>
+        &lt;/li>
+      &lt;/ul>
+    &lt;/li>
+  ......
+      </div>
+
+
       <h2>Script and CSS</h2>
       <ul>
         <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-theme/blob/master/js/DisclosureMenu.js">DisclosureMenu.js</a></li>
@@ -958,13 +1003,6 @@
         <li><a href="https://github.com/illinois-dres-aitg/aitg-wordpress-design/blob/master/banner-menu.scss">SASS file for the banner menu styling</a></li>
       </ul>
 
-    </contents>
-  </slide>
-
-  <slide>
-    <title>Disclosure Menu: Menu Configuration</title>
-    <contents>
-      <p class="center"><img src="menu-configuration.png" alt="screen shot of the menu configuration interface of WordPress"/></p>
     </contents>
   </slide>
 
@@ -1006,6 +1044,7 @@
         <li>Websites using SkipTo.js on campus:
           <ul>
             <li><a href="https://ahs.illinois.edu/" target="example">College of Applied Health Sciences</a></li>
+            <li><a href="https://itproforum.illinois.edu/">IT Pro Forum</a></li>
             <li><a href="https://webcon.illinois.edu/">Illinois Webcon</a></li>
             <li><a href="http://cpanel.web.illinois.edu/">Cpanel Web Hosting Service @ Illinois</a></li>
             <li><a href="https://nightingaledesignresearch.com/">Nightingale Design Research</a></li>
@@ -1016,7 +1055,7 @@
   </slide>
 
   <slide>
-    <title>Working with Third Party Vendors</title>
+    <title>Third Party WordPress Plugins</title>
     <contents>
       <table class="table table-striped" aria-labelledby="h1_title">
         <thead>
@@ -1031,17 +1070,37 @@
           <tr>
             <td>Table Creation</td>
             <td><a href="https://tablepress.org/">TablePress</a></td>
-            <td>Providing an accessible name and description for the table for users of assistive technology.</td>
+            <td><a href="https://wordpress.org/support/topic/using-aria-labelledby-and-aria-describedby/">Sumitted a support request for an accessible name and description</a> for the table for users of assistive technology.</td>
             <td>Added the used of <code>aria-labelledby</code> and <code>aria-describedby</code> to the <code>table</code> element to point to use the heading and caption elements associated with the table.  See example on the <a href="https://accessibleit.disability.illinois.edu/universal-design/what-is-universal-design/">Survey: UDL Principles are Vital to Learning</a> table.</td>
           </tr>
           <tr>
             <td>Calendar</td>
             <td><a href="https://wordpress.org/plugins/my-calendar/">My Calendar</a></td>
-            <td>Consistency of header usage for list, Month, week and day views of the calendar.</td>
+            <td><a href="https://github.com/joedolson/my-calendar/issues/33">Submitted an issue for consistency of header usage</a> for list, Month, week and day views of the calendar.</td>
             <td>See example on the <a href="https://accessibleit.disability.illinois.edu/my-calendar/">full calendar page</a>.</td>
           </tr>
         </tbody>
       </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Illinois Theme for WordPress</title>
+    <contents>
+      <p><a href="https://wordpress.webtheme.illinois.edu/home/get-the-code/#wp-install">Illinois Theme for WordPress</a></p>
+      <ul>
+        <li></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>WordPress Plugin for SkipTo script</title>
+    <contents>
+      <p><a href="#">WordPress Plugin for SkipTo script</a></p>
+      <ul>
+        <li></li>
+      </ul>
     </contents>
   </slide>
 
