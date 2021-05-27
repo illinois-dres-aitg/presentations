@@ -654,18 +654,18 @@
 
       <ul>
         <li>Applies to inline SVG images</li>
-        <li>The currentColor CSS value is specified on stroke or fill attribute</li>
+        <li>The currentColor CSS value is specified on <code>stroke</code> or <code>fill</code> attribute</li>
       </ul>
 
-      <p>Under certain conditions (relatively simple SVG graphic with only a few colors — mainly foreground and background; the image is something users interact with), using currentColor can be advantageous.</p>
+      <p>Under certain conditions (relatively simple SVG graphic with only a few colors — mainly foreground and background; the image is something users interact with), using <code>currentColor</code> can be advantageous.</p>
 
-      <p>In our case, the search button icon and the chevron images in menu buttons meet these requirements.</p>
+      <p>In our case, the search button icon and the <code>chevron</code> images in menu buttons meet these requirements.</p>
 
-      <p>The SVG search button icon (magnifying glass) is specified as the content of the button element, and its colors are:</p>
+      <p>The SVG search button icon (magnifying glass) is specified as the content of the <code>button</code> element, and its colors are:</p>
 
       <ul>
-        <li>color: $white</li>
-        <li>background-color: $illini-blue</li>
+        <li><code>color: $white</code></li>
+        <li><code>background-color: $illini-blue</code></li>
       </ul>
 
       <p>The relevant parts of the search icon SVG:</p>
@@ -680,13 +680,13 @@
         &lt;/svg>
       </div>
 
-      <p>The currentColor value means that the foreground color is inherited from color value of its closest ancestor (e.g. parent element).</p>
+      <p>The <code>currentColor</code> value means that the foreground color is inherited from color value of its closest ancestor (e.g. parent element).</p>
 
       <p>The background color is unspecified, effectively making it transparent so that it picks up the color of its parent.</p>
 
       <p>For this image, when high contrast mode is used and a color scheme is chosen that inverts the colors on the page, the background color will appear to change as it would with any type of image with a transparent background (e.g. PNG).</p>
 
-      <p>However, because the foreground color for these images is specified as currentColor, it will inherit the new foreground color of the HCM scheme (unlike its PNG counterpart).</p>
+      <p>However, because the foreground color for these images is specified as <code>currentColor</code>, it will inherit the new foreground color of the HCM scheme (unlike its PNG counterpart).</p>
     </contents>
   </slide>
 
