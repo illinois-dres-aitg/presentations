@@ -650,38 +650,43 @@
       }
     </style>
     <contents>
-      <p>When an SVG image is used as a user interface component, if you specify the foreground color (usually 'stroke' or 'fill') as 'currentColor', it will inherit its color value from its nearest ancestor (in our case, the 'button' element).</p>
-      <p>The utility of doing this pays off in high contrast mode, which is controlled at the operating system level.</p>
-      <p>If HCM inverts the colors on a page, [for example from 'white foreground on dark background' to 'dark foreground on white background',] it will change the 'button' foreground and background colors, but it does not 'tamper' with the internal settings of SVG images.</p>
-      <p>Because 'currentColor' was used, the SVG image still renders correctly.</p>
-      <p>Search button icon (magnifying glass)
-      <div class="svg-background">
-        <svg width="21px" height="21px" viewBox="0 0 241 243" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" color="rgb(255, 255, 255)">
-          <title>Search Icon: Magnifying Glass</title>
-          <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="Group" transform="translate(19.000000, 19.000000)">
-              <circle id="Oval" stroke="currentColor" stroke-width="30" cx="75.5" cy="75.5" r="75.5"></circle>
-              <rect id="Rectangle" fill="currentColor" transform="translate(166.414214, 169.414214) rotate(45.000000) translate(-166.414214, -169.414214) " x="106.414214" y="149.414214" width="120" height="40" rx="16"></rect>
-            </g>
-          </g>
-        </svg>
+      <p>Accessible SVG Images</p>
+
+      <ul>
+        <li>Applies to inline SVG images</li>
+        <li>The currentColor CSS value is specified on stroke or fill attribute</li>
+      </ul>
+
+      <p>Under certain conditions (relatively simple SVG graphic with only a few colors — mainly foreground and background; the image is something users interact with), using currentColor can be advantageous.</p>
+
+      <p>In our case, the search button icon and the chevron images in menu buttons meet these requirements.</p>
+
+      <p>The SVG search button icon (magnifying glass) is specified as the content of the button element, and its colors are:</p>
+
+      <ul>
+        <li>color: $white</li>
+        <li>background-color: $illini-blue</li>
+      </ul>
+
+      <p>The relevant parts of the search icon SVG:</p>
+
+      <div class="code">
+        &lt;svg ...>
+          &lt;title>Search&lt;/title>
+          ...
+            &lt;circle stroke="currentColor" ...>&lt;/circle>
+            &lt;rect fill="currentColor" ...>&lt;/rect>
+          ...
+        &lt;/svg>
       </div>
-      </p>
-      <p>'button' element
-      </p>
-      <ul>
-        <li><code>color: $white</code></li>
-        <li><code>background-color: $illini-blue</code></li>
-      </ul>
-      <p>'svg' image element
-      </p>
-      <ul>
-        <li><code>circle stroke="currentColor"</code></li>
-        <li><code>rect fill="currentColor"</code></li>
-      </ul>
 
+      <p>The currentColor value means that the foreground color is inherited from color value of its closest ancestor (e.g. parent element).</p>
 
+      <p>The background color is unspecified, effectively making it transparent so that it picks up the color of its parent.</p>
 
+      <p>For this image, when high contrast mode is used and a color scheme is chosen that inverts the colors on the page, the background color will appear to change as it would with any type of image with a transparent background (e.g. PNG).</p>
+
+      <p>However, because the foreground color for these images is specified as currentColor, it will inherit the new foreground color of the HCM scheme (unlike its PNG counterpart).</p>
     </contents>
   </slide>
 
