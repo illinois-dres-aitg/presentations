@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu"
+      alt="University of Illinois">
+      <img src="../images/block-i.png"/>
+    </a>
+    Copyright &#169; 2021 University of Illinois
+  </footer>
+  <title>Understanding Web Accessibility Standards and Open Source Tools</title>
+  <person>
+    <name>Jon Gunderson, Ph.D.</name>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  </person>
+
+  <person>
+    <name>Nicholas Hoyt</name>
+    <desc>Software Development and Interaction Design Specialist</desc>
+    <desc>Division of Disability Resources and Educational Services</desc>
+    <desc>College of Applied Health Sciences</desc>
+    <desc>University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:nhoyt@illinois.edu">nhoyt@illinois.edu</desc>
+  </person>
+
+  <conference>
+    <name href="https://accessibility.mste.illinois.edu/explore">Explore with Hadi</name>
+    <desc>July 13th, 2021</desc>
+    <desc>Champaign, IL and online</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/html-slides.js</script>
+
+
+
+  <slide>
+    <title>Bookmarklets for Visualizing Accessibility Features</title>
+    <contents>
+      <ul>
+        <li><a href="https://accessibility-bookmarklets.org/" target="_bookmarklets">Bookmarklets Website</a> (<a href="https://github.com/oaa-tools/bookmarklets">Source Code</a>)</li>
+        <li>Features:
+          <ul>
+            <li>Highlight Regions and Elements on page</li>
+            <li>Element information</li>
+            <li>Default or defined <code>role</code></li>
+            <li>Accessible name</li>
+            <li>Accessible description</li>
+            <li>Important properties (e.g the number of items in a list)</li>
+          </ul>
+        </li>
+      </ul>
+
+      <iframe src="https://accessibility-bookmarklets.org" width="98%" height="600px" title="Bookmarklets Website"></iframe>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>AInspector WCAG</title>
+    <contents>
+      <ul>
+        <li><a href="https://go.illinois.edu/ainspector-wcag" target="_ainspector_wcag">Firefox Add-ons: AInspector WCAG</a></li>
+        <li>Designed for:
+          <ul>
+            <li>Web designers</li>
+            <li>Software developers</li>
+            <li>Quality assurance testers</li>
+          </ul>
+        </li>
+        <li>Summary Rule Results
+          <ul>
+            <li>Rule Categories</li>
+            <li>WCAG Guideline</li>
+          </ul>
+        </li>
+        <li>Analyzes the browser DOM content</li>
+        <li>Highlighting elements</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Functional Accessibility Evaluator (FAE) 2.0</title>
+    <contents>
+      <ul>
+        <li>Two versions of Functional Accessibility Evaluator 2.0
+          <ul>
+            <li><a href="https://fae.disability.illinois.edu"  target="_fae20">FAE 2.0 Individual License Version</a></li>
+            <li><a href="https://fae.illinois.edu" target="_fae20">FAE 2.0 Institutional License Version</a> using <a href="https://www.incommon.org/"  target="_other">InCommon</a></li>
+            <li><a href="https://github.com/opena11y/fae2" target="_other">Source Code for FAE 2.0</a></li>
+          </ul>
+        </li>
+        <li>Designed for:
+          <ul>
+            <li>Managers</li>
+            <li>Web designers</li>
+            <li>Software developers</li>
+            <li>Quality assurance testers</li>
+            <li>IT Auditors</li>
+          </ul>
+        </li>
+        <li>Website rule result summaries and implementation status</li>
+        <li>Page rule result summaries</li>
+        <li>Organizes rules by Rule Categories, Rule Scope and WCAG Guidelines</li>
+        <li>Archive and share reports</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Skip to Landmarks and Headings Browser Extensions</title>
+    <contents>
+      <ul>
+        <li><a href="https://chrome.google.com/webstore/detail/skip-to-landmarks-and-hea/fjkpbfcodhflpdildjbmdhhmcoplghgf" rel="nofollow">Chrome Extension</a></li>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/skipto" rel="nofollow">Firefox Extension</a></li>
+      </ul>
+
+      <p>If you like the extension please consider writing a review.</p>
+
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Open Source Web Accessibility Tools Group</title>
+    <contents>
+      <p><a href="https://github.com/a11y-tools/user-group/wiki">Open Source Web Accessibility Tools User Group</a></p>
+
+      <p>Next meeting:</p>
+
+      <p><strong>Date:</strong> 14 July 2021 (Tomorrow)</p>
+
+      <p><strong>Time:</strong> 2:00pm Central Daylight Time USA (Chicago Local Time)</p>
+
+      <p><a href="https://illinois.zoom.us/j/83544681392?pwd=YXdZOXB4SDZmWXdyTW9WdUdPY01adz09" rel="nofollow">Zoom Link</a></p>
+    </contents>
+  </slide>
+
+
+
+</slides>
+
+
