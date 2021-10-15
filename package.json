@@ -7,8 +7,8 @@
     "example": "example"
   },
   "dependencies": {
-    "saxon-js": "^2.0.3",
-    "xslt3": "^2.0.3"
+    "saxon-js": "^2.3.0",
+    "xslt3": "^2.3.0"
   },
   "devDependencies": {},
   "scripts": {
