@@ -1,63 +1,48 @@
-<!DOCTYPE html PUBLIC "">
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 17: Test Page: .ariaLabel DOM Property</title>
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
-<link rel="stylesheet" type="text/css" href="../css/html-slides.css">
-<script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script>
-<style id="style"></style>
-</head>
-<body>
-<nav id="nav" class="navbar navbar-default">
-<div class="container">
-<div class="navbar-header">
-<button class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#slide-nav"><span class="sr-only">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Slide 17: Test Page: .ariaLabel DOM Property</title>
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
+   </head>
+   <body>
+      <nav id="nav" class="navbar navbar-default">
+         <div class="container">
+            <div class="navbar-header"><button class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#slide-nav"><span class="sr-only">
                   Toggle navigation
-                </span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-</div>
-<div id="slide-nav" class="collapse navbar-collapse">
-<ul class="nav navbar-nav">
-<li>
-<a id="ID_SLIDE_INDEX" href="index.html">
+                </span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
+            <div id="slide-nav" class="collapse navbar-collapse">
+               <ul class="nav navbar-nav">
+                  <li><a id="ID_SLIDE_INDEX" href="index.html">
                         Index
-                      </a>
-</li>
-<li>
-<a id="ID_SLIDE_FIRST" href="slide1.html" title="Slide 1">
+                      </a></li>
+                  <li><a id="ID_SLIDE_FIRST" href="slide1.html" title="Slide 1">
                         First
-                      </a>
-</li>
-<li>
-<a id="ID_SLIDE_PREVIOUS" href="slide16.html" title="Slide 16">
+                      </a></li>
+                  <li><a id="ID_SLIDE_PREVIOUS" href="slide16.html" title="Slide 16">
                         Previous
-                      </a>
-</li>
-<li>
-<a id="ID_SLIDE_NEXT" href="slide18.html" title="Slide 18">
+                      </a></li>
+                  <li><a id="ID_SLIDE_NEXT" href="slide18.html" title="Slide 18">
                         Next
-                      </a>
-</li>
-<li>
-<a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
+                      </a></li>
+                  <li><a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
                         Last
-                      </a>
-</li>
-</ul>
-<ul class="nav navbar-nav pull-right">
-<li class="nav navbar-text">Slide 17 of 22</li>
-</ul>
-</div>
-</div>
-</nav>
-<main id="content" class="container">
-<div class="row">
-<div class="col-md-1"></div>
-<div class="col-md-9">
-<h1 id="h1_title" class="title">Test Page: .ariaLabel DOM Property</h1>
-<script>
+                      </a></li>
+               </ul>
+               <ul class="nav navbar-nav pull-right">
+                  <li class="nav navbar-text">Slide 17 of 22</li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <main id="content" class="container">
+         <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-9">
+               <h1 id="h1_title" class="title">Test Page: .ariaLabel DOM Property</h1><script>
         function setAttribute(id, attr, value) {
           document.getElementById(id).setAttribute(attr, value);
         }
@@ -81,216 +66,138 @@
           }
           return '';
         }
-      </script>
-<p>Accessibility problems exist when return values for <code>.ariaLabel</code> are "undefined" or return a type that is <strong>not</strong> the same on every browser.   Developers assume that DOM properties for ARIA roles, properties and states are consistent between browsers, and when they are not that causes accessibility problems.</p>
-<table class="table table-striped">
-        
-<caption>Getting value with <code>.ariaLabel</code> property</caption>
-        
-<thead>
-          
-<tr>
-            
-<th>Setting Code</th>
-            <th>Return value of <code>.ariaLabel</code></th>
-          
-</tr>
-        
-</thead>
-        
-<tbody>
-          
-<tr>
-            
-<td class="sourcecode">&lt;input type="checkbox" aria-label="My label"/&gt;</td>
-            <td>
-              
-<div class="sr-only">
-                
-<input id="aom-11-label" type="checkbox" aria-label="My label">
-              
-</div>
-              
-<script>
+      </script><p>Accessibility problems exist when return values for <code>.ariaLabel</code> are "undefined" or return a type that is <strong>not</strong> the same on every browser.   Developers assume that DOM properties for ARIA roles, properties and states are consistent between browsers, and when they are not that causes accessibility problems.</p>
+               <table class="table table-striped">
+                  <caption>Getting value with <code>.ariaLabel</code> property</caption>
+                  <thead>
+                     <tr>
+                        <th>Setting Code</th>
+                        <th>Return value of <code>.ariaLabel</code></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="sourcecode">&lt;input type="checkbox" aria-label="My label"/&gt;</td>
+                        <td>
+                           <div class="sr-only">
+                <input id="aom-11-label" type="checkbox" aria-label="My label">
+              </div>
+              <script>
                 document.write(getProperty('aom-11-label', 'ariaLabel'));
               </script>
             </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">&lt;div role="checkbox" aria-label="My label"&gt;</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-12-label" role="checkbox" aria-label="My label"></div>
-              
-</div>
-              
-<script>
+                     </tr>
+                     <tr>
+                        <td class="sourcecode">&lt;div role="checkbox" aria-label="My label"&gt;</td>
+                        <td>
+                           <div class="sr-only">
+                              <div id="aom-12-label" role="checkbox" aria-label="My label"></div>
+                           </div>
+              <script>
                 document.write(getProperty('aom-12-label', 'ariaLabel'));
               </script>
             </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">e.setAttribute('aria-label', 'My label');</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-13-label" role="checkbox"></div>
-              
-</div>
-              
-<script>
+                     </tr>
+                     <tr>
+                        <td class="sourcecode">e.setAttribute('aria-label', 'My label');</td>
+                        <td>
+                           <div class="sr-only">
+                              <div id="aom-13-label" role="checkbox"></div>
+                           </div>
+              <script>
                 setAttribute('aom-13-label', 'aria-label', 'My label');
                 document.write(getProperty('aom-13-label', 'ariaLabel'));
               </script>
             </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">e.ariaLabel = 'My label';</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-14-label" role="checkbox"></div>
-              
-</div>
-              
-<script>
+                     </tr>
+                     <tr>
+                        <td class="sourcecode">e.ariaLabel = 'My label';</td>
+                        <td>
+                           <div class="sr-only">
+                              <div id="aom-14-label" role="checkbox"></div>
+                           </div>
+              <script>
                 setProperty('aom-14-label', 'ariaLabel', 'My label');
                 document.write(getProperty('aom-14-label', 'ariaLabel'));
               </script>
             </td>
-          
-</tr>
-        
-</tbody>
-      
-</table>
-<table class="table table-striped">
-        
-<caption>
-<code>.ariaLabel</code> property is not computed accessible name.</caption>
-        
-<thead>
-          
-<tr>
-            
-<th>Setting Code</th>
-            <th>Return value of <code>.ariaLabel</code></th>
-          
-</tr>
-        
-</thead>
-        
-<tbody>
-          
-<tr>
-            
-<td class="sourcecode">&lt;input type="checkbox" aria-labelledby="id-label"/&gt;&lt;span id="id-label"&gt;My label&lt;/span&gt;</td>
-            <td>
-              
-<div class="sr-only">
-                
-<input id="aom-21-label" type="checkbox" aria-labelledby="id-label">
+                     </tr>
+                  </tbody>
+               </table>
+               <table class="table table-striped">
+                  <caption><code>.ariaLabel</code> property is not computed accessible name.</caption>
+                  <thead>
+                     <tr>
+                        <th>Setting Code</th>
+                        <th>Return value of <code>.ariaLabel</code></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="sourcecode">&lt;input type="checkbox" aria-labelledby="id-label"/&gt;&lt;span id="id-label"&gt;My label&lt;/span&gt;</td>
+                        <td>
+                           <div class="sr-only">
+                <input id="aom-21-label" type="checkbox" aria-labelledby="id-label">
                 <span id="id-label">My label</span>
-              
-</div>
-              
-<script>
+              </div>
+              <script>
                 document.write(getProperty('aom-21-label', 'ariaLabel'));
               </script>
             </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">&lt;div role="checkbox" title="My label"&gt;</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-22-label" role="checkbox" title="My label"></div>
-              
-</div>
-              
-<script>
+                     </tr>
+                     <tr>
+                        <td class="sourcecode">&lt;div role="checkbox" title="My label"&gt;</td>
+                        <td>
+                           <div class="sr-only">
+                              <div id="aom-22-label" role="checkbox" title="My label"></div>
+                           </div>
+              <script>
                 document.write(getProperty('aom-22-label', 'ariaLabel'));
               </script>
             </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">e.setAttribute('title', 'My label');</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-23-label" role="checkbox"></div>
-              
-</div>
-              
-<script>
+                     </tr>
+                     <tr>
+                        <td class="sourcecode">e.setAttribute('title', 'My label');</td>
+                        <td>
+                           <div class="sr-only">
+                              <div id="aom-23-label" role="checkbox"></div>
+                           </div>
+              <script>
                 setAttribute('aom-23-label', 'title', 'My label');
                 document.write(getProperty('aom-23-label', 'ariaLabel'));
               </script>
             </td>
-          
-</tr>
-          
-<tr>
-            
-<td class="sourcecode">e.title = 'My label';</td>
-            <td>
-              
-<div class="sr-only">
-                
-<div id="aom-24-label" role="checkbox"></div>
-              
-</div>
-              
-<script>
+                     </tr>
+                     <tr>
+                        <td class="sourcecode">e.title = 'My label';</td>
+                        <td>
+                           <div class="sr-only">
+                              <div id="aom-24-label" role="checkbox"></div>
+                           </div>
+              <script>
                 setProperty('aom-24-label', 'title', 'My label');
                 document.write(getProperty('aom-24-label', 'ariaLabel'));
               </script>
             </td>
-          
-</tr>
-        
-</tbody>
-      
-</table>
-<p>NOTE: Getting value of <code>.ariaLabel</code> property is only associated with the <code>aria-label</code> attribute, and is not a way to get the "computed" label for an widget element.</p>
-</div>
-<div class="col"></div>
-</div>
-</main>
-<footer class="container">
-<div id="footer" class="well well-sm">
-<a href="https://illinois.edu" alt="University of Illinois">
-      <img src="../images/block-i.png">
+                     </tr>
+                  </tbody>
+               </table>
+               <p>NOTE: Getting value of <code>.ariaLabel</code> property is only associated with the <code>aria-label</code> attribute, and is not a way to get the "computed" label for an widget element.</p>
+            </div>
+            <div class="col"></div>
+         </div>
+      </main>
+      <footer class="container">
+         <div id="footer" class="well well-sm"><a href="https://illinois.edu">
+      <img src="../images/block-i.png" alt="University of Illinois">
     </a>
     
       
     
-    Copyright &copy; 2020 University of Illinois
+    Copyright © 2020 University of Illinois
   <span class="highlight-icon">
           ↖
-        </span>
-</div>
-</footer>
-</body>
+        </span></div>
+      </footer>
+   </body>
 </html>

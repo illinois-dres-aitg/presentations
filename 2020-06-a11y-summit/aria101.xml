@@ -5,9 +5,9 @@
   <lang>en</lang>
   <addtranscript/>
   <footer>
-    <a href="https://illinois.edu"
-      alt="University of Illinois">
-      <img src="../images/block-i.png"/>
+    <a href="https://illinois.edu">
+      <img src="../images/block-i.png"
+      alt="University of Illinois"/>
     </a>
     Copyright &#169; 2020 University of Illinois
   </footer>
