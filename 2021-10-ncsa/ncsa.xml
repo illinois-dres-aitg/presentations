@@ -128,7 +128,7 @@
     <contents>
       <ul>
         <li><a href="http://www.ncsa.illinois.edu/">NCSA Home Page</a></li>
-        <li>No keyboard focus styling.</li>
+        <li>No <em>active</em> keyboard focus styling, rely on the default browser styling, which is different in each browser and often difficult to see.</li>
         <li>Misuse of <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications</a> (ARIA) markup, remember <em>"no ARIA is better than bad ARIA"</em>, examples of issues:
         <ul>
           <li><code>link</code> role in page banner, probably not needed, but no keyboard support and poor accessible name (e.g. essentially all the text content in the banner).</li>
