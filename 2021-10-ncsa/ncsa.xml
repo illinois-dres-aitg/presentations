@@ -123,6 +123,21 @@
     </contents>
   </slide>
 
+  <slide>
+    <title>Comments on Accessibility of NCSA Website</title>
+    <contents>
+      <ul>
+        <li><a href="http://www.ncsa.illinois.edu/">NCSA Home Page</a></li>
+        <li>No keyboard focus styling.</li>
+        <li>Misuse of <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications</a> (ARIA) markup, remember <em>"no ARIA is better than bad ARIA"</em>, examples of issues:
+        <ul>
+          <li><code>link</code> role in page banner, probably not needed, but no keyboard support and poor accessible name (e.g. essentially all the text content in the banner).</li>
+          <li><code>menubar</code> and <code>menuitem</code> roles do not describe the actual keyboard behavior of the page, actual keyboard navigation seem very unpredictable to me.</li>
+        </ul>
+      </li>
+      </ul>
+    </contents>
+  </slide>
 
 </slides>
 

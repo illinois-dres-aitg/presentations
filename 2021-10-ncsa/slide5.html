@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 5: Open Source Web Accessibility Tools Group</title>
+      <title>Slide 5: Comments on Accessibility of NCSA Website</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -42,12 +42,17 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Open Source Web Accessibility Tools Group</h1>
-               <p><a href="https://github.com/a11y-tools/user-group/wiki">Open Source Web Accessibility Tools User Group</a></p>
-               <p>Next meeting:</p>
-               <p><strong>Date:</strong> 14 July 2021 (Tomorrow)</p>
-               <p><strong>Time:</strong> 2:00pm Central Daylight Time USA (Chicago Local Time)</p>
-               <p><a href="https://illinois.zoom.us/j/83544681392?pwd=YXdZOXB4SDZmWXdyTW9WdUdPY01adz09" rel="nofollow">Zoom Link</a></p>
+               <h1 id="h1_title" class="title">Comments on Accessibility of NCSA Website</h1>
+               <ul>
+                  <li><a href="http://www.ncsa.illinois.edu/">NCSA Home Page</a></li>
+                  <li>No keyboard focus styling.</li>
+                  <li>Misuse of <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications</a> (ARIA) markup, remember <em>"no ARIA is better than bad ARIA"</em>, examples of issues:
+        <ul>
+                        <li><code>link</code> role in page banner, probably not needed, but no keyboard support and poor accessible name (e.g. essentially all the text content in the banner).</li>
+                        <li><code>menubar</code> and <code>menuitem</code> roles do not describe the actual keyboard behavior of the page, actual keyboard navigation seem very unpredictable to me.</li>
+                     </ul>
+                  </li>
+               </ul>
             </div>
             <div class="col"></div>
          </div>
