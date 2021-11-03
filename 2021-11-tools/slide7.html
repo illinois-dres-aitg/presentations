@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 7: New Evaluation Library Rules</title>
+      <title>Slide 7: Updated Evaluation Library Rules</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -32,12 +32,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide8.html" title="Slide 8">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide13.html" title="Slide 13">
+                  <li><a id="ID_SLIDE_LAST" href="slide14.html" title="Slide 14">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 7 of 13</li>
+                  <li class="nav navbar-text">Slide 7 of 14</li>
                </ul>
             </div>
          </div>
@@ -46,40 +46,80 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">New Evaluation Library Rules</h1>
+               <h1 id="h1_title" class="title">Updated Evaluation Library Rules</h1>
                <table class="table table-striped" aria-labelledby="h1_title">
                   <thead>
                      <tr>
                         <th>Rule ID</th>
                         <th>Description</th>
-                        <th>Result</th>
-                        <th>Requirement</th>
+                        <th>Changes</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
-                        <td><a href="https://fae.disability.illinois.edu/rulesets/HTML_3/">HTML 3</a></td>
-                        <td>Role is not allowed.</td>
-                        <td>Pass/Violation</td>
-                        <td><a href="https://www.w3.org/TR/html-aria/">HTML in ARIA</a></td>
+                        <td></td>
+                        <td>Most Rules</td>
+                        <td>
+              Updated Widget rule references to use:
+              <ul>
+                              <li>Web Content Accessibility Guidelines 2.1</li>
+                              <li>Latest ARIA Authoring Practices.</li>
+                              <li>MDN Resources for ARIA.</li>
+                              <li>Web FOundation references for ARIA.</li>
+                              <li>Removed many broken and outdated links from reference section.</li>
+                           </ul>
+                        </td>
                      </tr>
                      <tr>
-                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_13/">Widget 13</a></td>
-                        <td>Role does not support accessible name.</td>
-                        <td>Pass/Violation</td>
-                        <td><a href="https://www.w3.org/TR/wai-aria-1.2/#namefromprohibited">5.2.8.6 Roles which cannot be named</a> (ARIA 1.2)</td>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/CONTROL_11">Control 11</a></td>
+                        <td>Submit and reset button labels must be unique</td>
+                        <td>
+                           <ul>
+                              <li>Fixed initial incomplete implementation.</li>
+                              <li>Updated test cases.</li>
+                           </ul>
+                        </td>
                      </tr>
                      <tr>
-                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_15/">Widget 15</a></td>
-                        <td>Remove deprecated ARIA attributes.</td>
-                        <td>Pass/Warning</td>
-                        <td><a href="https://www.w3.org/TR/wai-aria-1.2/#global_states">6.5 Global States and Properties</a> (ARIA 1.2)</td>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_7">Widget 7</a></td>
+                        <td>Widgets must have owned elements</td>
+                        <td>
+                           <ul>
+                              <li>Fixed bugs in initial implementation.</li>
+                              <li>Updated tests to ARIA 1.2 owned requirements.</li>
+                              <li>Updated test cases for aria owns.</li>
+                           </ul>
+                        </td>
                      </tr>
                      <tr>
-                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_16/">Widget 16</a></td>
-                        <td>Custom element requires manual check.</td>
-                        <td>Manual Check</td>
-                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">MDN: Web Components</a></td>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_8">Widget 8</a></td>
+                        <td>Role must have parent</td>
+                        <td>
+                           <ul>
+                              <li>Updated logic based on changes needed for Widget 7 rule.</li>
+                              <li>Updated test cases.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_9">Widget 9</a></td>
+                        <td>Only one owner</td>
+                        <td>
+                           <ul>
+                              <li>Updated logic based on changes needed for Widget 7 rule.</li>
+                              <li>Updated test cases.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_10">Widget 10</a></td>
+                        <td>Value in range</td>
+                        <td>
+                           <ul>
+                              <li>ARIA 1.2 clarified the use of default <a href="https://w3c.github.io/aria-practices/#range_related_properties">range control values</a> and required attributes and rule was updated with the new information.</li>
+                              <li>Updated test cases.</li>
+                           </ul>
+                        </td>
                      </tr>
                   </tbody>
                </table>
