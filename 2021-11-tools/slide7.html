@@ -2,11 +2,15 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 7: Questions</title>
+      <title>Slide 7: New Evaluation Library Rules</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
-      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style">
+      table tbody tr td:nth-child(1) {
+        white-space: nowrap;
+      }
+    </style>
    </head>
    <body>
       <nav id="nav" class="navbar navbar-default">
@@ -25,15 +29,15 @@
                   <li><a id="ID_SLIDE_PREVIOUS" href="slide6.html" title="Slide 6">
                         Previous
                       </a></li>
-                  <li class="disabled"><a id="ID_SLIDE_NEXT" href="#" title="On Last Slide">
+                  <li><a id="ID_SLIDE_NEXT" href="slide8.html" title="Slide 8">
                         Next
                       </a></li>
-                  <li class="disabled"><a id="ID_SLIDE_LAST" href="#" name="On Last Slide">
+                  <li><a id="ID_SLIDE_LAST" href="slide12.html" title="Slide 12">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 7 of 7</li>
+                  <li class="nav navbar-text">Slide 7 of 12</li>
                </ul>
             </div>
          </div>
@@ -42,7 +46,43 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Questions</h1>
+               <h1 id="h1_title" class="title">New Evaluation Library Rules</h1>
+               <table class="table table-striped">
+                  <thead>
+                     <tr>
+                        <th>Rule ID</th>
+                        <th>Description</th>
+                        <th>Result</th>
+                        <th>Requirement</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/HTML_3/">HTML 3</a></td>
+                        <td>Role is not allowed.</td>
+                        <td>Pass/Violation</td>
+                        <td><a href="https://www.w3.org/TR/html-aria/">HTML in ARIA</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_13/">WIDGET 13</a></td>
+                        <td>Role does not support accessible name.</td>
+                        <td>Pass/Violation</td>
+                        <td><a href="https://www.w3.org/TR/wai-aria-1.2/#namefromprohibited">5.2.8.6 Roles which cannot be named</a> (ARIA 1.2)</td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_15/">WIDGET 15</a></td>
+                        <td>Remove deprecated ARIA attributes.</td>
+                        <td>Pass/Warning</td>
+                        <td><a href="https://www.w3.org/TR/wai-aria-1.2/#global_states">6.5 Global States and Properties</a> (ARIA 1.2)</td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_16/">WIDGET 16</a></td>
+                        <td>Custom element requires manual check.</td>
+                        <td>Manual Check</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">MDN: Web Components</a></td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>

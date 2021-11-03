@@ -2,11 +2,15 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 6: Open Source Web Accessibility Tools Group</title>
+      <title>Slide 6: Updated Evaluation Library Rules</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
-      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style">
+      table tbody tr td:nth-child(1) {
+        white-space: nowrap;
+      }
+    </style>
    </head>
    <body>
       <nav id="nav" class="navbar navbar-default">
@@ -28,12 +32,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide7.html" title="Slide 7">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide7.html" title="Slide 7">
+                  <li><a id="ID_SLIDE_LAST" href="slide12.html" title="Slide 12">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 6 of 7</li>
+                  <li class="nav navbar-text">Slide 6 of 12</li>
                </ul>
             </div>
          </div>
@@ -42,12 +46,83 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Open Source Web Accessibility Tools Group</h1>
-               <p><a href="https://github.com/a11y-tools/user-group/wiki">Open Source Web Accessibility Tools User Group</a></p>
-               <p>Next meeting:</p>
-               <p><strong>Date:</strong> 17 November 2021 (Tomorrow)</p>
-               <p><strong>Time:</strong> 2:00pm Central Daylight Time USA (Chicago Local Time)</p>
-               <p><a href="https://illinois.zoom.us/j/81505123700?pwd=WFowQjluY095ZFFDc25NRWJjNnJUUT09" rel="nofollow">Zoom Link</a></p>
+               <h1 id="h1_title" class="title">Updated Evaluation Library Rules</h1>
+               <table class="table table-striped">
+                  <thead>
+                     <tr>
+                        <th>Rule ID</th>
+                        <th>Description</th>
+                        <th>Changes</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td></td>
+                        <td>Most Rules</td>
+                        <td>
+              Updated Widget rule references to use:
+              <ul>
+                              <li>Web Content Accessibility Guidelines 2.1</li>
+                              <li>Latest ARIA Authoring Practices.</li>
+                              <li>MDN Resources for ARIA.</li>
+                              <li>Web FOundation references for ARIA.</li>
+                              <li>Removed many broken and outdated links from reference section.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/CONTROL_11">Control 11</a></td>
+                        <td>Submit and reset button labels must be unique</td>
+                        <td>
+                           <ul>
+                              <li>Fixed initial incomplete implementation.</li>
+                              <li>Updated test cases.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_7">WIDGET 7</a></td>
+                        <td>Widgets must have owned elements</td>
+                        <td>
+                           <ul>
+                              <li>Fixed bugs in initial implementation.</li>
+                              <li>Updated tests to ARIA 1.2 owned requirements.</li>
+                              <li>Updated test cases for aria owns.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_8">WIDGET 8</a></td>
+                        <td>Role must have parent</td>
+                        <td>
+                           <ul>
+                              <li>Updated logic based on changes needed for Widget 7 rule.</li>
+                              <li>Updated test cases.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_9">WIDGET 9</a></td>
+                        <td>Only one owner</td>
+                        <td>
+                           <ul>
+                              <li>Updated logic based on changes needed for Widget 7 rule.</li>
+                              <li>Updated test cases.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_10">WIDGET 10</a></td>
+                        <td>Value in range</td>
+                        <td>
+                           <ul>
+                              <li>ARIA 1.2 clarified the use of default <a href="https://w3c.github.io/aria-practices/#range_related_properties">range control values</a> and required attributes and rule was updated with the new information.</li>
+                              <li>Updated test cases.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>
