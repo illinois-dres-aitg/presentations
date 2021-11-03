@@ -242,7 +242,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_7">WIDGET 7</a></td>
+            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_7">Widget 7</a></td>
             <td>Widgets must have owned elements</td>
             <td>
               <ul>
@@ -253,7 +253,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_8">WIDGET 8</a></td>
+            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_8">Widget 8</a></td>
             <td>Role must have parent</td>
             <td>
               <ul>
@@ -263,7 +263,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_9">WIDGET 9</a></td>
+            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_9">Widget 9</a></td>
             <td>Only one owner</td>
             <td>
               <ul>
@@ -273,7 +273,7 @@
             </td>
           </tr>
           <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_10">WIDGET 10</a></td>
+            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_10">Widget 10</a></td>
             <td>Value in range</td>
             <td>
               <ul>
@@ -312,19 +312,19 @@
             <td><a href="https://www.w3.org/TR/html-aria/">HTML in ARIA</a></td>
           </tr>
           <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_13/">WIDGET 13</a></td>
+            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_13/">Widget 13</a></td>
             <td>Role does not support accessible name.</td>
             <td>Pass/Violation</td>
             <td><a href="https://www.w3.org/TR/wai-aria-1.2/#namefromprohibited">5.2.8.6 Roles which cannot be named</a> (ARIA 1.2)</td>
           </tr>
           <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_15/">WIDGET 15</a></td>
+            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_15/">Widget 15</a></td>
             <td>Remove deprecated ARIA attributes.</td>
             <td>Pass/Warning</td>
             <td><a href="https://www.w3.org/TR/wai-aria-1.2/#global_states">6.5 Global States and Properties</a> (ARIA 1.2)</td>
           </tr>
           <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_16/">WIDGET 16</a></td>
+            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_16/">Widget 16</a></td>
             <td>Custom element requires manual check.</td>
             <td>Manual Check</td>
             <td><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">MDN: Web Components</a></td>
@@ -367,8 +367,8 @@
             <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_8/">Widget 8: Role must have parent </a></li>
             <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_9/">Widget 9: Only one owner </a></li>
             <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_10/">Widget 10: Value in range</a></li>
-            <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_13/">WIDGET 13: Role does not support accessible name.</a></li>
-            <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_15/">WIDGET 15: Remove deprecated ARIA attributes. </a></li>
+            <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_13/">Widget 13: Role does not support accessible name.</a></li>
+            <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_15/">Widget 15: Remove deprecated ARIA attributes. </a></li>
             <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_16/">Widget 16: Custom element requires manual check. </a></li>
           </ul>
         </li>
@@ -434,7 +434,7 @@
   </slide>
 
   <slide>
-    <title>Questions</title>
+    <title>Comments and Questions</title>
     <contents>
     </contents>
   </slide>
