@@ -13,6 +13,7 @@
 
   <person>
     <name>Jon Gunderson, Ph.D.</name>
+    <desc href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</desc>
     <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
     <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
   </person>
@@ -354,7 +355,7 @@
   </slide>
 
   <slide>
-    <title>How you can help</title>
+    <title>How you can help improve the tools</title>
     <contents>
       <ul>
         <li><abbr title="Accessibility">A11y</abbr> Evaluation library are open source tools and are based on W3C standards.</li>
@@ -390,6 +391,32 @@
       <p><strong>Time:</strong> 2:00pm Central Daylight Time USA (Chicago Local Time)</p>
 
       <p><a href="https://illinois.zoom.us/j/81505123700?pwd=WFowQjluY095ZFFDc25NRWJjNnJUUT09" rel="nofollow">Zoom Link</a></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Help Develop Accessibility Standards</title>
+    <contents>
+      <p>The <a href="">University of Illinois is a member of the W3C</a>, consider joining one of these two working groups.</p>
+      <ul>
+        <li><a href="https://www.w3.org/WAI/ARIA/task-forces/practices/">ARIA Authoring Practices Task Force</a>:
+          <ul>
+            <li>Creating guidance.</li>
+            <li>Reviewing guidance.</li>
+            <li>Creating examples.</li>
+            <li>Testing examples.</li>
+            <li>Great way to learn how to use ARIA markup to create accessible content!</li>
+          </ul>
+        </li>
+        <li><a href="https://www.w3.org/community/aria-at/">ARIA Assistive Technology Community Group</a>:
+          <ul>
+            <li>Testing ARIA examples with assistive technologies to identify usage of HTML and ARIA semantics by screen readers.</li>
+            <li>Provide feedback to screen readers on use of ARIA markup.</li>
+            <li>Help developers understand how ARIA markup changes the experience of people using screen readers.</li>
+            <li>Excellent way to learn how screen readers work!</li>
+          </ul>
+        </li>
+      </ul>
     </contents>
   </slide>
 
