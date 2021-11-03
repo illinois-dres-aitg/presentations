@@ -52,8 +52,13 @@
   </slide>
 
   <slide>
-    <title>Informal Survey of Tool Usage</title>
+    <title>Informal Survey of Open Source Tool Usage</title>
     <contents>
+      <ul>
+        <li><a href="https://accessibility-bookmarklets.org/">Accessibility Bookmarklets</a></li>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">AInspector WCAG</a></li>
+        <li><a href="https://fae.disability.illinois.edu/">Functional Accessibility Evaluator (FAE)</a></li>
+      </ul>
     </contents>
   </slide>
 
