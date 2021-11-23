@@ -103,14 +103,68 @@
   <slide>
     <title>Open Source Tools</title>
     <contents>
-      <ul>
-        <li><a href="https://go.illinois.edu/ainspector-wcag" target="_ainspector_wcag">Firefox Add-ons: AInspector WCAG 1.1</a>
-      </li>
-      <li><a href="https://fae.disability.illinois.edu"  target="_fae20">Functional Accessibility Evaluator (FAE) 2.2</a><a href="https://github.com/ainspector/a11y-evaluation-library">OpenAjax Evaluation Library for WCAG 2.0 evaluation</a></li>
-      <li><a href="https://ckeditor.com/cke4/addons/search/plugins/a11y">A11yFirst enhancements for CKEditor</a></li>
-      <li><a href="https://paypal.github.io/skipto/">SkipTo script for WCAG Bypass Blocks requirement</a> (in collaboration with PayPal)</li>
-      <li><a href="https://skipto.github.io/">SkipTo extension for Firefox and Chrome</a></li>
-      </ul>
+      <table class="table table-striped" aria-labelledby="h1_title">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Users</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://go.illinois.edu/ainspector-wcag" target="_ainspector_wcag">Firefox Add-ons: AInspector WCAG 1.1</a>
+            </td>
+            <td>
+              <ul>
+                <li>Managers</li>
+                <li>Web designers</li>
+                <li>Software developers</li>
+                <li>Quality assurance testers</li>
+                <li>IT Auditors</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://fae.disability.illinois.edu"  target="_fae20">Functional Accessibility Evaluator (FAE) 2.2</a><a href="https://github.com/ainspector/a11y-evaluation-library">OpenAjax Evaluation Library for WCAG 2.0 evaluation</a>
+            </td>
+            <td>
+              <ul>
+                <li>Managers</li>
+                <li>Web designers</li>
+                <li>Software developers</li>
+                <li>Quality assurance testers</li>
+                <li>IT Auditors</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://ckeditor.com/cke4/addons/search/plugins/a11y">A11yFirst enhancements for CKEditor</a>
+            </td>
+            <td>
+              Web authors using content management systems like WordPress.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://paypal.github.io/skipto/">SkipTo script for WCAG Bypass Blocks requirement</a><br/>(in collaboration with PayPal)
+            </td>
+            <td>
+              People with disabilities
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://skipto.github.io/">SkipTo extension for Firefox and Chrome</a>
+            </td>
+            <td>
+              People with disabilities
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </contents>
   </slide>
 
