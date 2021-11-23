@@ -9,19 +9,19 @@
     </a>
     Copyright &#169; 2021 University of Illinois
   </footer>
-  <title>AInspector WCAG and Functional Accessibility Evaluator (FAE) updates to support ARIA 1.2</title>
+  <title>Future of the Accessible IT Group</title>
 
   <person>
     <name>Jon Gunderson, Ph.D.</name>
-    <desc href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</desc>
+    <desc href="http://accessibleit.disability.illinois.edu">DRES Accessinle IT Group</desc>
     <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
     <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
   </person>
 
   <conference>
-    <name href="https://www.itproforum.illinois.edu/">Illinois IT Professionals Pro Forum</name>
-    <desc>November 4th, 2021</desc>
-    <desc>online</desc>
+    <name>DRES Strategic Planning Retreat</name>
+    <desc>November 23rd, 2021</desc>
+    <desc>Allerton, Illinois</desc>
   </conference>
 
   <desc href="../">Presentations</desc>
@@ -40,418 +40,112 @@
   <slide>
     <title>Overview</title>
     <contents>
+
       <ul>
-        <li>Changes in <abbr title="Accessible Rich Interet Applications">ARIA 1.2</abbr></li>
-        <li>ARIA in HTML</li>
-        <li>Changes to evaluation library</li>
-        <li>Updates to open source tools</li>
-        <li>How you can help</li>
-        <li>Questions</li>
+        <li>Mission Statement</li>
+        <li>History</li>
+        <li>Web Accessibility Standards</li>
+        <li>Open Source Tools</li>
+        <li>Courses</li>
+        <li>Technical Support</li>
+      </ul>
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Mission Statement</title>
+    <contents>
+      <p><em>The mission of the DRES Accessible IT Group is to research, promote and facilitate the application of universal design principles to online learning and information and communications technologies (ICT) through education, collaboration, evaluation, and outreach, with the objective of ensuring the comprehensive inclusion of students with disabilities in the Illinois Experience.</em></p>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>History of IT Accessibility at DRES</title>
+    <contents>
+
+      <h2>Selected Highlights</h2>
+      <ul>
+        <li>1995: Assistive Technology lab at DRES with hours restricted to building hours.</li>
+        <li>1997: Created assistive technology rooms in 4 libraries across campus available during library hours.</li>
+        <li>2003: Accessible publishing Wizard for Microsoft Word and Powerpoint.</li>
+        <li>2004: Functional Accessibility Evaluator (FAE) 1.0 released for free use by anyone.</li>
+        <li>2010: FAE 1.1 released for free use by anyone.</li>
+        <li>2010: AInspector Sidebar for Firefox released.</li>
+        <li>2014: FAE 2.0 released for free use by anyone and made open source.</li>
+        <li>2016: AInspector WCAG for Firefox released.</li>
+        <li>2017: First global accessibility awareness day event at Illinois.</li>
+        <li>2018: A11lyFirst enhancements to CKEditor released to help people create accessible web content.</li>
+        <li>2020: Relased SkipTo script for websites to implement WCAG requirement for ByPass blocks.</li>
+        <li>2021: Released SkipTo Browser Extension for Firefox and Chrome to provide keyboard navigation to landmarks and headings.</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>Informal Survey of Open Source Tool Usage</title>
+    <title>Contributing to Web Standards</title>
     <contents>
-      <ul>
-        <li><a href="https://accessibility-bookmarklets.org/">Accessibility Bookmarklets</a></li>
-        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">AInspector WCAG</a></li>
-        <li><a href="https://fae.illinois.edu/">Functional Accessibility Evaluator (FAE)</a></li>
-      </ul>
-    </contents>
-  </slide>
 
-  <slide>
-    <title>Accessible Rich Internet Applications (ARIA) 1.2</title>
-    <contents>
-      <p><a href="https://www.w3.org/TR/wai-aria-1.2/">ARIA in HTML</a></p>
+      <p>Just like the contributions DRES made to the Uniform Federal Accessibility Standards (UFAS) to make buildings and transportation systems accessible, DRES has contributed over half of the examples in the ARIA Authoring Practices to make the web accessible.</p>
+
+      <h2><a href="https://www.w3.org/TR/wai-aria-1.2/">ARIA 1.2</a></h2>
       <iframe src="https://www.w3.org/TR/wai-aria-1.2/" width="99%" height="600px"></iframe>
+
+      <h2><a href="https://w3c.github.io/aria-practices">ARIA 1.2 Authroing Practices</a></h2>
+      <iframe src="https://w3c.github.io/aria-practices" width="99%" height="600px"></iframe>
+
     </contents>
   </slide>
 
   <slide>
-    <title>Overview of Major Changes in ARIA 1.2</title>
-    <contents>
-      <ul>
-        <li>
-          Some <a href="https://www.w3.org/TR/wai-aria-1.2/#global_states">global attributes are deprecated</a> in ARIA 1.2.
-        </li>
-        <li>
-          Accessible name prohibited on some roles: <code>caption</code>, <code>code</code>, <code>deletion</code>, <code>emphasis</code>, <code>generic</code>, <code>insertion</code>, <code>paragraph</code>, <code>presentation</code>, <code>strong</code>, <code>subscript</code> and <code>superscript</code>.
-        </li>
-        <li>
-          Added <a href="https://www.w3.org/TR/wai-aria-1.2/#idl-interface">ARIA Interface Description Language (IDL)</a> to simplify JavaScript access to ARIA attributes.  <br/>For example, using <code>element.ariaRole = 'button'</code> to set the role of an element, instead of using <code>element.setAttribute('role', 'button')</code>.
-        </li>
-        <li>
-          Changes in the usage of <code>aria-errormessage</code> to hopefully improve implementation in assistive technologies.
-        </li>
-        <li>
-          Clarifications to the definition and usage of <code>aria-valuenow</code>, <code>aria-valuemin</code> and <code>aria-valuemax</code>.
-        </li>
-      </ul>
-
-      <h2>References</h2>
-      <ul>
-        <li>
-          <a href="https://www.w3.org/TR/wai-aria-1.2/">Accessible Rich Internet Applications (WAI-ARIA) 1.2 (Candidate Recommendation)</a>
-        </li>
-        <li>
-          <a href="https://www.w3.org/TR/wai-aria-1.2/#substantive-changes-since-the-wai-aria-1-1-recommendation">Substantive changes in ARIA 1.2 since the WAI-ARIA 1.1 Recommendation</a>
-        </li>
-      </ul>
-    </contents>
-  </slide>
-
-  <slide>
-    <title>ARIA in HTML</title>
-    <contents>
-      <p><a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a></p>
-      <iframe src="https://www.w3.org/TR/html-aria/" width="99%" height="600px"></iframe>
-    </contents>
-  </slide>
-
-  <slide>
-    <title>Examples of Rules of ARIA attribute usage by HTML element
-</title>
-    <contents>
-      <table class="table table-striped" aria-labelledby="h1_title">
-        <thead>
-          <tr>
-            <th>
-              HTML element
-            </th>
-            <th>
-              <p id="implicit">
-                Implicit ARIA semantics
-              </p>
-            </th>
-            <th>
-              ARIA roles, states and properties which <em class="rfc2119">MAY</em> be used
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>
-              <a href="https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements"><code>h1 to h6</code></a>
-            </th>
-            <td>
-              <div><code>role=heading</code></div>
-              <div><code>aria-level</code> assigned the number in the element's tag name.</div>
-            </td>
-            <td>
-              <p>
-                Roles:
-                <code>none</code>,
-                <code>presentation</code>
-                or <code>tab</code>.
-              </p>
-              <p>
-                DPub Role:
-                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-subtitle"><code>doc-subtitle</code></a>
-              </p>
-              <p>
-                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
-                any <code>aria-*</code> attributes applicable to the allowed roles.
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <code><a data-type="element" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element">li</a></code>
-            </th>
-            <td>
-              <code>role=<a href="#index-aria-listitem">listitem</a></code>
-            </td>
-            <td>
-              <p>
-                Roles:
-                <code>menuitem</code>,
-                <code>menuitemcheckbox</code>,
-                <code>menuitemradio</code>,
-                <code>option</code>,
-                <code>none</code>,
-                <code>presentation</code>,
-                <code>radio</code>,
-                <code>separator</code>,
-                <code>tab</code>
-                or <code>treeitem</code>
-              </p>
-              <p>
-                DPub Roles:
-                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-biblioentry"><code>doc-biblioentry</code></a>,
-                <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-endnote"><code>doc-endnote</code></a>.
-              </p>
-              <p>
-                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
-                any <code>aria-*</code> attributes applicable to the allowed roles.
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <code><a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element">div</a></code>
-            </th>
-            <td>
-              No corresponding role
-            </td>
-            <td>
-              <p>
-                <strong>Any</strong> <code>role</code>
-              </p>
-              <p>
-                <a href="https://www.w3.org/TR/wai-aria-1.1/#global_states">Global <code>aria-*</code> attributes</a> and
-                any <code>aria-*</code> attributes applicable to the allowed roles.
-              </p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </contents>
-  </slide>
-
-  <slide>
-    <style>
-      table tbody tr td:nth-child(1) {
-        white-space: nowrap;
-      }
-    </style>
-    <title>Updated Evaluation Library Rules</title>
-    <contents>
-            <table class="table table-striped" aria-labelledby="h1_title">
-        <thead>
-          <tr>
-            <th>Rule ID</th>
-            <th>Description</th>
-            <th>Changes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td>Most Rules</td>
-            <td>
-              Updated Widget rule references to use:
-              <ul>
-                <li>Web Content Accessibility Guidelines 2.1</li>
-                <li>Latest ARIA Authoring Practices.</li>
-                <li>MDN Resources for ARIA.</li>
-                <li>Web Foundation references for ARIA.</li>
-                <li>Removed many broken and outdated links from reference section.</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/CONTROL_11">Control 11</a></td>
-            <td>Submit and reset button labels must be unique</td>
-            <td>
-              <ul>
-                <li>Fixed initial incomplete implementation.</li>
-                <li>Updated test cases.</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_7">Widget 7</a></td>
-            <td>Widgets must have owned elements</td>
-            <td>
-              <ul>
-                <li>Fixed bugs in initial implementation.</li>
-                <li>Updated tests to ARIA 1.2 owned requirements.</li>
-                <li>Updated test cases for aria owns.</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_8">Widget 8</a></td>
-            <td>Role must have parent</td>
-            <td>
-              <ul>
-                <li>Updated logic based on changes needed for Widget 7 rule.</li>
-                <li>Updated test cases.</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_9">Widget 9</a></td>
-            <td>Only one owner</td>
-            <td>
-              <ul>
-                <li>Updated logic based on changes needed for Widget 7 rule.</li>
-                <li>Updated test cases.</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_10">Widget 10</a></td>
-            <td>Value in range</td>
-            <td>
-              <ul>
-                <li>ARIA 1.2 clarified the use of default <a href="https://w3c.github.io/aria-practices/#range_related_properties">range control values</a> and required attributes and rule was updated with the new information.</li>
-                <li>Updated test cases.</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </contents>
-  </slide>
-
-  <slide>
-    <style>
-      table tbody tr td:nth-child(1) {
-        white-space: nowrap;
-      }
-    </style>
-    <title>New Evaluation Library Rules</title>
-    <contents>
-      <table class="table table-striped" aria-labelledby="h1_title">
-        <thead>
-          <tr>
-            <th>Rule ID</th>
-            <th>Description</th>
-            <th>Result</th>
-            <th>Requirement</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/HTML_3/">HTML 3</a></td>
-            <td>Role is not allowed.</td>
-            <td>Pass/Violation</td>
-            <td><a href="https://www.w3.org/TR/html-aria/">HTML in ARIA</a></td>
-          </tr>
-          <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_13/">Widget 13</a></td>
-            <td>Role does not support accessible name.</td>
-            <td>Pass/Violation</td>
-            <td><a href="https://www.w3.org/TR/wai-aria-1.2/#namefromprohibited">5.2.8.6 Roles which cannot be named</a> (ARIA 1.2)</td>
-          </tr>
-          <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_15/">Widget 15</a></td>
-            <td>Remove deprecated ARIA attributes.</td>
-            <td>Pass/Warning</td>
-            <td><a href="https://www.w3.org/TR/wai-aria-1.2/#global_states">6.5 Global States and Properties</a> (ARIA 1.2)</td>
-          </tr>
-          <tr>
-            <td><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_16/">Widget 16</a></td>
-            <td>Custom element requires manual check.</td>
-            <td>Manual Check</td>
-            <td><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">MDN: Web Components</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </contents>
-  </slide>
-  <slide>
-    <title>Updated Tools</title>
+    <title>Open Source Tools</title>
     <contents>
       <ul>
         <li><a href="https://go.illinois.edu/ainspector-wcag" target="_ainspector_wcag">Firefox Add-ons: AInspector WCAG 1.1</a>
-        <ul>
-           <li><a href="https://github.com/ainspector/firefox-ainspector-wcag" target="_other">Source Code for AInspector WCAG</a></li>
-        </ul>
       </li>
-        <li>Two versions of Functional Accessibility Evaluator 2.2
-          <ul>
-            <li><a href="https://fae.disability.illinois.edu"  target="_fae20">FAE 2.2 Individual License Version</a></li>
-            <li><a href="https://fae.illinois.edu" target="_fae20">FAE 2.2 Institutional License Version</a> using <a href="https://www.incommon.org/"  target="_other">InCommon</a></li>
-            <li><a href="https://github.com/opena11y/fae2" target="_other">Source Code for FAE 2.2</a></li>
-          </ul>
-        </li>
-        <li>Source code, regression tests and API documentation for <a href="https://github.com/ainspector/a11y-evaluation-library">A11y Evaluation Library</a>.</li>
+      <li><a href="https://fae.disability.illinois.edu"  target="_fae20">Functional Accessibility Evaluator (FAE) 2.2</a><a href="https://github.com/ainspector/a11y-evaluation-library">OpenAjax Evaluation Library for WCAG 2.0 evaluation</a></li>
+      <li><a href="https://ckeditor.com/cke4/addons/search/plugins/a11y">A11yFirst enhancements for CKEditor</a></li>
+      <li><a href="https://paypal.github.io/skipto/">SkipTo script for WCAG Bypass Blocks requirement</a> (in collaboration with PayPal)</li>
+      <li><a href="https://skipto.github.io/">SkipTo extension for Firefox and Chrome</a></li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>How you can help improve the tools</title>
+    <title>Presentations and Courses</title>
     <contents>
       <ul>
-        <li><abbr title="Accessibility">A11y</abbr> Evaluation library are open source tools and are based on W3C standards.</li>
-        <li>Review new and updated rules:
-          <ul>
-            <li><a href="https://fae.disability.illinois.edu/rulesets/CONTROL_11/">Control 11: Submit and reset button labels must be unique.</a></li>
-            <li><a href="https://fae.disability.illinois.edu/rulesets/HTML_3/">HTML 3: Role is not allowed </a></li>
-            <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_7/">Widget 7: Widgets must have owned elements </a></li>
-            <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_8/">Widget 8: Role must have parent </a></li>
-            <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_9/">Widget 9: Only one owner </a></li>
-            <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_10/">Widget 10: Value in range</a></li>
-            <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_13/">Widget 13: Role does not support accessible name.</a></li>
-            <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_15/">Widget 15: Remove deprecated ARIA attributes. </a></li>
-            <li><a href="https://fae.disability.illinois.edu/rulesets/WIDGET_16/">Widget 16: Custom element requires manual check. </a></li>
-          </ul>
-        </li>
-        <li>
-          Report issues in the <a href="https://github.com/ainspector/a11y-evaluation-library/issues"><abbr title="Accessibility">A11y</abbr> Evaluation Library GitHub repository</a> issues list.
-        </li>
+        <li><a href="https://accessibleit.disability.illinois.edu/presentations/">Previous presentations and courses</a></li>
+        <li><a href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/">Accessibility 101</a> (online)</li>
+        <li><a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/">Captioning: Knowing How</a> (online and in collaboration with Ann Fredricksen)</li>
+        <li>In development: Online course on web accessibility concepts</li>
+        <li>Illinois Global Accessibility Awareness Day event (transitioning to Access Illinois)</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>Open Source Web Accessibility Tools Group</title>
+    <title>Technical Support</title>
     <contents>
-      <p><a href="https://github.com/a11y-tools/user-group/wiki">Open Source Web Accessibility Tools User Group</a></p>
-
-      <p>Next meeting:</p>
-
-      <p><a href="https://github.com/a11y-tools/user-group/wiki/2021-11-17-Open-Source-Web-Accessibility-Tools-User-Group-Meeting">Agenda</a></p>
-
-      <p><strong>Date:</strong> Wednesday, 17 November 2021</p>
-
-      <p><strong>Time:</strong> 2:00pm Central Daylight Time USA (Chicago Local Time)</p>
-
-      <p><a href="https://illinois.zoom.us/j/81505123700?pwd=WFowQjluY095ZFFDc25NRWJjNnJUUT09" rel="nofollow">Zoom Link</a></p>
-    </contents>
-  </slide>
-
-  <slide>
-    <title>Help Develop Accessibility Standards</title>
-    <contents>
-      <p>The <a href="">University of Illinois is a member of the W3C</a>, consider joining one of these two working groups.</p>
       <ul>
-        <li><a href="https://www.w3.org/WAI/ARIA/task-forces/practices/">ARIA Authoring Practices Task Force</a>:
-          <ul>
-            <li>Creating guidance.</li>
-            <li>Reviewing guidance.</li>
-            <li>Creating examples.</li>
-            <li>Testing examples.</li>
-            <li>Great way to learn how to use ARIA markup to create accessible content!</li>
-          </ul>
-        </li>
-        <li><a href="https://www.w3.org/community/aria-at/">ARIA Assistive Technology Community Group</a>:
-          <ul>
-            <li>Testing ARIA examples with assistive technologies to identify usage of HTML and ARIA semantics by screen readers.</li>
-            <li>Provide feedback to screen readers on use of ARIA markup.</li>
-            <li>Help developers understand how ARIA markup changes the experience of people using screen readers.</li>
-            <li>Excellent way to learn how screen readers work!</li>
-          </ul>
-        </li>
+        <li><a href="https://itaccessibility.illinois.edu/explore-hadi">Explore with Hadi</a> (Lori, Jon and Nick)</li>
+        <li>Illinois web tools development group (Nick)</li>
+        <li>Illinois Canvas accessibility group (Lori and Jon)</li>
+        <li>Webcon planning committee (Lori)</li>
+        <li>Various websites and applications used at Illinois (Lori and Jon)</li>
+        <li>Document and PDF accessibility (Christy)</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>ANNOUNCEMENT: Skip to Landmarks &amp; Headings Browser Extension</title>
-    <contents>
-      <p>An assistive technology to provide keyboard navigation to the landmark regions and headings (<code>h1-h6</code>) on a web page.</p>
-      <ul>
-        <li><a href="https://chrome.google.com/webstore/detail/skip-to-landmarks-heading/fjkpbfcodhflpdildjbmdhhmcoplghgf" rel="nofollow">Chrome Extension</a></li>
-        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/skipto" rel="nofollow">Firefox Extension</a></li>
-        <li><a href="https://skipto.github.io/">Documentation</a></li>
-      </ul>
-    </contents>
-  </slide>
-
-  <slide>
-    <title>Comments and Questions</title>
+    <title>What is the Future of IT Accessibility Leadership at DRES?</title>
     <contents>
     </contents>
   </slide>
-
-
 
 </slides>
 
