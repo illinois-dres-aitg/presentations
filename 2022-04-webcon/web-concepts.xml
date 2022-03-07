@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu">
+      <img src="../images/block-i.png" alt="University of Illinois"/>
+    </a>
+    Copyright &#169; 2022 University of Illinois
+  </footer>
+  <title>Web Accessibility Concepts</title>
+
+  <person>
+    <name>Jon Gunderson, Ph.D.</name>
+    <desc href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</desc>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  </person>
+
+  <conference>
+    <name href="https://www.itproforum.illinois.edu/">Illinois IT Professionals Pro Forum</name>
+    <desc>April 7th, 2022</desc>
+    <desc>online</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/html-slides.js</script>
+
+  <slide>
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li>Keyboard only operation</li>
+        <li>Color</li>
+        <li>Page structure</li>
+        <li>Links and forms</li>
+      </ul>
+    </contents>
+  </slide>
+
+</slides>
+
+
