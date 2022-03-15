@@ -40,29 +40,16 @@
     <title>Overview</title>
     <contents>
       <ul>
-        <li>"Bypass Blocks" accessibility requirement</li>
+        <li>WCAG 2.4.1 "Bypass Blocks of Content"</li>
         <li>History of bypass blocks requirement</li>
         <li>Structural elements</li>
-        <li>SkipTo design and features</li>
-        <li>SkipTo installation and configuration</li>
+        <li>SkipTo Script</li>
+        <li>SkipTo Landmarks &amp; Headings browser extensions</li>
       </ul>
 
       <script type="text/javascript">
         slideShowURL()
       </script>
-    </contents>
-  </slide>
-
-  <slide>
-    <title>Summary</title>
-    <contents>
-      <ul>
-        <li>Providing a mechanism to bypass blocks of content has been an accessibility requirement from the early days of the web.</li>
-        <li>Little has changed regarding the techniques used to satisfy the requirement over the past 20 years, while much has changed in the technologies of the web.</li>
-        <li><a href="https://github.com/a11y-tools/skipto" target="_website">SkipTo</a> is a major advancement in implementing the “bypass blocks” requirement using existing document structural elements.</li>
-        <li>Version 3.0 is a complete rewrite of the SkipTo code and a significant update to the user experience.</li>
-        <li>Come learn how to make your website more accessible to keyboard users and help everyone learn more about accessibility.</li>
-      </ul>
     </contents>
   </slide>
 
@@ -185,11 +172,6 @@
             <td></td>
           </tr>
           <tr>
-            <td><a href="https://harvard.edu/" target="_website">Harvard</a></td>
-            <td>No</td>
-            <td>3 different skip locations: main, search and footer</td>
-          </tr>
-          <tr>
             <td><a href="https://www.w3.org/WAI/" target="_website">W3C Web Accessibility Initiative (WAI)</a></td>
             <td>Yes</td>
             <td></td>
@@ -215,6 +197,7 @@
       <ul>
         <li>Screen reader users were the primary advocates of the original bypass blocks requirement.</li>
         <li>Improvements in web design and screen reader support for heading and landmark navigation have helped in satisfying the requirement, making the "Skip to Main Content" link less important to screen reader users.  For example <code>h1</code> elements and/or <code>main</code> landmarks are typically used for the main content and screen readers have built-in commands to navigate to these locations.</li>
+        <li>SkipTo script and extension provide a filtered list of landmarks and headings, to make exploration and navigation more efficient.</li>
       </ul>
     </contents>
   </slide>
@@ -285,7 +268,7 @@
           <tr>
             <td><code>navigation</code></td>
             <td><code>nav</code></td>
-            <td>Identifies links related to website navigation.</td>
+            <td>Identifies a group links related to website navigation.</td>
           </tr>
           <tr>
             <td><code>region</code></td>
@@ -303,13 +286,13 @@
   </slide>
 
   <slide>
-    <title>Goals of SkipTo.js</title>
+    <title>Goals of SkipTo script and browser extensions</title>
     <contents>
       <ul>
-        <li>Improve keyboard accessibility to web page content.  Basically give keyboard users some of the header and landmark navigation features available in screen readers.</li>
+        <li>Improve keyboard accessibility to web page content.  Basically give all users some of the header and landmark navigation features available in screen readers.</li>
         <li>Allow authors to identify more than one important navigational point within web resources.</li>
-        <li>Make it simpler to implement Bypass Blocks requirement.</li>
-        <li>Make hidden header and landmark region information available to all users to help promote a better understanding of accessibility.</li>
+        <li>Simplify implementation of WCAG 2.4.1 Bypass Blocks of Content requirement.</li>
+        <li>Make invisible header and landmark region information available to all users to help promote a better understanding of accessibility.</li>
       </ul>
 
       <h2>Examples</h2>
@@ -338,8 +321,12 @@
             <td>
               <ul>
                 <li>Improved options for keyboard navigation to sections of a web page.</li>
-                <li>Visible button makes the feature easy to identify without interacting with the page.</li>
-                <li>Voice recognition users can just say "click skip to content" to get a list of sections.</li>
+                <li>If SkipTo button visible when page loads:
+                  <ul>
+                    <li>Feature easy to identify without interacting with the page.</li>
+                    <li>Voice recognition users can just say "click skip to content" to get a list of sections.</li>
+                  </ul>
+                </li>
               </ul>
             </td>
           </tr>
@@ -384,7 +371,7 @@
         <li>Button placement and styling.</li>
         <li>Tooltip on accesskey information</li>
       </ul>
-      <div class="screenshot"><img src="skipto-menu-highlight-button.png" alt="Screenshot of SkipTo menu open with highlight around the menu button"/></div>
+      <div class="screenshot"><img src="skipto-button-focus-ahs.png" alt="Screenshot of SkipTo menu open with highlight around the menu button"/></div>
     </contents>
   </slide>
 
@@ -399,15 +386,8 @@
             <li>navigation</li>
           </ul>
         </li>
-        <li>Group label "Landmarks" to provide context.</li>
-        <li>Menu items include:
-          <ul>
-            <li>Name of landmark region.</li>
-            <li>If defined, accessible name of landmark region.</li>
-          </ul>
-        </li>
       </ul>
-      <div class="screenshot"><img src="skipto-menu-highlight-landmarks.png" alt="Screenshot of SkipTo menu open with highlight around the landmark section of the menu"/></div>
+      <div class="screenshot"><img src="skipto-menu-open-ahs.png" alt="Screenshot of SkipTo menu open with highlight around the menu button"/></div>
     </contents>
   </slide>
 
@@ -421,28 +401,8 @@
             <li>h2</li>
           </ul>
         </li>
-        <li>Group label "Headings" to provide context.</li>
-        <li>Menu items include:
-          <ul>
-            <li>Level of the heading is indicated by number and indentation.</li>
-            <li>Accessible name of heading.</li>
-          </ul>
-        </li>
       </ul>
-      <div class="screenshot"><img src="skipto-menu-highlight-headings.png" alt="Screenshot of SkipTo menu open with highlight around the headings section of the menu"/></div>
-    </contents>
-  </slide>
-
-  <slide>
-    <title>SkipTo Design: Actions</title>
-    <contents>
-      <ul>
-        <li>Concerns that only filtered landmarks and headings are visible and want to give users full information.</li>
-        <li>Actions allow all landmarks or headings to be included in the menu.</li>
-        <li>Actions are removed if there is no difference in the filtered and all items.</li>
-      </ul>
-      <div class="screenshot"><img src="skipto-menu-highlight-actions.png" alt="Screenshot of SkipTo menu open with highlight around the actions section of the menu"/></div>
-
+      <div class="screenshot"><img src="skipto-menu-open-ahs.png" alt="Screenshot of SkipTo menu open with highlight around the headings section of the menu"/></div>
     </contents>
   </slide>
 
@@ -478,6 +438,32 @@
   &lt;/script>
       </pre></code>
     </div>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>SkipTo Landmarks &amp; Headings Browser Extensions for Chrome and Firefox</title>
+    <contents>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="screenshot"><img src="skipto-menu-open-ahs.png" alt=""/></div>
+    </contents>
+  </slide>
+
+
+
+  <slide>
+    <title>Summary</title>
+    <contents>
+      <ul>
+        <li>Providing a mechanism to allow the user to bypass blocks of content has been an accessibility requirement from the early days of the web.</li>
+        <li>Little has changed regarding the techniques used to satisfy the requirement over the past 20 years, while much has changed in the technologies of the web.</li>
+        <li><a href="https://github.com/paypal/skipto" target="_website">SkipTo</a> is a major advancement in implementing the WCAG 2.4.1 Bypass Blocks of Content requirement.</li>
+        <li>SkipTo Landmarks &amp; Headings browser extensions for <a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf">Chrome</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/skipto/">Firefox</a></li>
+      </ul>
     </contents>
   </slide>
 

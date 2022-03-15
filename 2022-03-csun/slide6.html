@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 6: Which disabilities benefit from Bypass Blocks?</title>
+      <title>Slide 6: HTML Heading and Landmark Elements</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -42,18 +42,83 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Which disabilities benefit from Bypass Blocks?</h1>
-               <p><a href="https://www.w3.org/WAI/people-use-web/user-stories/">W3C WAI Stories on how people use the web.</a></p>
-               <h2>Physical</h2>
-               <ul>
-                  <li>Many types of physical disabilities limit the ability of people to use pointing and touch devices.</li>
-                  <li>Keyboards or assistive technologies that emulate the keyboard (e.g. on-screen keyboards, voice recognition) are used to navigate and interact with web pages.</li>
-               </ul>
-               <h2>Blind and Low Vision</h2>
-               <ul>
-                  <li>Screen reader users were the primary advocates of the original bypass blocks requirement.</li>
-                  <li>Improvements in web design and screen reader support for heading and landmark navigation have helped in satisfying the requirement, making the "Skip to Main Content" link less important to screen reader users.  For example <code>h1</code> elements and/or <code>main</code> landmarks are typically used for the main content and screen readers have built-in commands to navigate to these locations.</li>
-               </ul>
+               <h1 id="h1_title" class="title">HTML Heading and Landmark Elements</h1>
+               <h2 id="id-Headings-label">Heading Elements</h2>
+               <table class="table table-striped" aria-labelledby="id-headings-label">
+                  <thead>
+                     <tr>
+                        <th scope="col">Element</th>
+                        <th scope="col">Description</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><code>h1</code></td>
+                        <td>Title of web page at the beginning of the main content.</td>
+                     </tr>
+                     <tr>
+                        <td><code>h2</code></td>
+                        <td>
+                           <ul>
+                              <li>Identify subsections of main region.</li>
+                              <li>Identify title for complementary region.</li>
+                              <li>Labels for top-level navigation and complementary landmark regions.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><code>h3-h6</code></td>
+                        <td>Identify subsections of top level regions using the heading level to identify nesting level of the section.</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <h2 id="id-landmarks-label">Landmark Elements</h2>
+               <table class="table table-striped" aria-labelledby="id-landmarks-label">
+                  <thead>
+                     <tr>
+                        <th scope="col">Role</th>
+                        <th scope="col">Element</th>
+                        <th scope="col">Description</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><code>banner</code></td>
+                        <td><code>header</code></td>
+                        <td>Shared content at the beginning of most pages within a website.</td>
+                     </tr>
+                     <tr>
+                        <td><code>complementary</code></td>
+                        <td><code>aside</code></td>
+                        <td>Content that is related to the main content of a website, that is often located in a sidebar.</td>
+                     </tr>
+                     <tr>
+                        <td><code>contentinfo</code></td>
+                        <td><code>footer</code></td>
+                        <td>Shared content at the bottom of most web pages within a website.</td>
+                     </tr>
+                     <tr>
+                        <td><code>main</code></td>
+                        <td><code>main</code></td>
+                        <td>Identifies the main content of a web page.</td>
+                     </tr>
+                     <tr>
+                        <td><code>navigation</code></td>
+                        <td><code>nav</code></td>
+                        <td>Identifies a group links related to website navigation.</td>
+                     </tr>
+                     <tr>
+                        <td><code>region</code></td>
+                        <td><code>section</code> with accessible name</td>
+                        <td>Typically identifies subsections of other landmark regions.</td>
+                     </tr>
+                     <tr>
+                        <td><code>search</code></td>
+                        <td><code>[role=<q>search</q>]</code></td>
+                        <td>Identifies search forms on a web page.</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>

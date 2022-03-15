@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 4: History of Bypass Blocks</title>
+      <title>Slide 4: Current Bypass Blocks Techniques</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -42,71 +42,42 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">History of Bypass Blocks</h1>
-               <table class="table table-striped" aria-labelledby="h1_title">
+               <h1 id="h1_title" class="title">Current Bypass Blocks Techniques</h1>
+               <h2><q>Skip to Main Content</q> Link</h2>
+               <ul>
+                  <li>Early implementations used 1 pixel images for the link with ALT text attribute, current implementations use visible text.</li>
+                  <li>Link at beginning of page to internal anchor.</li>
+                  <li>Link is hidden until it receives keyboard focus.</li>
+                  <li>No significant change in technique in over 20 years.</li>
+                  <li><a href="https://webaim.org/techniques/skipnav/">WebAIM: "Skip Navigation" Links</a></li>
+               </ul>
+               <h2 id="id-examples">Examples</h2>
+               <table class="table table-striped" aria-laeblledby="id-examples">
                   <thead>
-                     <th scope="col">Year</th>
-                     <th scope="col" style="min-width: 8em">Standard</th>
-                     <th scope="col">Requirement and Assistive Technology</th>
+                     <th scope="col">Website</th>
+                     <th scope="col">Visible on load?</th>
+                     <th scope="col">Notes</th>
                   </thead>
                   <tbody>
                      <tr>
-                        <td>1999</td>
-                        <td><a href="https://www.w3.org/TR/wai-aria-1.0/" target="_spec">WCAG 1.0</a></td>
-                        <td>
-                           <ul>
-                              <li>Checkpoint 13.6 Group related links, identify the group (for user agents), and, until user agents do so, provide a way to bypass the group. [Priority 3].</li>
-                              <li>Screen readers did not have features to navigate headers.</li>
-                           </ul>
-                        </td>
+                        <td><a href="https://illinois.edu/" target="_website">Illinois</a></td>
+                        <td>No</td>
+                        <td></td>
                      </tr>
                      <tr>
-                        <td>2000</td>
-                        <td><a href="https://www.access-board.gov/ict/#original508" target="_spec">Section 508</a></td>
-                        <td>
-                           <ul>
-                              <li>§ 1194.22 (o) A method shall be provided that permits users to skip repetitive navigation links.</li>
-                              <li>Screen readers begin to include web page navigation features like navigating headers.</li>
-                           </ul>
-                        </td>
+                        <td><a href="https://education.illinois.edu/" target="_website">Illinois Education</a></td>
+                        <td>No</td>
+                        <td></td>
                      </tr>
                      <tr>
-                        <td>2007</td>
-                        <td><a href="https://www.w3.orgTR/2007/WD-xhtml-role-20071004/" target="_spec">XHTML Role Attribute Module (Working Draft)</a>
-            </td>
-                        <td>First introduction of landmark region roles:
-              <ul>
-                              <li>banner</li>
-                              <li>contentinfo</li>
-                              <li>main</li>
-                              <li>navigation</li>
-                              <li>search</li>
-                              <li>secondary (later changed to "complementary" in ARIA)</li>
-                           </ul>
-                        </td>
+                        <td><a href="https://wisc.edu/" target="_website">Wisconsin</a></td>
+                        <td>No</td>
+                        <td></td>
                      </tr>
                      <tr>
-                        <td>2008</td>
-                        <td><a href="https://www.w3.org/TR/WCAG20/" target="_spec">WCAG 2.0</a></td>
-                        <td>
-                           <ul>
-                              <li>Success Criteria 2.4.1 Bypass Blocks: A mechanism is available to bypass blocks of content that are repeated on multiple Web pages. (Level A)</li>
-                              <li>JAWS Screen Reader + Some Specific Version of Microsoft Internet Explore is the default standard for accessibility.</li>
-                              <li>VoiceOver for macOS is available.</li>
-                           </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>2014</td>
-                        <td>ARIA 1.0</td>
-                        <td>
-                           <ul>
-                              <li>ARIA is first standard to define how browsers should communicate web page information to accessibility APIs for macOS, Windows and Linux</li>
-                              <li>ARIA defines landmark region roles, although implementation in browsers has been available for years.</li>
-                              <li>Mozilla Firefox and Google Chrome lead browser efforts to implement ARIA standard.</li>
-                              <li>JAWS and NVDA for Windows, VoiceOver for macOS and Orca for Linux/GNOME become the dominate screen readers.</li>
-                           </ul>
-                        </td>
+                        <td><a href="https://www.w3.org/WAI/" target="_website">W3C Web Accessibility Initiative (WAI)</a></td>
+                        <td>Yes</td>
+                        <td></td>
                      </tr>
                   </tbody>
                </table>

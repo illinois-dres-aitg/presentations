@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 14: SkipTo: Installing and Configuration</title>
+      <title>Slide 14: Summary</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -42,38 +42,13 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">SkipTo: Installing and Configuration</h1>
+               <h1 id="h1_title" class="title">Summary</h1>
                <ul>
-                  <li>Include reference to <a href="https://github.com/a11y-tools/skipto/tree/master/compiled/js" target="_code"><code>skipto.js</code></a> script in the page template.</li>
-                  <li>To change default settings use the <code>SkipToConfig</code> object.
-          <ul>
-                        <li>CSS Selectors are used for defining which elements are included in the Landmarks and Headings groups.</li>
-                        <li>The CSS selectors can be modified through configuration from the default settings.</li>
-                        <li>Colors can also be customized and there is also a theme option, including an "Illinois" theme.</li>
-                        <li><a href="https://github.com/a11y-tools/skipto" target="_website">Full list of configuration options.</a></li>
-                     </ul>
-                  </li>
+                  <li>Providing a mechanism to allow the user to bypass blocks of content has been an accessibility requirement from the early days of the web.</li>
+                  <li>Little has changed regarding the techniques used to satisfy the requirement over the past 20 years, while much has changed in the technologies of the web.</li>
+                  <li><a href="https://github.com/paypal/skipto" target="_website">SkipTo</a> is a major advancement in implementing the WCAG 2.4.1 Bypass Blocks of Content requirement.</li>
+                  <li>SkipTo Landmarks &amp; Headings browser extensions for <a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf">Chrome</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/skipto/">Firefox</a></li>
                </ul>
-               <h2>Example Configuration</h2>
-               <div>
-      <code>
-                     <pre>
-  &lt;script src="https://accessibleit.disability.illinois.edu/wp-content/themes/aitg-wordpress-theme/js/skipto.js"&gt;&lt;/script&gt;
-  &lt;script&gt;
-      var SkipToConfig =  {
-          'settings': {
-              'skipTo': {
-                  landmarks: 'main, [role="main"], [role="search"], nav',
-                  headings: 'main h1, main h2',
-                  colorTheme: 'illinois',
-                  customClass: 'aitg'
-              }
-          }
-      };
-  &lt;/script&gt;
-      </pre>
-                  </code>
-    </div>
             </div>
             <div class="col"></div>
          </div>
