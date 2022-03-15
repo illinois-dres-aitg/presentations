@@ -474,6 +474,12 @@
   </slide>
 
   <slide>
+    <title>Questions and Discussion</title>
+    <contents>
+    </contents>
+  </slide>
+
+  <slide>
     <title>BONUS: AInspector 2.0 for Firefox</title>
     <contents>
       <div class="screenshot">
@@ -486,12 +492,6 @@
           <li>Support for the latest W3C <a href="https://www.w3.org/TR/wai-aria-1.2/" target="_specification">ARIA 1.2</a> and <a href="https://www.w3.org/TR/html-aria/" target="_specification">ARIA in HTML</a> recommendations.</li>
           <li>Export evaluation results to CSV or JSON formats.</li>
         </ul>
-    </contents>
-  </slide>
-
-  <slide>
-    <title>Questions and Discussion</title>
-    <contents>
     </contents>
   </slide>
 
