@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 14: SkipTo Summary</title>
+      <title>Slide 14: SkipTo: Installing and Configuration</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -28,12 +28,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide15.html" title="Slide 15">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide16.html" title="Slide 16">
+                  <li><a id="ID_SLIDE_LAST" href="slide19.html" title="Slide 19">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 14 of 16</li>
+                  <li class="nav navbar-text">Slide 14 of 19</li>
                </ul>
             </div>
          </div>
@@ -42,12 +42,44 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">SkipTo Summary</h1>
+               <h1 id="h1_title" class="title">SkipTo: Installing and Configuration</h1>
                <ul>
-                  <li>Use existing page landmark and heading structure to generate a menu for orientation and navigation.</li>
-                  <li><a href="https://github.com/paypal/skipto" target="_website">SkipTo</a> is a major advancement in implementing the WCAG 2.4.1 Bypass Blocks of Content requirement for web pages.</li>
-                  <li>SkipTo Landmarks &amp; Headings browser extensions for <a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf" target="_other">Chrome</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/skipto/" target="_other">Firefox</a> implements a long standing <a href="https://www.w3.org/TR/UAAG20-Reference/#gl-alternative-views" target="_specification">browser accessbility requirement</a> for keyboard navigation to structural content.</li>
+                  <li>Open source resources and is free to use.</li>
+                  <li>Include reference to <a href="https://paypal.github.io/skipto/downloads/js/skipto.min.js" target="_code"><code>skipto.js</code></a> script in the page template:
+        <ul>
+                        <li>CDN Link: <a href="https://paypal.github.io/skipto/downloads/js/skipto.min.js" target="_code"><code>https://paypal.github.io/skipto/downloads/js/skipto.min.js</code></a></li>
+                        <li>Reference to a local file system copy of <code>skipto.js</code></li>
+                     </ul>
+                  </li>
+                  <li>To change default settings use the <code>SkipToConfig</code> object.
+          <ul>
+                        <li>Menu button is visible on load or pops up with focus.</li>
+                        <li>Landmarks and headings shown in menu.</li>
+                        <li>Colors used for button and menus.</li>
+                        <li><a href="https://github.com/a11y-tools/skipto" target="_website">L  ist of all configuration options.</a></li>
+                     </ul>
+                  </li>
                </ul>
+               <h2>Example Configuration</h2>
+               <div>
+      <code>
+                     <pre>
+  &lt;script src="https://paypal.github.io/skipto/downloads/js/skipto.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+      var SkipToConfig =  {
+          'settings': {
+              'skipTo': {
+                  landmarks: 'main, [role="main"], [role="search"], nav',
+                  headings: 'main h1, main h2',
+                  colorTheme: 'illinois',
+                  customClass: 'aitg'
+              }
+          }
+      };
+  &lt;/script&gt;
+      </pre>
+                  </code>
+    </div>
             </div>
             <div class="col"></div>
          </div>

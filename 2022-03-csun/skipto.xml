@@ -383,52 +383,62 @@
   <slide>
     <title>SkipTo Design: Landmarks</title>
     <contents>
+      <div>List of filtered landmarks, by default:</div>
       <ul>
-        <li>List of filtered landmarks, by default:
-          <ul>
-            <li>main</li>
-            <li>search</li>
-            <li>navigation</li>
-          </ul>
-        </li>
-        <li>Menu items:
-          <ul>
-            <li>Landmark name</li>
-            <li>Accessible name</li>
-            <li><em>Accessible names</em> are only required when there is more than one of the same landmark role on the page.</li>
-          </ul>
-        </li>
+        <li>main</li>
+        <li>search</li>
+        <li>navigation</li>
       </ul>
       <div class="screenshot"><img src="skipto-menu-open-ahs-landmarks.png" alt="Screenshot of SkipTo menu open with highlight around the landmark menu items"/></div>
     </contents>
   </slide>
 
   <slide>
+    <title>SkipTo Menu Items: Landmarks</title>
+    <contents>
+      <div>Menu items:</div>
+      <ul>
+        <li>Landmark role</li>
+        <li>Accessible name</li>
+      </ul>
+      <p><em>Accessible names</em> are only required on landmarks when more than one of the same landmark role on the page.</p>
+      <div class="screenshot"><img src="skipto-menu-landmarks-1.png" alt="Screenshot of SkipTo menu open with highlight around the landmark menu items"/></div>
+    </contents>
+  </slide>
+
+  <slide>
     <title>SkipTo Design: Headings</title>
     <contents>
+      <div>List of filtered headings, by default:</div>
       <ul>
-        <li>List of filtered headings, by default:
-          <ul>
-            <li>h1</li>
-            <li>h2</li>
-          </ul>
-        </li>
-        <li>Menu items:
-          <ul>
-            <li>Heading level (e.g. 1-6)</li>
-            <li>Accessible name</li>
-            <li><em>Accessible names</em> are always required for heading elements.</li>
-          </ul>
-        </li>
+        <li>h1 headings</li>
+        <li>h2 headings</li>
       </ul>
       <div class="screenshot"><img src="skipto-menu-open-ahs-headings.png" alt="Screenshot of SkipTo menu open with highlight around the headings section of the menu"/></div>
     </contents>
   </slide>
 
   <slide>
+    <title>SkipTo Menu Items: Headings</title>
+    <contents>
+    <div>Menu items:</div>
+      <ul>
+        <li>Heading level (e.g. 1-6)</li>
+        <li>Indent is based on the heading level</li>
+        <li>Accessible name</li>
+      </ul>
+      <p><em>Accessible names</em> are always required for heading elements.</p>
+
+      <div class="screenshot"><img src="skipto-menu-headings-1.png" alt="Screenshot of SkipTo menu."/></div>
+    </contents>
+  </slide>
+
+
+  <slide>
     <title>SkipTo: Installing and Configuration</title>
     <contents>
       <ul>
+        <li>Open source resources and is free to use.</li>
         <li>Include reference to <a href="https://paypal.github.io/skipto/downloads/js/skipto.min.js" target="_code"><code>skipto.js</code></a> script in the page template:
         <ul>
           <li>CDN Link: <a href="https://paypal.github.io/skipto/downloads/js/skipto.min.js" target="_code"><code>https://paypal.github.io/skipto/downloads/js/skipto.min.js</code></a></li>
@@ -469,6 +479,7 @@
     <title>SkipTo Landmarks &amp; Headings Browser Extensions for Chrome and Firefox</title>
     <contents>
       <ul>
+        <li><a href="https://github.com/skipto/extension" target="_other">Open source</a> and free to use.</li>
         <li>Adds the SkipTo functionality to the <a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf" target="_other">Chrome</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/skipto/" target="_other">Firefox</a> browsers.</li>
         <li>Provides access to the landmark and heading structure of web pages for anyone to benefit.</li>
         <li>Implements a <a href="https://www.w3.org/TR/UAAG20" target="_specification">W3C User Agent Accessibility Guidelines</a> requirement for:
@@ -489,12 +500,36 @@
   </slide>
 
   <slide>
+    <title>SkipTo Browser Extension Menu Items</title>
+    <contents>
+      <ul>
+        <li>Landmark menu items:
+          <ul>
+            <li>Landmark role</li>
+            <li>Accessible name</li>
+          </ul>
+        </li>
+        <li>Headings menu items:
+          <ul>
+            <li>Heading level (e.g. 1-6)</li>
+            <li>Indent is based on the heading level</li>
+            <li>Accessible name</li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="screenshot"><img src="skipto-extension-menu-items-ibm.png" alt="Screenshot of SkipTo menu."/></div>
+    </contents>
+  </slide>
+
+  <slide>
     <title>SkipTo Summary</title>
     <contents>
       <ul>
+        <li>SkipTo script and browser extensions are <a href="https://github.com/paypal/skipto/blob/main/LICENSE.md" target="_other">open source</a> resources and are free to use or modify to your own needs.</li>
         <li>Use existing page landmark and heading structure to generate a menu for orientation and navigation.</li>
         <li><a href="https://github.com/paypal/skipto" target="_website">SkipTo</a> is a major advancement in implementing the WCAG 2.4.1 Bypass Blocks of Content requirement for web pages.</li>
-        <li>SkipTo Landmarks &amp; Headings browser extensions for <a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf" target="_other">Chrome</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/skipto/" target="_other">Firefox</a> implements a long standing <a href="https://www.w3.org/TR/UAAG20-Reference/#gl-alternative-views" target="_specification">browser accessbility requirement</a> for keyboard navigation to structural content.</li>
+        <li>SkipTo Landmarks &amp; Headings browser extensions for <a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf" target="_other">Chrome</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/skipto/" target="_other">Firefox</a> implements a long standing <a href="https://www.w3.org/TR/UAAG20-Reference/#gl-alternative-views" target="_specification">browser accessibility requirement</a> for keyboard navigation to structural content.</li>
       </ul>
     </contents>
   </slide>
@@ -508,16 +543,17 @@
   <slide>
     <title>BONUS: AInspector 2.0 for Firefox</title>
     <contents>
+      <ul>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/" target="_other">AInspector for Firefox Addon page</a></li>
+        <li>Improved user interface and responsiveness to page and tab changes.</li>
+        <li><strong>NEW:</strong> Support for the latest W3C <a href="https://www.w3.org/TR/wai-aria-1.2/" target="_specification">ARIA 1.2</a> and <a href="https://www.w3.org/TR/html-aria/" target="_specification">ARIA in HTML</a> recommendations.</li>
+        <li><strong>NEW:</strong> Export evaluation results to CSV or JSON formats.</li>
+        <li>As always, <a href="https://github.com/ainspector/ainspector-for-firefox">open source</a> and free to use or modify.</li>
+      </ul>
       <div class="screenshot">
-          <img src="ainspector-ill-2.png" alt="Screen shot of AInspector for Firefox sidebar open on the University of Illinois home page"/>
+        <img src="ainspector-ill-2.png" alt="Screen shot of AInspector for Firefox sidebar open on the University of Illinois home page"/>
       </div>
-      <h2>Updated Features</h2>
-        <ul>
-          <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/" target="_other">AInspector for Firefox Addon page</a></li>
-          <li>Improved user interface and responsiveness to page and tab changes.</li>
-          <li>Support for the latest W3C <a href="https://www.w3.org/TR/wai-aria-1.2/" target="_specification">ARIA 1.2</a> and <a href="https://www.w3.org/TR/html-aria/" target="_specification">ARIA in HTML</a> recommendations.</li>
-          <li>Export evaluation results to CSV or JSON formats.</li>
-        </ul>
+  
     </contents>
   </slide>
 
