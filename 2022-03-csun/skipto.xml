@@ -288,10 +288,10 @@
     <title>Goals of SkipTo script and browser extensions</title>
     <contents>
       <ul>
-        <li>Improve keyboard accessibility to web page content.  Basically give all users some of the header and landmark navigation features available in screen readers.</li>
+        <li>Improve keyboard accessibility to web page content by giving all users the header and landmark navigation features available in screen readers.</li>
         <li>Allow authors to identify more than one important navigational point within web resources.</li>
-        <li>Simplify implementation of WCAG 2.4.1 Bypass Blocks of Content requirement.</li>
-        <li>Make header and landmark region information available to everyone to  promote a better understanding of accessibility.</li>
+        <li>Simplify and improve the reliability of implementing the WCAG 2.4.1 Bypass Blocks of Content requirement.</li>
+        <li>Increase the awareness of header and landmark region information on web pages to promote a better understanding of functional accessibility.</li>
       </ul>
 
       <h2>Script Examples</h2>
