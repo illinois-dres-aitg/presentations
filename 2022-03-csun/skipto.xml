@@ -394,7 +394,8 @@
         <li>Menu items:
           <ul>
             <li>Landmark name</li>
-            <li>Accessible name<br/>Note: Accessible names are only required when there is more than one of the same landmark role on the page.</li>
+            <li>Accessible name</li>
+            <li><em>Accessible names</em> are only required when there is more than one of the same landmark role on the page.</li>
           </ul>
         </li>
       </ul>
@@ -415,8 +416,8 @@
         <li>Menu items:
           <ul>
             <li>Heading level (e.g. 1-6)</li>
-            <li>Accessible name<br/>Note: Accessible names are required for heading elements.</li>
-
+            <li>Accessible name</li>
+            <li><em>Accessible names</em> are always required for heading elements.</li>
           </ul>
         </li>
       </ul>
