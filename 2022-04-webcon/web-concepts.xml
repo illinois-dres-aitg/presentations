@@ -12,14 +12,21 @@
   <title>Web Accessibility Concepts</title>
 
   <person>
-    <name>Jon Gunderson, Ph.D.</name>
+    <name>Jon Gunderson, Ph.D., <abbr title="Certicified Web Accessibility Professional">CWAP</abbr></name>
     <desc href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</desc>
     <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
     <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
   </person>
 
+  <person>
+    <name>Lori Lane, M.Ed., <abbr title="Certified Professional in Accessibility Core Competencies">CPAC</abbr></name>
+    <desc href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</desc>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:lorilane@illinois.edu">lorilane@illinois.edu</desc>
+  </person>
+
   <conference>
-    <name href="https://www.itproforum.illinois.edu/">Illinois IT Professionals Pro Forum</name>
+    <name href="https://webcon.illinois.edu/">Illinois Webcon 2022</name>
     <desc>April 7th, 2022</desc>
     <desc>online</desc>
   </conference>
@@ -41,13 +48,65 @@
     <title>Overview</title>
     <contents>
       <ul>
-        <li>Keyboard only operation</li>
-        <li>Color</li>
+        <li>Keyboard support</li>
+        <li>Color contrast and color</li>
         <li>Page structure</li>
         <li>Links and forms</li>
+        <li>Authenitcation</li>
       </ul>
     </contents>
   </slide>
+
+  <slide>
+    <title>Part 1: Keyboard Support</title>
+    <contents>
+      <ul>
+        <li>Keyboard only operation.</li>
+        <li>Keyboard focus styling.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Part 2: Color and Color Contrast</title>
+    <contents>
+      <ul>
+        <li>Using color as the only way to convey information.</li>
+        <li>Meeting Color Contrast Requirements of WCAG 2.x.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Part 3: Page Structure</title>
+    <contents>
+      <ul>
+        <li>Page title</li>
+        <li>Landmarks</li>
+        <li>Section and subl-section headings</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Part 4: Links and Form Controls</title>
+    <contents>
+      <ul>
+        <li>Accessible names</li>
+        <li>Descriptions</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Part 5: Authentication</title>
+    <contents>
+      <ul>
+        <li>Captcha </li>
+      </ul>
+    </contents>
+  </slide>
+
 
 </slides>
 
