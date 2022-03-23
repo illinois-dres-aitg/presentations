@@ -9,7 +9,7 @@
     </a>
     Copyright &#169; 2022 University of Illinois
   </footer>
-  <title>Web Accessibility Concepts</title>
+  <title>Web Accessibility Concepts for Beginners</title>
 
   <person>
     <name>Jon Gunderson, Ph.D., <abbr title="Certicified Web Accessibility Professional">CWAP</abbr></name>
@@ -26,7 +26,7 @@
   </person>
 
   <conference>
-    <name href="https://webcon.illinois.edu/">Illinois Webcon 2022</name>
+    <name href="https://webcon.illinois.edu/session/more-of-you-and-less-of-me-better-design-through-humility-web-accessibility-concepts-for-beginners/">Illinois Webcon 2022</name>
     <desc>April 7th, 2022</desc>
     <desc>online</desc>
   </conference>
@@ -51,18 +51,146 @@
         <li>Keyboard support</li>
         <li>Color contrast and color</li>
         <li>Page structure</li>
-        <li>Links and forms</li>
-        <li>Authenitcation</li>
+        <li>Links and form controls</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>Part 1: Keyboard Support</title>
+    <title>Keyboard Support: Sequential Navigation and Cursor Keys</title>
     <contents>
       <ul>
-        <li>Keyboard only operation.</li>
-        <li>Keyboard focus styling.</li>
+        <li>Using the <kbd>tab</kbd> key to sequentially navigate to make sure all the links, form controls and any other interactive elements on the page can be accessed with the keyboard.</li>
+        <li>Pressing <kbd>Space</kbd> or <kbd>Enter</kbd> can activate a link, form control or other interactive elements.</li>
+        <li>Some interactive elememnts like menus, toolbars, spin buttons and sliders support cursor keys to move between items or change the value of the controls.</li>
+        <li>Menus can also support character keys to move between items that start with that character</li>
+        <li>Modal dialog boxes must constrain keyboard navigation to the controls in the dialog box.</li>
+        <li>Bypass Blocks feature: Either a SkipTo link or "Skip To Main" link.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Keyboard Support: Focus Visibility</title>
+    <contents>
+      <ul>
+        <li>Default focus styling of links and form controls:
+          <ul>
+            <li>Vary between browsers.</li>
+            <li>Often disabled through "reset" stylesheets.</li>
+          </ul>
+        </li>
+        <li>Best practices for focus styling:
+          <ul>
+            <li>Focus outline of at least 2 pixels in width.</li>
+            <li>At least 2 pixels of padding between outline the text of a link or borders of a form control.</li>
+            <li>Outline includes the label for checkboxes and radio buttons.</li>
+            <li>Outline meets WCAG color contrast requirements with background content.</li>
+          </ul>
+        </li>
+        <li>GOAL: When looking at a web page for the first time it should be visually easy to identify the element with keyboard focus and to follow changes in focus.</li>
+      </ul>
+      <p><strong>NOTE:</strong> When I test a website and keyboard focus is clearly vsiible and has been intergrated into the look and feel of the website, I am highly confident other accessibility features have been addressed.</p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Keyboard Support: Examples</title>
+    <contents>
+        <p><a href="https://accessibleit.disability.illinois.edu/course-web-a11y-concepts/examples/html/links-and-form-controls.html#default" target="_test">Test page for exploring the visual differences between passive and active focus styling.</a></p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Web Page</th>
+            <th>Sequential Navigation and Activation</th>
+            <th>Focus: Default</th>
+            <th>Focus: Active Outline</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://fightingillini.com/" target="_test">Fighting Illini Home Page</a></td>
+            <td>no</td>
+            <td>Yes</td>
+            <td>no</td>
+            <td>
+              <ul>
+                <li>Video controls are not keyboard accessible.</li>
+                <li>Poor focus styling, relies on default focus styling with mixed results.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="https://zoom.us/" target="_test">Zoom Home Page</a></td>
+            <td>no</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>
+              <ul>
+                <li>Keyboard activation for carousels operates on the second carousel and there is not sequential access to the carousel controls on the second carousel    .</li>
+                <li>Poor focus styling, inconsistent used of active and default focus styling creates missing or ambivelent focus indication.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="https://accessibleit.disability.illinois.edu/" target="_test">DRES Accessible IT Group</a></td>
+            <td>Yes</td>
+            <td>no</td>
+            <td>Yes</td>
+            <td>
+              <ul>
+                <li>All links and controls can be accessed through the keyboard.</li>
+                <li>Keyboard activation and pointer "click" on items have same results.</li>
+                <li>Actively style keyboard focus to provide an outline around links and form controls.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="https://www.rutgers.edu/" target="_test">Rutgers University home page</a></td>
+            <td>Yes</td>
+            <td>no</td>
+            <td>Yes</td>
+            <td>
+              <ul>
+                <li>Sub-menu open/close controls not easy to discerne.</li>
+                <li>If search opened, it is not automatically closed and obscures content.</li>
+                <li>Generally good keyboard focus styling with use of a outline.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="https://webtheme.illinois.edu/" target="_test">Illinois Web Theme</a></td>
+            <td>Yes</td>
+            <td>no</td>
+            <td>Yes</td>
+            <td>
+              <ul>
+                <li>Some keyboard enhancements result in lost focus, using arrow keys when a menu is open.</li>
+                <li>Poor keyboard focus, relies mostly on color changes and no outlining.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Keyboard Support: Testing</title>
+    <contents>
+      <ul>
+        <li>Move your mouse away from your work station or cover your track pad to allow your attention to be only on using the keyboard.  Note: Recommend using Firefox since it's default focus styling is less apparent than Chrome or Safari.</li>
+        <li>Use the <kbd>tab</kbd> key to navigate to links, form controls and other interactive content on the page.</li>
+        <li>Questions to ask your self:
+          <ul>
+            <li>Can I tell where keyboard focus is on the page?</li>
+            <li>Can I activate controls using the <kbd>Space</kbd> or <kbd>Enter</kbd> keys?  DO they perform the same action?</li>
+            <li>Does the navigation of controls seem predictable.</li>
+            <li>Does focus ever <em>disappear</em> and then magically reapear?  If you answer yes, this means there is content being obscured and this is not good for accessibility.  Only visible elements should have focus.</li>
+            <li>Can I use the cursor keys to navigate or change the state of some types of interactive elements.</li>
+          </ul>
+        </li>
       </ul>
     </contents>
   </slide>

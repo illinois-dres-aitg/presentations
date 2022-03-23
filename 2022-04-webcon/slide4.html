@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 4: Part 3: Page Structure</title>
+      <title>Slide 4: Keyboard Support: Examples</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -28,12 +28,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide5.html" title="Slide 5">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide6.html" title="Slide 6">
+                  <li><a id="ID_SLIDE_LAST" href="slide9.html" title="Slide 9">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 4 of 6</li>
+                  <li class="nav navbar-text">Slide 4 of 9</li>
                </ul>
             </div>
          </div>
@@ -42,12 +42,83 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Part 3: Page Structure</h1>
-               <ul>
-                  <li>Page title</li>
-                  <li>Landmarks</li>
-                  <li>Section and subl-section headings</li>
-               </ul>
+               <h1 id="h1_title" class="title">Keyboard Support: Examples</h1>
+               <p><a href="https://accessibleit.disability.illinois.edu/course-web-a11y-concepts/examples/html/links-and-form-controls.html#default" target="_test">Test page for exploring the visual differences between passive and active focus styling.</a></p>
+               <table class="table table-striped">
+                  <thead>
+                     <tr>
+                        <th>Web Page</th>
+                        <th>Sequential Navigation and Activation</th>
+                        <th>Focus: Default</th>
+                        <th>Focus: Active Outline</th>
+                        <th>Notes</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><a href="https://fightingillini.com/" target="_test">Fighting Illini Home Page</a></td>
+                        <td>no</td>
+                        <td>Yes</td>
+                        <td>no</td>
+                        <td>
+                           <ul>
+                              <li>Video controls are not keyboard accessible.</li>
+                              <li>Poor focus styling, relies on default focus styling with mixed results.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://zoom.us/" target="_test">Zoom Home Page</a></td>
+                        <td>no</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>
+                           <ul>
+                              <li>Keyboard activation for carousels operates on the second carousel and there is not sequential access to the carousel controls on the second carousel    .</li>
+                              <li>Poor focus styling, inconsistent used of active and default focus styling creates missing or ambivelent focus indication.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://accessibleit.disability.illinois.edu/" target="_test">DRES Accessible IT Group</a></td>
+                        <td>Yes</td>
+                        <td>no</td>
+                        <td>Yes</td>
+                        <td>
+                           <ul>
+                              <li>All links and controls can be accessed through the keyboard.</li>
+                              <li>Keyboard activation and pointer "click" on items have same results.</li>
+                              <li>Actively style keyboard focus to provide an outline around links and form controls.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://www.rutgers.edu/" target="_test">Rutgers University home page</a></td>
+                        <td>Yes</td>
+                        <td>no</td>
+                        <td>Yes</td>
+                        <td>
+                           <ul>
+                              <li>Sub-menu open/close controls not easy to discerne.</li>
+                              <li>If search opened, it is not automatically closed and obscures content.</li>
+                              <li>Generally good keyboard focus styling with use of a outline.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://webtheme.illinois.edu/" target="_test">Illinois Web Theme</a></td>
+                        <td>Yes</td>
+                        <td>no</td>
+                        <td>Yes</td>
+                        <td>
+                           <ul>
+                              <li>Some keyboard enhancements result in lost focus, using arrow keys when a menu is open.</li>
+                              <li>Poor keyboard focus, relies mostly on color changes and no outlining.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>
