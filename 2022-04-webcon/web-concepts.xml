@@ -65,6 +65,7 @@
         <li>Some interactive elememnts like menus, toolbars, spin buttons and sliders support cursor keys to move between items or change the value of the controls.</li>
         <li>Menus can also support character keys to move between items that start with that character</li>
         <li>Modal dialog boxes must constrain keyboard navigation to the controls in the dialog box.</li>
+        <li>Keyboard focus must always be on visible elements.</li>
         <li>Bypass Blocks feature: Either a SkipTo link or "Skip To Main" link.</li>
       </ul>
     </contents>
@@ -90,7 +91,7 @@
         </li>
         <li>GOAL: When looking at a web page for the first time it should be visually easy to identify the element with keyboard focus and to follow changes in focus.</li>
       </ul>
-      <p><strong>NOTE:</strong> When I test a website and keyboard focus is clearly vsiible and has been intergrated into the look and feel of the website, I am highly confident other accessibility features have been addressed.</p>
+      <p><strong>NOTE:</strong> When I test a website and keyboard focus is clearly vsiible and has been intergrated into the look and feel of the website, I am more confident other accessibility features have been addressed.</p>
     </contents>
   </slide>
 
