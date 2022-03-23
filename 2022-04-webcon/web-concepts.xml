@@ -197,28 +197,81 @@
   </slide>
 
   <slide>
-    <title>Part 2: Color and Color Contrast</title>
+    <title>Color contrast of text with background</title>
     <contents>
       <ul>
-        <li>Using color as the only way to convey information.</li>
         <li>Meeting Color Contrast Requirements of WCAG 2.x.</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>Part 3: Page Structure</title>
+    <title>Use of color alone to convey information</title>
     <contents>
       <ul>
-        <li>Page title</li>
-        <li>Landmarks</li>
-        <li>Section and subl-section headings</li>
+        <li>Using color as the only way to convey information.</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>Part 4: Links and Form Controls</title>
+    <title>Page Title</title>
+    <contents>
+      <ul>
+        <li>Page title</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmarks</title>
+    <contents>
+      <ul>
+        <li>Landmarks</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>landmarks: Screen reader list of landmarks</title>
+    <contents>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Headings</title>
+    <contents>
+      <ul>
+        <li>Section and sub-section headings</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Headings: Screen reader list of headings</title>
+    <contents>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Links</title>
+    <contents>
+      <ul>
+        <li>Accessible names</li>
+        <li>Descriptions</li>
+        <li>Size</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Links: Screen reader list of links</title>
+    <contents>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Form Controls</title>
     <contents>
       <ul>
         <li>Accessible names</li>
@@ -228,14 +281,10 @@
   </slide>
 
   <slide>
-    <title>Part 5: Authentication</title>
+    <title>Form Controls: Screen reader list of form controls</title>
     <contents>
-      <ul>
-        <li>Captcha </li>
-      </ul>
     </contents>
   </slide>
-
 
 </slides>
 
