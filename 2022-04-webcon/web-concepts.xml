@@ -117,7 +117,7 @@
             <td>Link</td>
             <td>
               <ul>
-                <li>Keyboard activation for carousels operates on the second carousel and there is not sequential access to the carousel controls on the second carousel    .</li>
+                <li>Keyboard activation for carousels operates on the second carousel and there is not sequential access to the carousel controls on the second carousel.</li>
                 <li>Poor focus styling, inconsistent use of active and default focus styling creates missing or ambivelent focus indication.</li>
               </ul>
             </td>
@@ -174,8 +174,8 @@
         <li>Questions:
           <ul>
             <li>Can I tell where keyboard focus is on the page?</li>
-            <li>Using the <kbd>Tab</kbd> can I navigate to all the interactive elements on the page.</li>
-            <li>Can I <em>activate</em> links and controls using the <kbd>Space</kbd> or <kbd>Enter</kbd> keys?</li>
+            <li>Using the <kbd>Tab</kbd> can I navigate to all the links and form controls on the page.</li>
+            <li>Can I <em>activate</em> links, buttons, checkboxes and radio buttons using the <kbd>Space</kbd> or <kbd>Enter</kbd> keys?</li>
             <li>Does the navigation of links and form controls seem predictable?</li>
             <li>Does focus ever <em>disappear</em> and then magically reapear?</li>
           </ul>
