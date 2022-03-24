@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 3: Keyboard Support: Focus Visibility</title>
+      <title>Slide 3: Keyboard Support: Examples</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -28,12 +28,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide4.html" title="Slide 4">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide16.html" title="Slide 16">
+                  <li><a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 3 of 16</li>
+                  <li class="nav navbar-text">Slide 3 of 22</li>
                </ul>
             </div>
          </div>
@@ -42,25 +42,83 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Keyboard Support: Focus Visibility</h1>
-               <ul>
-                  <li>Default focus styling of links and form controls:
-          <ul>
-                        <li>Vary between browsers.</li>
-                        <li>Often disabled through "reset" stylesheets.</li>
-                     </ul>
-                  </li>
-                  <li>Best practices for focus styling:
-          <ul>
-                        <li>Focus outline of at least 2 pixels in width.</li>
-                        <li>At least 2 pixels of padding between outline the text of a link or borders of a form control.</li>
-                        <li>Outline includes the label for checkboxes and radio buttons.</li>
-                        <li>Outline meets WCAG color contrast requirements with background content.</li>
-                     </ul>
-                  </li>
-                  <li>GOAL: When looking at a web page for the first time it should be visually easy to identify the element with keyboard focus and to follow changes in focus.</li>
-               </ul>
-               <p><strong>NOTE:</strong> When I test a website and keyboard focus is clearly vsiible and has been intergrated into the look and feel of the website, I am more confident other accessibility features have been addressed.</p>
+               <h1 id="h1_title" class="title">Keyboard Support: Examples</h1>
+               <p><a href="https://accessibleit.disability.illinois.edu/course-web-a11y-concepts/examples/html/links-and-form-controls.html#default" target="_test">Test page for exploring the visual differences between passive and active focus styling.</a></p>
+               <table class="table table-striped">
+                  <thead>
+                     <tr>
+                        <th>Web Page</th>
+                        <th>Sequential Navigation</th>
+                        <th>Focus Visible</th>
+                        <th>Bypass Blocks</th>
+                        <th>Notes</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><a href="https://fightingillini.com/" target="_test">Fighting Illini Home Page</a></td>
+                        <td>Incomplete</td>
+                        <td>Poor</td>
+                        <td>Link</td>
+                        <td>
+                           <ul>
+                              <li>Video controls are not keyboard accessible.</li>
+                              <li>Poor focus styling, relies on default focus styling with mixed results.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://zoom.us/" target="_test">Zoom Home Page</a></td>
+                        <td>Incomplete</td>
+                        <td>Poor</td>
+                        <td>Link</td>
+                        <td>
+                           <ul>
+                              <li>Keyboard activation for carousels operates on the second carousel and there is not sequential access to the carousel controls on the second carousel    .</li>
+                              <li>Poor focus styling, inconsistent use of active and default focus styling creates missing or ambivelent focus indication.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://accessibleit.disability.illinois.edu/" target="_test">DRES Accessible IT Group</a></td>
+                        <td>Complete</td>
+                        <td>Good</td>
+                        <td>SkipTo Button</td>
+                        <td>
+                           <ul>
+                              <li>All links and controls can be accessed through the keyboard.</li>
+                              <li>Keyboard activation and pointer "click" on items have same results.</li>
+                              <li>Actively style keyboard focus to provide an outline around links and form controls.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://www.rutgers.edu/" target="_test">Rutgers University home page</a></td>
+                        <td>Complete</td>
+                        <td>Good</td>
+                        <td>Link</td>
+                        <td>
+                           <ul>
+                              <li>Sub-menu open/close controls not easy to discerne.</li>
+                              <li>If search opened, it is not automatically closed and obscures content.</li>
+                              <li>Generally good keyboard focus styling with use of a outline.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><a href="https://webtheme.illinois.edu/" target="_test">Illinois Web Theme</a></td>
+                        <td>Complete</td>
+                        <td>Poor</td>
+                        <td>SkipTo Button</td>
+                        <td>
+                           <ul>
+                              <li>Some keyboard enhancements result in lost focus, using arrow keys when a menu is open.</li>
+                              <li>Poor keyboard focus, relies mostly on color changes and no outlining.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>
