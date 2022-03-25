@@ -187,17 +187,57 @@
   <slide>
     <title>Color Contrast: Color Contrast Ratio</title>
     <contents>
-      <ul>
-        <li>Meeting Color Contrast Requirements of WCAG 2.x.</li>
-      </ul>
+      <table class="table table-striped">
+        <caption>WCAG 2.1 Requriements for Color Contrast</caption>
+        <thead>
+          <tr>
+            <th>Requirement</th>
+            <th>Level</th>
+            <th>Normal Text</th>
+            <th>Large Text</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast (Minimum)</a>
+            </td>
+            <td>AA</td>
+            <td>4.5:1</td>
+            <td>3:1</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://www.w3.org/TR/WCAG21/#contrast-enhanced">1.4.6 Contrast (Enhanced)</a>
+            </td>
+            <td>AAA</td>
+            <td>7:1</td>
+            <td>4.5:1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>More information on meeting <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">Color Contrast Requirements of WCAG 2.1.</a></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Color Contrast: University of Illinois Branding Colors Blog</title>
+    <contents>
+
+      <p><a href="https://marketing.illinois.edu/blog/designing-with-color-accessibility-in-mind-part-1">Blog: Designing with color accessibility in mind (part 1)</a></p>
+
+      <iframe src="https://marketing.illinois.edu/blog/designing-with-color-accessibility-in-mind-part-1" title="Blog: Designing with color accessibility in mind (part 1)" height="600" width="98%"></iframe>
+
     </contents>
   </slide>
 
   <slide>
     <title>Color Contrast: Chrome River Expense management (Poor)</title>
     <contents>
-
-
+      <div>
+        <img src="chrome-river-contrast-1-highlight.png" alt="screen shot of Chrome River add expense page highlighting text with poor color contrast" width="98%"/>
+      </div>
     </contents>
   </slide>
 
@@ -205,8 +245,11 @@
     <title>Color Contrast: Testing Tools</title>
     <contents>
       <ul>
-        <a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">AInspector for Firefox</a>
-        <a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">WAVE Evaluation Tool browser addon</a>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">AInspector for Firefox</a></li>
+        <li><a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">WAVE Evaluation Tool browser add-on</a></li>
+        <li><a href="https://www.tpgi.com/color-contrast-checker/">TPGi Color Contrast Checkers for Mac and Windows</a></li>
+        <li><a href="https://monsido.com/tools/contrast-checker">Monsido Color Contrast Checker</a></li>
+        <li>There are <em>many</em> other Color Contrast checking tools, just use your favorite search engine to search for "color contrast checker".</li>
       </ul>
     </contents>
   </slide>
@@ -221,387 +264,228 @@
   </slide>
 
   <slide>
+    <style>
+      .visually-hidden {
+      position: absolute;
+      top: -30em;
+      }
+
+      table.vsl {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      table.vsl th,
+      table.vsl td {
+        border: 1px solid black;
+        padding: 2px;
+      }
+
+      table.vsl th.headcol {
+        width: 8em;
+      }
+
+      table.vsl td {
+        width: 1.25em;
+        text-align: center;
+      }
+
+    </style>
     <title>Use of Color: Example of problem</title>
     <contents>
+      <div>
+        <table class="vsl" aria-label="Absences range One Month &amp; One Month Back">
+          <thead>
+            <tr>
+              <th scope="col" class="headcol" rowspan="2">Name</th>
+              <th colspan="23" class="left">
+                <span aria-hidden="true">Mar 2022</span>
+                <span class="visually-hidden">March 2022</span>
+              </th>
+            </tr>
+            <tr>
+              <th title="Tuesday, March 1, 2022">
+              <span aria-hidden="true">T</span>
+              <span class="visually-hidden">Tuesday</span>
+              </th>
+              <th title="Wednesday, March 2, 2022">
+              <span aria-hidden="true">W</span>
+              <span class="visually-hidden">Wednesday</span>
+              </th>
+              <th title="Thursday, March 3, 2022">
+              <span aria-hidden="true">T</span>
+              <span class="visually-hidden">Thursday</span>
+              </th>
+              <th title="Friday, March 4, 2022">
+              <span aria-hidden="true">F</span>
+              <span class="visually-hidden">Friday</span>
+              </th>
+              <th title="Monday, March 7, 2022">
+              <span aria-hidden="true">M</span>
+              <span class="visually-hidden">Monday</span>
+              </th>
+              <th title="Tuesday, March 8, 2022">
+              <span aria-hidden="true">T</span>
+              <span class="visually-hidden">Tuesday</span>
+              </th>
+              <th title="Wednesday, March 9, 2022">
+              <span aria-hidden="true">W</span>
+              <span class="visually-hidden">Wednesday</span>
+              </th>
+              <th title="Thursday, March 10, 2022">
+              <span aria-hidden="true">T</span>
+              <span class="visually-hidden">Thursday</span>
+              </th>
+              <th title="Friday, March 11, 2022">
+              <span aria-hidden="true">F</span>
+              <span class="visually-hidden">Friday</span>
+              </th>
+              <th title="Monday, March 14, 2022">
+              <span aria-hidden="true">M</span>
+              <span class="visually-hidden">Monday</span>
+              </th>
+              <th title="Tuesday, March 15, 2022">
+              <span aria-hidden="true">T</span>
+              <span class="visually-hidden">Tuesday</span>
+              </th>
+              <th title="Wednesday, March 16, 2022">
+              <span aria-hidden="true">W</span>
+              <span class="visually-hidden">Wednesday</span>
+              </th>
+              <th title="Thursday, March 17, 2022">
+              <span aria-hidden="true">T</span>
+              <span class="visually-hidden">Thursday</span>
+              </th>
+              <th title="Friday, March 18, 2022">
+              <span aria-hidden="true">F</span>
+              <span class="visually-hidden">Friday</span>
+              </th>
+              <th title="Monday, March 21, 2022">
+              <span aria-hidden="true">M</span>
+              <span class="visually-hidden">Monday</span>
+              </th>
+              <th title="Tuesday, March 22, 2022">
+              <span aria-hidden="true">T</span>
+              <span class="visually-hidden">Tuesday</span>
+              </th>
+              <th title="Wednesday, March 23, 2022">
+              <span aria-hidden="true">W</span>
+              <span class="visually-hidden">Wednesday</span>
+              </th>
+              <th class="dark-gray" title="Thursday, March 24, 2022">
+              <span aria-hidden="true">T</span>
+              <span class="visually-hidden">Thursday</span>
+              </th>
+              <th title="Friday, March 25, 2022">
+              <span aria-hidden="true">F</span>
+              <span class="visually-hidden">Friday</span>
+              </th>
+              <th title="Monday, March 28, 2022">
+              <span aria-hidden="true">M</span>
+              <span class="visually-hidden">Monday</span>
+              </th>
+              <th title="Tuesday, March 29, 2022">
+              <span aria-hidden="true">T</span>
+              <span class="visually-hidden">Tuesday</span>
+              </th>
+              <th title="Wednesday, March 30, 2022">
+              <span aria-hidden="true">W</span>
+              <span class="visually-hidden">Wednesday</span>
+              </th>
+              <th title="Thursday, March 31, 2022">
+              <span aria-hidden="true">T</span>
+              <span class="visually-hidden">Thursday</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="headcol">Smith, Michael</th>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td class="center green"><span title="4 Vacation on Friday, March 25, 2022">4V</span> <span class="visually-hidden">Green</span></td>
+            </tr>
+            <tr>
+              <th scope="row" class="headcol">Jones, Mary</th>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td class="center green"><span title="8 Vacation on Friday, March 4, 2022">8V</span> <span class="visually-hidden">Green</span></td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td class="center green"><span title="4 Vacation on Friday, March 11, 2022">4V</span> <span class="visually-hidden">Green</span></td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td style="background-color:#ece9e9;"> </td>
+              <td class="center green"><span title="8 Vacation on Friday, March 25, 2022">8V</span> <span class="visually-hidden">Green</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3 class="text-only">Color Legend</h3>
 
-  <div>
-    <table>
-      <caption style="width: 1px!important;height: 1px!important;padding: 0!important;margin: -1px!important;overflow: hidden!important;clip: rect(0,0,0,0)!important;white-space: nowrap!important;border: 0!important;">Absences range One Month &amp; One Month Back</caption>
-      <thead>
-        <tr>
-          <th scope="col" class="headcol">Name</th>
-          <th colspan="5" class="left">
-            <span aria-hidden="true">Feb 2022</span>
-            <span class="visually-hidden">February 2022</span>
-          </th>
-          <th colspan="23" class="left">
-            <span aria-hidden="true">Mar 2022</span>
-            <span class="visually-hidden">March 2022</span>
-          </th>
-          <th colspan="16" class="left">
-            <span aria-hidden="true">Apr 2022</span>
-            <span class="visually-hidden">April 2022</span>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="headcol"> </td>
-          <td title="Tuesday, February 22, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Tuesday</span>
-          </td>
-          <td title="Wednesday, February 23, 2022">
-          <span aria-hidden="true">W</span>
-          <span class="visually-hidden">Wednesday</span>
-          </td>
-          <td title="Thursday, February 24, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Thursday</span>
-          </td>
-          <td title="Friday, February 25, 2022">
-          <span aria-hidden="true">F</span>
-          <span class="visually-hidden">Friday</span>
-          </td>
-          <td title="Monday, February 28, 2022">
-          <span aria-hidden="true">M</span>
-          <span class="visually-hidden">Monday</span>
-          </td>
-          <td title="Tuesday, March 1, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Tuesday</span>
-          </td>
-          <td title="Wednesday, March 2, 2022">
-          <span aria-hidden="true">W</span>
-          <span class="visually-hidden">Wednesday</span>
-          </td>
-          <td title="Thursday, March 3, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Thursday</span>
-          </td>
-          <td title="Friday, March 4, 2022">
-          <span aria-hidden="true">F</span>
-          <span class="visually-hidden">Friday</span>
-          </td>
-          <td title="Monday, March 7, 2022">
-          <span aria-hidden="true">M</span>
-          <span class="visually-hidden">Monday</span>
-          </td>
-          <td title="Tuesday, March 8, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Tuesday</span>
-          </td>
-          <td title="Wednesday, March 9, 2022">
-          <span aria-hidden="true">W</span>
-          <span class="visually-hidden">Wednesday</span>
-          </td>
-          <td title="Thursday, March 10, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Thursday</span>
-          </td>
-          <td title="Friday, March 11, 2022">
-          <span aria-hidden="true">F</span>
-          <span class="visually-hidden">Friday</span>
-          </td>
-          <td title="Monday, March 14, 2022">
-          <span aria-hidden="true">M</span>
-          <span class="visually-hidden">Monday</span>
-          </td>
-          <td title="Tuesday, March 15, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Tuesday</span>
-          </td>
-          <td title="Wednesday, March 16, 2022">
-          <span aria-hidden="true">W</span>
-          <span class="visually-hidden">Wednesday</span>
-          </td>
-          <td title="Thursday, March 17, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Thursday</span>
-          </td>
-          <td title="Friday, March 18, 2022">
-          <span aria-hidden="true">F</span>
-          <span class="visually-hidden">Friday</span>
-          </td>
-          <td title="Monday, March 21, 2022">
-          <span aria-hidden="true">M</span>
-          <span class="visually-hidden">Monday</span>
-          </td>
-          <td title="Tuesday, March 22, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Tuesday</span>
-          </td>
-          <td title="Wednesday, March 23, 2022">
-          <span aria-hidden="true">W</span>
-          <span class="visually-hidden">Wednesday</span>
-          </td>
-          <td class="dark-gray" title="Thursday, March 24, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Thursday</span>
-          </td>
-          <td title="Friday, March 25, 2022">
-          <span aria-hidden="true">F</span>
-          <span class="visually-hidden">Friday</span>
-          </td>
-          <td title="Monday, March 28, 2022">
-          <span aria-hidden="true">M</span>
-          <span class="visually-hidden">Monday</span>
-          </td>
-          <td title="Tuesday, March 29, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Tuesday</span>
-          </td>
-          <td title="Wednesday, March 30, 2022">
-          <span aria-hidden="true">W</span>
-          <span class="visually-hidden">Wednesday</span>
-          </td>
-          <td title="Thursday, March 31, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Thursday</span>
-          </td>
-          <td title="Friday, April 1, 2022">
-          <span aria-hidden="true">F</span>
-          <span class="visually-hidden">Friday</span>
-          </td>
-          <td title="Monday, April 4, 2022">
-          <span aria-hidden="true">M</span>
-          <span class="visually-hidden">Monday</span>
-          </td>
-          <td title="Tuesday, April 5, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Tuesday</span>
-          </td>
-          <td title="Wednesday, April 6, 2022">
-          <span aria-hidden="true">W</span>
-          <span class="visually-hidden">Wednesday</span>
-          </td>
-          <td title="Thursday, April 7, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Thursday</span>
-          </td>
-          <td title="Friday, April 8, 2022">
-          <span aria-hidden="true">F</span>
-          <span class="visually-hidden">Friday</span>
-          </td>
-          <td title="Monday, April 11, 2022">
-          <span aria-hidden="true">M</span>
-          <span class="visually-hidden">Monday</span>
-          </td>
-          <td title="Tuesday, April 12, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Tuesday</span>
-          </td>
-          <td title="Wednesday, April 13, 2022">
-          <span aria-hidden="true">W</span>
-          <span class="visually-hidden">Wednesday</span>
-          </td>
-          <td title="Thursday, April 14, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Thursday</span>
-          </td>
-          <td title="Friday, April 15, 2022">
-          <span aria-hidden="true">F</span>
-          <span class="visually-hidden">Friday</span>
-          </td>
-          <td title="Monday, April 18, 2022">
-          <span aria-hidden="true">M</span>
-          <span class="visually-hidden">Monday</span>
-          </td>
-          <td title="Tuesday, April 19, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Tuesday</span>
-          </td>
-          <td title="Wednesday, April 20, 2022">
-          <span aria-hidden="true">W</span>
-          <span class="visually-hidden">Wednesday</span>
-          </td>
-          <td title="Thursday, April 21, 2022">
-          <span aria-hidden="true">T</span>
-          <span class="visually-hidden">Thursday</span>
-          </td>
-          <td title="Friday, April 22, 2022">
-          <span aria-hidden="true">F</span>
-          <span class="visually-hidden">Friday</span>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row" class="headcol">Smith, Michael</th>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td class="center green"><span title="4 Vacation on Friday, March 25, 2022">4V</span> <span class="visually-hidden">Green</span></td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-        </tr>
-        <tr>
-          <th scope="row" class="headcol">Nelson, Betty</th>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td class="center red"><span title="4 Sick Leave on Wednesday, March 23, 2022">4S</span> <span class="visually-hidden">Red</span></td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-        </tr>
-        <tr>
-          <th scope="row" class="headcol">Jones, Larry</th>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td class="center green"><span title="8 Vacation on Friday, March 4, 2022">8V</span> <span class="visually-hidden">Green</span></td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td class="center green"><span title="4 Vacation on Friday, March 11, 2022">4V</span> <span class="visually-hidden">Green</span></td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td class="center green"><span title="8 Vacation on Friday, March 25, 2022">8V</span> <span class="visually-hidden">Green</span></td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-          <td style="background-color:#ece9e9;"> </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div>
-    <h3 class="text-only">Color Legend</h3>
-
-    <table class="gentable" role="presentation" style="width: 160px;">
-      <tbody>
-        <tr>
-          <td class="text-center green" width="20"><abbr title="Vacation">V</abbr><span class="visually-hidden">Green</span></td>
-          <td>Vacation</td>
-        </tr>
-        <tr>
-          <td class="text-center red" width="20"><abbr title="Sick Leave">S</abbr><span class="visually-hidden">Red</span></td>
-          <td>Sick Leave</td>
-        </tr>
-        <tr>
-          <td class="text-center blue" width="20"><abbr title="Floating Holiday">F</abbr><span class="visually-hidden">Blue</span></td>
-          <td>Floating Holidays</td>
-        </tr>
-        <tr>
-          <td class="text-center yellow" width="20"><abbr title="Other">T</abbr><span class="visually-hidden">Yellow</span></td>
-          <td>Other</td>
-        </tr>
-        <tr>
-          <td class="text-center purple" width="20"><abbr title="Multiple Events">M</abbr><span class="visually-hidden">Purple</span></td>
-          <td>Multiple Events</td>
-        </tr>
-        <tr>
-          <td class="text-center black" width="20"><abbr title="No Info">N</abbr><span class="visually-hidden">Black</span></td>
-          <td>No Info</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
+        <table class="gentable" role="presentation" style="width: 160px;">
+          <tbody>
+            <tr>
+              <td class="text-center green" width="20"><abbr title="Vacation">V</abbr><span class="visually-hidden">Green</span></td>
+              <td>Vacation</td>
+            </tr>
+            <tr>
+              <td class="text-center red" width="20"><abbr title="Sick Leave">S</abbr><span class="visually-hidden">Red</span></td>
+              <td>Sick Leave</td>
+            </tr>
+            <tr>
+              <td class="text-center blue" width="20"><abbr title="Floating Holiday">F</abbr><span class="visually-hidden">Blue</span></td>
+              <td>Floating Holidays</td>
+            </tr>
+            <tr>
+              <td class="text-center yellow" width="20"><abbr title="Other">T</abbr><span class="visually-hidden">Yellow</span></td>
+              <td>Other</td>
+            </tr>
+            <tr>
+              <td class="text-center purple" width="20"><abbr title="Multiple Events">M</abbr><span class="visually-hidden">Purple</span></td>
+              <td>Multiple Events</td>
+            </tr>
+            <tr>
+              <td class="text-center black" width="20"><abbr title="No Info">N</abbr><span class="visually-hidden">Black</span></td>
+              <td>No Info</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </contents>
   </slide>
 
