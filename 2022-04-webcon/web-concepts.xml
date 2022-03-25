@@ -283,16 +283,32 @@
 
       table.vsl th.headcol {
         width: 8em;
+        text-align: left;
       }
 
-      table.vsl td {
+      table.vsl td,
+      table.vsl th {
         width: 1.25em;
         text-align: center;
       }
 
+      table.vsl .green {
+        background-color: lightgreen;
+      }
+
+      table.vsl .red {
+        background-color: lightred;
+      }
+
+      table.vsl .yellow {
+        background-color: yellow;
+      }
+
+
     </style>
     <title>Use of Color: Example of problem</title>
     <contents>
+      <h2>Original Design</h2>
       <div>
         <table class="vsl" aria-label="Absences range One Month &amp; One Month Back">
           <thead>
@@ -486,6 +502,9 @@
           </tbody>
         </table>
       </div>
+
+      <h2>Revised Design</h2>
+
     </contents>
   </slide>
 
