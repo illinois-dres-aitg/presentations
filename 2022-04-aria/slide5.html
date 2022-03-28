@@ -33,9 +33,6 @@
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li style="float: left"><a target="transcript" href="transcript.html#slide5">
-                        Full Audio Transcript
-                    </a></li>
                   <li class="nav navbar-text">Slide 5 of 18</li>
                </ul>
             </div>
@@ -133,52 +130,6 @@
             <div class="col"></div>
          </div>
       </main>
-      <aside class="container" aria-label="Transcript">
-         <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-9">
-               <details class="transcript-container">
-                  <summary id="id-slide-transcript-button" class="btn-primary btn-sm" title="Audio transcript of the portion of the video for this slide">
-                          Audio Transcript
-                        </summary>
-                  <div class="slide-transcript">
-      Most ARIA roles need an accessible name or sometimes referred to as a label in HTML.
-
-      Using text on the screen are typically the best sources for the accessible name for controls and widgets, since the text will be the same for both the person using the graphical rendering and the person using a screen reader.
-
-      For example, in the checkbox example we will be going through shortly we will be use the text content of the DIV element for the accessible name.
-
-      This slide provides an overview of the different techniques that can use used to define an accessible name.
-
-      Browsers will first look for an aria-labelledby attribute.
-
-      Aria-labelledby attribute uses ID references to point to text on the web page to create the accessible name.
-
-      If more than one ID is provided the text is concatenated to compute the accessible name.
-
-      This is the most complex way to generate the accessible name and can also be used to include values of other controls and widgets on the page.
-
-      If aria-labelledby is not found the next item the browser will look for is the aria-label attribute.
-
-      In this case the text content of the aria-label attribute is used as a the accessible name.
-
-      If the aria-label attribute is not found and starting with the release of ARIA 1.2 the browser will look for a label role for a small subset of widget roles that can be labeled using encapsulation.
-
-      The label role will typically be ddefined using the standard HTML LABEL element.
-
-      For the group and radiogroup roles, the LEGEND element can be used to define an accessible name starting in ARIA 1.2.
-
-      Some widget roles like checkbox in our example today, can be labeled use the child text content.
-
-      If no other accessible name has been found for a widget and the element has a title attribute, the content of the title attribute will be used for the accessible name.
-
-      The title attribute is usually not considered a good source for the accessible name, since it is used by many browser to render a tooltip.  Tooltips are generally used more to provide help than a label, so therefore usually not too good as a label.
-    </div>
-               </details>
-            </div>
-            <div class="col"></div>
-         </div>
-      </aside>
       <footer class="container">
          <div id="footer" class="well well-sm"><a href="https://illinois.edu">
       <img src="../images/block-i.png" alt="University of Illinois">
