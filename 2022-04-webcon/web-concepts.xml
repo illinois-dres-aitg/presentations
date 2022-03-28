@@ -185,10 +185,32 @@
   </slide>
 
   <slide>
+    <style>
+      table.examples {
+        border-collapse: collapse;
+      }
+
+      table.examples tr {
+        border-bottom: 1px #888 solid;
+      }
+
+      table.examples td, th {
+        padding: 0.25em 1em;
+      }
+
+      table.examples .pass {
+        color: darkgreen;
+      }
+
+      table.examples .fail {
+        color: darkred;
+      }
+
+    </style>
     <title>Color Contrast: Color Contrast Ratio</title>
     <contents>
       <table class="table table-striped">
-        <caption>WCAG 2.1 Requriements for Color Contrast</caption>
+        <caption>WCAG 2.1 Requirements for Color Contrast</caption>
         <thead>
           <tr>
             <th>Requirement</th>
@@ -218,6 +240,88 @@
       </table>
 
       <p>More information on meeting <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">Color Contrast Requirements of WCAG 2.1.</a></p>
+
+      <h2>Examples</h2>
+
+      <table class="examples" aria-label="Color Contrast Examples">
+        <thead>
+          <tr>
+            <th>Normal Text</th>
+            <th class="num"><abbr title="Color Contrast Ratio">CCR</abbr></th>
+            <th>AA</th>
+            <th>AAA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="color: #000">Sample text</td>
+            <td class="num">21.0:1</td>
+            <td class="pass">Pass</td>
+            <td class="pass">Pass</td>
+          </tr>
+          <tr>
+            <td style="color: #111">Sample text</td>
+            <td class="num">18.8:1</td>
+            <td class="pass">Pass</td>
+            <td class="pass">Pass</td>
+          </tr>
+          <tr>
+            <td style="color: #222">Sample text</td>
+            <td class="num">15.9:1</td>
+            <td class="pass">Pass</td>
+            <td class="pass">Pass</td>
+          </tr>
+          <tr>
+            <td style="color: #333">Sample text</td>
+            <td class="num">12.6:1</td>
+            <td class="pass">Pass</td>
+            <td class="pass">Pass</td>
+          </tr>
+          <tr>
+            <td style="color: #444">Sample text</td>
+            <td class="num">9.7:1</td>
+            <td class="pass">Pass</td>
+            <td class="pass">Pass</td>
+          </tr>
+          <tr>
+            <td style="color: #555">Sample text</td>
+            <td class="num">7.5:1</td>
+            <td class="pass">Pass</td>
+            <td class="pass">Pass</td>
+          </tr>
+          <tr>
+            <td style="color: #666">Sample text</td>
+            <td class="num">5.7:1</td>
+            <td class="pass">Pass</td>
+            <td class="fail">Fail</td>
+          </tr>
+          <tr>
+            <td style="color: #777">Sample text</td>
+            <td class="num">4.5:1</td>
+            <td class="pass">Pass</td>
+            <td class="fail">Fail</td>
+          </tr>
+          <tr>
+            <td style="color: #888">Sample text</td>
+            <td class="num">3.5:1</td>
+            <td class="fail">Fail</td>
+            <td class="fail">Fail</td>
+          </tr>
+          <tr>
+            <td style="color: #999">Sample text</td>
+            <td class="num">2.8:1</td>
+            <td class="fail">Fail</td>
+            <td class="fail">Fail</td>
+          </tr>
+          <tr>
+            <td style="color: #AAA">Sample text</td>
+            <td class="num">2.3:1</td>
+            <td class="fail">Fail</td>
+            <td class="fail">Fail</td>
+          </tr>
+        </tbody>
+      </table>
+
     </contents>
   </slide>
 
@@ -258,7 +362,10 @@
     <title>Use of Color: Color alone to convey information</title>
     <contents>
       <ul>
-        <li>Using color as the only way to convey information.</li>
+        <li>Using color as the only way to convey information (<a href="https://www.w3.org/TR/WCAG21/#use-of-color" target="_spec">WCAG 1.4.1</a>).</li>
+        <li>1 in 6 men have some form of color blindess.</li>
+        <li>Older people and people with many types of visiual impairements often lose the ability to perceive colors.</li>
+        <li>Colors can also can mean different things in various cultures.</li>
       </ul>
     </contents>
   </slide>
@@ -300,6 +407,7 @@
         border-collapse: collapse;
       }
 
+
       table.legend td {
         padding: 0.125em 0.25em;
         text-align: left;
@@ -318,7 +426,7 @@
 
       table.legend .leave,
       table.vsl .leave {
-        background-color:   #ff7070;
+        background-color: #ff7070;
       }
 
       table.legend .float,
@@ -328,7 +436,7 @@
 
       table.legend .other,
       table.vsl .other {
-        background-color: yellow;
+        background-color: #fbec5d;
       }
 
       table.legend .multiple,
@@ -344,9 +452,13 @@
 
 
     </style>
-    <title>Use of Color: Example of problem</title>
+    <title>Use of Color: Example</title>
     <contents>
-      <h2>Original Design</h2>
+      <ul>
+        <li>Back ground color is used to indicate the type of absence.</li>
+        <li>People with color blindess could not disinguish between the colors.</li>
+        <li>The table would look empty to someone using a screen reader.</li>
+      </ul>
       <div>
         <table class="vsl" aria-label="Absences range One Month &amp; One Month Back">
           <thead>
@@ -541,217 +653,6 @@
         </table>
       </div>
 
-      <h2>Revised Design</h2>
-      <div>
-        <table class="vsl" aria-label="Absences range One Month &amp; One Month Back">
-          <thead>
-            <tr>
-              <th scope="col" class="headcol" rowspan="2">Name</th>
-              <th colspan="23" class="left">
-                <span aria-hidden="true">Mar 2022</span>
-                <span class="visually-hidden">March 2022</span>
-              </th>
-            </tr>
-            <tr>
-              <th title="Tuesday, March 1, 2022">
-              <span aria-hidden="true">T</span>
-              <span class="visually-hidden">Tuesday</span>
-              </th>
-              <th title="Wednesday, March 2, 2022">
-              <span aria-hidden="true">W</span>
-              <span class="visually-hidden">Wednesday</span>
-              </th>
-              <th title="Thursday, March 3, 2022">
-              <span aria-hidden="true">T</span>
-              <span class="visually-hidden">Thursday</span>
-              </th>
-              <th title="Friday, March 4, 2022">
-              <span aria-hidden="true">F</span>
-              <span class="visually-hidden">Friday</span>
-              </th>
-              <th title="Monday, March 7, 2022">
-              <span aria-hidden="true">M</span>
-              <span class="visually-hidden">Monday</span>
-              </th>
-              <th title="Tuesday, March 8, 2022">
-              <span aria-hidden="true">T</span>
-              <span class="visually-hidden">Tuesday</span>
-              </th>
-              <th title="Wednesday, March 9, 2022">
-              <span aria-hidden="true">W</span>
-              <span class="visually-hidden">Wednesday</span>
-              </th>
-              <th title="Thursday, March 10, 2022">
-              <span aria-hidden="true">T</span>
-              <span class="visually-hidden">Thursday</span>
-              </th>
-              <th title="Friday, March 11, 2022">
-              <span aria-hidden="true">F</span>
-              <span class="visually-hidden">Friday</span>
-              </th>
-              <th title="Monday, March 14, 2022">
-              <span aria-hidden="true">M</span>
-              <span class="visually-hidden">Monday</span>
-              </th>
-              <th title="Tuesday, March 15, 2022">
-              <span aria-hidden="true">T</span>
-              <span class="visually-hidden">Tuesday</span>
-              </th>
-              <th title="Wednesday, March 16, 2022">
-              <span aria-hidden="true">W</span>
-              <span class="visually-hidden">Wednesday</span>
-              </th>
-              <th title="Thursday, March 17, 2022">
-              <span aria-hidden="true">T</span>
-              <span class="visually-hidden">Thursday</span>
-              </th>
-              <th title="Friday, March 18, 2022">
-              <span aria-hidden="true">F</span>
-              <span class="visually-hidden">Friday</span>
-              </th>
-              <th title="Monday, March 21, 2022">
-              <span aria-hidden="true">M</span>
-              <span class="visually-hidden">Monday</span>
-              </th>
-              <th title="Tuesday, March 22, 2022">
-              <span aria-hidden="true">T</span>
-              <span class="visually-hidden">Tuesday</span>
-              </th>
-              <th title="Wednesday, March 23, 2022">
-              <span aria-hidden="true">W</span>
-              <span class="visually-hidden">Wednesday</span>
-              </th>
-              <th class="dark-gray" title="Thursday, March 24, 2022">
-              <span aria-hidden="true">T</span>
-              <span class="visually-hidden">Thursday</span>
-              </th>
-              <th title="Friday, March 25, 2022">
-              <span aria-hidden="true">F</span>
-              <span class="visually-hidden">Friday</span>
-              </th>
-              <th title="Monday, March 28, 2022">
-              <span aria-hidden="true">M</span>
-              <span class="visually-hidden">Monday</span>
-              </th>
-              <th title="Tuesday, March 29, 2022">
-              <span aria-hidden="true">T</span>
-              <span class="visually-hidden">Tuesday</span>
-              </th>
-              <th title="Wednesday, March 30, 2022">
-              <span aria-hidden="true">W</span>
-              <span class="visually-hidden">Wednesday</span>
-              </th>
-              <th title="Thursday, March 31, 2022">
-              <span aria-hidden="true">T</span>
-              <span class="visually-hidden">Thursday</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row" class="headcol">Smith, Michael</th>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="center green"><span title="4 Vacation on Friday, March 25, 2022">4V</span> <span class="visually-hidden">Green</span></td>
-            </tr>
-            <tr>
-              <th scope="row" class="headcol">Jones, Mary</th>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td class="center green">
-                <span title="8 Vacation on Friday, March 4, 2022">8V</span>
-               </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="center green">
-                <span title="4 Vacation on Friday, March 11, 2022">4V</span> 
-              </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="center green">
-                <span title="8 Vacation on Friday, March 25, 2022">8V</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div>
-        <h3 class="text-only">Color Legend</h3>
-
-        <table class="legend" role="presentation">
-          <tbody>
-            <tr>
-              <td class="vacation">
-                <abbr title="Vacation: Green background color">V</abbr></td>
-              <td>Vacation</td>
-            </tr>
-            <tr>
-              <td class="leave">
-                <abbr title="Sick Leave: Red background color">S</abbr>
-              </td>
-              <td>Sick Leave</td>
-            </tr>
-            <tr>
-              <td class="float">
-                <abbr title="Floating Holiday: Blue background color">F</abbr>
-              </td>
-              <td>Floating Holidays</td>
-            </tr>
-            <tr>
-              <td class="other">
-                <abbr title="Other: Yellow background color">T</abbr>
-              </td>
-              <td>Other</td>
-            </tr>
-            <tr>
-              <td class="multiple">
-                <abbr title="Multiple Events: Purple background color">M</abbr>
-              </td>
-              <td>Multiple Events</td>
-            </tr>
-            <tr>
-              <td class="no-info">
-                <abbr title="No Info: Black background">N</abbr>
-              </td>
-              <td>No Information</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
     </contents>
   </slide>
 
@@ -810,7 +711,7 @@
 
       table.legend .leave,
       table.vsl .leave {
-        background-color:   #ff7070;
+        background-color:   #ffCCCB;
       }
 
       table.legend .float,
@@ -820,7 +721,7 @@
 
       table.legend .other,
       table.vsl .other {
-        background-color: yellow;
+        background-color: #fbec5d;
       }
 
       table.legend .multiple,
@@ -836,9 +737,13 @@
 
 
     </style>
-    <title>Use of Color: Example of problem</title>
+    <title>Use of Color: Revised Example</title>
     <contents>
-      <h2>Revised Design</h2>
+      <ul>
+        <li>In addtion to background color, a letter code and the number of hours of the absence is also include.</li>
+        <li>The letter and number give all users more than one way to identify the absence and also provides additional information on wheter it was a full or half day.</li>
+        <li>The table has content in cells related absences for people using a screen reader.</li>
+      </ul>
       <div>
         <table class="vsl" aria-label="Absences range One Month &amp; One Month Back">
           <thead>
@@ -947,6 +852,16 @@
           <tbody>
             <tr>
               <th scope="row" class="headcol">Smith, Michael</th>
+              <td class="vacation">8V</td>
+              <td class="vacation">8V</td>
+              <td class="odd-num-week"> </td>
+              <td class="odd-num-week"> </td>
+              <td class="leave">4S</td>
+              <td class="leave">8S</td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
               <td class="odd-num-week"> </td>
               <td class="odd-num-week"> </td>
               <td class="odd-num-week"> </td>
@@ -955,21 +870,11 @@
               <td> </td>
               <td> </td>
               <td> </td>
-              <td> </td>
+              <td class="other">8T</td>
+              <td class="other">8T</td>
               <td class="odd-num-week"> </td>
               <td class="odd-num-week"> </td>
               <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="center green"><span title="4 Vacation on Friday, March 25, 2022">4V</span> <span class="visually-hidden">Green</span></td>
             </tr>
             <tr>
               <th scope="row" class="headcol">Jones, Mary</th>
@@ -981,27 +886,21 @@
               <td> </td>
               <td> </td>
               <td> </td>
-              <td class="center green">
-                <span title="8 Vacation on Friday, March 4, 2022">8V</span>
-               </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="odd-num-week"> </td>
-              <td class="center green">
-                <span title="4 Vacation on Friday, March 11, 2022">4V</span> 
-              </td>
+              <td class="float">8F</td>
+              <td class="vacation">8V</td>
+              <td class="vacation">8V</td>
+              <td class="vacation">8V</td>
+              <td class="vacation">8V</td>
+              <td class="vacation">8V</td>
+              <td class="leave">4S</td>
               <td> </td>
               <td> </td>
               <td> </td>
               <td> </td>
-              <td> </td>
               <td class="odd-num-week"> </td>
               <td class="odd-num-week"> </td>
               <td class="odd-num-week"> </td>
-              <td class="center green">
-                <span title="8 Vacation on Friday, March 25, 2022">8V</span>
-              </td>
+              <td class="odd-num-week"></td>
             </tr>
           </tbody>
         </table>
@@ -1053,9 +952,36 @@
   </slide>
 
   <slide>
-    <title>Images: Must have a description or identified as decorative</title>
+    <title>Images: Image Types and Descriptions</title>
     <contents>
-      <p></p>
+      <div><a href="https://www.w3.org/WAI/tutorials/images/" target="_spec">W3C WAI Images Tutorial</a></div>
+      <h2>Types of Images</h2>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/WAI/tutorials/images/informative/" target="_spec">Informative images</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/tutorials/images/informative/" target="_spec">Informative images</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/tutorials/images/decorative/" target="_spec">Decorative images</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_spec">Functional images</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/tutorials/images/textual/" target="_spec">Images of text</a>
+        </li>
+        <li>
+          <a href="/WAI/tutorials/images/complex/" target="_spec">Complex images</a>
+        </li>
+        <li>
+          <a href="/WAI/tutorials/images/groups/" target="_spec">Groups of images</a>
+        </li>
+        <li>
+          <a href="/WAI/tutorials/images/imagemap/" target="_spec">Image maps</a>
+        </li>
+      </ul>
     </contents>
   </slide>
 

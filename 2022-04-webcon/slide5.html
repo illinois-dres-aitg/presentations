@@ -6,7 +6,28 @@
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
-      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style">
+      table.examples {
+        border-collapse: collapse;
+      }
+
+      table.examples tr {
+        border-bottom: 1px #888 solid;
+      }
+
+      table.examples td, th {
+        padding: 0.25em 1em;
+      }
+
+      table.examples .pass {
+        color: darkgreen;
+      }
+
+      table.examples .fail {
+        color: darkred;
+      }
+
+    </style>
    </head>
    <body>
       <nav id="nav" class="navbar navbar-default">
@@ -44,7 +65,7 @@
             <div class="col-md-9">
                <h1 id="h1_title" class="title">Color Contrast: Color Contrast Ratio</h1>
                <table class="table table-striped">
-                  <caption>WCAG 2.1 Requriements for Color Contrast</caption>
+                  <caption>WCAG 2.1 Requirements for Color Contrast</caption>
                   <thead>
                      <tr>
                         <th>Requirement</th>
@@ -73,6 +94,85 @@
                   </tbody>
                </table>
                <p>More information on meeting <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">Color Contrast Requirements of WCAG 2.1.</a></p>
+               <h2>Examples</h2>
+               <table class="examples" aria-label="Color Contrast Examples">
+                  <thead>
+                     <tr>
+                        <th>Normal Text</th>
+                        <th class="num"><abbr title="Color Contrast Ratio">CCR</abbr></th>
+                        <th>AA</th>
+                        <th>AAA</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td style="color: #000">Sample text</td>
+                        <td class="num">21.0:1</td>
+                        <td class="pass">Pass</td>
+                        <td class="pass">Pass</td>
+                     </tr>
+                     <tr>
+                        <td style="color: #111">Sample text</td>
+                        <td class="num">18.8:1</td>
+                        <td class="pass">Pass</td>
+                        <td class="pass">Pass</td>
+                     </tr>
+                     <tr>
+                        <td style="color: #222">Sample text</td>
+                        <td class="num">15.9:1</td>
+                        <td class="pass">Pass</td>
+                        <td class="pass">Pass</td>
+                     </tr>
+                     <tr>
+                        <td style="color: #333">Sample text</td>
+                        <td class="num">12.6:1</td>
+                        <td class="pass">Pass</td>
+                        <td class="pass">Pass</td>
+                     </tr>
+                     <tr>
+                        <td style="color: #444">Sample text</td>
+                        <td class="num">9.7:1</td>
+                        <td class="pass">Pass</td>
+                        <td class="pass">Pass</td>
+                     </tr>
+                     <tr>
+                        <td style="color: #555">Sample text</td>
+                        <td class="num">7.5:1</td>
+                        <td class="pass">Pass</td>
+                        <td class="pass">Pass</td>
+                     </tr>
+                     <tr>
+                        <td style="color: #666">Sample text</td>
+                        <td class="num">5.7:1</td>
+                        <td class="pass">Pass</td>
+                        <td class="fail">Fail</td>
+                     </tr>
+                     <tr>
+                        <td style="color: #777">Sample text</td>
+                        <td class="num">4.5:1</td>
+                        <td class="pass">Pass</td>
+                        <td class="fail">Fail</td>
+                     </tr>
+                     <tr>
+                        <td style="color: #888">Sample text</td>
+                        <td class="num">3.5:1</td>
+                        <td class="fail">Fail</td>
+                        <td class="fail">Fail</td>
+                     </tr>
+                     <tr>
+                        <td style="color: #999">Sample text</td>
+                        <td class="num">2.8:1</td>
+                        <td class="fail">Fail</td>
+                        <td class="fail">Fail</td>
+                     </tr>
+                     <tr>
+                        <td style="color: #AAA">Sample text</td>
+                        <td class="num">2.3:1</td>
+                        <td class="fail">Fail</td>
+                        <td class="fail">Fail</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>

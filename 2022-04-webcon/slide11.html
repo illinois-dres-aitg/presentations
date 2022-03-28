@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 11: Use of Color: Example of problem</title>
+      <title>Slide 11: Use of Color: Revised Example</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -60,7 +60,7 @@
 
       table.legend .leave,
       table.vsl .leave {
-        background-color:   #ff7070;
+        background-color:   #ffCCCB;
       }
 
       table.legend .float,
@@ -70,7 +70,7 @@
 
       table.legend .other,
       table.vsl .other {
-        background-color: yellow;
+        background-color: #fbec5d;
       }
 
       table.legend .multiple,
@@ -121,8 +121,12 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Use of Color: Example of problem</h1>
-               <h2>Revised Design</h2>
+               <h1 id="h1_title" class="title">Use of Color: Revised Example</h1>
+               <ul>
+                  <li>In addtion to background color, a letter code and the number of hours of the absence is also include.</li>
+                  <li>The letter and number give all users more than one way to identify the absence and also provides additional information on wheter it was a full or half day.</li>
+                  <li>The table has content in cells related absences for people using a screen reader.</li>
+               </ul>
                <div>
                   <table class="vsl" aria-label="Absences range One Month &amp; One Month Back">
                      <thead>
@@ -135,27 +139,20 @@
                         </tr>
                         <tr>
                            <th title="Tuesday, March 1, 2022">
-              <span aria-hidden="true">1</span>
+              <span aria-hidden="true">T</span>
               <span class="visually-hidden">Tuesday</span>
               </th>
                            <th title="Wednesday, March 2, 2022">
-              <span aria-hidden="true">2</span>
+              <span aria-hidden="true">W</span>
               <span class="visually-hidden">Wednesday</span>
               </th>
                            <th title="Thursday, March 3, 2022">
-              <span aria-hidden="true">3</span>
+              <span aria-hidden="true">T</span>
               <span class="visually-hidden">Thursday</span>
               </th>
                            <th title="Friday, March 4, 2022">
-              <span aria-hidden="true">4</span>
+              <span aria-hidden="true">F</span>
               <span class="visually-hidden">Friday</span>
-              </th>
-                           <th title="Saturday, March 5, 2022">
-              <span aria-hidden="true">5</span>
-              <span class="visually-hidden">Saturday</span>
-              </th>
-                           <th title="Sunday, March 6, 2022">
-              <span aria-hidden="true">6</span>
               </th>
                            <th title="Monday, March 7, 2022">
               <span aria-hidden="true">M</span>
@@ -238,6 +235,16 @@
                      <tbody>
                         <tr>
                            <th scope="row" class="headcol">Smith, Michael</th>
+                           <td class="vacation">8V</td>
+                           <td class="vacation">8V</td>
+                           <td class="odd-num-week"> </td>
+                           <td class="odd-num-week"> </td>
+                           <td class="leave">4S</td>
+                           <td class="leave">8S</td>
+                           <td> </td>
+                           <td> </td>
+                           <td> </td>
+                           <td> </td>
                            <td class="odd-num-week"> </td>
                            <td class="odd-num-week"> </td>
                            <td class="odd-num-week"> </td>
@@ -246,21 +253,11 @@
                            <td> </td>
                            <td> </td>
                            <td> </td>
-                           <td> </td>
+                           <td class="other">8T</td>
+                           <td class="other">8T</td>
                            <td class="odd-num-week"> </td>
                            <td class="odd-num-week"> </td>
                            <td class="odd-num-week"> </td>
-                           <td class="odd-num-week"> </td>
-                           <td class="odd-num-week"> </td>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                           <td> </td>
-                           <td class="odd-num-week"> </td>
-                           <td class="odd-num-week"> </td>
-                           <td class="odd-num-week"> </td>
-                           <td class="center green"><span title="4 Vacation on Friday, March 25, 2022">V</span> <span class="visually-hidden">Green</span></td>
                         </tr>
                         <tr>
                            <th scope="row" class="headcol">Jones, Mary</th>
@@ -272,27 +269,21 @@
                            <td> </td>
                            <td> </td>
                            <td> </td>
-                           <td class="center green">
-                <span title="8 Vacation on Friday, March 4, 2022">8V</span>
-               </td>
-                           <td class="odd-num-week"> </td>
-                           <td class="odd-num-week"> </td>
-                           <td class="odd-num-week"> </td>
-                           <td class="odd-num-week"> </td>
-                           <td class="center green">
-                <span title="4 Vacation on Friday, March 11, 2022">4V</span> 
-              </td>
+                           <td class="float">8F</td>
+                           <td class="vacation">8V</td>
+                           <td class="vacation">8V</td>
+                           <td class="vacation">8V</td>
+                           <td class="vacation">8V</td>
+                           <td class="vacation">8V</td>
+                           <td class="leave">4S</td>
                            <td> </td>
                            <td> </td>
                            <td> </td>
                            <td> </td>
-                           <td> </td>
                            <td class="odd-num-week"> </td>
                            <td class="odd-num-week"> </td>
                            <td class="odd-num-week"> </td>
-                           <td class="center green">
-                <span title="8 Vacation on Friday, March 25, 2022">8V</span>
-              </td>
+                           <td class="odd-num-week"></td>
                         </tr>
                      </tbody>
                   </table>
