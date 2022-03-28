@@ -452,15 +452,10 @@
 
 
     </style>
-    <title>Use of Color: Example</title>
+    <title>Use of Color: Vaction/Sick Leave Calendar</title>
     <contents>
-      <ul>
-        <li>Back ground color is used to indicate the type of absence.</li>
-        <li>People with color blindess could not disinguish between the colors.</li>
-        <li>The table would look empty to someone using a screen reader.</li>
-      </ul>
-      <div>
-        <table class="vsl" aria-label="Absences range One Month &amp; One Month Back">
+      <div style="margin-top: 1.5em">
+        <table class="vsl" aria-label="Absences range for March 2022">
           <thead>
             <tr>
               <th scope="col" class="headcol" rowspan="2">Name</th>
@@ -652,6 +647,13 @@
           </tbody>
         </table>
       </div>
+      <h2>Accessibility Issues</h2>
+      <ul>
+        <li>Background color is used to indicate the type of absence.</li>
+        <li>People with color blindess could not disinguish between the colors.</li>
+        <li>The table would look empty to someone using a screen reader.</li>
+      </ul>
+
 
     </contents>
   </slide>
@@ -737,15 +739,10 @@
 
 
     </style>
-    <title>Use of Color: Revised Example</title>
+    <title>Use of Color: Vacation/Sick Leave Calendar (Revised)</title>
     <contents>
-      <ul>
-        <li>In addtion to background color, a letter code and the number of hours of the absence is also include.</li>
-        <li>The letter and number give all users more than one way to identify the absence and also provides additional information on wheter it was a full or half day.</li>
-        <li>The table has content in cells related absences for people using a screen reader.</li>
-      </ul>
-      <div>
-        <table class="vsl" aria-label="Absences range One Month &amp; One Month Back">
+      <div style="margin-top: 1.5em">
+        <table class="vsl" aria-label="Absences range for March 2022">
           <thead>
             <tr>
               <th scope="col" class="headcol" rowspan="2">Name</th>
@@ -948,6 +945,13 @@
           </tbody>
         </table>
       </div>
+      <h2>Revisions</h2>
+      <ul>
+        <li>In addtion to background color, a letter code and the number of hours of the absence is also include.</li>
+        <li>The letter and number give all users more than one way to identify the absence and also provides additional information on wheter it was a full or half day.</li>
+        <li>The table has content in cells related absences for people using a screen reader.</li>
+      </ul>
+
     </contents>
   </slide>
 
@@ -957,9 +961,6 @@
       <div><a href="https://www.w3.org/WAI/tutorials/images/" target="_spec">W3C WAI Images Tutorial</a></div>
       <h2>Types of Images</h2>
       <ul>
-        <li>
-          <a href="https://www.w3.org/WAI/tutorials/images/informative/" target="_spec">Informative images</a>
-        </li>
         <li>
           <a href="https://www.w3.org/WAI/tutorials/images/informative/" target="_spec">Informative images</a>
         </li>
