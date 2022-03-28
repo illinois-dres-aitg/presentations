@@ -326,12 +326,16 @@
   </slide>
 
   <slide>
-    <title>Color Contrast: University of Illinois Branding Colors Blog</title>
+    <title>Color Contrast: Illinois Branding Colors</title>
     <contents>
 
       <p><a href="https://marketing.illinois.edu/blog/designing-with-color-accessibility-in-mind-part-1">Blog: Designing with color accessibility in mind (part 1)</a></p>
 
-      <iframe src="https://marketing.illinois.edu/blog/designing-with-color-accessibility-in-mind-part-1" title="Blog: Designing with color accessibility in mind (part 1)" height="600" width="98%"></iframe>
+      <h2>WCAG AA: 1.4.3 Contrast (Minimum) </h2>
+      <img width="98%" src="image002-scaled.jpg" alt="Image of a color contrast comparision table for Univerity of Illinois"/>
+
+      <h2>WCAG AAA: 1.4.6 Contrast (Enhanced)</h2>
+      <img width="98%" src="image003-scaled.jpg" alt="Image of a color contrast comparision table for Univerity of Illinois"/>
 
     </contents>
   </slide>
