@@ -969,7 +969,9 @@
         <li>
           <a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_spec">Functional images</a>
         </li>
-
+        <li>
+          <a href="https://www.w3.org/WAI/tutorials/images/textual/" target="_spec">Images of text</a>
+        </li>
       </ul>
     </contents>
   </slide>
