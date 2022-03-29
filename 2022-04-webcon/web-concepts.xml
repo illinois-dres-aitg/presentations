@@ -27,7 +27,7 @@
 
   <conference>
     <name href="https://webcon.illinois.edu/session/more-of-you-and-less-of-me-better-design-through-humility-web-accessibility-concepts-for-beginners/">Illinois Webcon 2022</name>
-    <desc>April 7th, 2022</desc>
+    <desc>April 8th, 2022</desc>
     <desc>online</desc>
   </conference>
 
@@ -228,14 +228,6 @@
             <td>4.5:1</td>
             <td>3:1</td>
           </tr>
-          <tr>
-            <td>
-              <a href="https://www.w3.org/TR/WCAG21/#contrast-enhanced">1.4.6 Contrast (Enhanced)</a>
-            </td>
-            <td>AAA</td>
-            <td>7:1</td>
-            <td>4.5:1</td>
-          </tr>
         </tbody>
       </table>
 
@@ -249,7 +241,6 @@
             <th>Normal Text</th>
             <th class="num"><abbr title="Color Contrast Ratio">CCR</abbr></th>
             <th>AA</th>
-            <th>AAA</th>
           </tr>
         </thead>
         <tbody>
@@ -257,66 +248,55 @@
             <td style="color: #000">Sample text</td>
             <td class="num">21.0:1</td>
             <td class="pass">Pass</td>
-            <td class="pass">Pass</td>
           </tr>
           <tr>
             <td style="color: #111">Sample text</td>
             <td class="num">18.8:1</td>
-            <td class="pass">Pass</td>
             <td class="pass">Pass</td>
           </tr>
           <tr>
             <td style="color: #222">Sample text</td>
             <td class="num">15.9:1</td>
             <td class="pass">Pass</td>
-            <td class="pass">Pass</td>
           </tr>
           <tr>
             <td style="color: #333">Sample text</td>
             <td class="num">12.6:1</td>
-            <td class="pass">Pass</td>
             <td class="pass">Pass</td>
           </tr>
           <tr>
             <td style="color: #444">Sample text</td>
             <td class="num">9.7:1</td>
             <td class="pass">Pass</td>
-            <td class="pass">Pass</td>
           </tr>
           <tr>
             <td style="color: #555">Sample text</td>
             <td class="num">7.5:1</td>
-            <td class="pass">Pass</td>
             <td class="pass">Pass</td>
           </tr>
           <tr>
             <td style="color: #666">Sample text</td>
             <td class="num">5.7:1</td>
             <td class="pass">Pass</td>
-            <td class="fail">Fail</td>
           </tr>
           <tr>
             <td style="color: #777">Sample text</td>
             <td class="num">4.5:1</td>
             <td class="pass">Pass</td>
-            <td class="fail">Fail</td>
           </tr>
           <tr>
             <td style="color: #888">Sample text</td>
             <td class="num">3.5:1</td>
-            <td class="fail">Fail</td>
             <td class="fail">Fail</td>
           </tr>
           <tr>
             <td style="color: #999">Sample text</td>
             <td class="num">2.8:1</td>
             <td class="fail">Fail</td>
-            <td class="fail">Fail</td>
           </tr>
           <tr>
             <td style="color: #AAA">Sample text</td>
             <td class="num">2.3:1</td>
-            <td class="fail">Fail</td>
             <td class="fail">Fail</td>
           </tr>
         </tbody>
@@ -338,12 +318,16 @@
       </ul>
       <img width="98%" src="image002-scaled.jpg" alt="Image of a color contrast comparision table for Univerity of Illinois"/>
 
+      <!--
+
       <h2>WCAG AAA: 1.4.6 Contrast (Enhanced)</h2>
       <ul>
         <li><strong>Green Checks:</strong> Combination can be used for any size text.</li>
         <li><strong>Yellow Circles:</strong> Combination can be used for text larger than 14pt or bolded text.</li>
       </ul>
       <img width="98%" src="image003-scaled.jpg" alt="Image of a color contrast comparision table for Univerity of Illinois"/>
+
+      -->
 
     </contents>
   </slide>
@@ -364,6 +348,7 @@
         <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">AInspector for Firefox</a></li>
         <li><a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">WAVE Evaluation Tool browser add-on</a></li>
         <li><a href="https://www.tpgi.com/color-contrast-checker/">TPGi Color Contrast Checkers for Mac and Windows</a></li>
+        <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Contrast Checker</a></li>
         <li><a href="https://monsido.com/tools/contrast-checker">Monsido Color Contrast Checker</a></li>
         <li>There are <em>many</em> other Color Contrast checking tools, just use your favorite search engine to search for "color contrast checker".</li>
       </ul>
