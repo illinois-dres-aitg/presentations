@@ -316,7 +316,7 @@
         <li><strong>Green Checks:</strong> Combination can be used for any size text.</li>
         <li><strong>Yellow Circles:</strong> Combination can be used for text larger than 14pt or bolded text.</li>
       </ul>
-      <img width="98%" src="image002-scaled.jpg" alt="Image of a color contrast comparision table for Univerity of Illinois"/>
+      <img width="98%" src="images/image002-scaled.jpg" alt="Image of a color contrast comparision table for Univerity of Illinois"/>
 
       <!--
 
@@ -325,7 +325,7 @@
         <li><strong>Green Checks:</strong> Combination can be used for any size text.</li>
         <li><strong>Yellow Circles:</strong> Combination can be used for text larger than 14pt or bolded text.</li>
       </ul>
-      <img width="98%" src="image003-scaled.jpg" alt="Image of a color contrast comparision table for Univerity of Illinois"/>
+      <img width="98%" src="images/image003-scaled.jpg" alt="Image of a color contrast comparision table for Univerity of Illinois"/>
 
       -->
 
@@ -336,7 +336,7 @@
     <title>Color Contrast: Chrome River Expense management (Poor)</title>
     <contents>
       <div>
-        <img src="chrome-river-contrast-1-highlight.png" alt="screen shot of Chrome River add expense page highlighting text with poor color contrast" width="98%"/>
+        <img src="images/chrome-river-contrast-1-highlight.png" alt="screen shot of Chrome River add expense page highlighting text with poor color contrast" width="98%"/>
       </div>
     </contents>
   </slide>
@@ -973,6 +973,52 @@
           <a href="https://www.w3.org/WAI/tutorials/images/textual/" target="_spec">Images of text</a>
         </li>
       </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Images: Informative examples</title>
+    <contents>
+        <p>
+          <a href="https://www.w3.org/WAI/tutorials/images/informative/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Informative image tutorial</a>
+        </p>
+        <h2>Example 1: Cat with a colar than looks like a donut with sprinkles</h2>
+        <p><a href="https://www.walmart.com/ip/Cat-Recovery-Collar-Soft-Pet-Cone-Collar-Protective-Sunflower-Cone-Adjustable-Fasteners-Collar-for-Cat-and-Puppy-Yellow/248404357"><img src="images/Walmart_donut_cone.png" alt="Web page informative image example 1 was found"/></a></p>
+        <h2>Example 2: Cat with a colar that looks like a cone flower</h2>
+        <p><a href="https://www.walmart.com/ip/Feiona-Adjustable-Cat-Recovery-Collar-Cute-Donut-Soft-Cone-Collars-Cat-Wound-Healing-Protective-After-Surgery-Elizabethan-Kitten-Pets/346507267?wmlspartner=wlpa&amp;selectedSellerId=18988&amp;&amp;adid=22222222227497887743&amp;wl0=&amp;wl1=g&amp;wl2=c&amp;wl3=571770238008&amp;wl4=pla-1598573942524&amp;wl5=9022196&amp;wl6=&amp;wl7=&amp;wl8=&amp;wl9=pla&amp;wl10=125210027&amp;wl11=online&amp;wl12=346507267&amp;veh=sem&amp;gclid=EAIaIQobChMIrpKg45Pz9gIVs25vBB13pwvBEAQYBCABEgLZRvD_BwE&amp;gclsrc=aw.ds"><img src="images/Walmart_flower_cone.png" alt="Web page informative image example 2 was found"/></a></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Images: Decorative examples</title>
+    <contents>
+        <p>
+          <a href="https://www.w3.org/WAI/tutorials/images/decorative/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Decorative image tutorial</a>
+        </p>
+        <h2>Example 1: Nurse giving a COVID-19 vacination</h2>
+        <p><a href="https://my.clevelandclinic.org/landing/covid-19-vaccine"><img src="images/Cleveland _nurse_gives_covid_booster.png" alt="Web page example decorative image example was found"/></a></p>
+        <h2>Example 2: Medical Graphics</h2>
+        <p><a href="https://my.clevelandclinic.org/landing/covid-19-vaccine"><img src="images/Cleveland_medical_illustrations.png" alt="Web page example decorative image example was found"/></a></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Images: Functional examples</title>
+    <contents>
+        <p>
+          <a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Functional image tutorial</a>
+        </p>
+        <h2>Example 1: Youtube Icon</h2>
+        <p><img src="images/Youtube_icon.png" alt="Youtube icon"/></p>
+        <h2>Example 2: Instgram Icon</h2>
+        <p><img src="images/Instagram_icon.png" alt="Instgram icon"/></p>
+        <h2>Example 3: Facebook Icon</h2>
+        <p><img src="images/Facebook_icon.jpg" alt="Facebook icon"/></p>
+        <h2>Example 4: Twitter Icon</h2>
+        <p><img src="images/Twitter_bird_icon.jpg" alt="Twitter icon"/></p>
+        <h2>Example 5: Accessible Twitter Icon</h2>
+        <p><img src="images/Accessible_Twitter_icon.png" alt="Accessible twitter icon"/></p>
+
     </contents>
   </slide>
 
