@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 16: Page Structure: Page Title</title>
+      <title>Slide 16: Page Strcuture: ARIA Landmark Regions</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -42,10 +42,49 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Page Structure: Page Title</h1>
-               <ul>
-                  <li>Page title</li>
-               </ul>
+               <h1 id="h1_title" class="title">Page Strcuture: ARIA Landmark Regions</h1>
+               <p><a href="https://www.w3.org/TR/wai-aria/#landmark_roles" target="_specification">ARIA Landmark Role Specification</a></p>
+               <table class="table table-striped" aria-label="ARIA Landmarks">
+                  <thead>
+                     <tr>
+                        <th>Landmark</th>
+                        <th>Frequency of Usage on Page</th>
+                        <th>Description</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><code>banner</code></td>
+                        <td>None or one</td>
+                        <td>The common content typically found at the top of each page in a website.</td>
+                     </tr>
+                     <tr>
+                        <td><code>complementary</code></td>
+                        <td>As many as needed, often none.</td>
+                        <td>Identifies unique page content not part of the <code>main</code> landmark.</td>
+                     </tr>
+                     <tr>
+                        <td><code>contentinfo</code></td>
+                        <td>None or one</td>
+                        <td>The common content typically found at the bottom of each page in a website.</td>
+                     </tr>
+                     <tr>
+                        <td><code>main</code></td>
+                        <td>Typically one, but in web sites that aggregate content from other resources, some or all of the resources may identify a <code>main</code> landmark.</td>
+                        <td>Identify the main content area or areas of a web page or application.</td>
+                     </tr>
+                     <tr>
+                        <td><code>navigation</code></td>
+                        <td>As many as needed.</td>
+                        <td>Identify major groupings of navigational links to other pages in the website.</td>
+                     </tr>
+                     <tr>
+                        <td><code>search</code></td>
+                        <td>Typically one if there is a site search feature.</td>
+                        <td>Identify website search features</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>
