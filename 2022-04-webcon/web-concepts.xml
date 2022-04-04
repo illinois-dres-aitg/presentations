@@ -983,32 +983,36 @@
         border: 1px solid #aaa;
       }
     </style>
-    <title>Images: Informative examples</title>
+    <title>Images: Informative example</title>
     <contents>
         <p>
-          <a href="https://www.w3.org/WAI/tutorials/images/informative/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Informative image tutorial</a>
+          <a href="https://www.w3.org/WAI/tutorials/images/informative/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> informative image tutorial</a>
         </p>
         <p>
-          <img class="example" src="images/Walmart_donut_cone.png" alt="Cat with collar that looks like a sprinkle donut" width="38%"/>
-          <img class="example" src="images/Walmart_flower_cone.png" alt="Cat with a collar that looks like a cone flower" width="38%"/>
+          <img class="example" width="60%" src="images/Walmart_flower_cone.png" alt="Cat with collar that looks like a sprinkle donut" />
         </p>
-        <ul>
-          <li><a href="https://www.walmart.com/ip/Cat-Recovery-Collar-Soft-Pet-Cone-Collar-Protective-Sunflower-Cone-Adjustable-Fasteners-Collar-for-Cat-and-Puppy-Yellow/248404357"  target="_test">Source of first image</a></li>
-          <li><a href="https://www.walmart.com/ip/Feiona-Adjustable-Cat-Recovery-Collar-Cute-Donut-Soft-Cone-Collars-Cat-Wound-Healing-Protective-After-Surgery-Elizabethan-Kitten-Pets/346507267?wmlspartner=wlpa&amp;selectedSellerId=18988&amp;&amp;adid=22222222227497887743&amp;wl0=&amp;wl1=g&amp;wl2=c&amp;wl3=571770238008&amp;wl4=pla-1598573942524&amp;wl5=9022196&amp;wl6=&amp;wl7=&amp;wl8=&amp;wl9=pla&amp;wl10=125210027&amp;wl11=online&amp;wl12=346507267&amp;veh=sem&amp;gclid=EAIaIQobChMIrpKg45Pz9gIVs25vBB13pwvBEAQYBCABEgLZRvD_BwE&amp;gclsrc=aw.ds" target="_test">Source of second image</a></li>
-        </ul>
+        <p>
+          <a href="https://www.walmart.com/ip/Cat-Recovery-Collar-Soft-Pet-Cone-Collar-Protective-Sunflower-Cone-Adjustable-Fasteners-Collar-for-Cat-and-Puppy-Yellow/248404357"  target="_test">
+            Source of informative image.
+          </a>
+        </p>
     </contents>
   </slide>
 
   <slide>
-    <title>Images: Decorative examples</title>
+    <title>Images: Decorative example</title>
     <contents>
         <p>
-          <a href="https://www.w3.org/WAI/tutorials/images/decorative/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Decorative image tutorial</a>
+          <a href="https://www.w3.org/WAI/tutorials/images/decorative/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> decorative image tutorial</a>
         </p>
-        <h2>Example 1: Nurse giving a COVID-19 vaccination</h2>
-        <p><a href="https://my.clevelandclinic.org/landing/covid-19-vaccine" target="_test"><img src="images/Cleveland _nurse_gives_covid_booster.png" alt="Web page example decorative image example was found"/></a></p>
-        <h2>Example 2: Medical Graphics</h2>
-        <p><a href="https://my.clevelandclinic.org/landing/covid-19-vaccine" target="_test"><img src="images/Cleveland_medical_illustrations.png" alt="Web page example decorative image example was found"/></a></p>
+        <p>
+            <img class="example" width="100%" src="images/Cleveland_medical_illustrations.png" alt="Medical decorative images"/>
+        </p>
+        <p>
+          <a href="https://my.clevelandclinic.org/landing/covid-19-vaccine" target="_test">
+            Source of decorative image.
+          </a>
+        </p>
     </contents>
   </slide>
 
@@ -1016,10 +1020,27 @@
     <title>Images: Functional examples</title>
     <contents>
         <p>
-          <a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Functional image tutorial</a>
+          <a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> functional image tutorial.</a>
         </p>
-        <p><img src="images/Social_media_icons.png" alt="Social media icon"/></p>
+        <p><img class="example" width="100%" src="images/Social_media_icons.png" alt="Social media icons"/></p>
 
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Images: Text</title>
+    <contents>
+        <p>
+          <a href="https://www.w3.org/WAI/tutorials/images/textual/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> images of text tutorial.</a>
+        </p>
+        <p>
+            <img class="example" width="60%" src="images/cchs-hours.png"/>
+        </p>
+        <p>
+          <a href="https://www.cuhumane.org/Home.aspx" target="_test">
+            Source of image of text.
+          </a>
+        </p>
     </contents>
   </slide>
 
@@ -1028,17 +1049,19 @@
     <contents>
         <ul>
           <li>
-            <a href="https://www.w3.org/WAI/media/av/" target="_spec">
-              <abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Tutorial: Making Audio and Video Media Accessible
-            </a>
+            <abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Tutorial:
+            <em><a href="https://www.w3.org/WAI/media/av/" target="_spec">
+              Making Audio and Video Media Accessible
+            </a></em>
           </li>
           <li>
-            <a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/"  target="_more">Knowing How to Caption: A self paced online course from Illinois</a>
+            Self-Paced Online Course:
+            <em><a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/"  target="_more">Knowing How to Caption</a></em>
           </li>
-          <li>
-            <a href="https://www.youtube.com/watch?v=xQ-VFNqK4go"  target="_more">
-              Example Video: Holiday Message from Illinois Chancellor Jones
-            </a>
+          <li>Example Video:
+            <em><a href="https://www.youtube.com/watch?v=xQ-VFNqK4go"  target="_more">
+              Holiday Message from Illinois Chancellor Jones
+            </a></em>
           </li>
         </ul>
 
