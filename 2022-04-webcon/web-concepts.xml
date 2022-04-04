@@ -1045,6 +1045,15 @@
     </contents>
   </slide>
 
+  <slide>
+    <title>Page Structure: ARIA Landmark Regions</title>
+    <contents>
+      <ul>
+        <li><em>Orientation:</em> What is the content and it's structure.</li>
+        <li><em>Navigation:</em> Getting to the content of interest.</li>
+      </ul>
+    </contents>
+  </slide>
 
   <slide>
     <title>Page Structure: ARIA Landmark Regions</title>
@@ -1144,7 +1153,7 @@
             <li>1 Contentinfo</li>
           </ul>
         </li>
-        <li>The longer the list the more time need to read and decide, remember landmarks are to <em>enhance</em> navigation.</li>
+        <li>The longer the list the more time need to read and decide.</li>
       </ul>
       <h2>Headings</h2>
       <ul>
