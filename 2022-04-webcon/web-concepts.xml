@@ -317,7 +317,7 @@
         <li><strong>Green Checks:</strong> Combination can be used for any size text.</li>
         <li><strong>Yellow Circles:</strong> Combination can be used for text larger than 14pt or bolded text.</li>
       </ul>
-      <img width="98%" src="images/image002-scaled.jpg" alt="Image of a color contrast comparision table for Univerity of Illinois"/>
+      <p class="center"><img class="screenshot" src="images/image002-scaled.jpg" alt="Image of a color contrast comparision table for Univerity of Illinois"/></p>
 
       <!--
 
