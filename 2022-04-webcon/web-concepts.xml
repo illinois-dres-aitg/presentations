@@ -1147,7 +1147,12 @@
         <li>Identify sections and sub-sections of content.</li>
         <li>Look for proper nesting.</li>
       </ul>
-      <h2>Screen Reader Video Tutorials</h2>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Page Structure: Screen Reader Video Tutorials</title>
+    <contents>
       <ul>
         <li><a href="https://mediaspace.illinois.edu/media/t/1_c6vvlk6g" target="_video">JAWS for Windows: Landmarks and Headings Navigation</a> (~15 minutes)</li>
         <li><a href="https://mediaspace.illinois.edu/media/t/0_hdra12rh" target="_video">NVDA for Windows: Landamrks and Headings Navigation</a> (~17 minutes)</li>
