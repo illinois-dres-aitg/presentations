@@ -51,6 +51,7 @@
         <li>Keyboard support</li>
         <li>Color contrast and color</li>
         <li>Images</li>
+        <li>Media</li>
         <li>Page structure</li>
         <li>Links and form controls</li>
       </ul>
@@ -1022,6 +1023,28 @@
     </contents>
   </slide>
 
+  <slide>
+    <title>Media: Captions</title>
+    <contents>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/media/av/" target="_spec">
+              <abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Tutorial: Making Audio and Video Media Accessible
+            </a>
+          </li>
+          <li>
+            <a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/">Knowing How to Caption: A self paced online course from Illinois</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=xQ-VFNqK4go">
+              Example Video: Holiday Message from Illinois Chancellor Jones
+            </a>
+          </li>
+        </ul>
+
+    </contents>
+  </slide>
+
 
   <slide>
     <title>Page Strcuture: ARIA Landmark Regions</title>
@@ -1186,6 +1209,7 @@
   <slide>
     <title>Questions and Discussions</title>
     <contents>
+      <p><a href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/">Accessibility 101: Small next step in learning more about disability and accessibility.</a></p>
     </contents>
   </slide>
 
