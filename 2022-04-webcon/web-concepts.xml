@@ -119,7 +119,7 @@
             <td>
               <ul>
                 <li>Keyboard activation for carousels operates on the second carousel and there is not sequential access to the carousel controls on the second carousel.</li>
-                <li>Poor focus styling, inconsistent use of active and default focus styling creates missing or ambivelent focus indication.</li>
+                <li>Poor focus styling, inconsistent use of active and default focus styling creates missing or ambivalent focus indication.</li>
               </ul>
             </td>
           </tr>
@@ -143,7 +143,7 @@
             <td>Link</td>
             <td>
               <ul>
-                <li>Sub-menu open/close controls not easy to discerne.</li>
+                <li>Sub-menu open/close controls not easy to discern.</li>
                 <li>If search opened, it is not automatically closed and obscures content.</li>
                 <li>Generally good keyboard focus styling with use of a outline.</li>
               </ul>
@@ -178,7 +178,7 @@
             <li>Using the <kbd>Tab</kbd> can I navigate to all the links and form controls on the page.</li>
             <li>Can I <em>activate</em> links, buttons, checkboxes and radio buttons using the <kbd>Space</kbd> or <kbd>Enter</kbd> keys?</li>
             <li>Does the navigation of links and form controls seem predictable?</li>
-            <li>Does focus ever <em>disappear</em> and then magically reapear?</li>
+            <li>Does focus ever <em>disappear</em> and then magically reappear?</li>
           </ul>
         </li>
       </ul>
@@ -326,7 +326,7 @@
         <li><strong>Green Checks:</strong> Combination can be used for any size text.</li>
         <li><strong>Yellow Circles:</strong> Combination can be used for text larger than 14pt or bolded text.</li>
       </ul>
-      <img width="98%" src="images/image003-scaled.jpg" alt="Image of a color contrast comparision table for Univerity of Illinois"/>
+      <img width="98%" src="images/image003-scaled.jpg" alt="Image of a color contrast comparison table for University of Illinois"/>
 
       -->
 
@@ -361,8 +361,8 @@
     <contents>
       <ul>
         <li>Using color as the only way to convey information (<a href="https://www.w3.org/TR/WCAG21/#use-of-color" target="_spec">WCAG 1.4.1</a>).</li>
-        <li>1 in 6 men have some form of color blindess.</li>
-        <li>Older people and people with many types of visiual impairements often lose the ability to perceive colors.</li>
+        <li>1 in 6 men have some form of color blindness.</li>
+        <li>Older people and people with many types of visual impairments often lose the ability to perceive colors.</li>
         <li>Colors can also can mean different things in various cultures.</li>
       </ul>
     </contents>
@@ -648,7 +648,7 @@
       <h2>Accessibility Issues</h2>
       <ul>
         <li>Background color is used to indicate the type of absence.</li>
-        <li>People with color blindess could not disinguish between the colors.</li>
+        <li>People with color blindness could not distinguish between the colors.</li>
         <li>The table would look empty to someone using a screen reader.</li>
       </ul>
 
@@ -1005,7 +1005,7 @@
         <p>
           <a href="https://www.w3.org/WAI/tutorials/images/decorative/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Decorative image tutorial</a>
         </p>
-        <h2>Example 1: Nurse giving a COVID-19 vacination</h2>
+        <h2>Example 1: Nurse giving a COVID-19 vaccination</h2>
         <p><a href="https://my.clevelandclinic.org/landing/covid-19-vaccine" target="_test"><img src="images/Cleveland _nurse_gives_covid_booster.png" alt="Web page example decorative image example was found"/></a></p>
         <h2>Example 2: Medical Graphics</h2>
         <p><a href="https://my.clevelandclinic.org/landing/covid-19-vaccine" target="_test"><img src="images/Cleveland_medical_illustrations.png" alt="Web page example decorative image example was found"/></a></p>
@@ -1047,7 +1047,7 @@
 
 
   <slide>
-    <title>Page Strcuture: ARIA Landmark Regions</title>
+    <title>Page Structure: ARIA Landmark Regions</title>
     <contents>
       <p><a href="https://www.w3.org/TR/wai-aria/#landmark_roles" target="_spec">ARIA Landmark Role Specification</a></p>
 
@@ -1131,7 +1131,7 @@
     <contents>
       <h2>Title</h2>
       <ul>
-        <li>Title describing specfic page.</li>
+        <li>Title describing specific page.</li>
         <li>Website the page is on.</li>
       </ul>
       <h2>Landmarks</h2>
@@ -1144,7 +1144,7 @@
             <li>1 Contentinfo</li>
           </ul>
         </li>
-        <li>The more landmarks the more time to orient to list, remember they are for navigation.</li>
+        <li>The longer the list the more time need to read and decide, <em>remember</em> landmarks are to enhance navigation.</li>
       </ul>
       <h2>Headings</h2>
       <ul>
@@ -1159,7 +1159,7 @@
     <contents>
       <ul>
         <li><a href="https://mediaspace.illinois.edu/media/t/1_c6vvlk6g" target="_video">JAWS for Windows: Landmarks and Headings Navigation</a> (~15 minutes)</li>
-        <li><a href="https://mediaspace.illinois.edu/media/t/0_hdra12rh" target="_video">NVDA for Windows: Landamrks and Headings Navigation</a> (~17 minutes)</li>
+        <li><a href="https://mediaspace.illinois.edu/media/t/0_hdra12rh" target="_video">NVDA for Windows: Landmarks and Headings Navigation</a> (~17 minutes)</li>
         <li><a href="https://mediaspace.illinois.edu/media/t/1_g9rb6w59" target="_video">VoiceOver for macOS: Landmarks and Headings Navigation</a> (~16 minutes)</li>
       </ul>
     </contents>
