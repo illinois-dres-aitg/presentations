@@ -76,8 +76,8 @@
         </li>
         <li>Bypass Blocks feature:
           <ul>
-            <li><a href="https://paypal.github.io/skipto/">SkipTo Menu Button</a></li>
-            <li><a href="https://webaim.org/techniques/skipnav/">"Skip To Main" link</a></li>
+            <li><a href="https://paypal.github.io/skipto/"  target="_tools">SkipTo Menu Button</a></li>
+            <li><a href="https://webaim.org/techniques/skipnav/" target="_tools">"Skip To Main" link</a></li>
           </ul>
         </li>
       </ol>
@@ -223,7 +223,7 @@
         <tbody>
           <tr>
             <td>
-              <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast (Minimum)</a>
+              <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_spec">1.4.3 Contrast (Minimum)</a>
             </td>
             <td>AA</td>
             <td>4.5:1</td>
@@ -232,7 +232,7 @@
         </tbody>
       </table>
 
-      <p>More information on meeting <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">Color Contrast Requirements of WCAG 2.1.</a></p>
+      <p>More information on meeting <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html"  target="_spec">Color Contrast Requirements of WCAG 2.1.</a></p>
 
       <h2>Examples</h2>
 
@@ -310,7 +310,7 @@
     <title>Color Contrast: Illinois Branding Colors</title>
     <contents>
 
-      <p><a href="https://marketing.illinois.edu/design/color">Office of Strategic Marketing and Branding: Color</a></p>
+      <p><a href="https://marketing.illinois.edu/design/color"  target="_more">Office of Strategic Marketing and Branding: Color</a></p>
 
       <h2>WCAG AA: 1.4.3 Contrast (Minimum) </h2>
       <ul>
@@ -346,11 +346,11 @@
     <title>Color Contrast: Testing Tools</title>
     <contents>
       <ul>
-        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">AInspector for Firefox</a></li>
-        <li><a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">WAVE Evaluation Tool browser add-on</a></li>
-        <li><a href="https://www.tpgi.com/color-contrast-checker/">TPGi Color Contrast Checkers for Mac and Windows</a></li>
-        <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Contrast Checker</a></li>
-        <li><a href="https://monsido.com/tools/contrast-checker">Monsido Color Contrast Checker</a></li>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/" target="_tools">AInspector for Firefox</a></li>
+        <li><a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" target="_tools">WAVE Evaluation Tool browser add-on</a></li>
+        <li><a href="https://www.tpgi.com/color-contrast-checker/" target="_tools">TPGi Color Contrast Checkers for Mac and Windows</a></li>
+        <li><a href="https://webaim.org/resources/contrastchecker/" target="_tools">WebAIM: Contrast Checker</a></li>
+        <li><a href="https://monsido.com/tools/contrast-checker" target="_tools">Monsido Color Contrast Checker</a></li>
         <li>There are <em>many</em> other Color Contrast checking tools, just use your favorite search engine to search for "color contrast checker".</li>
       </ul>
     </contents>
@@ -993,8 +993,8 @@
           <img class="example" src="images/Walmart_flower_cone.png" alt="Cat with a collar that looks like a cone flower" width="38%"/>
         </p>
         <ul>
-          <li><a href="https://www.walmart.com/ip/Cat-Recovery-Collar-Soft-Pet-Cone-Collar-Protective-Sunflower-Cone-Adjustable-Fasteners-Collar-for-Cat-and-Puppy-Yellow/248404357">Source of first image</a></li>
-          <li><a href="https://www.walmart.com/ip/Feiona-Adjustable-Cat-Recovery-Collar-Cute-Donut-Soft-Cone-Collars-Cat-Wound-Healing-Protective-After-Surgery-Elizabethan-Kitten-Pets/346507267?wmlspartner=wlpa&amp;selectedSellerId=18988&amp;&amp;adid=22222222227497887743&amp;wl0=&amp;wl1=g&amp;wl2=c&amp;wl3=571770238008&amp;wl4=pla-1598573942524&amp;wl5=9022196&amp;wl6=&amp;wl7=&amp;wl8=&amp;wl9=pla&amp;wl10=125210027&amp;wl11=online&amp;wl12=346507267&amp;veh=sem&amp;gclid=EAIaIQobChMIrpKg45Pz9gIVs25vBB13pwvBEAQYBCABEgLZRvD_BwE&amp;gclsrc=aw.ds">Source of second image</a></li>
+          <li><a href="https://www.walmart.com/ip/Cat-Recovery-Collar-Soft-Pet-Cone-Collar-Protective-Sunflower-Cone-Adjustable-Fasteners-Collar-for-Cat-and-Puppy-Yellow/248404357"  target="_test">Source of first image</a></li>
+          <li><a href="https://www.walmart.com/ip/Feiona-Adjustable-Cat-Recovery-Collar-Cute-Donut-Soft-Cone-Collars-Cat-Wound-Healing-Protective-After-Surgery-Elizabethan-Kitten-Pets/346507267?wmlspartner=wlpa&amp;selectedSellerId=18988&amp;&amp;adid=22222222227497887743&amp;wl0=&amp;wl1=g&amp;wl2=c&amp;wl3=571770238008&amp;wl4=pla-1598573942524&amp;wl5=9022196&amp;wl6=&amp;wl7=&amp;wl8=&amp;wl9=pla&amp;wl10=125210027&amp;wl11=online&amp;wl12=346507267&amp;veh=sem&amp;gclid=EAIaIQobChMIrpKg45Pz9gIVs25vBB13pwvBEAQYBCABEgLZRvD_BwE&amp;gclsrc=aw.ds" target="_test">Source of second image</a></li>
         </ul>
     </contents>
   </slide>
@@ -1006,9 +1006,9 @@
           <a href="https://www.w3.org/WAI/tutorials/images/decorative/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Decorative image tutorial</a>
         </p>
         <h2>Example 1: Nurse giving a COVID-19 vacination</h2>
-        <p><a href="https://my.clevelandclinic.org/landing/covid-19-vaccine"><img src="images/Cleveland _nurse_gives_covid_booster.png" alt="Web page example decorative image example was found"/></a></p>
+        <p><a href="https://my.clevelandclinic.org/landing/covid-19-vaccine" target="_test"><img src="images/Cleveland _nurse_gives_covid_booster.png" alt="Web page example decorative image example was found"/></a></p>
         <h2>Example 2: Medical Graphics</h2>
-        <p><a href="https://my.clevelandclinic.org/landing/covid-19-vaccine"><img src="images/Cleveland_medical_illustrations.png" alt="Web page example decorative image example was found"/></a></p>
+        <p><a href="https://my.clevelandclinic.org/landing/covid-19-vaccine" target="_test"><img src="images/Cleveland_medical_illustrations.png" alt="Web page example decorative image example was found"/></a></p>
     </contents>
   </slide>
 
@@ -1033,10 +1033,10 @@
             </a>
           </li>
           <li>
-            <a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/">Knowing How to Caption: A self paced online course from Illinois</a>
+            <a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/"  target="_more">Knowing How to Caption: A self paced online course from Illinois</a>
           </li>
           <li>
-            <a href="https://www.youtube.com/watch?v=xQ-VFNqK4go">
+            <a href="https://www.youtube.com/watch?v=xQ-VFNqK4go"  target="_more">
               Example Video: Holiday Message from Illinois Chancellor Jones
             </a>
           </li>
@@ -1049,7 +1049,7 @@
   <slide>
     <title>Page Strcuture: ARIA Landmark Regions</title>
     <contents>
-      <p><a href="https://www.w3.org/TR/wai-aria/#landmark_roles" target="_specification">ARIA Landmark Role Specification</a></p>
+      <p><a href="https://www.w3.org/TR/wai-aria/#landmark_roles" target="_spec">ARIA Landmark Role Specification</a></p>
 
       <table class="table table-striped" aria-label="ARIA Landmarks">
         <thead>
@@ -1147,6 +1147,12 @@
         <li>Identify sections and sub-sections of content.</li>
         <li>Look for proper nesting.</li>
       </ul>
+      <h2>Screen Reader Tutorials</h2>
+      <ul>
+        <li><a href="https://mediaspace.illinois.edu/media/t/1_c6vvlk6g" target="_video">JAWS for Windows: Landmarks and Headings Navigation</a></li>
+        <li><a href="https://mediaspace.illinois.edu/media/t/0_hdra12rh" target="_video">NVDA for Windows: Landamrks and Headings Navigation</a></li>
+        <li><a href="https://mediaspace.illinois.edu/media/t/1_g9rb6w59" target="_video">VoiceOver for macOS: Landmarks and Headings Navigation</a></li>
+      </ul>
     </contents>
   </slide>
 
@@ -1154,10 +1160,11 @@
     <title>Page Structure: Testing Tools</title>
     <contents>
       <ul>
-        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">AInspector for Firefox</a></li>
-        <li><a href="https://accessibility-bookmarklets.org/">Accessibility Bookmarklets</a></li>
-        <li><a href="https://github.com/a11y-tools/page-structure">Page Structure Addon for Firefox</a></li>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/" target="_tools">AInspector for Firefox</a></li>
+        <li><a href="https://accessibility-bookmarklets.org/" target="_tools">Accessibility Bookmarklets</a></li>
+        <li><a href="https://github.com/a11y-tools/page-structure" target="_tools">Page Structure Addon for Firefox</a></li>
       </ul>
+
     </contents>
   </slide>
 
@@ -1200,8 +1207,8 @@
     <title>Link and Form Controls: Testing Tools</title>
     <contents>
       <ul>
-        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">AInspector for Firefox</a></li>
-        <li><a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">WAVE Evaluation Tool browser addon</a></li>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/" target="_tools">AInspector for Firefox</a></li>
+        <li><a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" target="_tools">WAVE Evaluation Tool browser addon</a></li>
       </ul>
     </contents>
   </slide>
@@ -1209,7 +1216,7 @@
   <slide>
     <title>Questions and Discussions</title>
     <contents>
-      <p><a href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/">Accessibility 101: Small next step in learning more about disability and accessibility.</a></p>
+      <p><a href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/" target="_more">Accessibility 101: Small next step in learning more about disability and accessibility.</a></p>
     </contents>
   </slide>
 
