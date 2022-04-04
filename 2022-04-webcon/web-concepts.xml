@@ -1045,30 +1045,6 @@
   </slide>
 
   <slide>
-    <title>Media: Captions</title>
-    <contents>
-        <ul>
-          <li>
-            <abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Tutorial:
-            <em><a href="https://www.w3.org/WAI/media/av/" target="_spec">
-              Making Audio and Video Media Accessible
-            </a></em>
-          </li>
-          <li>
-            Self-Paced Online Course:
-            <em><a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/"  target="_more">Knowing How to Caption</a></em>
-          </li>
-          <li>Example Video:
-            <em><a href="https://www.youtube.com/watch?v=xQ-VFNqK4go"  target="_more">
-              Holiday Message from Illinois Chancellor Jones
-            </a></em>
-          </li>
-        </ul>
-
-    </contents>
-  </slide>
-
-  <slide>
     <title>Page Structure: Purpose</title>
     <contents>
       <ul>
@@ -1252,6 +1228,30 @@
         <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/" target="_tools">AInspector for Firefox</a></li>
         <li><a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" target="_tools">WAVE Evaluation Tool browser addon</a></li>
       </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Media: Captions</title>
+    <contents>
+        <ul>
+          <li>
+            <abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Tutorial:
+            <em><a href="https://www.w3.org/WAI/media/av/" target="_spec">
+              Making Audio and Video Media Accessible
+            </a></em>
+          </li>
+          <li>
+            Self-Paced Online Course:
+            <em><a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/"  target="_more">Knowing How to Caption</a></em>
+          </li>
+          <li>Example Video:
+            <em><a href="https://www.youtube.com/watch?v=xQ-VFNqK4go"  target="_more">
+              Holiday Message from Illinois Chancellor Jones
+            </a></em>
+          </li>
+        </ul>
+
     </contents>
   </slide>
 
