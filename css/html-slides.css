@@ -355,10 +355,10 @@ aside .full-transcript-link {
     border-radius: 4px;
 }
 
-.screenshot {
-    border: black solid 2px;
+main .screenshot {
+    border: #ccc solid 1px;
 }
 
-.screenshot img {
+main .screenshot img {
     width: 100%;
 }

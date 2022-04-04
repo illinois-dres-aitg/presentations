@@ -1075,7 +1075,7 @@
   <slide>
     <title>Structure: DRES Home Page NVDA showing List of Landmarks</title>
     <contents>
-      <p class="center"><img width="98%" src="images/landmark-list-dres-2.png" alt="screen shot NVDA list of landmarks on dres informational page"/></p>
+      <p class="center"><img class="screenshot" src="images/landmark-list-dres-2.png" alt="screen shot NVDA list of landmarks on dres informational page"/></p>
     </contents>
   </slide>
 
@@ -1099,7 +1099,7 @@
   <slide>
     <title>Page Structure: Screen reader list of headings</title>
     <contents>
-      <p class="center"><img width="98%" src="images/heading-list-dres-2.png" alt="screen shot NVDA list of headings on dres informational page"/></p>
+      <p class="center"><img  class="screenshot" src="images/heading-list-dres-2.png" alt="screen shot NVDA list of headings on dres informational page"/></p>
     </contents>
   </slide>
 
@@ -1151,7 +1151,7 @@
   <slide>
     <title>Links: Screen reader list of links</title>
     <contents>
-      <p class="center"><img width="98%" src="images/link-list-dres-2.png" alt="screen shot NVDA list of links on dres informational page"/></p>
+      <p class="center"><img class="screenshot" src="images/link-list-dres-2.png" alt="screen shot NVDA list of links on dres informational page"/></p>
     </contents>
   </slide>
 
@@ -1169,7 +1169,7 @@
   <slide>
     <title>Form Controls: Screen reader list of form controls</title>
     <contents>
-      <p class="center"><img width="98%" src="images/form-control-list-1.png" alt="screen shot NVDA list of form controls in report an accessibility issues form"/></p>
+      <p class="center"><img  class="screenshot" src="images/form-control-list-1.png" alt="screen shot NVDA list of form controls in report an accessibility issues form"/></p>
     </contents>
   </slide>
 
