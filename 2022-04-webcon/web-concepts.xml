@@ -1136,10 +1136,14 @@
       </ul>
       <h2>Landmarks</h2>
       <ul>
-        <li>Banner</li>
-        <li>Main</li>
-        <li>one of more navigation</li>
-        <li>Contentinfo</li>
+        <li>Typical landmark usage:
+          <ul>
+            <li>1 Banner</li>
+            <li>1 Main</li>
+            <li>1 or more navigation</li>
+            <li>1 Contentinfo</li>
+          </ul>
+        </li>
         <li>The more landmarks the more time to orient to list, remember they are for navigation.</li>
       </ul>
       <h2>Headings</h2>
