@@ -1159,13 +1159,13 @@
   </slide>
 
   <slide>
-    <title>Page Structure: Rules of Thumb</title>
+    <title>Page Structure: Rules of thumb for a web page</title>
     <contents>
       <h2>Title</h2>
-      <ul>
-        <li>Title describing specific page.</li>
-        <li>Website the page is on.</li>
-      </ul>
+      <ol>
+        <li>Describes content on specific page.</li>
+        <li>Name of the Website .</li>
+      </ol>
       <h2>Landmarks</h2>
       <ul>
         <li>Typical landmark usage:
@@ -1180,6 +1180,7 @@
       </ul>
       <h2>Headings</h2>
       <ul>
+        <li><code>h1</code> heading used to identify the start of the main content.</li>
         <li>Identify sections and sub-sections of content.</li>
         <li>Look for proper nesting.</li>
       </ul>
@@ -1257,7 +1258,14 @@
   <slide>
     <title>Questions and Discussions</title>
     <contents>
-      <p><a href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/" target="_more">Accessibility 101: Small next step in learning more about disability and accessibility.</a></p>
+
+      <p style="margin-top: 5em">
+        <em>Next Step:</em> Self-paced online course:
+        <a href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/" target="_more">
+          Accessibility 101
+        </a>
+         (30 - 40 minutes).
+      </p>
     </contents>
   </slide>
 
