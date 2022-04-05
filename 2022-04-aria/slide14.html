@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 14: Using ARIA in HTML (Best Practices)</title>
+      <title>Slide 14: ARIA Widgets: Tabindex and Keyboard Focus</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -28,12 +28,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide15.html" title="Slide 15">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide18.html" title="Slide 18">
+                  <li><a id="ID_SLIDE_LAST" href="slide26.html" title="Slide 26">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 14 of 18</li>
+                  <li class="nav navbar-text">Slide 14 of 26</li>
                </ul>
             </div>
          </div>
@@ -42,17 +42,59 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Using ARIA in HTML (Best Practices)</h1>
-               <p><a href="https://w3c.github.io/using-aria/">Using ARIA in HTML (Best Practices)</a></p>
+               <h1 id="h1_title" class="title">ARIA Widgets: Tabindex and Keyboard Focus</h1>
                <ul>
-                  <li>Use native semantics of HTML (e.g. <code>input[type=checkbox]</code> rather than div[role=checkbox]).</li>
-                  <li>Don't override native semantics of elements (e.g. <code>h2[role="banner]</code>).</li>
-                  <li>Don't redefine the native semantics of an element (e.g. <code>main[role=main]</code>).</li>
-                  <li>All interactive ARIA widgets must be operable with the keyboard.</li>
-                  <li>Do not use role="presentation" or aria-hidden="true" on a visible focusable elements.</li>
-                  <li>All interactive elements must have an accessible name.</li>
-                  <li>Live regions (e.g. <code>aria-live</code> attribute and <code>log</code>, <code>status</code>, and <code>alert</code> roles) should be used with extreme caution, only for asynchronous content changes important for the users attention.</li>
+                  <li>
+            <a href="https://www.w3.org/TR/html4/interact/forms.html#adef-tabindex" target="_specification">
+              HTM4 tabindex requirements
+            </a>
+        </li>
+                  <li>
+            <a href="https://www.w3.org/TR/html5/editing.html#focus" target="_specification">
+              HTM5 focus and tabindex requirements
+            </a>
+        </li>
+                  <li>Actively define visual focus style, since the default browser visual focus styling of focus is typically hard to discern.</li>
                </ul>
+               <h2 id="tabindex_values">Tabindex Values</h2>
+               <table class="table table-striped table-hover" aria-label="tabindex_values">
+                  <thead>
+                     <tr>
+                        <th>Value</th>
+                        <th>Description</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>-1</td>
+                        <td>
+                           <ul>
+                              <li>Support keyboard focus/blur events.</li>
+                              <li>Not included in the tab order of the page.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>0</td>
+                        <td>
+                           <ul>
+                              <li>Support keyboard focus/blur events.</li>
+                              <li>Included in the tab order of the page.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>&gt; 0</td>
+                        <td>
+                           <ul>
+                              <li>Support keyboard focus/blur events.</li>
+                              <li>Defines the tab order of the page.</li>
+                              <li><strong>Note:</strong> This technique is not recommended due to browser incompatibilities and unpredicatable focus behaviors.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>

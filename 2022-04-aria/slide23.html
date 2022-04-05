@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 11: ARIA Landamrks: Rules of thumb for a web page</title>
+      <title>Slide 23: New features in ARIA 1.2</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -22,10 +22,10 @@
                   <li><a id="ID_SLIDE_FIRST" href="slide1.html" title="Slide 1">
                         First
                       </a></li>
-                  <li><a id="ID_SLIDE_PREVIOUS" href="slide10.html" title="Slide 10">
+                  <li><a id="ID_SLIDE_PREVIOUS" href="slide22.html" title="Slide 22">
                         Previous
                       </a></li>
-                  <li><a id="ID_SLIDE_NEXT" href="slide12.html" title="Slide 12">
+                  <li><a id="ID_SLIDE_NEXT" href="slide24.html" title="Slide 24">
                         Next
                       </a></li>
                   <li><a id="ID_SLIDE_LAST" href="slide26.html" title="Slide 26">
@@ -33,7 +33,7 @@
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 11 of 26</li>
+                  <li class="nav navbar-text">Slide 23 of 26</li>
                </ul>
             </div>
          </div>
@@ -42,29 +42,18 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">ARIA Landamrks: Rules of thumb for a web page</h1>
-               <h2>Title</h2>
-               <ol>
-                  <li>Describes content on specific page.</li>
-                  <li>Name of the Website .</li>
-               </ol>
-               <h2>Landmarks</h2>
+               <h1 id="h1_title" class="title">New features in ARIA 1.2</h1>
+               <p><a href="https://www.w3.org/TR/wai-aria-1.2/">ARIA 1.2 Candidate Recommendation</a></p>
                <ul>
-                  <li>Typical landmark usage:
+                  <li>Combobox design pattern 1.2 that works with assistive technologies.</li>
+                  <li>Accessible Object Model (AOM) to reflect ARIA properties.</li>
+                  <li>HTML harmonization:
           <ul>
-                        <li>1 Banner</li>
-                        <li>1 Main</li>
-                        <li>1 or more navigation</li>
-                        <li>1 Contentinfo</li>
+                        <li>Define roles appropriate for every HTML element.</li>
+                        <li>Assign default <a href="https://www.w3.org/TR/html-aria/" target="_spec">ARIA role mappings to every HTML element</a>.</li>
+                        <li>Some new roles, like <code>generic</code> role for elements with no semantics like <code>div</code> and <code>span</code>, should not be used by developers.</li>
                      </ul>
                   </li>
-                  <li>The longer the list the more time need to read and decide.</li>
-               </ul>
-               <h2>Headings</h2>
-               <ul>
-                  <li><code>h1</code> heading used to identify the start of the main content.</li>
-                  <li>Identify sections and sub-sections of content.</li>
-                  <li>Look for proper nesting.</li>
                </ul>
             </div>
             <div class="col"></div>

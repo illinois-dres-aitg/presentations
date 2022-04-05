@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 17: Part 1 Responding to the keyboard</title>
+      <title>Slide 20: Part 4: Synchronization of ARIA and visual states</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -17,8 +17,8 @@ fieldset legend {
 }
 
 label,
-div.checkbox {
-     padding: 2px;
+[role="checkbox"] {
+     padding: 4px;
      width: 10em;
      display: block;
      margin-top: 0.25em;
@@ -29,20 +29,32 @@ label input {
      margin-right: 0.5em;
 }
 
-div.checkbox span {
+[role="checkbox"] span {
      padding: 0.25em;
 }
 
-div.checkbox span:before {
+[role="checkbox"] span:before {
     content: '✗';
     color: red;
     padding-right: 0.125em;
 }
 
-div.checkbox.checked span:before {
+[role="checkbox"][aria-checked="true"] span:before {
     content: '✓';
     color: green;
     padding-right: 0.190em;
+}
+
+label.focus,
+[role="checkbox"]:focus {
+  padding: 2px;
+  border: 2px solid #999;
+  background-color: #DDE;
+}
+
+label:hover,
+[role="checkbox"]:hover {
+  background-color: #CCD;
 }
     </style>
    </head>
@@ -60,10 +72,10 @@ div.checkbox.checked span:before {
                   <li><a id="ID_SLIDE_FIRST" href="slide1.html" title="Slide 1">
                         First
                       </a></li>
-                  <li><a id="ID_SLIDE_PREVIOUS" href="slide16.html" title="Slide 16">
+                  <li><a id="ID_SLIDE_PREVIOUS" href="slide19.html" title="Slide 19">
                         Previous
                       </a></li>
-                  <li><a id="ID_SLIDE_NEXT" href="slide18.html" title="Slide 18">
+                  <li><a id="ID_SLIDE_NEXT" href="slide21.html" title="Slide 21">
                         Next
                       </a></li>
                   <li><a id="ID_SLIDE_LAST" href="slide26.html" title="Slide 26">
@@ -71,7 +83,7 @@ div.checkbox.checked span:before {
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 17 of 26</li>
+                  <li class="nav navbar-text">Slide 20 of 26</li>
                </ul>
             </div>
          </div>
@@ -80,16 +92,16 @@ div.checkbox.checked span:before {
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Part 1 Responding to the keyboard</h1>
+               <h1 id="h1_title" class="title">Part 4: Synchronization of ARIA and visual states</h1>
                <ul>
-                  <li>Adding <code>tabindex="0"</code> to make part of tab order of the page.</li>
-                  <li>Add <code>onKeyDown</code> event handler to toggle checkbox when <kbd>space</kbd> key is pressed.</li>
+                  <li>Using CSS attribute selectors and CSS <code>content</code> property to synchronize visual and aria states.</li>
+                  <li>Use of CSS <code>content</code> property supports high contrast browser settings, unike the use of CSS <code>background-image</code>.</li>
                </ul><script id="script" type="text/javascript">
 function toggleCheckbox(node) {
- if (node.classList.contains('checked')) {
-  node.classList.remove('checked');
+ if (node.getAttribute('aria-checked') === 'true') {
+  node.setAttribute('aria-checked', 'false');
  } else {
-  node.classList.add('checked');
+  node.setAttribute('aria-checked', 'true');
  }
 }
 
@@ -108,27 +120,37 @@ function keydownCheckbox(event) {
     event.stopPropagation();
     event.preventDefault();
   }
-}      </script><h2>Example</h2>
-               <p><a href="https://webedit.disability.illinois.edu/user/jongund/checkbox-part-1/output/" target="_webedit">Part 1 on WebEdit</a></p>
+}
+
+function checkboxFocus(event) {
+  event.currentTarget.parentElement.classList.add('focus');
+}
+
+function checkboxBlur(event) {
+  event.currentTarget.parentElement.classList.remove('focus');
+}
+      </script><h2>Example</h2>
+               <p><a href="https://webedit.disability.illinois.edu/user/jongund/checkbox-part-4/output/" target="_webedit">Part 4 on WebEdit</a></p>
                <div id="example">
+                  <h1>Part 4: Custom Checkbox Widget with synchronization of ARIA and visual states</h1>
                   <fieldset>
                      <legend>
         Pizza Toppings
     </legend>
     <label>
-      <input type="checkbox">
+      <input type="checkbox" onfocus="checkboxFocus(event)" onblur="checkboxBlur(event)">
         Green pepper
      </label>
     <label>
-      <input type="checkbox">
+      <input type="checkbox" onfocus="checkboxFocus(event)" onblur="checkboxBlur(event)">
         Onion
     </label>
-    <div class="checkbox" tabindex="0" onclick="clickCheckbox(event)" onkeydown="keydownCheckbox(event)">
-      <span></span>
+    <div class="checkbox" role="checkbox" aria-checked="false" tabindex="0" onclick="clickCheckbox(event)" onkeydown="keydownCheckbox(event)">
+      <span aria-hidden="true"></span>
         Mushrooms
     </div>
-                     <div class="checkbox" tabindex="0" onclick="clickCheckbox(event)" onkeydown="keydownCheckbox(event)">
-      <span></span>
+                     <div class="checkbox" role="checkbox" aria-checked="false" tabindex="0" onclick="clickCheckbox(event)" onkeydown="keydownCheckbox(event)">
+      <span aria-hidden="true"></span>
           Spinach
     </div>
                   </fieldset>
