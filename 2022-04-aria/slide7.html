@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 7: ARIA Basics: Describe Semantics and Behavior</title>
+      <title>Slide 7: Browsers and Accessibility APIs</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -28,12 +28,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide8.html" title="Slide 8">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide32.html" title="Slide 32">
+                  <li><a id="ID_SLIDE_LAST" href="slide52.html" title="Slide 52">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 7 of 32</li>
+                  <li class="nav navbar-text">Slide 7 of 52</li>
                </ul>
             </div>
          </div>
@@ -42,27 +42,9 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">ARIA Basics: Describe Semantics and Behavior</h1>
-               <ul>
-                  <li>Provide an inter-operable way to describe the features of <em>custom widgets</em>:
-           <ul>
-                        <li><strong>Role:</strong> Describes the type of widget, which implies the <em>keyboard interaction</em>.</li>
-                        <li><strong>Properties and States:</strong> Describing features like "expandable", "checked" or "selected".</li>
-                        <li><strong>Language independence:</strong> Roles, properties and states can be translated by the operating systems and assistive technologies to local languages.</li>
-                        <li><strong>Labeling:</strong> How to label the features of the widget and its components (e.g. accessible name).</li>
-                        <li><strong>Relationships:</strong> How different components relate to each other (e.g. descriptions, controls, owns).</li>
-                        <li><strong>Grouping:</strong> Groups of related components (e.g. lists, menus, trees, tab panels).</li>
-                     </ul>
-                  </li>
-                  <li>Define markup mappings to accessibility APIs:
-          <ul>
-                        <li>ATK/AT-SPI (Linux/Unix)</li>
-                        <li>Microsoft Active Accessibility (MSAA) + IAccessible2</li>
-                        <li>Microsoft UI Automate</li>
-                        <li>MacOS Accessibility API</li>
-                     </ul>
-                  </li>
-               </ul>
+               <h1 id="h1_title" class="title">Browsers and Accessibility APIs</h1>
+               <p><img src="images/browser-apis.png" width="60%" alt="Flow chart of how HTML, Javascript and CSS are combined through the rendering engine to send information to Accessibility APIs."></p>
+               <p><strong>NOTE:</strong> HTML and ARIA semantics are important when the information is being rendered for more than just graphical renderings.</p>
             </div>
             <div class="col"></div>
          </div>

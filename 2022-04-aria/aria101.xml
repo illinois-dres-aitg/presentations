@@ -56,10 +56,18 @@
   </slide>
 
   <slide>
+    <title>Part 1: Screen Readers</title>
+    <contents>
+    </contents>
+  </slide>
+
+  <slide>
     <title>What are screen readers?</title>
     <contents>
       <ul>
         <li>Translate the graphical user interface to to speech, sounds and refreshable Braille.</li>
+        <li>Keyboard commands for operation on desktop computers.</li>
+        <li>Swipe/tap and keyboard (e.g. bluetooth) commands for operation on touch devices.</li>
         <li>Use operating system accessibility APIs:
           <ul>
             <li><em>Microsoft Windows:</em> MSAA + IAccessible2</li>
@@ -68,8 +76,21 @@
             <li><em>Linux:</em> ATK / AT-API</li>
           </ul>
         </li>
-        <li>Keyboard commands for operation on desktop computers.</li>
-        <li>Swipe/tap and keyboard (e.g. bluetooth) commands for operation on touch devices.</li>
+        <li>Accessibility APIs create tree like structures for navigation.</li>
+        <li>Browsers communicate web content information through accessibility APIs.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>How do I know?</title>
+    <contents>
+      <p>When using a screen reader, how do I know:</p>
+      <ul>
+        <li>What user interface item am I on?</li>
+        <li>Can I interact with this item (e.g. button or textbox)?</li>
+        <li>How does this item relate to other items around it (e.g. menus, combo box)?</li>
+        <li>If I am lost, how do I get back to a known place?</li>
       </ul>
     </contents>
   </slide>
@@ -107,6 +128,7 @@
                <li>heading</li>
                <li>textbox</li>
                <li>radio button</li>
+               <li>groupings</li>
              </ul>
            </td>
           </tr>
@@ -151,7 +173,28 @@
   <slide>
     <title>Browsers and Accessibility APIs</title>
     <contents>
+      <p><img src="images/browser-apis.png" width="60%" alt="Flow chart of how HTML, Javascript and CSS are combined through the rendering engine to send information to Accessibility APIs."/></p>
+      <p><strong>NOTE:</strong> HTML and ARIA semantics are important when the information is being rendered for more than just graphical renderings.</p>
+    </contents>
+  </slide>
 
+  <slide>
+    <title>Viewing Accessibility Tree: Firefox Browser</title>
+    <contents>
+      <p><img class="screenshot" src="images/firefox-accessibility-tree.png" width="100%" alt="Screen shot of accessibility tree in firefox for University of Illinois home page"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Viewing Accessibility Tree: Chrome Browser</title>
+    <contents>
+      <p><img class="screenshot" src="images/chrome-accessibility-tree.png" width="100%" alt="Screen shot of accessibility tree in firefox for University of Illinois home page"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Part 2: Introduction to Accessible Rich Internet Application (ARIA) </title>
+    <contents>
     </contents>
   </slide>
 
@@ -159,49 +202,64 @@
     <title>ARIA Specifications: History</title>
     <contents>
       <ul>
-        <li><a href="https://www.w3.org/TR/wai-aria-1.0/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a> (2014)</li>
-        <li><a href="https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.1</a> (2017)</li>
-        <li><a href="https://www.w3.org/TR/wai-aria-1.2/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.2</a> (2021, Candidate Recommendation)</li>
-        <li><a href="https://w3c.github.io/aria/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.3</a> (2022, Working Draft)</li>
+        <li><a href="https://www.w3.org/TR/wai-aria-1.0/" target="_spec">Accessible Rich Internet Applications 1.0</a> (2014)</li>
+        <li><a href="https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/" target="_spec">Accessible Rich Internet Applications 1.1</a> (2017)</li>
+        <li><a href="https://www.w3.org/TR/wai-aria-1.2/" target="_spec">Accessible Rich Internet Applications 1.2</a> (2021, Candidate Recommendation)</li>
+        <li><a href="https://w3c.github.io/aria/" target="_spec">Accessible Rich Internet Applications 1.3</a> (2022, Working Draft)</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>ARIA Specifications: Features</title>
+    <title>Related Resources</title>
     <contents>
-      <ul>
-        <li><a href="https://www.w3.org/TR/wai-aria-1.0/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a> (2014)</li>
-        <li><a href="https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.1</a> (2017)</li>
-        <li><a href="https://www.w3.org/TR/wai-aria-1.2/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.2</a> (2021, Candidate Recommendation)</li>
-        <li><a href="https://w3c.github.io/aria/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.3</a> (2022, Working Draft)</li>
-      </ul>
+      <dl>
+        <dt><a href="https://w3c.github.io/core-aam/" target="_spec">Core Accessibility API Mappings 1.2</a> (2022, Working Draft)</dt>
+        <dd>Define how ARIA markup is represented in specific accessibility APIs.</dd>
+        <dt><a href="https://w3c.github.io/accname/" target="_spec">Accessible Name and Description Computation 1.2</a> (2022, Working Draft)</dt>
+        <dd>Defines how accessible names and descriptions are calculated.</dd>
+        <dt><a href="https://www.w3.org/TR/html-aria/" target="_spec">ARIA in HTML</a> (2021, living)</dt>
+        <dd>Defines how HTML elements are represented using ARIA.</dd>
+        <dt><a href="https://www.w3.org/TR/wai-aria-practices/" target="_spec">WAI-ARIA Authoring Practices 1.2</a> (2022, Note)</dt>
+        <dd>Design patterns and examples of using ARIA in documents and widgets.</dd>
+      </dl>
     </contents>
   </slide>
 
   <slide>
     <title>ARIA Basics: Describe Semantics and Behavior</title>
     <contents>
-       <ul>
-         <li>Provide an inter-operable way to describe the features of <em>custom widgets</em>:
-           <ul>
-             <li><strong>Role:</strong> Describes the type of widget, which implies the <em>keyboard interaction</em>.</li>
-             <li><strong>Properties and States:</strong> Describing features like "expandable", "checked" or "selected".</li>
-             <li><strong>Language independence:</strong> Roles, properties and states can be translated by the operating systems and assistive technologies to local languages.</li>
-             <li><strong>Labeling:</strong> How to label the features of the widget and its components (e.g. accessible name).</li>
-             <li><strong>Relationships:</strong> How different components relate to each other (e.g. descriptions, controls, owns).</li>
-             <li><strong>Grouping:</strong> Groups of related components (e.g. lists, menus, trees, tab panels).</li>
-           </ul>
-        </li>
-        <li>Define markup mappings to accessibility APIs:
-          <ul>
-            <li>ATK/AT-SPI (Linux/Unix)</li>
-            <li>Microsoft Active Accessibility (MSAA) + IAccessible2</li>
-            <li>Microsoft UI Automate</li>
-            <li>MacOS Accessibility API</li>
-          </ul>
-         </li>
-      </ul>
+       <dl>
+         <dt>Role</dt>
+         <dd>
+          Describes the type of widget, which implies the <em>keyboard interaction</em>.
+         </dd>
+
+         <dt>Properties and States</dt>
+         <dd>
+          Describing features like "expandable", "checked" or "selected".
+         </dd>
+
+         <dt>Language independence</dt>
+         <dd>
+          Roles, properties and states can be translated by the operating systems and assistive technologies to local languages.
+        </dd>
+
+         <dt>Accessible name and description</dt>
+         <dd>
+          Requirements for labeling or providing additional information for a landmark or widget.
+        </dd>
+
+         <dt>Relationships</dt>
+         <dd>
+          How different components relate to each other (e.g. controls, owns).
+        </dd>
+
+         <dt>Grouping</dt>
+         <dd>
+          Groups of related components (e.g. lists, menus, trees, tab panels).
+        </dd>
+       </dl>
     </contents>
   </slide>
 
@@ -218,6 +276,20 @@
       <ul>
         <li>Do not specify what assistive technologies will do with the information.</li>
       </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>ARIA Basics: Landmark Region and Widget Roles</title>
+    <contents>
+      <dl>
+        <dt>Landmark Region Roles</dt>
+        <dd>Identify and name sections of a web page.</dd>
+        <dd>Provide efficient orientation and <em>navigation</em> to sections of content.</dd>
+        <dt>Widget Roles</dt>
+        <dd>Identify <em>keyboard</em> interaction model.</dd>
+        <dd>Describe states, properties, groupings and relationships.</dd>
+      </dl>
     </contents>
   </slide>
 
@@ -335,7 +407,13 @@
   </slide>
 
   <slide>
-    <title>ARIA Landmarks: Purpose</title>
+    <title>Part 3: Landmark Regions </title>
+    <contents>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: Purpose</title>
     <contents>
       <ul>
         <li><em>Orientation:</em> What is the content and it's structure.</li>
@@ -345,7 +423,7 @@
   </slide>
 
   <slide>
-    <title>ARIA Landmarks: Named Regions</title>
+    <title>Landmark Regions: Named Regions</title>
     <contents>
       <p><a href="https://www.w3.org/TR/wai-aria/#landmark_roles" target="_spec">ARIA Landmark Role Specification</a></p>
 
@@ -394,78 +472,1003 @@
   </slide>
 
   <slide>
-    <title>ARIA Landmarks: DRES Home Page NVDA showing List of Landmarks</title>
+    <title>Landmark Regions: DRES WEbsite</title>
     <contents>
-      <p class="center"><img class="screenshot" src="images/landmark-list-dres-2.png" alt="screen shot NVDA list of landmarks on dres informational page"/></p>
+      <p class="center"><a href="http://disability.illinois.edu" target="_example">Landmark Example: DRES Website</a></p>
+      <img src="images/disability-home.png" width="99%" alt="Graphical browser rendering of University of Illinois Disability Services Home Page"/>
     </contents>
   </slide>
 
   <slide>
-    <title>ARIA Landmarks: Landmarks versus Headings</title>
+    <title>Landmark Regions: Pitfalls Observed</title>
     <contents>
-      <h2>Screen Readers</h2>
       <ul>
-        <li>Header navigation commands.</li>
-        <li>List of header dialog.</li>
-      </ul>
-      <h2>Authors</h2>
-      <ul>
-        <li><code>h1</code> heading should be reserved to identify the main content.</li>
-        <li>Identify the sections and sub-sections of a web page.</li>
-        <li>Properly nested to convey the section and sub-sections of a web page.</li>
-      </ul>
-    </contents>
-  </slide>
-
-  <slide>
-    <title>ARIA Landmarks: Screen reader list of headings</title>
-    <contents>
-      <p class="center"><img  class="screenshot" src="images/heading-list-dres-2.png" alt="screen shot NVDA list of headings on dres informational page"/></p>
-    </contents>
-  </slide>
-
-  <slide>
-    <title>ARIA Landamrks: Rules of thumb for a web page</title>
-    <contents>
-      <h2>Title</h2>
-      <ol>
-        <li>Describes content on specific page.</li>
-        <li>Name of the Website .</li>
-      </ol>
-      <h2>Landmarks</h2>
-      <ul>
-        <li>Typical landmark usage:
+        <li>ARIA menu roles were used in flyout menus:
           <ul>
-            <li>1 Banner</li>
-            <li>1 Main</li>
-            <li>1 or more navigation</li>
-            <li>1 Contentinfo</li>
+            <li>No keyboard support to manage focus.</li>
+            <li>Menu roles override link role.</li>
           </ul>
         </li>
-        <li>The longer the list the more time need to read and decide.</li>
-      </ul>
-      <h2>Headings</h2>
-      <ul>
-        <li><code>h1</code> heading used to identify the start of the main content.</li>
-        <li>Identify sections and sub-sections of content.</li>
-        <li>Look for proper nesting.</li>
+        <li>Nested Navigation Landmarks, resulting in too many navigation landmarks.</li>
+        <li>Landmarks indicated programmatic/styling sections, not semantic sections.</li>
+        <li>Some content in landmarks some content not in landmarks.</li>
+        <li><code>article</code> role was used as a landmark role.</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>ARIA Landmarks: Screen Reader Video Tutorials</title>
+    <title>Landmark Regions: DRES Example Home Page</title>
+    <style>
+      table.table.table-striped th {
+        min-width: 8em;
+      }
+
+      table.table.table-striped td em {
+        color: #333;
+        font-size: 90%;
+      }
+
+      table.table.table-striped {
+        margin-bottom: 4em;
+      }
+
+      table.table.table-striped .level-2 {
+        padding-left: 2em;
+      }
+    </style>
+    <contents>
+
+      <table class="table table-striped">
+        <caption>Landmarks on DRES Home Page</caption>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Level</th>
+            <th>Accessible Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>banner</td>
+            <td>top</td>
+            <td><em>no name required</em></td>
+          </tr>
+          <tr>
+            <td>navigation</td>
+            <td>top</td>
+            <td>Quick Links</td>
+          </tr>
+          <tr>
+            <td>navigation</td>
+            <td>top</td>
+            <td>Top Menu</td>
+          </tr>
+          <tr>
+            <td>search</td>
+            <td>top</td>
+            <td><em>no name required</em></td>
+          </tr>
+          <tr>
+            <td>main</td>
+            <td>top</td>
+            <td><em>no name required</em></td>
+          </tr>
+          <tr>
+            <td class="level-2">navigation</td>
+            <td>main</td>
+            <td>Services and Resources</td>
+          </tr>
+          <tr>
+            <td class="level-2">region</td>
+            <td>main</td>
+            <td>Spotlight (note: accessible name from heading)</td>
+          </tr>
+          <tr>
+            <td class="level-2">region</td>
+            <td>main</td>
+            <td>A History of Firsts (note: accessible name from heading)</td>
+          </tr>
+          <tr>
+            <td class="level-2">region</td>
+            <td>main</td>
+            <td>Calendar (note: accessible name from heading)</td>
+          </tr>
+          <tr>
+            <td>contentinfo</td>
+            <td>top</td>
+            <td><em>no name required</em></td>
+          </tr>
+          <tr>
+            <td class="level-2">navigation</td>
+            <td>contentinfo</td>
+            <td>Frequently Asked Questions (note: accessible name from heading)</td>
+          </tr>
+          <tr>
+            <td class="level-2">navigation</td>
+            <td>contentinfo</td>
+            <td>Directory and Units</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="center"><img width="98%" src="images/dres-landmarks-home-page.png" alt="screen shot highlighting landmarks on dres home page"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: NVDA showing List for DRES Home Page</title>
+    <contents>
+      <p class="center"><img width="98%" src="images/landmark-list-dres-1.png" alt="screen shot NVDA list of landmarks on dres home page"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: DRES Example 2</title>
+    <style>
+      table.table.table-striped th {
+        min-width: 8em;
+      }
+
+      table.table.table-striped td em {
+        color: #333;
+        font-size: 90%;
+      }
+
+      table.table.table-striped {
+        margin-bottom: 4em;
+      }
+      table.table.table-striped .level-2 {
+        padding-left: 2em;
+      }
+    </style>
+    <contents>
+      <table class="table table-striped">
+        <caption>Landmarks on DRES Informational Pages</caption>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Level</th>
+            <th>Accessible Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>banner</td>
+            <td>top</td>
+            <td><em>no name required</em></td>
+          </tr>
+          <tr>
+            <td>navigation</td>
+            <td>top</td>
+            <td>Quick Links</td>
+          </tr>
+          <tr>
+            <td>navigation</td>
+            <td>top</td>
+            <td>Top Menu</td>
+          </tr>
+          <tr>
+            <td>search</td>
+            <td>top</td>
+            <td><em>no name required</em></td>
+          </tr>
+          <tr>
+            <td>navigation</td>
+            <td>top</td>
+            <td>Services and Resources</td>
+          </tr>
+          <tr>
+            <td>main</td>
+            <td>top</td>
+            <td><em>no name required</em></td>
+          </tr>
+          <tr>
+            <td class="level-2">navigaton</td>
+            <td>main</td>
+            <td>Breadcrumbs</td>
+          </tr>
+          <tr>
+            <td>contentinfo</td>
+            <td>top</td>
+            <td><em>no name required</em></td>
+          </tr>
+          <tr>
+            <td class="level-2">navigation</td>
+            <td>contentinfo</td>
+            <td>Frequently Asked Questions (note: accessible name from heading)</td>
+          </tr>
+          <tr>
+            <td class="level-2">navigation</td>
+            <td>contentinfo</td>
+            <td>Directory and Units</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="center"><img width="98%" src="images/dres-landmarks-general-page.png" alt="screen shot highlighting landmarks on a dres informational page"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: NVDA List of Landmarks</title>
+    <contents>
+      <p class="center"><img width="98%" src="images/landmark-list-dres-2.png" alt="screen shot NVDA list of landmarks on dres informational page"/></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: General Principles of Design</title>
+    <contents>
+
+      <p>
+        Including <strong>all content</strong> on a page in one of its landmark regions and giving each landmark region a semantically meaningful role is one of the most effective ways of ensuring assistive technology users will not overlook information that is relevant to their needs.
+      </p>
+
+      <p><strong>Step 1: Identify the logical structure</strong></p>
+
+      <ul>
+        <li>Break the page into perceivable areas of content which designers typically indicate visually using alignment and spacing.</li>
+
+        <li>Areas can be further defined into logical sub-areas as needed.</li>
+
+        <li>An example of a sub-area is a portlet in a portal application.</li>
+      </ul>
+
+      <p><strong>Step 2: Assign landmark roles to each area</strong></p>
+
+      <ul>
+        <li>Assign landmark roles based on the type of content in the area.</li>
+
+        <li><code>banner</code>, <code>main</code>, <code>complementary</code> and <code>contentinfo</code> landmarks should be top level landmarks.</li>
+
+        <li>Landmark roles can be nested to identify parent/child relationships of the information being presented.</li>
+      </ul>
+
+      <p><strong>Step 3: Label areas</strong></p>
+
+      <ul>
+        <li>If a specific landmark role is used more than once on a web page, it should have a unique label.</li>
+
+        <li>If a landmark is only used once on the page it may not require a label. See Landmark Roles section below. </li>
+
+        <li>If an area begins with a heading element (e.g. <code>h1-h6</code>) it can be used as the label for the area using the <code>aria-labelledby</code> attribute.</li>
+
+        <li>If an area requires a label and does not have a heading element, provide a label using the <code>aria-label</code> attribute.</li>
+
+        <li>
+          Do not use the landmark role as part of the label. For example, a navigation landmark with a label "Site Navigation" will be announced by a screen reader as "Site Navigation Navigation". The label should simply be "Site".
+        </li>
+      </ul>
+      <p><em><a href="https://www.w3.org/TR/wai-aria-practices/#general-principles-of-landmark-design">Taken from ARIA Authoring Practices Guide</a></em></p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: Main</title>
+    <contents>
+      <table class="table table-striped table-hover" aria-labelledby="id1">
+        <tbody>
+          <tr>
+            <th>Definition</th>
+            <td>
+              A <code>main</code> landmark identifies the primary content of the page.
+            </td>
+          </tr>
+          <tr>
+            <th>ARIA 1.1 Specification</th>
+            <td>
+              <a href="https://www.w3.org/TR/wai-aria/#main" target="_specification"><code>main</code> landmark</a>
+            </td>
+          </tr>
+          <tr>
+            <th>Coding Patterns</th>
+            <td>
+              <ul>
+                <li>Each page should have one <code>main</code> landmark.</li>
+                <li>The <code>main</code> landmark should be a top-level landmark.</li>
+                <li>When a page contains nested <code>document</code> and/or <code>application</code> roles (e.g. typically through the use of <code>iframe</code> and <code>frame</code> elements),
+                  each <code>document</code> or <code>application</code> role may have one <code>main</code> landmark.</li>
+                <li>If a page includes more than one <code>main</code> landmark, each should have a unique label.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Techniques</th>
+            <td>
+              <ul>
+                <li>Use the HTML5 <code>main</code> element to define a <code>main</code> landmark.</li>
+                <li>If the HTML5 <code>main</code> element technique is not being used, use a <code>role="main"</code> attribute to define a <code>main</code> landmark.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Headings</th>
+            <td>
+              <ul>
+                <li>Each main landmark should have an <code>h1</code> element describing the main content.</li>
+                <li>If there are more than one main landmarks on the page, use <code>aria-labelledby</code> to reference the <code>h1</code> elements for labeling each landmark.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>One Main Landmark</h2>
+
+      <h3>HTML5 <code>main</code> element technique</h3>
+      <div class="code">
+        <strong>&lt;main&gt;</strong><br/><br/>
+        &#160;&#160;&lt;h1&gt;<em>title for main content</em>&lt;h1&gt;<br/><br/>
+        &#160;&#160;.... <em>main content</em>....   <br/><br/>
+        <strong>&lt;/main&gt;</strong>
+      </div>
+
+      <h3><code>[role="main"]</code> attribute technqiue</h3>
+      <div class="code">
+        &lt;div <strong>role="main"&gt;</strong><br/><br/>
+        &#160;&#160;&lt;h1&gt;<em>title for main content</em>&lt;h1&gt;<br/><br/>
+        &#160;&#160;.... <em>main content</em>....   <br/><br/>
+        &lt;/div&gt;
+      </div>
+
+
+      <h2>Multiple Main Landmarks</h2>
+
+      <div class="code">
+        <strong>&lt;main  aria-labelledby="<em>title1</em>"&gt;</strong><br/><br/>
+        &#160;&#160;&lt;h1 <strong>id="<em>title1</em>"</strong>&gt;<em>title for main content 1</em>&lt;h1&gt;<br/><br/>
+        &#160;&#160;.... <em>main content</em>....<br/><br/>
+        <strong>&lt;/main&gt;</strong><br/><br/>
+        ....<br/><br/>
+        <strong>&lt;main  aria-labelledby="<em>title2</em>"&gt;</strong><br/><br/>
+        &#160;&#160;&lt;h1 <strong>id="<em>title2</em>"</strong>&gt;<em>title for main content 2</em>&lt;h1&gt;<br/><br/>
+        &#160;&#160;.... <em>main content</em>....<br/><br/>
+        <strong>&lt;/main&gt;</strong><br/><br/>
+      </div>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: Navigation</title>
+    <contents>
+      <table class="table table-striped table-hover" aria-labelledby="id1">
+        <tbody>
+          <tr>
+            <th>Definition</th>
+            <td>
+              Navigation landmarks provide a way to identify groups (e.g. lists) of links that are intended to be used for website or page content navigation.
+            </td>
+          </tr>
+          <tr>
+            <th>ARIA 1.1 Specification</th>
+            <td>
+              <a href="https://www.w3.org/TR/wai-aria/#navigation" target="_specification"><code>navigation</code> landmark</a>
+            </td>
+          </tr>
+          <tr>
+            <th>Coding Patterns</th>
+            <td>
+              <ul>
+                <li>If a page includes more than one <code>navigation</code> landmark, each should have a unique label.</li>
+                <li>If a <code>navigation</code> landmark has an identical set of links as another <code>navigation</code> landmark on the page, use the same label for each <code>navigation</code> landmark.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Techniques</th>
+            <td>
+              <ul>
+                <li>Use the HTML5 <code>nav</code> element to define a <code>navigation</code> landmark.</li>
+                <li>If the HTML5 <code>nav</code> element technique is not being used, use a <code>role="navigation"</code> attribute to define a <code>navigation</code> landmark.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Headings</th>
+            <td>
+              <ul>
+                <li>Each navigation landmark should have an <code>h2</code> element, which maybe rendered off screen.</li>
+                <li>If there are more than one navigation landmarks on the page, use <code>aria-labelledby</code> to reference the <code>h2</code> elements for labeling each landmark.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>One <code>navigation</code> landmark</h2>
+      <h3>HTML5 <code>nav</code> element technique</h3>
+      <div class="code">
+        <strong>&lt;nav&gt;</strong><br/><br/>
+        &#160;&#160;&lt;h2&gt;<em>title for navigation</em>&lt;h2&gt;<br/><br/>
+        &#160;&#160;&lt;ul><br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page1.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page2.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page3.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page4.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;.....<br/>
+        &#160;&#160;&lt;/ul><br/>
+        <strong>&lt;/nav&gt;</strong>
+      </div>
+      <h3><code>[role="navigation"]</code> attribute technique</h3>
+      <div class="code">
+        &lt;div <strong>role="navigation"</strong>&gt;<br/><br/>
+        &#160;&#160;&lt;h2&gt;<em>title for navigation</em>&lt;h2&gt;<br/><br/>
+        &#160;&#160;&lt;ul><br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page1.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page2.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page3.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page4.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;.....<br/>
+        &#160;&#160;&lt;/ul><br/>
+        &lt;/div&gt;
+      </div>
+      <h2>More than one <code>navigation</code> landmark</h2>
+      <div class="code">
+        <strong>&lt;nav  aria-labelledby="<em>nav1</em>"&gt;</strong><br/><br/>
+        &#160;&#160;&lt;h2 <strong>id="<em>nav1</em>"</strong>&gt;<em>title for navigation 1</em>&lt;h2&gt;<br/><br/>
+        &#160;&#160;&lt;ul><br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page11.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page12.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page13.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page14.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;.....<br/>
+        &#160;&#160;&lt;/ul><br/>
+        <strong>&lt;/nav&gt;</strong><br/><br/>
+        ....<br/><br/>
+        <strong>&lt;nav  aria-labelledby="<em>nav2</em>"&gt;</strong><br/><br/>
+        &#160;&#160;&lt;h2 <strong>id="<em>nav2</em>"</strong>&gt;<em>title for navigation 2</em>&lt;h2&gt;<br/><br/>
+        &#160;&#160;&lt;ul><br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page11.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page12.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page13.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page14.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;.....<br/>
+        &#160;&#160;&lt;/ul><br/>
+        <strong>&lt;/nav&gt;</strong>
+      </div>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: Banner</title>
+    <contents>
+
+      <table class="table table-striped table-hover" aria-labelledby="id1">
+        <tbody>
+          <tr>
+            <th>Definition</th>
+            <td>
+              A <code>banner</code> landmark identifies site-oriented content at the beginning of each page within a website. Site-oriented content typically includes things such as the logo or identity of the site sponsor, and site-specific search tool. A banner usually appears at the top of the page and typically spans the full width.
+            </td>
+          </tr>
+          <tr>
+            <th>ARIA 1.1 Specification</th>
+            <td>
+              <a href="https://www.w3.org/TR/wai-aria/#banner" target="_specification"><code>banner</code> landmark</a>
+            </td>
+          </tr>
+          <tr>
+            <th>Coding Patterns</th>
+            <td>
+              <ul>
+                <li>Each page may have one <code>banner</code> landmark.</li>
+                <li>The <code>banner</code> landmark should be a top-level landmark.</li>
+                <li>When a page contains nested <code>document</code> and/or <code>application</code> roles (e.g. typically through the use of <code>iframe</code> and <code>frame</code> elements),
+                  each <code>document</code> or <code>application</code> role may have one <code>banner</code> landmark.</li>
+                <li>If a page includes more than one <code>banner</code> landmark, each should have a unique label (see Step 3 above).</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Techniques</th>
+            <td>
+              <ul>
+                <li>The HTML5 <code>header</code> element defines a <code>banner</code> landmark when its context is the <code>body</code> element.</li>
+                <li>The HTML5 <code>header</code> element is not considered a <code>banner</code> landmark when it is descendant of any of following elements:
+                  <ul>
+                    <li><code>address</code></li>
+                    <li><code>article</code></li>
+                    <li><code>aside</code></li>
+                    <li><code>blockquote</code></li>
+                    <li><code>details</code></li>
+                    <li><code>fieldset</code></li>
+                    <li><code>figure</code></li>
+                    <li><code>main</code></li>
+                    <li><code>nav</code></li>
+                    <li><code>section</code></li>
+                    <li><code>table</code></li>
+                  </ul>
+                </li>
+                <li>If the HTML5 <code>header</code> element technique is not being used, a <code>role="banner"</code> attribute should be used to define a <code>banner</code> landmark.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Headings</th>
+            <td>
+              <ul>
+                <li>Each banner landmark may have an <code>h1</code> element defining a label for the website.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <h2>Example of HTML5 <code>header</code> element technique</h2>
+      <div class="code">
+        &lt;body&gt;<br/><br/>
+
+        &#160;&#160;<strong>&lt;header&gt;</strong><br/>
+        &#160;&#160;&#160;&#160;&lt;h1&gt;<em>website information</em>&lt;h1&gt;<br/>
+        &#160;&#160;&#160;&#160;.... <em>banner content</em>....   <br/>
+        &#160;&#160;<strong>&lt;/header&gt;</strong><br/><br/>
+        &#160;&#160;&lt;nav&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h2&gt;<em>title for navigation</em>&lt;h2&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;ul><br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page1.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page2.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page3.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page4.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;.....<br/>
+        &#160;&#160;&#160;&#160;&lt;/ul><br/>
+        &#160;&#160;&lt;/nav&gt;<br/><br/>
+
+        &#160;&#160;&lt;main&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h1&gt;<em>title for main content</em>&lt;h1&gt;<br/>
+        &#160;&#160;&#160;&#160;.... <em>main content</em>....   <br/>
+        &#160;&#160;&lt;/main&gt;<br/><br/>
+
+        &#160;&#160;&lt;footer&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h2&gt;Contact, Policies and Legal&lt;h2&gt;<br/>
+        &#160;&#160;&#160;&#160;.... <em>contentinfo content</em>....   <br/>
+        &#160;&#160;&lt;/footer&gt;<br/>
+
+        &lt;/body&gt;<br/><br/>
+
+      </div>
+
+      <h2>Example of <code>[role="banner"]</code> element technique</h2>
+      <div class="code">
+        &lt;body&gt;<br/><br/>
+
+        &#160;&#160;&lt;div <strong>role="banner"</strong>&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h1&gt;<em>website information</em>&lt;h1&gt;<br/>
+        &#160;&#160;&#160;&#160;.... <em>banner content</em>....   <br/>
+        &#160;&#160;&lt;/div&gt;<br/><br/>
+
+        &#160;&#160;&lt;div role="navigation"&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h2&gt;<em>title for navigation</em>&lt;h2&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;ul><br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page1.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page2.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page3.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page4.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;.....<br/>
+        &#160;&#160;&#160;&#160;&lt;/ul><br/>
+        &#160;&#160;&lt;/div&gt;<br/><br/>
+
+        &#160;&#160;&lt;div role="main"&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h1&gt;<em>title for main content</em>&lt;h1&gt;<br/>
+        &#160;&#160;&#160;&#160;.... <em>main content</em>....   <br/>
+        &#160;&#160;&lt;/div&gt;<br/><br/>
+
+        &#160;&#160;&lt;div role="contentinfo"&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h2&gt;Contact, Policies and Legal&lt;h2&gt;<br/>
+        &#160;&#160;&#160;&#160;.... <em>contentinfo content</em>....   <br/>
+        &#160;&#160;&lt;/div&gt;<br/>
+
+        &lt;/body&gt;<br/><br/>
+
+      </div>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: Contentinfo</title>
+    <contents>
+
+      <table class="table table-striped table-hover" aria-labelledby="id1">
+        <tbody>
+          <tr>
+            <th>Definition</th>
+            <td>
+              A <code>contentinfo</code> landmark is a way to identify common information at the bottom of each page within a website, typically called the "footer" of the page, including information such as copyrights and links to privacy and accessibility statements.
+            </td>
+          </tr>
+          <tr>
+            <th>ARIA 1.1 Specification</th>
+            <td>
+              <a href="https://www.w3.org/TR/wai-aria/#contentinfo" target="_specification"><code>contentinfo</code> landmark</a>
+            </td>
+          </tr>
+          <tr>
+            <th>Coding Patterns</th>
+            <td>
+              <ul>
+                <li>Each page may have one <code>contentinfo</code> landmark.</li>
+                <li>The <code>contentinfo</code> landmark should be a top-level landmark.</li>
+                <li>When a page contains nested <code>document</code> and/or <code>application</code> roles (e.g. typically through the use of <code>iframe</code> and <code>frame</code> elements),
+                  each <code>document</code> or <code>application</code> role may have one <code>contentinfo</code> landmark.</li>
+                <li>If a page includes more than one <code>contentinfo</code> landmark, each should have a unique label (see Step 3 above).</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Techniques</th>
+            <td>
+              <ul>
+                <li>The HTML5 <code>footer</code> element defines a <code>contentinfo</code> landmark when its context is the <code>body</code> element.</li>
+                <li>The HTML5 <code>footer</code> element is not considered a <code>contentinfo</code> landmark when it is descendant of any of following elements:
+                  <ul>
+                    <li><code>address</code></li>
+                    <li><code>article</code></li>
+                    <li><code>aside</code></li>
+                    <li><code>blockquote</code></li>
+                    <li><code>details</code></li>
+                    <li><code>fieldset</code></li>
+                    <li><code>figure</code></li>
+                    <li><code>main</code></li>
+                    <li><code>nav</code></li>
+                    <li><code>section</code></li>
+                    <li><code>table</code></li>
+                  </ul>
+                </li>
+                <li>If the HTML5 <code>footer</code> element technique is not being used, a <code>role="contentinfo"</code> attribute should be used to define a <code>contentinfo</code> landmark.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Headings</th>
+            <td>
+              <ul>
+                <li>Each contentinfo landmark may have an <code>h2</code> element describing the content of the footer.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <h2>Example of HTML5 <code>footer</code> element technique</h2>
+      <div class="code">
+        &lt;body&gt;<br/><br/>
+
+        &#160;&#160;&lt;header&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h1&gt;<em>website information</em>&lt;h1&gt;<br/>
+        &#160;&#160;&#160;&#160;.... <em>banner content</em>....   <br/>
+        &#160;&#160;&lt;/header&gt;<br/><br/>
+        &#160;&#160;&lt;nav&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h2&gt;<em>title for navigation</em>&lt;h2&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;ul><br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page1.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page2.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page3.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page4.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;.....<br/>
+        &#160;&#160;&#160;&#160;&lt;/ul><br/>
+        &#160;&#160;&lt;/nav&gt;<br/><br/>
+
+        &#160;&#160;&lt;main&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h1&gt;<em>title for main content</em>&lt;h1&gt;<br/>
+        &#160;&#160;&#160;&#160;.... <em>main content</em>....   <br/>
+        &#160;&#160;&lt;/main&gt;<br/><br/>
+
+        &#160;&#160;<strong>&lt;footer&gt;</strong><br/>
+        &#160;&#160;&#160;&#160;&lt;h2&gt;<em>Contact, Policies and Legal</em>&lt;h2&gt;<br/>
+        &#160;&#160;&#160;&#160;.... <em>contentinfo content</em>....   <br/>
+        &#160;&#160;<strong>&lt;/footer&gt;</strong><br/>
+
+        &lt;/body&gt;<br/><br/>
+
+      </div>
+
+      <h2>Example of <code>[role="contentinfo"]</code> element technique</h2>
+      <div class="code">
+        &lt;body&gt;<br/><br/>
+
+        &#160;&#160;&lt;divrole="banner"&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h1&gt;website information&lt;h1&gt;<br/>
+        &#160;&#160;&#160;&#160;.... <em>banner content</em>....   <br/>
+        &#160;&#160;&lt;/div&gt;<br/><br/>
+
+        &#160;&#160;&lt;div role="navigation"&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h2&gt;<em>title for navigation</em>&lt;h2&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;ul><br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page1.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page2.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page3.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;&lt;li&gt;&lt;a href="page4.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;<br/>
+        &#160;&#160;&#160;&#160;&#160;&#160;.....<br/>
+        &#160;&#160;&#160;&#160;&lt;/ul><br/>
+        &#160;&#160;&lt;/div&gt;<br/><br/>
+
+        &#160;&#160;&lt;div role="main"&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h1&gt;<em>title for main content</em>&lt;h1&gt;<br/>
+        &#160;&#160;&#160;&#160;.... <em>main content</em>....   <br/>
+        &#160;&#160;&lt;/div&gt;<br/><br/>
+
+        &#160;&#160;&lt;div <strong>role="contentinfo"</strong>&gt;<br/>
+        &#160;&#160;&#160;&#160;&lt;h2&gt;<em>Contact, Policies and Legal</em>&lt;h2&gt;<br/>
+        &#160;&#160;&#160;&#160;.... <em>contentinfo content</em>....   <br/>
+        &#160;&#160;&lt;/div&gt;<br/>
+
+        &lt;/body&gt;<br/><br/>
+
+      </div>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: Complementary</title>
+    <contents>
+
+      <table class="table table-striped table-hover" aria-labelledby="id1">
+        <tbody>
+          <tr>
+            <th>Definition</th>
+            <td>
+              A <code>complementary</code> landmark is a supporting section of the document, designed to be complementary to the main content at a similar level in the DOM hierarchy, but remains meaningful when separated from the main content.
+            </td>
+          </tr>
+          <tr>
+            <th>ARIA 1.1 Specification</th>
+            <td>
+              <a href="https://www.w3.org/TR/wai-aria/#complementary" target="_specification"><code>complementary</code> landmark</a>
+            </td>
+          </tr>
+          <tr>
+            <th>Coding Patterns</th>
+            <td>
+              <ul>
+                <li><code>complementary</code> landmarks should be top level landmarks (e.g. not contained within any other landmarks).</li>
+                <li>If the complementary content is not related to the main content, a more general role should be assigned (e.g. <code>region</code>).</li>
+                <li>If a page includes more than one <code>complementary</code> landmark, each should have a unique label (see Step 3 above).</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Techniques</th>
+            <td>
+              <ul>
+                <li>Use the HTML5 <code>aside</code> element to define a <code>complementary</code> landmark.</li>
+                <li>If the HTML5 <code>aside</code> element technique is not being used, use a <code>role="complementary"</code> attribute to define a <code>complementary</code> landmark.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Headings</th>
+            <td>
+              <ul>
+                <li>Each complementary landmark should have an <code>h2</code> element identifying the content of the landmark.</li>
+                <li>If there are more than one complementary landmark on the page, use <code>aria-labelledby</code> to reference the <code>h2</code> elements for labeling each landmark.</li>
+
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: Region</title>
+    <contents>
+
+      <table class="table table-striped table-hover" aria-labelledby="id1">
+        <tbody>
+          <tr>
+            <th>Definition</th>
+            <td>
+              A <code>region</code> landmark is a perceivable section of the page containing content that is sufficiently important for users to be able to navigate to the section.
+            </td>
+          </tr>
+          <tr>
+            <th>ARIA 1.1 Specification</th>
+            <td>
+              <a href="https://www.w3.org/TR/wai-aria/#region" target="_specification"><code>region</code> landmark</a>
+            </td>
+          </tr>
+          <tr>
+            <th>Coding Patterns</th>
+            <td>
+              <ul>
+                <li>A <code>region</code> landmark must have a label using <code>aria-label</code>, <code>arai-labelledby</code> or the <code>title</code> attribute.</li>
+                <li>If a page includes more than one <code>region</code> landmark, each should have a unique label.</li>
+                <li>The <code>region</code> landmark can be used identify content that named landmarks do not appropriately describe.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Techniques</th>
+            <td>
+              <ul>
+                <li>Use the HTML5 <code>section</code> element to define a <code>region</code> landmark.</li>
+                <li>If the HTML5 <code>section</code> element technique is not being used, use a <code>role="region"</code> attribute to define a <code>region</code> landmark.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Headings</th>
+            <td>
+              <ul>
+                <li>Each region landmark should have a heading <code>h2-h6</code> element identifying the content of the landmark.</li>
+                <li>If there are more than one region landmark on the page, use <code>aria-labelledby</code> to reference the heading element for labeling each landmark.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: JAWS Landmark Support Information</title>
+    <contents>
+
+      <table class="table table-striped table-hover" aria-labelledby="h1_title">
+        <thead>
+          <tr>
+            <th>Keyboard Command</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><kbd>Insert</kbd>+<kbd>Control</kbd>+<kbd>Z</kbd></td>
+            <td>
+              <ul>
+                <li>Toggle on/off virtual JAWS cursor for reading web pages.</li>
+                <li>Must be in virtual mode for the following commands to work.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><kbd>Insert</kbd>+<kbd>Control</kbd>+<kbd>R</kbd></td>
+            <td>Region List</td>
+          </tr>
+          <tr>
+            <td><kbd>Q</kbd></td>
+            <td>Main Region</td>
+          </tr>
+          <tr>
+            <td><kbd>R</kbd></td>
+            <td>Next Region</td>
+          </tr>
+          <tr>
+            <td><kbd>Shift</kbd>+<kbd>R</kbd></td>
+            <td>Previous Region</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Feature Overview</h2>
+
+      <ul>
+        <li>JAWS documentation and commands refer to landmarks as <q>regions</q>.</li>
+        <li>In virtual you can move sequentially through the landmarks on a page or view a list of landmarks.</li>
+        <li>When navigating a web page JAWS announces landmark information when the virtual or PC cursor enters a new landmark.</li>
+      </ul>
+
+      <h2>Other Jaws Command Resources</h2>
+      <ul>
+        <li><a href="http://accessibility.psu.edu/jawscommands" target="_specification">Penn State: JAWS commands for web</a></li>
+        <li><a href="http://webaim.org/resources/shortcuts/jaws" target="_specification">WebAIM: JAWS commands for web</a></li>
+        <li><a href="http://www.freedomscientific.com/Training/Surfs-up/Quick_Keys.htm" target="_specification">Freedom Scientific: JAWS commands for web</a></li>
+        <li><a href="https://dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts" target="_specification">Deque University: JAWS commands</a></li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: NVDA Landmark Support</title>
+    <contents>
+
+      <table class="table table-striped table-hover" aria-labelledby="h1_title">
+        <thead>
+          <tr>
+            <th>Keyboard Command</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><kbd>Insert</kbd>+<kbd>Space</kbd></td>
+            <td>
+              <ul>
+                <li>Toggle between focus mode and browse mode.</li>
+                <li>Must be in browse mode for the following commands to work.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><kbd>Insert</kbd>+<kbd>F7</kbd></td>
+            <td>List of Landmarks</td>
+          </tr>
+          <tr>
+            <td><kbd>D</kbd></td>
+            <td>Next Landmark</td>
+          </tr>
+          <tr>
+            <td><kbd>Shift</kbd>+<kbd>D</kbd></td>
+            <td>Previous Landmark</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Feature Overview</h2>
+      <ul>
+        <li>In browse mode you can move sequentially through the landmarks on the page or view a list of landmarks.</li>
+        <li>When navigating a web page NVDA announces landmark information when the browse or focus cursor enters a new landmark.</li>
+      </ul>
+
+      <h2>Other NVDA Command Resources</h2>
+      <ul>
+        <li><a href="http://accessibility.psu.edu/nvda" target="_specification">Penn State: NVDA Keyboard Commands</a></li>
+        <li><a href="http://webaim.org/resources/shortcuts/nvda" target="_specification">Webaim: NVDA Keyboard Commands</a></li>
+        <li><a href="http://community.nvda-project.org/documentation/userGuide.html#toc40" target="_specification">NVDA: Web Browse Keyboard Commands</a></li>
+        <li><a href="https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts" target="_specification">Deque University: NVDA Commands</a></li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: Voice Over Landmark Support</title>
+    <contents>
+
+      <table class="table table-striped table-hover" aria-labelledby="h1_title">
+        <thead>
+          <tr>
+            <th>Keyboard Command</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><kbd>Command</kbd>+<kbd>F5</kbd></td>
+            <td>Start Voice Over on MacOS</td>
+          </tr>
+          <tr>
+            <td><kbd>Control</kbd>+<kbd>Option</kbd>+<kbd>U</kbd></td>
+            <td>Open rotor to navigate content on the web page and use the <kbb>left arrow</kbb> or <kbd>right arrow</kbd> keys to show the list of landmarks.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Feature Overview</h2>
+      <ul>
+        <li>Voice Over allows you to view a list of landmarks.</li>
+        <li>When navigating a web page Voice Over announces landmark information when the browse or focus cursor enters a new landmark.</li>
+      </ul>
+
+      <h2>Other Voice Over Command Resources</h2>
+
+      <ul>
+        <li><a href="http://accessibility.psu.edu/voiceover" target="_specification">Penn State: Voice Over for OS X</a></li>
+        <li><a href="http://www.apple.com/voiceover/info/guide/_1131.html" target="_specification">Apple Voice Over Commands</a></li>
+        <li><a href="https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts#vo-mac-basics" target="_specification">Deque University: Voice Over Commands</a></li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Landmark Regions: Tutorials</title>
     <contents>
       <ul>
-        <li><a href="https://mediaspace.illinois.edu/media/t/1_c6vvlk6g" target="_video">JAWS for Windows: Landmarks and Headings Navigation</a> (~15 minutes)</li>
-        <li><a href="https://mediaspace.illinois.edu/media/t/0_hdra12rh" target="_video">NVDA for Windows: Landmarks and Headings Navigation</a> (~17 minutes)</li>
-        <li><a href="https://mediaspace.illinois.edu/media/t/1_g9rb6w59" target="_video">VoiceOver for macOS: Landmarks and Headings Navigation</a> (~16 minutes)</li>
+        <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/main.html">W3C ARIA Landmarks Example</a></li>
+        <li><a href="https://mediaspace.illinois.edu/media/t/1_c6vvlk6g" target="_video">JAWS for Windows: Landmark regions and Headings Navigation</a> (~15 minutes)</li>
+        <li><a href="https://mediaspace.illinois.edu/media/t/0_hdra12rh" target="_video">NVDA for Windows: Landmark regions and Headings Navigation</a> (~17 minutes)</li>
+        <li><a href="https://mediaspace.illinois.edu/media/t/1_g9rb6w59" target="_video">VoiceOver for macOS: Landmark regions and Headings Navigation</a> (~16 minutes)</li>
       </ul>
     </contents>
   </slide>
 
   <slide>
-    <title>ARIA Landamrks: Testing Tools</title>
+    <title>Landmark Regions: Testing Tools</title>
     <contents>
       <ul>
         <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/" target="_tools">AInspector for Firefox</a></li>
@@ -476,9 +1479,14 @@
     </contents>
   </slide>
 
+  <slide>
+    <title>Part 4: ARIA enabled Widgets </title>
+    <contents>
+    </contents>
+  </slide>
 
   <slide>
-    <title>ARIA Widgets: Tabindex and Keyboard Focus</title>
+    <title>Widgets: Tabindex and Keyboard Focus</title>
     <contents>
       <ul>
         <li>
@@ -539,7 +1547,7 @@
   </slide>
 
   <slide>
-    <title>Example Widget: Inaccessible Custom Checkbox</title>
+    <title>Widgets: Inaccessible Custom Checkbox</title>
     <style id="style">
 fieldset {
      border-color: #EEE;
@@ -671,7 +1679,7 @@ function clickCheckbox(event) {
   </slide>
 
  <slide>
-    <title>Basic Screen Reader Commands</title>
+    <title>Widgets: Basic Screen Reader Commands</title>
     <contents>
       <table class="table table-striped table-hover" aria-label="Basic Screen Reader Commands">
         <thead>
@@ -726,7 +1734,7 @@ function clickCheckbox(event) {
   </slide>
 
   <slide>
-    <title>Part 1 Responding to the keyboard</title>
+    <title>Widget Example: Responding to the keyboard</title>
     <style id="style">
 fieldset {
      border-color: #EEE;
@@ -856,7 +1864,7 @@ function keydownCheckbox(event) {
   </slide>
 
   <slide>
-    <title>Part 2: Adding role, checked state and accessible name</title>
+    <title>Widget Example: Adding role, checked state and accessible name</title>
     <style id="style">
 fieldset {
      border-color: #EEE;
@@ -1002,7 +2010,7 @@ function keydownCheckbox(event) {
   </slide>
 
  <slide>
-    <title>Part 3: Keyboard Focus and hover styling</title>
+    <title>Widget Example: Keyboard Focus and hover styling</title>
     <style id="style">
 fieldset {
      border-color: #EEE;
@@ -1166,7 +2174,7 @@ function checkboxBlur(event) {
   </slide>
 
  <slide>
-    <title>Part 4: Synchronization of ARIA and visual states</title>
+    <title>Widget Example: Synchronization of ARIA and visual states</title>
     <style id="style">
 fieldset {
      border-color: #EEE;
@@ -1325,7 +2333,7 @@ function checkboxBlur(event) {
   </slide>
 
   <slide>
-    <title>Example Widget: Accessible Custom Checkbox Widget using ARIA</title>
+    <title>Widget Example: Accessible Custom Checkbox Widget using ARIA</title>
     <style id="style">
       fieldset {
         border-color: #EEE;
@@ -1502,15 +2510,7 @@ function checkboxBlur(event) {
   </slide>
 
   <slide>
-    <title>ARIA in HTML: Mapping HTML elements </title>
-    <contents>
-      <p><a href="https://www.w3.org/TR/html-aria/">Using ARIA in HTML</a></p>
-    </contents>
-  </slide>
-
-
-  <slide>
-    <title>Using ARIA: Best Practices </title>
+    <title>Widgets: Best Practices </title>
     <contents>
       <p><a href="https://www.w3.org/TR/html-aria/">Using ARIA in HTML</a></p>
       <ul>

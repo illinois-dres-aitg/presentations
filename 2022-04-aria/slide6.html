@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 6: ARIA Specifications</title>
+      <title>Slide 6: Accessibility APIs Basic Concepts</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -28,12 +28,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide7.html" title="Slide 7">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide32.html" title="Slide 32">
+                  <li><a id="ID_SLIDE_LAST" href="slide52.html" title="Slide 52">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 6 of 32</li>
+                  <li class="nav navbar-text">Slide 6 of 52</li>
                </ul>
             </div>
          </div>
@@ -42,13 +42,62 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">ARIA Specifications</h1>
-               <ul>
-                  <li><a href="https://www.w3.org/TR/wai-aria-1.0/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a> (2014)</li>
-                  <li><a href="https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.1</a> (2017)</li>
-                  <li><a href="https://www.w3.org/TR/wai-aria-1.2/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.2</a> (2021, Candidate Recommendation)</li>
-                  <li><a href="https://w3c.github.io/aria/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.3</a> (2022, Working Draft)</li>
-               </ul>
+               <h1 id="h1_title" class="title">Accessibility APIs Basic Concepts</h1>
+               <table class="table table-striped">
+                  <thead>
+                     <tr>
+                        <th>Concept</th>
+                        <th>Description</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>Role</td>
+                        <td>The type of user interface element, for example:
+              <ul>
+                              <li>image</li>
+                              <li>heading</li>
+                              <li>textbox</li>
+                              <li>radio button</li>
+                              <li>groupings</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>Accessible Name</td>
+                        <td>A text label for a particular user interface element.</td>
+                     </tr>
+                     <tr>
+                        <td>Accessible Description</td>
+                        <td>More information about particular user interface element, for examples:
+              <ul>
+                              <li>Instructions</li>
+                              <li>Error feedback</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>Properties</td>
+                        <td>Features of a user interface element that tend to be static, for example:
+              <ul>
+                              <li>Button has a pop menu.</li>
+                              <li>Textbox content is required.</li>
+                              <li>More than one option can be selected from a list.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>States</td>
+                        <td>Features of a user interface element that tend to change through user interaction, for example:
+              <ul>
+                              <li>Radio button is checked.</li>
+                              <li>Button is in the pressed state.</li>
+                              <li>Option in a list is selected.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>

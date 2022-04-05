@@ -2,60 +2,11 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 20: Example Widget: Inaccessible Custom Checkbox</title>
+      <title>Slide 20: Landmark Regions: Named Regions</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
-      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style">
-fieldset {
-     border-color: #EEE;
-     width: 10em;
-}
-
-fieldset legend {
-     font-size: 100%;
-}
-
-label,
-div.checkbox {
-     padding: 2px;
-     width: 10em;
-     display: block;
-     margin-top: 0.25em;
-     margin-bottom: 0.25em;
-}
-
-label input {
-     margin-right: 0.5em;
-}
-
-div.checkbox span {
-     padding: 0.25em;
-     margin-right: 0.25em;
-}
- div.checkbox span:before {
-     content: '✗';
-     color: red;
-}
-
-div.checkbox.checked span {
-  margin-right: 0.375em;
-}
-
-div.checkbox.checked span:before {
-     content: '✓';
-     color: green;
-     font-size: 90%;
-}
- label {
-}
- label:hover,
-.checkbox:hover {
-     padding: 0;
-     border: 2px solid #000;
-     background-color: #CCD;
-}
-    </style>
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
    </head>
    <body>
       <nav id="nav" class="navbar navbar-default">
@@ -77,12 +28,12 @@ div.checkbox.checked span:before {
                   <li><a id="ID_SLIDE_NEXT" href="slide21.html" title="Slide 21">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide32.html" title="Slide 32">
+                  <li><a id="ID_SLIDE_LAST" href="slide52.html" title="Slide 52">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 20 of 32</li>
+                  <li class="nav navbar-text">Slide 20 of 52</li>
                </ul>
             </div>
          </div>
@@ -91,66 +42,50 @@ div.checkbox.checked span:before {
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Example Widget: Inaccessible Custom Checkbox</h1>
-               <h2>Accessibility Issues</h2>
-               <ul>
-                  <li>Keyboard support</li>
-                  <li>Keyboard focus styling</li>
-                  <li>Role information</li>
-                  <li>Accessible name</li>
-                  <li>State of checkbox</li>
-               </ul>
-               <h2>Example</h2>
-               <p><a href="https://webedit.disability.illinois.edu/user/jongund/checkbox-inaccessible/output/" target="_webedit">Checkbox example on WebEdit</a></p><script id="script">
-function toggleCheckbox(node) {
- if (node.classList.contains('checked')) {
-  node.classList.remove('checked');
- } else {
-  node.classList.add('checked');
- }
-}
-
-function clickCheckbox(event) {
- var cb = event.currentTarget;
- toggleCheckbox(cb);
- event.stopPropagation();
- event.preventDefault();
-}
-     </script><div id="example">
-                  <fieldset>
-                     <legend>
-            Pizza Toppings
-        </legend>
-        <label>
-          <input type="checkbox">
-            Green pepper
-         </label>
-        <label>
-          <input type="checkbox">
-            Onion
-        </label>
-        <div class="checkbox" onclick="clickCheckbox(event)">
-          <span></span>
-            Mushrooms
-        </div>
-                     <div class="checkbox" onclick="clickCheckbox(event)">
-          <span></span>
-            Spinach
-        </div>
-                  </fieldset>
-               </div>
-               <h2>HTML Source Code</h2>
-               <pre><code id="sc1"></code></pre>
-               <h2>CSS Source Code</h2>
-               <pre><code id="sc2"></code></pre>
-               <h2>Javascript Source Code</h2>
-               <pre><code id="sc3"></code></pre><script type="text/javascript">
-        sourceCode.add('sc1', 'example');
-        sourceCode.add('sc2', 'style');
-        sourceCode.add('sc3', 'script');
-        sourceCode.make();
-        hljs.initHighlightingOnLoad();
-      </script></div>
+               <h1 id="h1_title" class="title">Landmark Regions: Named Regions</h1>
+               <p><a href="https://www.w3.org/TR/wai-aria/#landmark_roles" target="_spec">ARIA Landmark Role Specification</a></p>
+               <table class="table table-striped" aria-label="ARIA Landmarks">
+                  <thead>
+                     <tr>
+                        <th>Landmark</th>
+                        <th>Frequency</th>
+                        <th>Description</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><code>banner</code></td>
+                        <td>One or none</td>
+                        <td>The common content typically found at the top of each page in a website.</td>
+                     </tr>
+                     <tr>
+                        <td><code>complementary</code></td>
+                        <td>As many as needed, often none.</td>
+                        <td>Identifies unique page content not part of the <code>main</code> landmark.</td>
+                     </tr>
+                     <tr>
+                        <td><code>contentinfo</code></td>
+                        <td>One or none</td>
+                        <td>The common content typically found at the bottom of each page in a website.</td>
+                     </tr>
+                     <tr>
+                        <td><code>main</code></td>
+                        <td>One</td>
+                        <td>Identify the main content area or areas of a web page or application.</td>
+                     </tr>
+                     <tr>
+                        <td><code>navigation</code></td>
+                        <td>At least one, and often more.</td>
+                        <td>Identify major groupings of navigational links to other pages in the website.</td>
+                     </tr>
+                     <tr>
+                        <td><code>search</code></td>
+                        <td>Typically one if there is a site search feature.</td>
+                        <td>Identify website search features</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
             <div class="col"></div>
          </div>
       </main>

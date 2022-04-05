@@ -2,61 +2,11 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 24: Part 3: Keyboard Focus and hover styling</title>
+      <title>Slide 24: Landmark Regions: NVDA showing List for DRES Home Page</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
-      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style">
-fieldset {
-     border-color: #EEE;
-     width: 10em;
-}
-
-fieldset legend {
-     font-size: 100%;
-}
-
-label,
-div.checkbox {
-     padding: 4px;
-     width: 10em;
-     display: block;
-     margin-top: 0.25em;
-     margin-bottom: 0.25em;
-}
-
-label input {
-     margin-right: 0.5em;
-}
-
-div.checkbox span {
-     padding: 0.25em;
-}
-
-div.checkbox span:before {
-    content: '✗';
-    color: red;
-    padding-right: 0.125em;
-}
-
-div.checkbox.checked span:before {
-    content: '✓';
-    color: green;
-    padding-right: 0.190em;
-}
-
-label.focus,
-div.checkbox:focus {
-  padding: 2px;
-  border: 2px solid #999;
-  background-color: #DDE;
-}
-
-label:hover,
-div.checkbox:hover {
-  background-color: #CCD;
-}
-    </style>
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
    </head>
    <body>
       <nav id="nav" class="navbar navbar-default">
@@ -78,12 +28,12 @@ div.checkbox:hover {
                   <li><a id="ID_SLIDE_NEXT" href="slide25.html" title="Slide 25">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide32.html" title="Slide 32">
+                  <li><a id="ID_SLIDE_LAST" href="slide52.html" title="Slide 52">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 24 of 32</li>
+                  <li class="nav navbar-text">Slide 24 of 52</li>
                </ul>
             </div>
          </div>
@@ -92,86 +42,9 @@ div.checkbox:hover {
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Part 3: Keyboard Focus and hover styling</h1>
-               <ul>
-                  <li>Keyboard <code>focus</code> and <code>hover</code> styling should be similar to to harmonize the look and feel of styling between interaction techniques.</li>
-                  <li>Recommend <code>focus</code> styling has a border and <code>hover</code> does not.</li>
-                  <li><code>focus</code> styling should use a 2 pixel<code>border</code> or <code>outline</code> width to make the control with focus easy for users to see and track.</li>
-                  <li>If the <code>border</code> technique is used the <code>border</code> must be removed when the widget does not have focus to support focus styling to change when users select operating system high contrast modes.</li>
-                  <li>Need to use <code>onfocus</code> and <code>onblur</code> events to create focus styling of standard radio buttons and checkboxes by styling their labels.</li>
-                  <li>Styling background color makes the focus change much easier to detect visually.</li>
-               </ul><script id="script" type="text/javascript">
-function toggleCheckbox(node) {
- if (node.classList.contains('checked')) {
-  node.classList.remove('checked');
-  node.setAttribute('aria-checked', 'false');
- } else {
-  node.classList.add('checked');
-  node.setAttribute('aria-checked', 'true');
- }
-}
-
-function clickCheckbox(event) {
- var cb = event.currentTarget;
- toggleCheckbox(cb);
- event.stopPropagation();
- event.preventDefault();
-}
-
-function keydownCheckbox(event) {
-  var cb = event.currentTarget;
-  if (event.key === ' ') {
-    toggleCheckbox(cb);
-
-    event.stopPropagation();
-    event.preventDefault();
-  }
-}
-
-function checkboxFocus(event) {
-  event.currentTarget.parentElement.classList.add('focus');
-}
-
-function checkboxBlur(event) {
-  event.currentTarget.parentElement.classList.remove('focus');
-}
-      </script><h2>Example</h2>
-               <p><a href="https://webedit.disability.illinois.edu/user/jongund/checkbox-part-3/output/" target="_webedit">Part 3 on WebEdit</a></p>
-               <div id="example">
-                  <fieldset>
-                     <legend>
-        Pizza Toppings
-    </legend>
-    <label>
-      <input type="checkbox" onfocus="checkboxFocus(event)" onblur="checkboxBlur(event)">
-        Green pepper
-     </label>
-    <label>
-      <input type="checkbox" onfocus="checkboxFocus(event)" onblur="checkboxBlur(event)">
-        Onion
-    </label>
-    <div class="checkbox" role="checkbox" aria-checked="false" tabindex="0" onclick="clickCheckbox(event)" onkeydown="keydownCheckbox(event)">
-      <span aria-hidden="true"></span>
-        Mushrooms
-    </div>
-                     <div class="checkbox" role="checkbox" aria-checked="false" tabindex="0" onclick="clickCheckbox(event)" onkeydown="keydownCheckbox(event)">
-      <span aria-hidden="true"></span>
-          Spinach
-    </div>
-                  </fieldset>
-               </div>
-               <h2>HTML Source Code</h2>
-               <pre><code id="sc1"></code></pre>
-               <h2>CSS Source Code</h2>
-               <pre><code id="sc2"></code></pre>
-               <h2>Javascript Source Code</h2>
-               <pre><code id="sc3"></code></pre><script type="text/javascript">
-        sourceCode.add('sc1', 'example');
-        sourceCode.add('sc2', 'style');
-        sourceCode.add('sc3', 'script');
-        sourceCode.make();
-        hljs.initHighlightingOnLoad();
-      </script></div>
+               <h1 id="h1_title" class="title">Landmark Regions: NVDA showing List for DRES Home Page</h1>
+               <p class="center"><img width="98%" src="images/landmark-list-dres-1.png" alt="screen shot NVDA list of landmarks on dres home page"></p>
+            </div>
             <div class="col"></div>
          </div>
       </main>
