@@ -1377,9 +1377,17 @@ function checkboxBlur(event) {
   </slide>
 
   <slide>
-    <title>Using ARIA in HTML (Best Practices)</title>
+    <title>ARIA in HTML: Mapping HTML elements </title>
     <contents>
-      <p><a href="https://w3c.github.io/using-aria/">Using ARIA in HTML (Best Practices)</a></p>
+      <p><a href="https://www.w3.org/TR/html-aria/">Using ARIA in HTML</a></p>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Using ARIA: Best Practices </title>
+    <contents>
+      <p><a href="https://www.w3.org/TR/html-aria/">Using ARIA in HTML</a></p>
       <ul>
         <li>Use native semantics of HTML (e.g. <code>input[type=checkbox]</code> rather than div[role=checkbox]).</li>
         <li>Don't override native semantics of elements (e.g. <code>h2[role="banner]</code>).</li>
@@ -1393,7 +1401,7 @@ function checkboxBlur(event) {
   </slide>
 
    <slide>
-    <title>New features in ARIA 1.2</title>
+    <title>ARIA 1.2: New Features</title>
     <contents>
       <p><a href="https://www.w3.org/TR/wai-aria-1.2/">ARIA 1.2 Candidate Recommendation</a></p>
       <ul>
@@ -1412,7 +1420,7 @@ function checkboxBlur(event) {
 
 
    <slide>
-    <title>ARIA Authoring Practices 1.2</title>
+    <title>ARIA 1.2: Authoring Practices</title>
     <contents>
       <p><a href="https://w3c.github.io/aria-practices/">ARIA Authoring Practices 1.2</a></p>
       <ul>
