@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 12: ARIA Landmarks: Screen Reader Video Tutorials</title>
+      <title>Slide 12: ARIA Landmarks: Named Regions</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -28,12 +28,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide13.html" title="Slide 13">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide27.html" title="Slide 27">
+                  <li><a id="ID_SLIDE_LAST" href="slide32.html" title="Slide 32">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 12 of 27</li>
+                  <li class="nav navbar-text">Slide 12 of 32</li>
                </ul>
             </div>
          </div>
@@ -42,12 +42,49 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">ARIA Landmarks: Screen Reader Video Tutorials</h1>
-               <ul>
-                  <li><a href="https://mediaspace.illinois.edu/media/t/1_c6vvlk6g" target="_video">JAWS for Windows: Landmarks and Headings Navigation</a> (~15 minutes)</li>
-                  <li><a href="https://mediaspace.illinois.edu/media/t/0_hdra12rh" target="_video">NVDA for Windows: Landmarks and Headings Navigation</a> (~17 minutes)</li>
-                  <li><a href="https://mediaspace.illinois.edu/media/t/1_g9rb6w59" target="_video">VoiceOver for macOS: Landmarks and Headings Navigation</a> (~16 minutes)</li>
-               </ul>
+               <h1 id="h1_title" class="title">ARIA Landmarks: Named Regions</h1>
+               <p><a href="https://www.w3.org/TR/wai-aria/#landmark_roles" target="_spec">ARIA Landmark Role Specification</a></p>
+               <table class="table table-striped" aria-label="ARIA Landmarks">
+                  <thead>
+                     <tr>
+                        <th>Landmark</th>
+                        <th>Frequency</th>
+                        <th>Description</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><code>banner</code></td>
+                        <td>One or none</td>
+                        <td>The common content typically found at the top of each page in a website.</td>
+                     </tr>
+                     <tr>
+                        <td><code>complementary</code></td>
+                        <td>As many as needed, often none.</td>
+                        <td>Identifies unique page content not part of the <code>main</code> landmark.</td>
+                     </tr>
+                     <tr>
+                        <td><code>contentinfo</code></td>
+                        <td>One or none</td>
+                        <td>The common content typically found at the bottom of each page in a website.</td>
+                     </tr>
+                     <tr>
+                        <td><code>main</code></td>
+                        <td>One</td>
+                        <td>Identify the main content area or areas of a web page or application.</td>
+                     </tr>
+                     <tr>
+                        <td><code>navigation</code></td>
+                        <td>At least one, and often more.</td>
+                        <td>Identify major groupings of navigational links to other pages in the website.</td>
+                     </tr>
+                     <tr>
+                        <td><code>search</code></td>
+                        <td>Typically one if there is a site search feature.</td>
+                        <td>Identify website search features</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>

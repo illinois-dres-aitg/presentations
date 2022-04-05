@@ -42,7 +42,8 @@
     <title>Overview</title>
     <contents>
       <ul>
-        <li>ARIA basics</li>
+        <li>Screen Readers</li>
+        <li>ARIA Basics</li>
         <li>ARIA Landmarks</li>
         <li>Using ARIA to build an custom checkbox widget</li>
         <li>New features in ARIA 1.2</li>
@@ -51,6 +52,130 @@
       <script type="text/javascript">
         slideShowURL()
       </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>What are screen readers?</title>
+    <contents>
+      <ul>
+        <li>Translate the graphical user interface to to speech, sounds and refreshable Braille.</li>
+        <li>Use operating system accessibility APIs:
+          <ul>
+            <li><em>Microsoft Windows:</em> MSAA + IAccessible2</li>
+            <li><em>Microsoft Windows:</em> UI Automation</li>
+            <li><em>macOS:</em> AX API</li>
+            <li><em>Linux:</em> ATK / AT-API</li>
+          </ul>
+        </li>
+        <li>Keyboard commands for operation on desktop computers.</li>
+        <li>Swipe/tap and keyboard (e.g. bluetooth) commands for operation on touch devices.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Screen Readers</title>
+    <contents>
+      <ul>
+        <li><em>Microsoft Windows:</em> <a href="https://www.nvaccess.org" target="_more">Non-Visual Desktop Access</a> (NVDA, Open Source)</li>
+        <li><em>Microsoft Windows:</em> <a href="https://www.freedomscientific.com/products/software/jaws/" target="_more">JAWS</a> (Commercial)</li>
+        <li><em>macOS:</em> <a href="https://support.apple.com/accessibility" target="_more">VoiceOver</a> (included with macOS)</li>
+        <li><em>Linux:</em> <a href="https://help.gnome.org/users/orca/stable/" target="_more">Orca</a> (included with most Linux distributions)</li>
+        <li><em>iOS:</em> <a href="https://support.apple.com/accessibility" target="_more">VoiceOver</a> (included with iOS)</li>
+        <li><em>Android:</em> <a href="https://support.google.com/accessibility/android/answer/6283677?hl=en" target="_more">TalkBack</a> (included with most Linux distributions)</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Accessibility APIs Basic Concepts</title>
+    <contents>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Role</td>
+            <td>The type of user interface element, for example:
+              <ul>
+               <li>image</li>
+               <li>heading</li>
+               <li>textbox</li>
+               <li>radio button</li>
+             </ul>
+           </td>
+          </tr>
+          <tr>
+            <td>Accessible Name</td>
+            <td>A text label for a particular user interface element.</td>
+          </tr>
+          <tr>
+            <td>Accessible Description</td>
+            <td>More information about particular user interface element, for examples:
+              <ul>
+                <li>Instructions</li>
+                <li>Error feedback</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Properties</td>
+            <td>Features of a user interface element that tend to be static, for example:
+              <ul>
+                <li>Button has a pop menu.</li>
+                <li>Textbox content is required.</li>
+                <li>More than one option can be selected from a list.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>States</td>
+            <td>Features of a user interface element that tend to change through user interaction, for example:
+              <ul>
+                <li>Radio button is checked.</li>
+                <li>Button is in the pressed state.</li>
+                <li>Option in a list is selected.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Browsers and Accessibility APIs</title>
+    <contents>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>ARIA Specifications: History</title>
+    <contents>
+      <ul>
+        <li><a href="https://www.w3.org/TR/wai-aria-1.0/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a> (2014)</li>
+        <li><a href="https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.1</a> (2017)</li>
+        <li><a href="https://www.w3.org/TR/wai-aria-1.2/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.2</a> (2021, Candidate Recommendation)</li>
+        <li><a href="https://w3c.github.io/aria/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.3</a> (2022, Working Draft)</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>ARIA Specifications: Features</title>
+    <contents>
+      <ul>
+        <li><a href="https://www.w3.org/TR/wai-aria-1.0/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a> (2014)</li>
+        <li><a href="https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.1</a> (2017)</li>
+        <li><a href="https://www.w3.org/TR/wai-aria-1.2/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.2</a> (2021, Candidate Recommendation)</li>
+        <li><a href="https://w3c.github.io/aria/" target="_spec">Accessible Rich Internet Applications (WAI-ARIA) 1.3</a> (2022, Working Draft)</li>
+      </ul>
     </contents>
   </slide>
 
