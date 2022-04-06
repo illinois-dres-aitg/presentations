@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 18: Part 3: Landmark Regions </title>
+      <title>Slide 18: ARIA Basics: Assistive Technologies Support Issues</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -28,12 +28,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide19.html" title="Slide 19">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide52.html" title="Slide 52">
+                  <li><a id="ID_SLIDE_LAST" href="slide53.html" title="Slide 53">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 18 of 52</li>
+                  <li class="nav navbar-text">Slide 18 of 53</li>
                </ul>
             </div>
          </div>
@@ -42,7 +42,47 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Part 3: Landmark Regions </h1>
+               <h1 id="h1_title" class="title">ARIA Basics: Assistive Technologies Support Issues</h1>
+               <h2 id="heading_other">Other Description Techniques</h2>
+               <table class="table table-striped table-hover" aria-labelledby="heading_other">
+                  <thead>
+                     <tr>
+                        <th>Technique</th>
+                        <th>Description</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><code>aria-errormessage</code></td>
+                        <td>
+                           <ul>
+                              <li>The <a href="https://www.w3.org/TR/wai-aria-1.2/#aria-errormessage" target="_spec"><code>aria-errormessage</code></a> attribute contains a list of <code>IDREF</code>s to elements on the page, similar to <code>aria-describedby</code>.</li>
+                              <li>Intention is to make sure error messages can be distinguished from accessible descriptions, which can be disabled by screen reader users.</li>
+                              <li>Must only be used in conjunction with <code>aria-invalid="true"</code> or on a HTML form control that supports the <code>invalid</code> property.</li>
+                              <li>Text content of referenced elements are concatenated to compute the <em>error message</em>.</li>
+                              <li>Designed to reference visible text on the screen, like instructions and error feedback.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><code>aria-details</code></td>
+                        <td>
+                           <ul>
+                              <li><a href="https://www.w3.org/TR/wai-aria-1.2/#aria-details" target="_spec"><code>aria-details</code></a> provides a pointer using an ID reference to a location in the document for a more information on image, media or form control in a web resource.</li>
+                              <li>Useful when plain text descriptions are an insufficient description.</li>
+                              <li><em>Example:</em> An image of a chart can use <code>aria-details</code> reference a table with the data used to create or summarize the chart data.</li>
+                              <li>Screen readers can use this information to notify the user of the description and provide them with a way to jump directly to the description.</li>
+                              <li>Supported in EPUB readers for the blind, but not well supported in desktop screen readers.</li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <h2>Assistive Technologies Support Issues</h2>
+               <ul>
+                  <li>Theses ARIA attributes are examples where authors can provide information and browsers do their job in providing the information through the accessibility APIs, but it is not consistently supported in actual screen readers.</li>
+                  <li>The <a href="https://www.w3.org/community/aria-at/" target="_spec">ARIA Assistive Technologies Community Group</a> is working on raising awareness of inconsistencies and gaps in support of ARIA markup.</li>
+               </ul>
             </div>
             <div class="col"></div>
          </div>

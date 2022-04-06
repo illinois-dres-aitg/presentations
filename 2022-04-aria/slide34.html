@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 34: Landmark Regions: JAWS Landmark Support Information</title>
+      <title>Slide 34: Landmark Regions: Region</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -28,12 +28,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide35.html" title="Slide 35">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide52.html" title="Slide 52">
+                  <li><a id="ID_SLIDE_LAST" href="slide53.html" title="Slide 53">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 34 of 52</li>
+                  <li class="nav navbar-text">Slide 34 of 53</li>
                </ul>
             </div>
          </div>
@@ -42,55 +42,51 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Landmark Regions: JAWS Landmark Support Information</h1>
-               <table class="table table-striped table-hover" aria-labelledby="h1_title">
-                  <thead>
-                     <tr>
-                        <th>Keyboard Command</th>
-                        <th>Description</th>
-                     </tr>
-                  </thead>
+               <h1 id="h1_title" class="title">Landmark Regions: Region</h1>
+               <table class="table table-striped table-hover" aria-labelledby="id1">
                   <tbody>
                      <tr>
-                        <td><kbd>Insert</kbd>+<kbd>Control</kbd>+<kbd>Z</kbd></td>
+                        <th>Definition</th>
+                        <td>
+              A <code>region</code> landmark is a perceivable section of the page containing content that is sufficiently important for users to be able to navigate to the section.
+            </td>
+                     </tr>
+                     <tr>
+                        <th>ARIA 1.1 Specification</th>
+                        <td>
+              <a href="https://www.w3.org/TR/wai-aria/#region" target="_specification"><code>region</code> landmark</a>
+            </td>
+                     </tr>
+                     <tr>
+                        <th>Coding Patterns</th>
                         <td>
                            <ul>
-                              <li>Toggle on/off virtual JAWS cursor for reading web pages.</li>
-                              <li>Must be in virtual mode for the following commands to work.</li>
+                              <li>A <code>region</code> landmark must have a label using <code>aria-label</code>, <code>arai-labelledby</code> or the <code>title</code> attribute.</li>
+                              <li>If a page includes more than one <code>region</code> landmark, each should have a unique label.</li>
+                              <li>The <code>region</code> landmark can be used identify content that named landmarks do not appropriately describe.</li>
                            </ul>
                         </td>
                      </tr>
                      <tr>
-                        <td><kbd>Insert</kbd>+<kbd>Control</kbd>+<kbd>R</kbd></td>
-                        <td>Region List</td>
+                        <th>Techniques</th>
+                        <td>
+                           <ul>
+                              <li>Use the HTML5 <code>section</code> element to define a <code>region</code> landmark.</li>
+                              <li>If the HTML5 <code>section</code> element technique is not being used, use a <code>role="region"</code> attribute to define a <code>region</code> landmark.</li>
+                           </ul>
+                        </td>
                      </tr>
                      <tr>
-                        <td><kbd>Q</kbd></td>
-                        <td>Main Region</td>
-                     </tr>
-                     <tr>
-                        <td><kbd>R</kbd></td>
-                        <td>Next Region</td>
-                     </tr>
-                     <tr>
-                        <td><kbd>Shift</kbd>+<kbd>R</kbd></td>
-                        <td>Previous Region</td>
+                        <th>Headings</th>
+                        <td>
+                           <ul>
+                              <li>Each region landmark should have a heading <code>h2-h6</code> element identifying the content of the landmark.</li>
+                              <li>If there are more than one region landmark on the page, use <code>aria-labelledby</code> to reference the heading element for labeling each landmark.</li>
+                           </ul>
+                        </td>
                      </tr>
                   </tbody>
                </table>
-               <h2>Feature Overview</h2>
-               <ul>
-                  <li>JAWS documentation and commands refer to landmarks as <q>regions</q>.</li>
-                  <li>In virtual you can move sequentially through the landmarks on a page or view a list of landmarks.</li>
-                  <li>When navigating a web page JAWS announces landmark information when the virtual or PC cursor enters a new landmark.</li>
-               </ul>
-               <h2>Other Jaws Command Resources</h2>
-               <ul>
-                  <li><a href="http://accessibility.psu.edu/jawscommands" target="_specification">Penn State: JAWS commands for web</a></li>
-                  <li><a href="http://webaim.org/resources/shortcuts/jaws" target="_specification">WebAIM: JAWS commands for web</a></li>
-                  <li><a href="http://www.freedomscientific.com/Training/Surfs-up/Quick_Keys.htm" target="_specification">Freedom Scientific: JAWS commands for web</a></li>
-                  <li><a href="https://dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts" target="_specification">Deque University: JAWS commands</a></li>
-               </ul>
             </div>
             <div class="col"></div>
          </div>

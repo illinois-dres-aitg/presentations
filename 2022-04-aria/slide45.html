@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 45: Widget Example: Keyboard Focus and hover styling</title>
+      <title>Slide 45: Widget Example: Adding role, checked state and accessible name</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -18,7 +18,7 @@ fieldset legend {
 
 label,
 div.checkbox {
-     padding: 4px;
+     padding: 2px;
      width: 10em;
      display: block;
      margin-top: 0.25em;
@@ -45,18 +45,13 @@ div.checkbox.checked span:before {
     padding-right: 0.190em;
 }
 
-label.focus,
-div.checkbox:focus {
-  padding: 2px;
-  border: 2px solid #999;
-  background-color: #DDE;
-}
-
 label:hover,
-div.checkbox:hover {
-  background-color: #CCD;
+.checkbox:hover {
+     padding: 0;
+     border: 2px solid #000;
+     background-color: #CCD;
 }
-    </style>
+</style>
    </head>
    <body>
       <nav id="nav" class="navbar navbar-default">
@@ -78,12 +73,12 @@ div.checkbox:hover {
                   <li><a id="ID_SLIDE_NEXT" href="slide46.html" title="Slide 46">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide52.html" title="Slide 52">
+                  <li><a id="ID_SLIDE_LAST" href="slide53.html" title="Slide 53">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 45 of 52</li>
+                  <li class="nav navbar-text">Slide 45 of 53</li>
                </ul>
             </div>
          </div>
@@ -92,14 +87,12 @@ div.checkbox:hover {
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Widget Example: Keyboard Focus and hover styling</h1>
+               <h1 id="h1_title" class="title">Widget Example: Adding role, checked state and accessible name</h1>
                <ul>
-                  <li>Keyboard <code>focus</code> and <code>hover</code> styling should be similar to to harmonize the look and feel of styling between interaction techniques.</li>
-                  <li>Recommend <code>focus</code> styling has a border and <code>hover</code> does not.</li>
-                  <li><code>focus</code> styling should use a 2 pixel<code>border</code> or <code>outline</code> width to make the control with focus easy for users to see and track.</li>
-                  <li>If the <code>border</code> technique is used the <code>border</code> must be removed when the widget does not have focus to support focus styling to change when users select operating system high contrast modes.</li>
-                  <li>Need to use <code>onfocus</code> and <code>onblur</code> events to create focus styling of standard radio buttons and checkboxes by styling their labels.</li>
-                  <li>Styling background color makes the focus change much easier to detect visually.</li>
+                  <li>Adding <code>role="checkbox"</code> to make part of tab order of the page.</li>
+                  <li>Adding <code>aria-checked</code> attribute.</li>
+                  <li>Accessible name from text content.</li>
+                  <li>Removing state character (e.g. <span style="color: red">✗</span>) from accessible name using <code>aria-hidden</code>.</li>
                </ul><script id="script" type="text/javascript">
 function toggleCheckbox(node) {
  if (node.classList.contains('checked')) {
@@ -127,27 +120,19 @@ function keydownCheckbox(event) {
     event.preventDefault();
   }
 }
-
-function checkboxFocus(event) {
-  event.currentTarget.parentElement.classList.add('focus');
-}
-
-function checkboxBlur(event) {
-  event.currentTarget.parentElement.classList.remove('focus');
-}
       </script><h2>Example</h2>
-               <p><a href="https://webedit.disability.illinois.edu/user/jongund/checkbox-part-3/output/" target="_webedit">Part 3 on WebEdit</a></p>
+               <p><a href="https://webedit.disability.illinois.edu/user/jongund/checkbox-part-2/output/" target="_webedit">Part 2 on WebEdit</a></p>
                <div id="example">
                   <fieldset>
                      <legend>
         Pizza Toppings
     </legend>
     <label>
-      <input type="checkbox" onfocus="checkboxFocus(event)" onblur="checkboxBlur(event)">
+      <input type="checkbox">
         Green pepper
      </label>
     <label>
-      <input type="checkbox" onfocus="checkboxFocus(event)" onblur="checkboxBlur(event)">
+      <input type="checkbox">
         Onion
     </label>
     <div class="checkbox" role="checkbox" aria-checked="false" tabindex="0" onclick="clickCheckbox(event)" onkeydown="keydownCheckbox(event)">
