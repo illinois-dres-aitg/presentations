@@ -67,7 +67,7 @@
       <ul>
         <li>Translate the graphical user interface to to speech, sounds and refreshable Braille.</li>
         <li>Keyboard commands for operation on desktop computers.</li>
-        <li>Swipe/tap and keyboard (e.g. bluetooth) commands for operation on touch devices.</li>
+        <li>Swipe/tap and optionally keyboard (e.g. Bluetooth) commands for operation on touch devices.</li>
         <li>Use operating system accessibility APIs:
           <ul>
             <li><em>Microsoft Windows:</em> MSAA + IAccessible2</li>
