@@ -450,7 +450,7 @@
 
 
     </style>
-    <title>Use of Color: Vaction/Sick Leave Calendar</title>
+    <title>Use of Color: Vaca tion/Sick Leave Calendar</title>
     <contents>
       <div style="margin-top: 1.5em">
         <table class="vsl" aria-label="Absences range for March 2022">
@@ -908,38 +908,27 @@
         <table class="legend" role="presentation">
           <tbody>
             <tr>
-              <td class="vacation">
-                <abbr title="Vacation: Green background color">V</abbr></td>
+              <td class="vacation">V</td>
               <td>Vacation</td>
             </tr>
             <tr>
-              <td class="leave">
-                <abbr title="Sick Leave: Red background color">S</abbr>
-              </td>
+              <td class="leave">S</td>
               <td>Sick Leave</td>
             </tr>
             <tr>
-              <td class="float">
-                <abbr title="Floating Holiday: Blue background color">F</abbr>
-              </td>
+              <td class="float">F</td>
               <td>Floating Holidays</td>
             </tr>
             <tr>
-              <td class="other">
-                <abbr title="Other: Yellow background color">T</abbr>
-              </td>
+              <td class="other">T</td>
               <td>Other</td>
             </tr>
             <tr>
-              <td class="multiple">
-                <abbr title="Multiple Events: Purple background color">M</abbr>
-              </td>
+              <td class="multiple">M</td>
               <td>Multiple Events</td>
             </tr>
             <tr>
-              <td class="no-info">
-                <abbr title="No Info: Black background">N</abbr>
-              </td>
+              <td class="no-info">N</td>
               <td>No Information</td>
             </tr>
           </tbody>
@@ -1101,22 +1090,31 @@
   <slide>
     <title>Images: Image Types and Descriptions</title>
     <contents>
-      <div><a href="https://www.w3.org/WAI/tutorials/images/" target="_spec">W3C WAI Images Tutorial</a></div>
-      <h2>Types of Images</h2>
       <ul>
-        <li>
-          <a href="https://www.w3.org/WAI/tutorials/images/informative/" target="_spec">Informative images</a>
+        <li>Determine the type of image.</li>
+        <li>Four major types of images:
+          <ul>
+            <li>
+              <a href="https://www.w3.org/WAI/tutorials/images/informative/" target="_spec">Informative images</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/WAI/tutorials/images/decorative/" target="_spec">Decorative images</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_spec">Functional images</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/WAI/tutorials/images/textual/" target="_spec">Images of text</a>
+            </li>
+          </ul>
         </li>
-        <li>
-          <a href="https://www.w3.org/WAI/tutorials/images/decorative/" target="_spec">Decorative images</a>
-        </li>
-        <li>
-          <a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_spec">Functional images</a>
-        </li>
-        <li>
-          <a href="https://www.w3.org/WAI/tutorials/images/textual/" target="_spec">Images of text</a>
-        </li>
+        <li>Evaluate and identify the types of images.</li>
+        <li>Determine alternative text options for the images.</li>
       </ul>
+
+      <h2>Learn More</h2>
+      <div><a href="https://www.w3.org/WAI/tutorials/images/" target="_spec">W3C WAI Images Tutorial</a></div>
+
     </contents>
   </slide>
 
@@ -1134,19 +1132,11 @@
         <p>
           <img class="example" width="60%" src="images/Walmart_flower_cone.png" alt="Cat with collar that looks like a sprinkle donut" />
         </p>
-        <h2>Related Links</h2>
-        <ul>
-          <li>
-            <a href="https://www.walmart.com/ip/Cat-Recovery-Collar-Soft-Pet-Cone-Collar-Protective-Sunflower-Cone-Adjustable-Fasteners-Collar-for-Cat-and-Puppy-Yellow/248404357"  target="_test">
-              Source of informative image.
-            </a>
-          </li>
-          <li>
-            <a href="https://denisewhowrites.com/2021/09/07/cat-spay-recovery/"  target="_test">
-              Blog using the informative image.
-            </a>
-          </li>
-        </ul>
+        <p>
+          <a href="https://www.walmart.com/ip/Cat-Recovery-Collar-Soft-Pet-Cone-Collar-Protective-Sunflower-Cone-Adjustable-Fasteners-Collar-for-Cat-and-Puppy-Yellow/248404357"  target="_test">
+            Source of informative image.
+          </a>
+        </p>
     </contents>
   </slide>
 
@@ -1173,7 +1163,7 @@
         <p>
           <a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_spec"><abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> functional image tutorial.</a>
         </p>
-        <p><img class="example" width="100%" src="images/Social_media_icons.png" alt="Social media icons"/></p>
+        <p><a href="#" target="_self"><img class="example" width="100%" src="images/Social_media_icons.png" alt="Social media icons"/></a></p>
 
     </contents>
   </slide>
@@ -1244,6 +1234,11 @@
     <title>Media: Captions</title>
     <contents>
         <ul>
+          <li>Example Video:
+            <em><a href="https://www.youtube.com/watch?v=xQ-VFNqK4go"  target="_more">
+              Holiday Message from Illinois Chancellor Jones
+            </a></em>
+          </li>
           <li>
             <abbr title="World Wide Web">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> Tutorial:
             <em><a href="https://www.w3.org/WAI/media/av/" target="_spec">
@@ -1253,11 +1248,6 @@
           <li>
             Self-Paced Online Course:
             <em><a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/"  target="_more">Knowing How to Caption</a></em>
-          </li>
-          <li>Example Video:
-            <em><a href="https://www.youtube.com/watch?v=xQ-VFNqK4go"  target="_more">
-              Holiday Message from Illinois Chancellor Jones
-            </a></em>
           </li>
         </ul>
 
