@@ -87,7 +87,7 @@
   <slide>
     <title>Keyboard Support: Examples</title>
     <contents>
-      <p><a href="https://accessibleit.disability.illinois.edu/course-web-a11y-concepts/examples/html/links-and-form-controls.html#default" target="_test">Test page for exploring the visual differences between passive and active focus styling.</a></p>
+      <p><a href="https://accessibleit.disability.illinois.edu/course-web-a11y-concepts/examples/html/links-and-form-controls.html#default" target="_test">Keyboard test page</a> for exploring the visual differences between passive and active focus styling.</p>
       <table class="table table-striped">
         <thead>
           <tr>
