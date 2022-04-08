@@ -55,6 +55,9 @@
         <li>Page structure</li>
         <li>Links and form controls</li>
       </ul>
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
     </contents>
   </slide>
 
