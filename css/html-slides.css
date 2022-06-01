@@ -67,13 +67,11 @@ footer a img {
     top: -.1em;
     height: 2em;
     padding: 0.25em;
-    border: transparent 2px solid;
     border-radius: 5px;
 }
 
-footer a:hover img,
-footer a:focus img {
-    border-color: black;
+footer a:hover img {
+    outline: 2px solid rgb(51, 122, 183);
 }
 
 footer .highlight-icon {
