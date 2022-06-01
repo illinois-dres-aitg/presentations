@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu">
+      <img src="../images/block-i.png" alt="University of Illinois"/>
+    </a>
+    Copyright &#169; 2022 University of Illinois
+  </footer>
+  <title>Update on Open Source Web Accessibility Evaluation Tools from Illinois</title>
+
+  <person>
+    <name>Jon Gunderson, CPWA</name>
+    <desc>Coordinator of the DRES Accessible IT Group</desc>
+    <desc href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</desc>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  </person>
+
+  <person>
+    <name>Nicholas Hoyt</name>
+    <desc>Software Development and Interaction Design Specialist</desc>
+    <desc href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</desc>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:nhoyt@illinois.edu">nhoyt@illinois.edu</desc>
+  </person>
+
+  <conference>
+    <name href="https://www.itproforum.illinois.edu/">Illinois IT Professionals Pro Forum</name>
+    <desc>June 8th, 2022</desc>
+    <desc>online</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/html-slides.js</script>
+
+  <slide>
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li>SkipTo Extension</li>
+        <li>Page Structure Extension</li>
+        <li>AInspector for Firefox</li>
+        <li>OpenA11y Evaluation Library</li>
+        <li>Future of FAE</li>
+      </ul>
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>SkipTo Landmarks &amp; Headings Extension</title>
+    <contents>
+
+      <ul>
+        <li>An assistive technology to support keyboard only users in navigating web content based on the landmark regions and heading structure of the page.</li>
+        <li>Shortcut key (<kbd>Alt+2</kbd> or <kbd>Option+2</kbd>) to open menu.</li>
+        <li>Organized list of landmark regions on a page.</li>
+        <li>Filtered view of top level heading structure.</li>
+        <li>Selection from the menu <em>moves</em> keyboard focus to the associated landmark or headings.</li>
+      </ul>
+
+      <h2>Documentation and Installation</h2>
+      <ul>
+        <li><a href="https://skipto.github.io/">Documentation</a></li>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/skipto/">SkipTo Landmarks &amp; Headings — Firefox Add-ons</a></li>
+        <li><a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf">SkipTo Landmarks &amp; Headings — Chrome Web Store</a></li>
+      </ul>
+
+      <h2>Source Code</h2>
+      <p>SkipTo Landmarks &amp; Headings is open source software. The code is available at <a href="https://github.com/skipto/extension">https://github.com/skipto/extension</a>.</p>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Page Structure Extension</title>
+    <contents>
+
+      <ul>
+        <li>A tool for designers, developers and accessibility testers to easily identify and view the headings and landmarks region structure of a web page.</li>
+        <li>List of <em>all</em> landmark regions in document order, each menu item includes landmark roles and accessible name.</li>
+        <li>List of <em>all</em> headings in document order, each menu item includes the heading level and accessible name.</li>
+        <li>Highlights selected landmark region or heading on the page.</li>
+        <li>Does <strong>not</strong> move keyboard focus to the selected landmark region of heading.</li>
+      </ul>
+
+      <h2>Installation of Prototype</h2>
+      <ul>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/page-structure/">Page Structure — Firefox Add-ons</a></li>
+      </ul>
+
+      <h2>Source Code</h2>
+      <p>Page Structure for Firefox is open source software. The code is available at <a href="https://github.com/a11y-tools/page-structure">https://github.com/a11y-tools/page-structure</a>.</p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>AInspector for Firefox 2.0</title>
+    <contents>
+      <ul>
+        <li>Improved reliability and responsiveness to page updates and tab changes.</li>
+        <li>Support for ARIA 1.2 requirements.</li>
+        <li>Support for ARIA in HTML requirements.</li>
+        <li>Export evaluation results as CVS or JSON format.</li>
+        <li>Element details view includes more information about each element.</li>
+        <li>Removed "HTML4 Legacy Techniques" rule set, only "HTML and ARIA Techniques" ruleset.</li>
+      </ul>
+
+      <h2>Documentation and Installation</h2>
+      <ul>
+        <li><a href="https://ainspector.disability.illinois.edu/">Documentation</a></li>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">AInspector WCAG for Firefox</a></li>
+      </ul>
+
+      <h2>Source Code</h2>
+      <p>Page Structure for Firefox is open source software. The code is available at <a href="https://github.com/a11y-tools/page-structure">https://github.com/a11y-tools/page-structure</a>.</p>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>OpenA11y Evaluation Library</title>
+    <contents>
+      <ul>
+        <li>Total rewrite of evaluation library and rules to use modern JS techniques.</li>
+        <li>Review and fix rules and test cases for support of <a href="https://www.w3.org/TR/wai-aria-1.2/">ARIA 1.2</a>, <a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a> and <a href="https://www.w3.org/TR/WCAG/">WCAG 2.1</a> requirements.</li>
+        <li>New feature to allow evaluation to be limited to subsets of rules:
+          <ul>
+            <li>8-10 "First Step" rules (mixture of WCAG Level A and AA rules).</li>
+            <li>First Step and all WCAG Level A rules.</li>
+            <li>All WCAG Level A and AA rules, which includes all first step rules.</li>
+          </ul>
+        </li>
+        <li>Will be first released in AInspector for Firefox 2.1</li>
+      </ul>
+
+      <h2>Documentation and Source Code</h2>
+      <ul>
+        <li><a href="https://opena11y.github.io/evaluation-library/">Documentation</a></li>
+        <li><a href="https://github.com/opena11y/evaluation-library">Source Code</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>The Future of Functional Accessibility Evaluator (FAE)</title>
+    <contents>
+      <ul>
+        <li><a href="https://github.com/a11y-tools/user-group/wiki">FAE Advisory Group</a>.</li>
+        <li>Transitioning Illinois installation to management by Keith Hays in the Office of DIversity, Equity and Inclusion.</li>
+        <li>Future updates to the Illinois installation will be determined by the advisory group.</li>
+      </ul>
+
+      <h2>Illinois FAE Installations</h2>
+      <ul>
+        <li><a href="https://fae.disability.illinois.edu/">FAE - Self Registration Version (User managed password)</a></li>
+        <li><a href="https://fae.illinois.edu/">FAE - Institutional Version (Shibboleth Authentication)</a></li>
+      </ul>
+
+      <h2>Source Code</h2>
+      <p>Functional Accessibility Evalautor is open source software. The code is available at <a href="https://github.com/opena11y/fae">https://github.com/opena11y/fae</a>.</p>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Thank You!</title>
+    <contents>
+      <p>Would like to thank everyone for their support of making this campus more inclusive to people with disabilities by their work in making the online resources more accessible.</p>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Comments and Questions</title>
+    <contents>
+    </contents>
+  </slide>
+
+
+
+</slides>
+
+
