@@ -58,17 +58,17 @@
     <div class="person">
       <div class="name">Jon Gunderson, CPWA</div>
       <div>Coordinator of the DRES Accessible IT Group</div>
-      <div href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</div>
-      <div href="http://illinois.edu">University of Illinois at Urbana-Champaign</div>
-      <div href="mailto:jongund@illinois.edu">jongund@illinois.edu</div>
+      <div><a href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</a></div>
+      <div><a href="http://illinois.edu">University of Illinois at Urbana-Champaign</a></div>
+      <div><a href="mailto:jongund@illinois.edu">jongund@illinois.edu</a></div>
     </div>
 
     <div class="person">
       <div class="name">Nicholas Hoyt</div>
       <div>Software Development and Interaction Design Specialist</div>
-      <div href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</div>
-      <div href="http://illinois.edu">University of Illinois at Urbana-Champaign</div>
-      <div href="mailto:nhoyt@illinois.edu">nhoyt@illinois.edu</div>
+      <div><a href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</a></div>
+      <div><a href="http://illinois.edu">University of Illinois at Urbana-Champaign</a></div>
+      <div><a href="mailto:nhoyt@illinois.edu">nhoyt@illinois.edu</a></div>
     </div>
 
 
