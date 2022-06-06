@@ -82,13 +82,13 @@
 
     <title>Overview</title>
     <contents>
-      <h2>Part 1 (Nick)</h2>
+      <h2>Part 1 — Nick</h2>
       <ul>
         <li>Page Structure for Firefox</li>
         <li>SkipTo Landmarks &amp; Headings</li>
       </ul>
 
-      <h2>Part 2 (Jon)</h2>
+      <h2>Part 2 — Jon</h2>
       <ul>
         <li>AInspector for Firefox 2.0</li>
         <li>Evaluation Library 2.0</li>
@@ -151,7 +151,7 @@
   <slide>
     <title>Page Structure for Firefox</title>
     <contents>
-      <p>Utilize the Firefox Sidebar to display the semantic structure of a web page, including its page title, headings, and landmark regions, for web accessibility evaluation.</p>
+      <p style="margin">Utilize the Firefox Sidebar to display the semantic structure of a web page, including its page title, headings, and landmark regions, for web accessibility evaluation.</p>
       <p>[DEMO]</p>
       <p>Installation:</p>
       <ul>
