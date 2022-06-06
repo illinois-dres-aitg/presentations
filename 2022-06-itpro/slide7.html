@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 7: AInspector for Firefox 2.0</title>
+      <title>Slide 7: Differences between the two extensions</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
@@ -28,12 +28,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide8.html" title="Slide 8">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide11.html" title="Slide 11">
+                  <li><a id="ID_SLIDE_LAST" href="slide12.html" title="Slide 12">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 7 of 11</li>
+                  <li class="nav navbar-text">Slide 7 of 12</li>
                </ul>
             </div>
          </div>
@@ -42,22 +42,22 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">AInspector for Firefox 2.0</h1>
+               <h1 id="h1_title" class="title">Differences between the two extensions</h1>
                <ul>
-                  <li>Improved reliability and responsiveness to page updates and tab changes.</li>
-                  <li>Support for ARIA 1.2 requirements.</li>
-                  <li>Support for ARIA in HTML requirements.</li>
-                  <li>Export evaluation results as CVS or JSON format.</li>
-                  <li>Element details view includes more information about each element.</li>
-                  <li>Removed "HTML4 Legacy Techniques" rule set, only "HTML and ARIA Techniques" ruleset.</li>
+                  <li>Page Structure lists all headings and landmarks on a page. Its purpose is for manual checking of the semantic structure of a page.
+          <ul>
+                        <li>Does the page title accurately describe what is found on the page?</li>
+                        <li>Are headings used, and do they properly label the content sections? Are they used in the proper order?</li>
+                        <li>Are landmarks used to identify the important regions on a page?</li>
+                     </ul>
+                  </li>
+                  <li>SkipTo Landmarks &amp; Headings is an assistive technology. It enables easy and efficient navigation with the page to its headings and important landmark regions.
+        <ul>
+                        <li>Heading levels displayed are configurable. By default, only h1 through h3 are shown. Through user preferences you can change this to a depth of h2 (minimum) to h6 (maximum depth).</li>
+                        <li>Not all landmarks are shown. The extension will alway list the following landmark roles: 'main', 'search', 'navigation', and 'contentinfo'. You can toggle on or off the display of 'complementary' landmarks ('aside' element).</li>
+                     </ul>
+                  </li>
                </ul>
-               <h2>Documentation and Installation</h2>
-               <ul>
-                  <li><a href="https://ainspector.disability.illinois.edu/">Documentation</a></li>
-                  <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">AInspector WCAG for Firefox</a></li>
-               </ul>
-               <h2>Source Code</h2>
-               <p>Page Structure for Firefox is open source software. The code is available at <a href="https://github.com/a11y-tools/page-structure">https://github.com/a11y-tools/page-structure</a>.</p>
             </div>
             <div class="col"></div>
          </div>

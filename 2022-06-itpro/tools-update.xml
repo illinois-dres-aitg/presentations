@@ -47,18 +47,47 @@
   <script>../js/html-slides.js</script>
 
   <slide>
-    <title>Overview</title>
+    <style>
+      .name {
+        font-weight: bold;
+      }
+    </style>
+    <title>Update on Open Source Web Accessibility Evaluation Tools from Illinois</title>
     <contents>
-      <ul>
-        <li>Page Structure Extension (Nick)</li>
-        <li>SkipTo Landmarks &amp; Headings Extension (Nick)</li>
-        <li>Updates to AInspector for Firefox (Jon)</li>
-        <li>Updates to Evaluation Library (Jon)</li>
-        <li>Future of FAE (Jon)</li>
-      </ul>
+
+    <div class="person">
+      <div class="name">Jon Gunderson, CPWA</div>
+      <div>Coordinator of the DRES Accessible IT Group</div>
+      <div href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</div>
+      <div href="http://illinois.edu">University of Illinois at Urbana-Champaign</div>
+      <div href="mailto:jongund@illinois.edu">jongund@illinois.edu</div>
+    </div>
+
+    <div class="person">
+      <div class="name">Nicholas Hoyt</div>
+      <div>Software Development and Interaction Design Specialist</div>
+      <div href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</div>
+      <div href="http://illinois.edu">University of Illinois at Urbana-Champaign</div>
+      <div href="mailto:nhoyt@illinois.edu">nhoyt@illinois.edu</div>
+    </div>
+
+
       <script type="text/javascript">
         slideShowURL()
       </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li>Page Structure Extension (Nicholas Hoyt)</li>
+        <li>SkipTo Landmarks &amp; Headings Extension (Nicholas Hoyt)</li>
+        <li>AInspector for Firefox 2.0 (Jon Gunderson)</li>
+        <li>Evaluation Library 2.0 (Jon Gunderson)</li>
+        <li>Future of FAE 2.3 (Jon Gunderson)</li>
+      </ul>
     </contents>
   </slide>
 
