@@ -79,6 +79,7 @@
   </slide>
 
   <slide>
+
     <title>Overview</title>
     <contents>
       <h2>Part 1 (Nick)</h2>
@@ -102,8 +103,8 @@
     <contents>
       <p>Two new browser extension tools:</p>
       <ul>
-        <li>Page Structure Extension</li>
-        <li>SkipTo Landmarks &amp; Headings</li>
+        <li>Page Structure for Firefox</li>
+        <li>SkipTo Landmarks &amp; Headings (Chrome and Firefox)</li>
       </ul>
       <p>What do they do, and why are they useful?</p>
     </contents>
