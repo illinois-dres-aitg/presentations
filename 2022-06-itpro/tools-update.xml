@@ -49,13 +49,12 @@
   <slide>
     <title>Overview</title>
     <contents>
+      <p>Two new browser extension tools:</p>
       <ul>
-        <li>SkipTo Extension</li>
         <li>Page Structure Extension</li>
-        <li>AInspector for Firefox</li>
-        <li>OpenA11y Evaluation Library</li>
-        <li>Future of FAE</li>
+        <li>SkipTo Landmarks &amp; Headings</li>
       </ul>
+      <p>What do they do, and why are they useful?</p>
       <script type="text/javascript">
         slideShowURL()
       </script>
@@ -63,55 +62,97 @@
   </slide>
 
   <slide>
-    <title>SkipTo Landmarks &amp; Headings Extension</title>
+    <title>The Importance of Semantic Structure</title>
     <contents>
 
+      <h2>Structural Elements</h2>
+
+      <h3>Page Title</h3>
+
+      <p>Included because heading semantics (hierarchical labels describing sections of content) should align with the title of the page (especially the top-level headings).</p>
+
+      <h3>Headings</h3>
+
+      <p>As pointed out in WCAG 2.1 (Success Criteria 2.4.10 - Section Headings), not all pages require headings. However, any page with content broken down into sections (covers many pages) should have HTML headings.</p>
+
+      <h3>Landmarks</h3>
+
+      <p>Semantic regions such as <code>header</code>, <code>nav</code>, <code>main</code>, <code>footer</code>, <code>aside</code>, and <code>search</code>.</p>
+
+      <p>As pointed out on the WebAIM page linked below, every page should have one 'main' element, and most pages should have only one 'header' and one 'footer'. All three of these should be top-level elements (direct children of the 'body' element).</p>
+
+      <p>WebAIM also warns against the overuse of <code>nav</code> elements (or the <code>navigation</code> role). Generally a page should have a primary navigation region, and perhaps one or two secondary <code>nav</code> regions. Links in the 'footer' do not necessarily need to be enclosed in a <code>nav</code> element.</p>
+
+      <p>More than one region of the same type need unique labels so that users can tell them apart. (See this frequently with the 'navigation' role.)</p>
+
+      <h2>Benefits of Clear Semantic Structure</h2>
+
       <ul>
-        <li>An assistive technology to support keyboard only users in navigating web content based on the landmark regions and heading structure of the page.</li>
-        <li>Shortcut key (<kbd>Alt+2</kbd> or <kbd>Option+2</kbd>) to open menu.</li>
-        <li>Organized list of landmark regions on a page.</li>
-        <li>Filtered view of top level heading structure.</li>
-        <li>Selection from the menu <em>moves</em> keyboard focus to the associated landmark or headings.</li>
+        <li>All users benefit from being able to scan the headings on a page and treat them as if they were an outline or table of contents.</li>
+        <li>Screen reader users rely heavily on navigating among pages based on the page title, and within pages among headings and landmark regions.</li>
       </ul>
 
-      <h2>Documentation and Installation</h2>
+      <h3>Resources</h3>
       <ul>
-        <li><a href="https://skipto.github.io/">Documentation</a></li>
-        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/skipto/">SkipTo Landmarks &amp; Headings — Firefox Add-ons</a></li>
-        <li><a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf">SkipTo Landmarks &amp; Headings — Chrome Web Store</a></li>
+        <li><a href="https://webaim.org/techniques/semanticstructure/">WebAIM: Semantic Structure: Regions, Headings, and Lists</a></li>
       </ul>
-
-      <h2>Source Code</h2>
-      <p>SkipTo Landmarks &amp; Headings is open source software. The code is available at <a href="https://github.com/skipto/extension">https://github.com/skipto/extension</a>.</p>
-
     </contents>
   </slide>
 
   <slide>
-    <title>Page Structure Extension</title>
+    <title>Page Structure for Firefox</title>
+    <contents>
+      <p>Utilize the Firefox Sidebar to display the semantic structure of a web page, including its page title, headings, and landmark regions, for web accessibility evaluation.</p>
+      <p>[DEMO]</p>
+      <p>Installation:</p>
+      <ul>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/page-structure/">Page Structure for Firefox</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>SkipTo Landmarks &amp; Headings</title>
+    <contents>
+
+      <p>Provides keyboard access to landmark regions and headings (h1–h6) on a web page.</p>
+      <p>[DEMO]</p>
+      <p>Installation:</p>
+      <ul>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/skipto/" rel="nofollow">SkipTo Landmarks &amp; Headings for Firefox</a></li>
+        <li><a href="https://chrome.google.com/webstore/detail/skipto-landmarks-headings/fjkpbfcodhflpdildjbmdhhmcoplghgf" rel="nofollow">SkipTo Landmarks &amp; Headings for Brave/Chrome</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Differences between the two extensions</title>
     <contents>
 
       <ul>
-        <li>A tool for designers, developers and accessibility testers to easily identify and view the headings and landmarks region structure of a web page.</li>
-        <li>List of <em>all</em> landmark regions in document order, each menu item includes landmark roles and accessible name.</li>
-        <li>List of <em>all</em> headings in document order, each menu item includes the heading level and accessible name.</li>
-        <li>Highlights selected landmark region or heading on the page.</li>
-        <li>Does <strong>not</strong> move keyboard focus to the selected landmark region of heading.</li>
-      </ul>
+        <li>Page Structure lists all headings and landmarks on a page. Its purpose is for manual checking of the semantic structure of a page.
+          <ul>
+            <li>Does the page title accurately describe what is found on the page?</li>
+            <li>Are headings used, and do they properly label the content sections? Are they used in the proper order?</li>
+            <li>Are landmarks used to identify the important regions on a page?</li>
+          </ul>
+        </li>
+      <li>SkipTo Landmarks &amp; Headings is an assistive technology. It enables easy and efficient navigation with the page to its headings and important landmark regions.
+        <ul>
+          <li>Heading levels displayed are configurable. By default, only h1 through h3 are shown. Through user preferences you can change this to a depth of h2 (minimum) to h6 (maximum depth).</li>
+          <li>Not all landmarks are shown. The extension will alway list the following landmark roles: 'main', 'search', 'navigation', and 'contentinfo'. You can toggle on or off the display of 'complementary' landmarks ('aside' element).</li>
+        </ul>
+      </li>
+    </ul>
 
-      <h2>Installation of Prototype</h2>
-      <ul>
-        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/page-structure/">Page Structure — Firefox Add-ons</a></li>
-      </ul>
-
-      <h2>Source Code</h2>
-      <p>Page Structure for Firefox is open source software. The code is available at <a href="https://github.com/a11y-tools/page-structure">https://github.com/a11y-tools/page-structure</a>.</p>
     </contents>
   </slide>
+
 
   <slide>
     <title>AInspector for Firefox 2.0</title>
     <contents>
+
       <ul>
         <li>Improved reliability and responsiveness to page updates and tab changes.</li>
         <li>Support for ARIA 1.2 requirements.</li>
@@ -136,6 +177,7 @@
   <slide>
     <title>OpenA11y Evaluation Library</title>
     <contents>
+
       <ul>
         <li>Total rewrite of evaluation library and rules to use modern JS techniques.</li>
         <li>Review and fix rules and test cases for support of <a href="https://www.w3.org/TR/wai-aria-1.2/">ARIA 1.2</a>, <a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a> and <a href="https://www.w3.org/TR/WCAG/">WCAG 2.1</a> requirements.</li>
@@ -154,6 +196,7 @@
         <li><a href="https://opena11y.github.io/evaluation-library/">Documentation</a></li>
         <li><a href="https://github.com/opena11y/evaluation-library">Source Code</a></li>
       </ul>
+
     </contents>
   </slide>
 
@@ -161,6 +204,7 @@
   <slide>
     <title>The Future of Functional Accessibility Evaluator (FAE)</title>
     <contents>
+
       <ul>
         <li><a href="https://github.com/a11y-tools/user-group/wiki">FAE Advisory Group</a>.</li>
         <li>Transitioning Illinois installation to management by Keith Hays in the Office of DIversity, Equity and Inclusion.</li>
@@ -186,14 +230,11 @@
     </contents>
   </slide>
 
-
   <slide>
     <title>Comments and Questions</title>
     <contents>
     </contents>
   </slide>
-
-
 
 </slides>
 
