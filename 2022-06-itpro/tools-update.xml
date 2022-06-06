@@ -102,7 +102,7 @@
     <title>New Accessibility Tools</title>
     <contents>
       <p>Two new browser extension tools:</p>
-      <ul>
+      <ul style="margin-bottom: 1.5em">
         <li>Page Structure for Firefox</li>
         <li>SkipTo Landmarks &amp; Headings (Chrome and Firefox)</li>
       </ul>
@@ -151,9 +151,9 @@
   <slide>
     <title>Page Structure for Firefox</title>
     <contents>
-      <p>Utilize the Firefox Sidebar to display the semantic structure of a web page, including its page title, headings, and landmark regions, for web accessibility evaluation.</p>
-      <p style="margin-top: 1em">[DEMO]</p>
-      <p style="margin-top: 1em">Installation:</p>
+      <p style="margin-bottom: 1em">Utilize the Firefox Sidebar to display the semantic structure of a web page, including its page title, headings, and landmark regions, for web accessibility evaluation.</p>
+      <p style="margin-bottom: 1em">[DEMO]</p>
+      <p>Installation:</p>
       <ul>
         <li><a href="https://addons.mozilla.org/en-US/firefox/addon/page-structure/">Page Structure for Firefox</a></li>
       </ul>
@@ -164,8 +164,14 @@
     <title>SkipTo Landmarks &amp; Headings</title>
     <contents>
 
-      <p>Provides keyboard access to landmark regions and headings (h1–h6) on a web page.</p>
-      <p>[DEMO]</p>
+      <p style="margin-bottom: 1em">Provides keyboard access to landmark regions and headings (h1–h6) on a web page.</p>
+      <p style="margin-bottom: 1em">[DEMO]</p>
+
+      <p>Keyboard Shortcuts:</p>
+      <ul style="margin-bottom: 1em">
+        <li><a href="https://skipto.github.io/" rel="nofollow">SkipTo Extension: Documentation</a></li>
+      </ul>
+
       <p>Installation:</p>
       <ul>
         <li><a href="https://addons.mozilla.org/en-US/firefox/addon/skipto/" rel="nofollow">SkipTo Landmarks &amp; Headings for Firefox</a></li>
