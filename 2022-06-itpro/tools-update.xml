@@ -151,9 +151,9 @@
   <slide>
     <title>Page Structure for Firefox</title>
     <contents>
-      <p style="margin">Utilize the Firefox Sidebar to display the semantic structure of a web page, including its page title, headings, and landmark regions, for web accessibility evaluation.</p>
-      <p>[DEMO]</p>
-      <p>Installation:</p>
+      <p>Utilize the Firefox Sidebar to display the semantic structure of a web page, including its page title, headings, and landmark regions, for web accessibility evaluation.</p>
+      <p style="margin-top: 1em">[DEMO]</p>
+      <p style="margin-top: 1em">Installation:</p>
       <ul>
         <li><a href="https://addons.mozilla.org/en-US/firefox/addon/page-structure/">Page Structure for Firefox</a></li>
       </ul>

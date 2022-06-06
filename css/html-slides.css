@@ -140,20 +140,20 @@ main a {
 main h1 {
     font-size: 1.80em;
     font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1.25em;
 }
 
 main h2 {
-    margin-top: 1.5em;
-    margin-bottom: 0.125em;
     font-size: 1.35em;
     font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0.5em;
 }
 
 main h3 {
-    margin-top: 1.5em;
     font-size: 1.1em;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: .25em;
 }
 
 main ul {
