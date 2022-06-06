@@ -151,8 +151,8 @@
   <slide>
     <title>Page Structure for Firefox</title>
     <contents>
-      <p style="margin-bottom: 1em">Utilize the Firefox Sidebar to display the semantic structure of a web page, including its page title, headings, and landmark regions, for web accessibility evaluation.</p>
-      <p style="margin-bottom: 1em">[DEMO]</p>
+      <p style="margin-bottom: 2em">Utilize the Firefox Sidebar to display the semantic structure of a web page, including its page title, headings, and landmark regions, for web accessibility evaluation.</p>
+      <p style="margin-bottom: 2em">[DEMO]</p>
       <p>Installation:</p>
       <ul>
         <li><a href="https://addons.mozilla.org/en-US/firefox/addon/page-structure/">Page Structure for Firefox</a></li>
@@ -164,8 +164,8 @@
     <title>SkipTo Landmarks &amp; Headings</title>
     <contents>
 
-      <p style="margin-bottom: 1em">Provides keyboard access to landmark regions and headings (h1–h6) on a web page.</p>
-      <p style="margin-bottom: 1em">[DEMO]</p>
+      <p style="margin-bottom: 2em">Provides keyboard access to landmark regions and headings (h1–h6) on a web page.</p>
+      <p style="margin-bottom: 2em">[DEMO]</p>
 
       <p>Keyboard Shortcuts:</p>
       <ul style="margin-bottom: 1em">
