@@ -399,17 +399,17 @@ main a:focus {
 }
 
 .content h2 {
-  font-size: 180%;
+  font-size: 175%;
   margin: 0.325em 0;
 }
 
 .content h3 {
-  font-size: 155%;
+  font-size: 135%;
   margin: 0.45em 0;
 }
 
 .content h4 {
-  font-size: 135%;
+  font-size: 115%;
   margin: 0.575em 0;
 }
 
