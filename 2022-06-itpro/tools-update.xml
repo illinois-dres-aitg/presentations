@@ -126,6 +126,8 @@
 
       <h3 style="margin-top: 2em">Landmarks</h3>
 
+      <p>Define semantic regions on the page:</p>
+
       <table class="table table-striped">
         <thead>
           <tr>
