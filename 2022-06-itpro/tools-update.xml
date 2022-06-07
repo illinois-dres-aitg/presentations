@@ -116,35 +116,58 @@
 
       <h2>Structural Elements</h2>
 
-      <h3>Page Title</h3>
+      <h3 style="margin-top: 2em">Page Title</h3>
 
-      <p>Included because heading semantics (hierarchical labels describing sections of content) should align with the title of the page (especially the top-level headings).</p>
+      <p>Describes the content or purpose of the page</p>
 
-      <h3>Headings</h3>
+      <h3 style="margin-top: 2em">Headings</h3>
 
-      <p>As pointed out in WCAG 2.1 (Success Criteria 2.4.10 - Section Headings), not all pages require headings. However, any page with content broken down into sections (covers many pages) should have HTML headings.</p>
+      <p><code>h1</code> – <code>h6</code>: Provide labels for sections and subsections of content</p>
 
-      <h3>Landmarks</h3>
+      <h3 style="margin-top: 2em">Landmarks</h3>
 
-      <p>Semantic regions such as <code>header</code>, <code>nav</code>, <code>main</code>, <code>footer</code>, <code>aside</code>, and <code>search</code>.</p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+          <th>HTML Element</th>
+          <th>ARIA Role</th>
+          <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>main</code></td>
+            <td>main</td>
+            <td>default role</td>
+          </tr>
+          <tr>
+            <td><code>header</code></td>
+            <td>banner</td>
+            <td>default role</td>
+          </tr>
+          <tr>
+            <td><code>footer</code></td>
+            <td>contentinfo</td>
+            <td>default role</td>
+          </tr>
+          <tr>
+            <td><code>nav</code></td>
+            <td>navigation</td>
+            <td>default role</td>
+          </tr>
+          <tr>
+            <td>? (<code>div</code>, <code>form</code>)</td>
+            <td>search</td>
+            <td>role="search"</td>
+          </tr>
+          <tr>
+            <td><code>aside</code></td>
+            <td>complementary</td>
+            <td>default role</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <p>As pointed out on the WebAIM page linked below, every page should have one 'main' element, and most pages should have only one 'header' and one 'footer'. All three of these should be top-level elements (direct children of the 'body' element).</p>
-
-      <p>WebAIM also warns against the overuse of <code>nav</code> elements (or the <code>navigation</code> role). Generally a page should have a primary navigation region, and perhaps one or two secondary <code>nav</code> regions. Links in the 'footer' do not necessarily need to be enclosed in a <code>nav</code> element.</p>
-
-      <p>More than one region of the same type need unique labels so that users can tell them apart. (See this frequently with the 'navigation' role.)</p>
-
-      <h2>Benefits of Clear Semantic Structure</h2>
-
-      <ul>
-        <li>All users benefit from being able to scan the headings on a page and treat them as if they were an outline or table of contents.</li>
-        <li>Screen reader users rely heavily on navigating among pages based on the page title, and within pages among headings and landmark regions.</li>
-      </ul>
-
-      <h3>Resources</h3>
-      <ul>
-        <li><a href="https://webaim.org/techniques/semanticstructure/">WebAIM: Semantic Structure: Regions, Headings, and Lists</a></li>
-      </ul>
     </contents>
   </slide>
 
@@ -192,14 +215,18 @@
             <li>Are landmarks used to identify the important regions on a page?</li>
           </ul>
         </li>
-      <li>SkipTo Landmarks &amp; Headings is an assistive technology. It enables easy and efficient navigation with the page to its headings and important landmark regions.
-        <ul>
-          <li>Heading levels displayed are configurable. By default, only h1 through h3 are shown. Through user preferences you can change this to a depth of h2 (minimum) to h6 (maximum depth).</li>
-          <li>Not all landmarks are shown. The extension will alway list the following landmark roles: 'main', 'search', 'navigation', and 'contentinfo'. You can toggle on or off the display of 'complementary' landmarks ('aside' element).</li>
-        </ul>
-      </li>
-    </ul>
-
+        <li>SkipTo Landmarks &amp; Headings is an assistive technology. It enables fast and efficient navigation within the page to the section headings and important landmark regions.
+          <ul>
+            <li>Heading levels are configurable; default is 'h1' through 'h3'</li>
+            <li>Not all landmarks are shown
+              <ul>
+                <li>Always shown: <code>main</code>, <code>search</code>, <code>navigation</code> and <code>contentinfo</code></li>
+                <li>Optionally, 'complementary' landmarks can be included</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </contents>
   </slide>
 
