@@ -170,6 +170,11 @@
         </tbody>
       </table>
 
+      <h3 style="margin-top: 2em">Related Links</h3>
+      <ul>
+        <li><a href="https://webaim.org/techniques/semanticstructure/">WebAIM: Semantic Structure: Regions, Headings, and Lists</a></li>
+      </ul>
+
     </contents>
   </slide>
 
@@ -241,7 +246,7 @@
         <li>Improved reliability and responsiveness to page updates and tab changes.</li>
         <li>Support for ARIA 1.2 requirements.</li>
         <li>Support for ARIA in HTML requirements.</li>
-        <li>Export evaluation results as CVS or JSON format.</li>
+        <li>Export evaluation results as CSV or JSON format.</li>
         <li>Element details view includes more information about each element.</li>
         <li>Removed "HTML4 Legacy Techniques" rule set, only "HTML and ARIA Techniques" ruleset.</li>
       </ul>
@@ -253,7 +258,7 @@
       </ul>
 
       <h2>Source Code</h2>
-      <p>Page Structure for Firefox is open source software. The code is available at <a href="https://github.com/a11y-tools/page-structure">https://github.com/a11y-tools/page-structure</a>.</p>
+      <p>AInspector for Firefox is open source software. The code is available at <a href="https://github.com/ainspector/ainspector-for-firefox">https://github.com/ainspector/ainspector-for-firefox</a>.</p>
 
     </contents>
   </slide>
@@ -302,7 +307,7 @@
       </ul>
 
       <h2>Source Code</h2>
-      <p>Functional Accessibility Evalautor is open source software. The code is available at <a href="https://github.com/opena11y/fae">https://github.com/opena11y/fae</a>.</p>
+      <p>Functional Accessibility Evaluator is open source software. The code is available at <a href="https://github.com/opena11y/fae">https://github.com/opena11y/fae</a>.</p>
 
     </contents>
   </slide>
