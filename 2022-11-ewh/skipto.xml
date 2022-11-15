@@ -81,6 +81,12 @@
         <li>Support custom web components.</li>
         <li>Button switches to SkipTo icon on small screens.</li>
         <li>Simplify operation and configuration options.</li>
+        <li>Color theme includes a new way to automatically apply a theme using:
+          <ul>
+            <li>hostname selector</li>
+            <li>path selector</li>
+          </ul>
+        </li>
       </ul>
     </contents>
   </slide>
