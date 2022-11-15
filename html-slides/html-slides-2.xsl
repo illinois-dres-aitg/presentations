@@ -527,29 +527,14 @@
                   </xsl:otherwise>
                 </xsl:choose>
 
-                <xsl:choose>
-                  <xsl:when test="$num>1">
-                    <xsl:element name="li">
-                      <xsl:element name="a">
-                        <xsl:attribute name="id">ID_SLIDE_FIRST</xsl:attribute>
-                        <xsl:attribute name="href">slide1.html</xsl:attribute>
-                        <xsl:attribute name="title">Slide 1</xsl:attribute>
-                        First
-                      </xsl:element>
-                    </xsl:element>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:element name="li">
-                      <xsl:attribute name="class">disabled</xsl:attribute>
-                      <xsl:element name="a">
-                        <xsl:attribute name="id">ID_SLIDE_FIRST</xsl:attribute>
-                        <xsl:attribute name="href">slide1.html</xsl:attribute>
-                        <xsl:attribute name="title">On First Slide</xsl:attribute>
-                        First
-                      </xsl:element>
-                    </xsl:element>
-                  </xsl:otherwise>
-                </xsl:choose>
+                <xsl:element name="li">
+                  <xsl:element name="a">
+                    <xsl:attribute name="id">ID_SLIDE_FIRST</xsl:attribute>
+                    <xsl:attribute name="href">slide1.html</xsl:attribute>
+                    <xsl:attribute name="title">Slide 1</xsl:attribute>
+                    First
+                  </xsl:element>
+                </xsl:element>
 
                 <xsl:choose>
                   <xsl:when test="$num>1">
@@ -625,11 +610,10 @@
                       </xsl:element>
                     </xsl:element>
                     <xsl:element name="li">
-                      <xsl:attribute name="class">disabled</xsl:attribute>
                       <xsl:element name="a">
                         <xsl:attribute name="id">ID_SLIDE_LAST</xsl:attribute>
-                        <xsl:attribute name="href">#</xsl:attribute>
-                        <xsl:attribute name="name">On Last Slide</xsl:attribute>
+                        <xsl:attribute name="href"><xsl:value-of select="$last"/></xsl:attribute>
+                        <xsl:attribute name="title"><xsl:value-of select="$lastTitle"/></xsl:attribute>
                         Last
                       </xsl:element>
                     </xsl:element>

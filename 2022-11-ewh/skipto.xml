@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu">
+      <img src="../images/block-i.png" alt="University of Illinois"/>
+    </a>
+    Copyright &#169; 2022 University of Illinois
+  </footer>
+  <title>SkipTo Version 5.1</title>
+
+  <person>
+    <name>Jon Gunderson, CPWA</name>
+    <desc>Accessibility Advocate and Open Source Tool Developer</desc>
+    <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  </person>
+
+  <conference>
+    <name href="https://www.itproforum.illinois.edu/">Explore with Hadi</name>
+    <desc>November 15th, 2022</desc>
+    <desc>online</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/html-slides.js</script>
+
+  <slide>
+    <style>
+      .name {
+        font-weight: bold;
+      }
+    </style>
+    <title>SkipTo 5.1</title>
+    <contents>
+
+    <div class="person">
+      <div class="name">Jon Gunderson, CPWA</div>
+      <div>Accessibility Advocate and Open Source Tools Developer</div>
+      <div><a href="mailto:jongund@illinois.edu">jongund@illinois.edu</a></div>
+    </div>
+
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Purpose of SkipTo</title>
+    <contents>
+      <ul>
+        <li>Support WCAG SC 2.4.1 Bypass Blocks requirement.</li>
+        <li>Raise awareness of the functional use of landmark regions and headers.</li>
+        <li>Improve navigation to document content for everyone.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Major Changes in SkipTo Version 5.x</title>
+    <contents>
+      <ul>
+        <li>Use scripted shortcut key to improve consistency between browsers:
+          <ul>
+            <li>Alt-0 (Windows/Linux)</li>
+            <li>Option-0 (macOS)</li>
+          </ul>
+        </li>
+        <li>Support custom web components.</li>
+        <li>Button switches to SkipTo icon on small screens.</li>
+        <li>Simplify operation and configuration options.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Examples</title>
+    <contents>
+      <ul>
+        <li><a href="https://accessibleit.disability.illinois.edu/" target="_example">DRES Accessible IT Group</a></li>
+        <li><a href="https://ahs.illinois.edu/" target="_example">College of Applied Health Sciences</a></li>
+        <li><a href="https://webtheme.illinois.edu/" target="_example">Illinois Web Theme</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Comments and Questions</title>
+    <contents>
+      <ul>
+        <li><a href="https://skipto-landmarks-headings.github.io/page-script-5/" target="_docs">SkipTo Documentation</a></li>
+        <li><a href="https://github.com/skipto-landmarks-headings/page-script-5/issues" target="_docs">Report a issue</a></li>
+        <li><a href="https://github.com/skipto-landmarks-headings/page-script-5" target="_docs">Source Code on Github</a></li>
+      </ul>
+    </contents>
+  </slide>
+
+</slides>
+
+
