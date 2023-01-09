@@ -3,6 +3,13 @@
 <?xm-well_formed path="funct.dtd"?>
 <slides>
   <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu">
+      <img src="../images/block-i.png"
+      alt="University of Illinois"/>
+    </a>
+    Copyright &#169; 2017 University of Illinois
+  </footer>
   <title>Using the W3C ARIA Authoring Practices Guide 1.1 to Build Accessible Web Resources</title>
   <name>Jon Gunderson</name>
 
@@ -17,7 +24,9 @@
   <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
-  <stylesheet media="screen">../css/html-slides2.css</stylesheet>
+
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
+
   <script>../js/jquery-2.1.1.min.js</script>
   <script>../js/bootstrap.min.js</script>
   <script>../js/bootstrap-accessibility.min.js</script>

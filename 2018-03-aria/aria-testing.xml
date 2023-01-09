@@ -3,6 +3,13 @@
 <?xm-well_formed path="funct.dtd"?>
 <slides>
   <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu">
+      <img src="../images/block-i.png"
+      alt="University of Illinois"/>
+    </a>
+    Copyright &#169; 2018 University of Illinois
+  </footer>
   <title>Automated Testing of Browser Implementation of ARIA and HTML5</title>
   <person>
     <name>Joanmarie Diggs</name>
