@@ -3,6 +3,13 @@
 <?xm-well_formed path="funct.dtd"?>
 <slides>
   <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu">
+      <img src="../images/block-i.png"
+      alt="University of Illinois"/>
+    </a>
+    Copyright &#169; 2018 University of Illinois
+  </footer>
   <title>a11yFirst for CKEditor: Changing the Way People Think about Creating online Content</title>
   <person>
     <name>Jon Gunderson</name>

@@ -1,62 +1,56 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML//EN">
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Slide 6: Rule: Form Control Labels</title>
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
-<link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
-<link rel="stylesheet" type="text/css" href="../css/html-slides2.css">
-<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script><script type="text/javascript" src="../js/bootstrap.min.js"></script><script type="text/javascript" src="../js/bootstrap-accessibility.min.js"></script><script type="text/javascript" src="../js/html-slides.js"></script><script type="text/javascript" src="https://code.highcharts.com/highcharts.src.js"></script><script type="text/javascript" src="http://code.highcharts.com/modules/exporting.js"></script><script type="text/javascript" src="http://code.highcharts.com/modules/offline-exporting.js"></script>
-<style id="style" type="text/css"></style>
-</head>
-<body>
-<nav id="nav" class="navbar navbar-default">
-<div class="container">
-<div class="navbar-header">
-<button class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#slide-nav"><span class="sr-only">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Slide 6: Rule: Heading Properly Nested</title>
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><script src="https://code.highcharts.com/highcharts.src.js"></script><script src="http://code.highcharts.com/modules/exporting.js"></script><script src="http://code.highcharts.com/modules/offline-exporting.js"></script><style id="style"></style>
+   </head>
+   <body>
+      <nav id="nav" class="navbar navbar-default">
+         <div class="container">
+            <div class="navbar-header"><button class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#slide-nav"><span class="sr-only">
                   Toggle navigation
-                </span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-</div>
-<div id="slide-nav" class="collapse navbar-collapse">
-<ul class="nav navbar-nav">
-<li>
-<a href="index.html">Index
-                      </a>
-</li>
-<li>
-<a href="slide1.html">First
-                      </a>
-</li>
-<li>
-<a href="slide5.html">Previous
-                      </a>
-</li>
-<li>
-<a href="slide7.html">Next
-                      </a>
-</li>
-<li>
-<a href="slide24.html">Last
-                      </a>
-</li>
-</ul>
-<div class="navbar-text pull-right">Slide 6 of 24</div>
-</div>
-</div>
-</nav>
-<main id="content" class="container">
-<a name="main" id="main"></a>
-<h1 id="h1_title" class="title">Rule: Form Control Labels</h1>
-<div id="container" style="width:100%; height:400px;"></div>
-<script>
+                </span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
+            <div id="slide-nav" class="collapse navbar-collapse">
+               <ul class="nav navbar-nav">
+                  <li><a id="ID_SLIDE_INDEX" href="index.html">
+                        Index
+                      </a></li>
+                  <li><a id="ID_SLIDE_FIRST" href="slide1.html" title="Slide 1">
+                    First
+                  </a></li>
+                  <li><a id="ID_SLIDE_PREVIOUS" href="slide5.html" title="Slide 5">
+                        Previous
+                      </a></li>
+                  <li><a id="ID_SLIDE_NEXT" href="slide7.html" title="Slide 7">
+                        Next
+                      </a></li>
+                  <li><a id="ID_SLIDE_LAST" href="slide23.html" title="Slide 23">
+                        Last
+                      </a></li>
+               </ul>
+               <ul class="nav navbar-nav pull-right">
+                  <li class="nav navbar-text">Slide 6 of 23</li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <main id="content" class="container">
+         <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-9">
+               <h1 id="h1_title" class="title">Rule: Heading Properly Nested</h1>
+               <div id="container" style="width:100%; height:400px;"></div><script>
       $(function () {
     var myChart = Highcharts.chart('container', {
         chart: {
             type: 'column'
         },
         title: {
-            text: 'Each <code>input</code>, <code>select</code>, <code>textarea</code>, <code>progress</code>, <code>meter</code> and <code>output</code> element must have an accessible label.'
+            text: 'Heading elements must be properly nested on the page.'
         },
         xAxis: {
             categories: ['Percent Pass', 'Implementation Score']
@@ -72,61 +66,55 @@
         },
         series: [{
             name: '2016',
-            data: [30, 57]
+            data: [31, 89]
         }, {
             name: '2017',
-            data: [31, 70]
+            data: [24, 89]
         }]
       });
     });
-  </script>
-<h2 style="font-size: 130%">Website Data</h2>
-<table class="table table-striped" aria-label="Rule results for Each input, select, textarea, progress, meter and output element must have an accessible label.">
-
-<thead>
-
-<tr>
-
-<th>Year</th>
-            <th title="Websites that Failed">Website Fail</th>
-            <th title="Websites that Passed">Website Pass</th>
-            <th title="Percentage of Websites that Passed">Percent Pass</th>
-            <th title="Implementation Score">Implementation Score</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<th>February 2016</th>
-             <td>81</td>
-             <td>35</td>
-             <td>30%</td>
-             <td>57</td>
-
-</tr>
-
-<tr>
-
-<th>January 2017</th>
-             <td>172</td>
-             <td>78</td>
-             <td>31%</td>
-             <td>70</td>
-
-</tr>
-
-</tbody>
-
-</table>
-</main>
-<footer class="container">
-<div id="footer" class="well well-sm">
-        Copyright &copy; 2017 University of Illinois
-      </div>
-</footer>
-</body>
+  </script><table aria-labelledby="h1_title" class="table table-striped" aria-label="Rule results for  eading elements must be properly nested on the page.">
+                  <thead>
+                     <tr>
+                        <th>Year</th>
+                        <th title="Websites that Failed">Website Fail</th>
+                        <th title="Websites that Passed">Website Pass/MC</th>
+                        <th title="Percentage of Websites that Passed">Percent Pass/MC</th>
+                        <th title="Implementation Score">Implementation Score</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <th>February 2016</th>
+                        <td>96</td>
+                        <td>44</td>
+                        <td>31%</td>
+                        <td>89</td>
+                     </tr>
+                     <tr>
+                        <th>January 2017</th>
+                        <td>210</td>
+                        <td>67</td>
+                        <td>24%</td>
+                        <td>89</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <div class="col"></div>
+         </div>
+      </main>
+      <footer class="container">
+         <div id="footer" class="well well-sm"><a href="https://illinois.edu">
+      <img src="../images/block-i.png" alt="University of Illinois">
+    </a>
+    
+      
+    
+    Copyright © 2017 University of Illinois
+  <span class="highlight-icon">
+          ↖
+        </span></div>
+      </footer>
+   </body>
 </html>
