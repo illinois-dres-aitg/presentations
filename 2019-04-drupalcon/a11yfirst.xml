@@ -2,6 +2,12 @@
 <?xml-stylesheet href="funct.css" type="text/css"?>
 <?xm-well_formed path="funct.dtd"?>
 <slides>
+  <footer>
+    <a href="https://illinois.edu">
+      <img src="../images/block-i.png" alt="University of Illinois"/>
+    </a>
+    Copyright &#169; 2019 University of Illinois
+  </footer>
   <lang>en</lang>
   <title>A11yFirst Editor Enhancements Module for Drupal 8</title>
   <person>

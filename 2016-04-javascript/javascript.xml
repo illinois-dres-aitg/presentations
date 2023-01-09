@@ -800,8 +800,8 @@
   <slide>
     <title>Example Widget: SkipTo.js</title>
     <contents>
-      <p><a href="http://paypal.github.io/skipto/" target="_example">SkipTo plugin by PayPal Accessibility Team</a></p>
-      <iframe width="99%" height="600" src="http://paypal.github.io/skipto/"  title="SkipTo plugin by PayPal Accessibility Team"></iframe>
+      <p><a href="https://github.com/skipto-landmarks-headings/page-script-5" target="_example">SkipTo plugin by PayPal Accessibility Team</a></p>
+      <iframe width="99%" height="600" src="https://github.com/skipto-landmarks-headings/page-script-5"  title="SkipTo plugin by PayPal Accessibility Team"></iframe>
     </contents>
   </slide>
 

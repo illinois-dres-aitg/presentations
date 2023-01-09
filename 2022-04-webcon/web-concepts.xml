@@ -79,7 +79,7 @@
         </li>
         <li>Bypass Blocks feature:
           <ul>
-            <li><a href="https://paypal.github.io/skipto/"  target="_tools">SkipTo Menu Button</a></li>
+            <li><a href="https://github.com/skipto-landmarks-headings/page-script-5"  target="_tools">SkipTo Menu Button</a></li>
             <li><a href="https://webaim.org/techniques/skipnav/" target="_tools">"Skip To Main" link</a></li>
           </ul>
         </li>
@@ -1083,7 +1083,7 @@
     <contents>
       <h2>Bypass Block Script: SkipTo</h2>
       <ul>
-        <li><a href="https://paypal.github.io/skipto/" target="_tools">SkipTo script</a> adds a "Skip to Content" menu button to the web page for navigating high level landamrks and headings.  It is the modern way to implement that WCAG Bypass blocks requirement and relaces "Skip To Main" link technqiue.</li>
+        <li><a href="https://github.com/skipto-landmarks-headings/page-script-5" target="_tools">SkipTo script</a> adds a "Skip to Content" menu button to the web page for navigating high level landamrks and headings.  It is the modern way to implement that WCAG Bypass blocks requirement and relaces "Skip To Main" link technqiue.</li>
       </ul>
 
       <h2>Browser Extension: SkipTo</h2>

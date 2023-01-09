@@ -259,7 +259,7 @@
       <h2><a href="http://fae20.cita.illinois.edu/">Functional Accessibility Evaluator</a></h2>
       <p>The Functional Accessibility Evaluator (FAE) 2.0 provides accessibility information on an entire website for WCAG 2.0 Level A and AA Success Criteria. FAE 2.0 provides both website summary and page level detail on the accessibility requirements that applied to the pages with in a website. FAE 2.0 uses the same open source OpenAjax Evaluation Library, Rules and Rulesets as AInspector Sidebar. FAE 2.0 and AInspector Sidebar are designed to complement themselves. FAE 2.0 provide a overview of accessibility of a website that can be used in design, planning and quality assurance for project management and AInspector Sidebar provides detailed information and inspection capability of a particular page.</p>
 
-      <h2><a href="http://paypal.github.io/skipto/">SkipTo.js</a></h2>
+      <h2><a href="https://github.com/skipto-landmarks-headings/page-script-5">SkipTo.js</a></h2>
       <p>SkipTo.js is a replacement for your old classic “Skip To Main” link. The SkipTo.js script creates a drop-down menu consisting of the links to the important places on a given web page. </p>
 
       <h2><a href="https://github.com/paypal/bootstrap-accessibility-plugin">Bootstrap.js Accessibility Plug-in</a></h2>
