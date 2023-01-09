@@ -3,6 +3,13 @@
 <?xm-well_formed path="funct.dtd"?>
 <slides>
   <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu">
+      <img src="../images/block-i.png"
+      alt="University of Illinois"/>
+    </a>
+    Copyright &#169; 2016 University of Illinois
+  </footer>
   <title>The Scent of Accessibility</title>
   <name>Jon Gunderson, DRES and Mike Scott, DHS</name>
 
@@ -14,14 +21,16 @@
   <desc>April 28th, 2016</desc>
   <desc href="http://webcon.illinois.edu">Illinois Web Conference 2016</desc>
 
-  <stylesheet media="screen">../slides2/css/bootstrap.min.css</stylesheet>
-  <stylesheet media="screen">../slides2/css/bootstrap-theme.min.css</stylesheet>
-  <stylesheet media="screen">../slides2/css/bootstrap-accessibility.css</stylesheet>
-  <stylesheet media="screen">../slides2/css/html-slides2.css</stylesheet>
-  <script>../slides2/js/jquery-2.1.1.min.js</script>
-  <script>../slides2/js/bootstrap.min.js</script>
-  <script>../slides2/js/bootstrap-accessibility.min.js</script>
-  <script>../slides2/js/html-slides.js</script>
+   <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/html-slides.js</script>
 
   <slide>
     <title>Overview</title>
