@@ -3,6 +3,13 @@
 <?xm-well_formed path="funct.dtd"?>
 <slides>
   <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu">
+      <img src="../images/block-i.png"
+      alt="University of Illinois"/>
+    </a>
+    Copyright &#169; 2015 University of Illinois
+  </footer>
   <title>“SkipTo.js” Page Navigation and Bootstrap.js Accessibility Plug-in</title>
   <name>Jon Gunderson</name>
   <desc>Division of Disability Resources and Educational Services</desc>
@@ -12,10 +19,12 @@
   <desc href="https://www.itproforum.illinois.edu/">2015 Illinois IT Professional Conference</desc>
   <desc href="../">Presentation Home Page</desc>
 
-  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+   <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
-  <stylesheet media="screen">../css/html-slides2.css</stylesheet>
+
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
+
   <script>../js/jquery-2.1.1.min.js</script>
   <script>../js/bootstrap.min.js</script>
   <script>../js/bootstrap-accessibility.min.js</script>
