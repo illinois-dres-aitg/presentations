@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu">
+      <img src="../images/block-i.png" alt="University of Illinois"/>
+    </a>
+    Copyright &#169; 2023 University of Illinois
+  </footer>
+  <title>AInspector 3.0</title>
+
+  <person>
+    <name>Jon Gunderson, CPWA</name>
+    <desc>Retired Coordinator of the DRES Accessible IT Group</desc>
+    <desc href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</desc>
+    <desc href="http://illinois.edu">University of Illinois at Urbana-Champaign</desc>
+    <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  </person>
+
+  <conference>
+    <name href="https://www.itproforum.illinois.edu/">Illinois IT Professionals Pro Forum</name>
+    <desc>October 31st, 2023</desc>
+    <desc>online</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/html-slides.js</script>
+
+  <slide>
+    <style>
+      .name {
+        font-weight: bold;
+      }
+    </style>
+    <title>Update on Open Source Web Accessibility Evaluation Tools from Illinois</title>
+    <contents>
+
+    <div class="person">
+      <div class="name">Jon Gunderson, CPWA</div>
+      <div>Retired Coordinator of the DRES Accessible IT Group</div>
+      <div><a href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</a></div>
+      <div><a href="http://illinois.edu">University of Illinois at Urbana-Champaign</a></div>
+      <div><a href="mailto:jongund@illinois.edu">jongund@illinois.edu</a></div>
+    </div>
+
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li>AInspector for Firefox 3.0</li>
+        <li>Evaluation Library 2.0</li>
+      </ul>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>AInspector for Firefox 3.0</title>
+    <contents>
+
+      <ul>
+        <li>Improved reliability and responsiveness to page updates and tab changes.</li>
+        <li>Support for ARIA 1.2 requirements.</li>
+        <li>Support for ARIA in HTML requirements.</li>
+        <li>Export evaluation results as CSV or JSON format.</li>
+        <li>Element details view includes more information about each element.</li>
+        <li>Removed "HTML4 Legacy Techniques" rule set, only "HTML and ARIA Techniques" ruleset.</li>
+      </ul>
+
+      <h2>Documentation and Installation</h2>
+      <ul>
+        <li><a href="https://ainspector.disability.illinois.edu/">Documentation</a></li>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">AInspector 3.0 for Firefox</a></li>
+      </ul>
+
+      <h2>Source Code</h2>
+      <p>AInspector for Firefox is open source software. The code is available at <a href="https://github.com/ainspector/ainspector-for-firefox">https://github.com/ainspector/ainspector-for-firefox</a>.</p>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>OpenA11y Evaluation Library</title>
+    <contents>
+
+      <ul>
+        <li>Total rewrite of evaluation library and rules to use modern JS techniques.</li>
+        <li>Review and fix rules and test cases for support of <a href="https://www.w3.org/TR/wai-aria-1.2/">ARIA 1.2</a>, <a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a> and <a href="https://www.w3.org/TR/WCAG/">WCAG 2.1</a> requirements.</li>
+        <li>New feature to allow evaluation to be limited to subsets of rules:
+          <ul>
+            <li>8-10 "First Step" rules (mixture of WCAG Level A and AA rules).</li>
+            <li>First Step and all WCAG Level A rules.</li>
+            <li>All WCAG Level A and AA rules, which includes all first step rules.</li>
+          </ul>
+        </li>
+        <li>Will be first released in AInspector for Firefox 2.1</li>
+      </ul>
+
+      <h2>Documentation and Source Code</h2>
+      <ul>
+        <li><a href="https://opena11y.github.io/evaluation-library/">Documentation</a></li>
+        <li><a href="https://github.com/opena11y/evaluation-library">Source Code</a></li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title></title>
+    <contents>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Illinois Information Technology Accessibility Act Review</title>
+    <contents>
+      <p><a href="https://doit.illinois.gov/initiatives/accessibility/iitaa/iitaa-review.html">IITAA Review</a> on Tuesday, November 14th at 10:00am to 12:00pm</p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Thank You!</title>
+    <contents>
+      <p>Would like to thank everyone for their work and support in making this campus more inclusive to people with disabilities by your work in making the online resources more accessible.</p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Comments and Questions</title>
+    <contents>
+    </contents>
+  </slide>
+
+</slides>
+
+

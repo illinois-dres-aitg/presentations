@@ -635,11 +635,11 @@
                 </xsl:if>
 
                 <xsl:if test="not(/slides/noslidenumbers)">
-                  <xsl:if test="position() > 0">
+                  <xsl:if test="$num > 0">
                     <xsl:element name="li">
                       <xsl:attribute name="class">nav navbar-text</xsl:attribute>
                         <xsl:text>Slide </xsl:text>
-                        <xsl:value-of select="position()"/>
+                        <xsl:value-of select="$num"/>
                         <xsl:text> of </xsl:text>
                         <xsl:value-of select="last()"/>
                     </xsl:element>
