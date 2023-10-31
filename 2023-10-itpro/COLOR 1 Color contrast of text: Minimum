@@ -1,0 +1,43 @@
+COLOR 1 Color contrast of text: Minimum
+COLOR 2 Use of color
+
+LINK 1  Link text must describe the link target
+
+TIMING 1  Control time limits
+
+BYPASS 1  Skip to main content link
+
+NAVIGATION 1  At least two ways of finding content
+
+IMAGE 1 Images must have alt text
+
+HEADING 1 Page should have H1 element
+
+LANDMARK 1  MAIN landmark: at least one
+
+AUDIO 1 AUDIO must have alternative
+AUDIO 2 OBJECT for audio must have alternative
+AUDIO 3 EMBED for audio must have alternative
+
+VIDEO 1 VIDEO for video only must have alternative
+VIDEO 2 OBJECT for video only must have alternative
+VIDEO 3 EMBED for video only must have alternative
+
+WIDGET 1  Accessible name is required
+WIDGET 3  ROLE must be valid
+WIDGET 4  Values must be valid
+WIDGET 5  Attributes that start with ARIA- must be defined.
+WIDGET 12 Accessible name is descriptive
+
+TABLE 1 Data cells must have row/column headers
+TABLE 2 Data tables must have name
+TABLE 5 Identify table markup as data or layout
+
+KEYBOARD 1  ARIA widget role requires specific keyboard support
+KEYBOARD 2  Sequential tab order of focusable elements must be meaningful
+KEYBOARD 3  No keyboard trap
+
+CONTROL 1 Form controls must have labels
+CONTROL 2 Image button must have alt. content
+CONTROL 3 Radio buttons must have grouping label
+CONTROL 10  Accessible name must be unique

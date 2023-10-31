@@ -78,41 +78,44 @@
     <contents>
 
       <ul>
+        <li>Uses new OpenA11y Evaluation Library 2.0.</li>
         <li>Improved reliability and responsiveness to page updates and tab changes.</li>
-        <li>Support for ARIA 1.2 requirements.</li>
-        <li>Support for ARIA in HTML requirements.</li>
+        <li>Improved element highlighting.</li>
+        <li>Rule result view includes more information about each element.</li>
+        <li>New configuration options for WCAG level and scope of rules.</li>
         <li>Export evaluation results as CSV or JSON format.</li>
-        <li>Element details view includes more information about each element.</li>
-        <li>Removed "HTML4 Legacy Techniques" rule set, only "HTML and ARIA Techniques" ruleset.</li>
       </ul>
 
       <h2>Documentation and Installation</h2>
       <ul>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">Install AInspector 3.0 for Firefox</a></li>
         <li><a href="https://ainspector.disability.illinois.edu/">Documentation</a></li>
-        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ainspector-wcag/">AInspector 3.0 for Firefox</a></li>
       </ul>
 
       <h2>Source Code</h2>
       <p>AInspector for Firefox is open source software. The code is available at <a href="https://github.com/ainspector/ainspector-for-firefox">https://github.com/ainspector/ainspector-for-firefox</a>.</p>
 
+      <h2>Reporting an Issue</h2>
+      <p><a target="_github" href="https://github.com/opena11y/ainspector-for-firefox/issues">Create a github issue</a> or send me an e-mail: <a href="mailto:jongund@illinois.edu?subject=AInspector 3.0 issue">jongund@illinois.edu</a></p>
+
     </contents>
   </slide>
 
   <slide>
-    <title>OpenA11y Evaluation Library</title>
+    <title>OpenA11y Evaluation Library 2.0</title>
     <contents>
 
       <ul>
         <li>Total rewrite of evaluation library and rules to use modern JS techniques.</li>
-        <li>Review and fix rules and test cases for support of <a href="https://www.w3.org/TR/wai-aria-1.2/">ARIA 1.2</a>, <a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a> and <a href="https://www.w3.org/TR/WCAG/">WCAG 2.1</a> requirements.</li>
-        <li>New feature to allow evaluation to be limited to subsets of rules:
+        <li>Update, review and fix rules and test cases for support of:
           <ul>
-            <li>8-10 "First Step" rules (mixture of WCAG Level A and AA rules).</li>
-            <li>First Step and all WCAG Level A rules.</li>
-            <li>All WCAG Level A and AA rules, which includes all first step rules.</li>
+            <li><a href="https://www.w3.org/TR/wai-aria-1.2/">Accessible Rich Internet Application (ARIA) 1.2 Specification</a></li>
+            <li><a href="https://www.w3.org/TR/html-aria/">Accessible Name and Description Computation 1.1</a></li>
+            <li><a href="https://www.w3.org/TR/accname/">ARIA in HTML Specification</a></li>
+            <li><a href="https://www.w3.org/TR/WCAG21/">Web content Accessibility Guidelines 2.1</a></li>
+            <li><a href="https://www.w3.org/TR/WCAG22/">Web content Accessibility Guidelines 2.2</a></li>
           </ul>
         </li>
-        <li>Will be first released in AInspector for Firefox 2.1</li>
       </ul>
 
       <h2>Documentation and Source Code</h2>
@@ -121,19 +124,485 @@
         <li><a href="https://github.com/opena11y/evaluation-library">Source Code</a></li>
       </ul>
 
+
     </contents>
   </slide>
 
   <slide>
-    <title></title>
+    <title>New AInspector Settings</title>
     <contents>
+      <ul>
+        <li>WCAG Version</li>
+        <li>Success Criterion Level</li>
+        <li>Rule scope</li>
+      </ul>
+      <div style="text-align: center; width: 80%; border: #444 2px solid">
+        <img src="./images/ainspector-settings-1.png"
+             alt="Screen shot of AInspector settings for rules"
+             style="width: 100%"/>
+      </div>
     </contents>
   </slide>
 
   <slide>
-    <title>Illinois Information Technology Accessibility Act Review</title>
+    <title>New WCAG 2.1 Requirements</title>
+    <style>
+      ul.wcag li {
+        line-height: 1em;
+        margin: 0;
+        padding: 0.125em;
+      }
+    </style>
     <contents>
-      <p><a href="https://doit.illinois.gov/initiatives/accessibility/iitaa/iitaa-review.html">IITAA Review</a> on Tuesday, November 14th at 10:00am to 12:00pm</p>
+      <p>17 new requirements</p>
+      <h2>Level A (5)</h2>
+      <ul class="wcag">
+        <li>2.1.4 <a target="_spec" href="https://w3.org/TR/WCAG/#character-key-shortcuts">Character Key Shortcuts</a> (A)</li>
+        <li>2.5.1 <a target="_spec" href="https://w3.org/TR/WCAG/#pointer-gestures">Pointer Gestures</a> (A)</li>
+        <li>2.5.2 <a target="_spec" href="https://w3.org/TR/WCAG/#pointer-cancellation">Pointer Cancellation</a> (A)</li>
+        <li>2.5.3 <a target="_spec" href="https://w3.org/TR/WCAG/#label-in-name">Label in Name</a> (A)</li>
+        <li>2.5.4 <a target="_spec" href="https://w3.org/TR/WCAG/#motion-actuation">Motion Actuation</a> (A)</li>
+      </ul>
+
+      <h2>Level AA (7)</h2>
+      <ul class="wcag">
+        <li>1.3.4 <a target="_spec" href="https://w3.org/TR/WCAG/#orientation">Orientation</a> (AA)</li>
+        <li>1.3.5 <a target="_spec" href="https://w3.org/TR/WCAG/#identify-input-purpose">Identify Input Purpose</a> (AA)</li>
+        <li>1.4.10 <a target="_spec" href="https://w3.org/TR/WCAG/#reflow">Reflow</a> (AA)</li>
+        <li>1.4.11 <a target="_spec" href="https://w3.org/TR/WCAG/#non-text-contrast">Non-Text Contrast</a> (AA)</li>
+        <li>1.4.12 <a target="_spec" href="https://w3.org/TR/WCAG/#text-spacing">Text Spacing</a> (AA)</li>
+        <li>1.4.13 <a target="_spec" href="https://w3.org/TR/WCAG/#content-on-hover-or-focus">Content on Hover or Focus</a> (AA)</li>
+        <li>4.1.3 <a target="_spec" href="https://w3.org/TR/WCAG/#status-messages">Status Messages</a> (AA)</li>
+      </ul>
+
+      <h2>Level AAA (5)</h2>
+      <ul class="wcag">
+        <li>1.3.6 <a target="_spec" href="https://w3.org/TR/WCAG/#identify-purpose">Identify Purpose</a> (AAA)</li>
+        <li>2.2.6 <a target="_spec" href="https://w3.org/TR/WCAG/#timeouts">Timeouts</a> (AAA)</li>
+        <li>2.3.3 <a target="_spec" href="https://w3.org/TR/WCAG/#animation-from-interactions">Animation from Interactions</a> (AAA)</li>
+        <li>2.5.5 <a target="_spec" href="https://w3.org/TR/WCAG/#target-size">Target Size</a> (AAA)</li>
+        <li>2.5.6 <a target="_spec" href="https://w3.org/TR/WCAG/#concurrent-input-mechanisms">Concurrent Input Mechanisms</a> (AAA)</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>New WCAG 2.2 Requirements</title>
+    <style>
+      ul.wcag li {
+        line-height: 1em;
+        margin: 0;
+        padding: 0.125em;
+      }
+    </style>
+    <contents>
+      <p>9 new requirements</p>
+
+      <h2>Level A (2)</h2>
+      <ul class="wcag">
+        <li>3.2.6 <a target="_spec" href="#consistent-help">Consistent Help</a> (A)</li>
+        <li>3.3.7 <a target="_spec" href="https://w3.org/TR/WCAG/#redundant-entry">Redundant Entry</a> (A)</li>
+      </ul>
+
+      <h2>Level AA (4)</h2>
+      <ul class="wcag">
+        <li>2.4.11 <a target="_spec" href="https://w3.org/TR/WCAG/#focus-not-obscured-minimum">Focus Not Obscured (Minimum)</a> (AA)</li>
+        <li>2.5.7 <a target="_spec" href="https://w3.org/TR/WCAG/#dragging-movements">Dragging Movements</a> (AA)</li>
+        <li>2.5.8 <a target="_spec" href="https://w3.org/TR/WCAG/#target-size-minimum">Target Size (Minimum)</a> (AA)</li>
+        <li>3.3.8 <a target="_spec" href="https://w3.org/TR/WCAG/#accessible-authentication-minimum">Accessible Authentication (Minimum)</a> (AA)</li>
+      </ul>
+
+      <h2>Level AAA (3)</h2>
+      <ul class="wcag">
+        <li>2.4.12 <a target="_spec" href="https://w3.org/TR/WCAG/#focus-not-obscured-enhanced">Focus Not Obscured (Enhanced)</a> (AAA)</li>
+        <li>2.4.13 <a target="_spec" href="https://w3.org/TR/WCAG/#focus-appearance">Focus Appearance</a> (AAA)</li>
+        <li>3.3.9 <a target="_spec" href="https://w3.org/TR/WCAG/#accessible-authentication-enhanced">Accessible Authentication (Enhanced)</a> (AAA)</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Rule Scope</title>
+    <contents>
+      <ul>
+        <li><em>Element</em>: A WCAG requirement for a specific html element or an element with an ARIA role, property or state. For example, an <code>img</code> element must have an <code>alt</code> attribute.</li>
+        <li><em>Page</em>: A WCAG requirement that applies to a feature of a web page.  For example, a web page must have a <code>main</code> landmark.</li>
+        <li><em>Website</em>: A WCAG requrement that applied to pages in a website.  For example, consistent navigational links in each web page.</li>
+      </ul>
+
+      <div style="text-align: center; width: 80%; border: #444 2px solid">
+        <img src="./images/ainspector-page-rule.png"
+             alt="Screen shot of sidebar with page rule result"
+             style="width: 100%"/>
+      </div>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Improved Element Result Highlighting</title>
+    <contents>
+
+      <h2>Highlighting Features</h2>
+      <ul>
+        <li>Border around element</li>
+        <li>P: Pass</li>
+        <li>F: Fail</li>
+        <li>W: Warning</li>
+        <li>MC: Manual Check</li>
+      </ul>
+
+      <h2>Screenshot</h2>
+
+      <div style="text-align: center; width: 100%; border: #444 2px solid">
+        <img src="./images/ainspector-element-result-highlighting.png"
+             alt="Screen shot of screen with element result highlighting"
+             style="width: 100%"/>
+      </div>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Element Result Information</title>
+    <contents>
+
+      <h2>Information</h2>
+
+      <ul>
+        <li>Rule Definition</li>
+        <li>Action</li>
+        <li>Role</li>
+        <li>Accessible Name</li>
+        <li>Accessible Description</li>
+        <li>Tag Name</li>
+        <li>Element Attributes</li>
+        <li>Result Type</li>
+      </ul>
+
+      <h2>Screenshot</h2>
+
+      <div style="text-align: center; width: 80%; border: #444 2px solid">
+        <img src="./images/ainspector-element-info.png"
+             alt="Screen shot of sidebar with element result information"
+             style="width: 100%"/>
+      </div>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Element Result Information: Color Contrast Rule</title>
+    <contents>
+
+      <h2>Color Contrast Information</h2>
+
+      <ul>
+        <li>color contrast ratio</li>
+        <li>color</li>
+        <li>background color</li>
+        <li>font family</li>
+        <li>font size</li>
+        <li>font weight</li>
+        <li>large font</li>
+        <li>background image</li>
+        <li>background repeat</li>
+        <li>background position</li>
+      </ul>
+
+      <h2>Screenshot</h2>
+
+      <div style="text-align: center; width: 80%; border: #444 2px solid">
+        <img src="./images/ainspector-ccr-info.png"
+             alt="Screen shot of sidebar with element result information for color contrast rule"
+             style="width: 100%"/>
+      </div>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Element Result Information: Table Cell Rules</title>
+    <contents>
+
+      <h2>Table Cell Header Information</h2>
+
+      <ul>
+        <li>headers</li>
+        <li>headers source</li>
+        <li>rowspan</li>
+        <li>colspan</li>
+      </ul>
+
+      <h2>Screenshot</h2>
+
+      <div style="text-align: center; width: 80%; border: #444 2px solid">
+        <img src="./images/ainspector-data-cell-info.png"
+             alt="Screen shot of sidebar with element result information for a table cell"
+             style="width: 100%"/>
+      </div>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Table Examples</title>
+    <style>
+      table.table {
+        border: #CCC solid 1px;
+      }
+      table.table caption {
+        font-size: 1em;
+      }
+    </style>
+    <contents>
+      <h2>Row/Column Headers</h2>
+      <table class="table table-striped">
+        <caption>Game Sales</caption>
+        <thead>
+          <tr>
+            <td rowspan="2"></td>
+            <th colspan="2" scope="colgroup">Mars</th>
+            <th colspan="2" scope="colgroup">Venus</th>
+          </tr>
+          <tr>
+            <th scope="col">Produced</th>
+            <th scope="col">Sold</th>
+            <th scope="col">Produced</th>
+            <th scope="col">Sold</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Teddy Bears</th>
+            <td>50,000</td>
+            <td>30,000</td>
+            <td>100,000</td>
+            <td>80,000</td>
+          </tr>
+          <tr>
+            <th scope="row">Board Games</th>
+            <td>10,000</td>
+            <td>5,000</td>
+            <td>12,000</td>
+            <td>9,000</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <h2 style="margin-top: 3em">Headers Attribute</h2>
+      <table class="table table-striped">
+      <caption>
+          Availability of Holiday Accommodations
+      </caption>
+      <thead>
+          <tr>
+              <td></td>
+              <th id="stud" scope="col">
+                  Studio
+              </th>
+              <th id="apt" scope="col">
+                  <abbr title="Apartment">Apt</abbr>
+              </th>
+              <th id="chal" scope="col">
+                  Chalet
+              </th>
+              <th id="villa" scope="col">
+                  Villa
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <th id="par" class="span" colspan="5" scope="colgroup">
+                  Paris
+              </th>
+          </tr>
+          <tr>
+              <th headers="par" id="pbed1">
+                  1 bedroom
+              </th>
+              <td headers="par pbed1 stud">
+                  11
+              </td>
+              <td headers="par pbed1 apt">
+                  20
+              </td>
+              <td headers="par pbed1 chal">
+                  25
+              </td>
+              <td headers="par pbed1 villa">
+                  23
+              </td>
+          </tr>
+          <tr>
+              <th headers="par" id="pbed2">
+                  2 bedroom
+              </th>
+              <td headers="par pbed2 stud">
+                  -
+              </td>
+              <td headers="par pbed2 apt">
+                  43
+              </td>
+              <td headers="par pbed2 chal">
+                  52
+              </td>
+              <td headers="par pbed2 villa">
+                  32
+              </td>
+          </tr>
+          <tr>
+              <th headers="par" id="pbed3">
+                  3 bedroom
+              </th>
+              <td headers="par pbed3 stud">
+                  -
+              </td>
+              <td headers="par pbed3 apt">
+                  13
+              </td>
+              <td headers="par pbed3 chal">
+                  15
+              </td>
+              <td headers="par pbed3 villa">
+                  40
+              </td>
+          </tr>
+          <tr>
+              <th id="rome" class="span" colspan="5" scope="colgroup">
+                  Rome
+              </th>
+          </tr>
+          <tr>
+              <th id="rbed1" headers="rome">
+                  1 bedroom
+              </th>
+              <td headers="rome rbed1 stud">
+                  13
+              </td>
+              <td headers="rome rbed1 apt">
+                  21
+              </td>
+              <td headers="rome rbed1 chal">
+                  22
+              </td>
+              <td headers="rome rbed1 villa">
+                  3
+              </td>
+          </tr>
+          <tr>
+              <th id="rbed2" headers="rome">
+                  2 bedroom
+              </th>
+              <td headers="rome rbed2 stud">
+                  -
+              </td>
+              <td headers="rome rbed2 apt">
+                  23
+              </td>
+              <td headers="rome rbed2 chal">
+                  43
+              </td>
+              <td headers="rome rbed2 villa">
+                  30
+              </td>
+          </tr>
+          <tr>
+              <th id="rbed3" headers="rome">
+                  3 bedroom
+              </th>
+              <td headers="rome rbed3 stud">
+                  -
+              </td>
+              <td headers="rome rbed3 apt">
+                  16
+              </td>
+              <td headers="rome rbed3 chal">
+                  32
+              </td>
+              <td headers="rome rbed3 villa">
+                  40
+              </td>
+          </tr>
+      </tbody>
+      </table>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Exporting Results</title>
+    <contents>
+
+      <h2>Exporting Results</h2>
+
+      <ul>
+        <li>CSV</li>
+        <li>JSON</li>
+      </ul>
+
+      <h2>Screenshot</h2>
+
+      <div style="text-align: center; width: 80%; border: #444 2px solid">
+        <img src="./images/ainspector-export.png"
+             alt="Screen shot of sidebar with element result information for a table cell"
+             style="width: 100%"/>
+      </div>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Rerun Evaluation</title>
+    <contents>
+
+      <h2>Rerun Options</h2>
+
+      <ul>
+        <li>Immediate</li>
+        <li>Delayed</li>
+      </ul>
+
+      <h2>Screenshot</h2>
+
+      <div style="text-align: center; width: 80%; border: #444 2px solid">
+        <img src="./images/ainspector-rerun.png"
+             alt="Screen shot of sidebar with element result information for a table cell"
+             style="width: 100%"/>
+      </div>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Reporting Issues and Feature Requests</title>
+    <contents>
+      <p><a target="_github" href="https://github.com/opena11y/ainspector-for-firefox/issues">Create a github issue</a> or send me an e-mail: <a href="mailto:jongund@illinois.edu?subject=AInspector 3.0 issue">jongund@illinois.edu</a></p>
+
+      <p>Ideally include a link to a page you foung the problem and describe how I can replicate the issue.</p>
+
+      <p>NOTE: AInspector Sidebar for Firefox is an open source project and users are very important in helping make the tool better.</p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Future Steps</title>
+    <contents>
+
+      <ul>
+        <li>At least one rule for every WCAG 2.2 requirement.</li>
+        <li>Link information report to identify links to:
+          <ul>
+            <li>Office documents</li>
+            <li>PDF Documents</li>
+            <li>Media and images</li>
+          </ul>
+        </li>
+        <li>Create a version for Google Chrome.</li>
+      </ul>
+
     </contents>
   </slide>
 
