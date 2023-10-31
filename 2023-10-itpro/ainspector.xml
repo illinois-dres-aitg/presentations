@@ -129,6 +129,73 @@
   </slide>
 
   <slide>
+    <title>Accessible Name Calculation</title>
+    <contents>
+      <ul>
+        <li>Improved implementation of the <a href="https://www.w3.org/TR/html-aria/">Accessible Name and Description Computation 1.1</a> for:
+          <ul>
+            <li><code>aria-labelledby</code></li>
+            <li><code>aria-describedby</code></li>
+            <li><code>aria-errormessage</code></li>
+          </ul>
+        </li>
+        <li>Improved support includes:
+           <ul>
+            <li>Content from form control values (e.g. <code>input[type=text]</code>).</li>
+            <li>Content hidden using CSS <code>display</code> and <code>visibility</code> properties,</li>
+            <li>Content hidden using <code>aria-hidden=true</code>.</li>
+          </ul>
+        </li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>ARIA Specification Validation</title>
+    <contents>
+      <ul>
+        <li>Accessible name required, allowed or prohibited.</li>
+        <li>Required ARIA attributes.</li>
+        <li>Allowed ARIA attributes.</li>
+        <li>Allowed ARIA attribute values (e.g. <code>aria-checked</code> is <code>true</code>, <code>false</code> or <code>mixed</code>) .</li>
+        <li>Required children (e.g. menuitems in a menu).</li>
+        <li>Required context (e.g. treeitem the descendant of a tree).</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>ARIA in HTML Validation</title>
+    <contents>
+      <ul>
+        <li>Default ARIA role for the element.</li>
+        <li>What roles are allowed on HTML elements.</li>
+        <li>Examples:
+          <ul>
+            <li>
+                <code>main</code> element has the default role of <code>main</code> and cannot have any other role values.
+            </li>
+            <li>
+                <code>ol</code> element has the default role of <code>list</code>, or the roles:
+                <code>group</code>,
+                <code>listbox</code>,
+                <code>menu</code>,
+                <code>menubar</code>,
+                <code>none</code>,
+                <code>presentation</code>,
+                <code>radiogroup</code>,
+                <code>tablist</code>,
+                <code>toolbar</code>
+                or <code>tree</code>.
+            </li>
+            <li><code>p</code> element has the default role of <code>paragraph</code> and can have any other role assigned to it.</li>
+          </ul>
+        </li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
     <title>New AInspector Settings</title>
     <contents>
       <ul>

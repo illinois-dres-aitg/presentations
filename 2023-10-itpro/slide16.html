@@ -2,11 +2,18 @@
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Slide 16: Reporting Issues and Feature Requests</title>
+      <title>Slide 16: Table Examples</title>
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
-      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
+      <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style">
+      table.table {
+        border: #CCC solid 1px;
+      }
+      table.table caption {
+        font-size: 1em;
+      }
+    </style>
    </head>
    <body>
       <nav id="nav" class="navbar navbar-default">
@@ -28,12 +35,12 @@
                   <li><a id="ID_SLIDE_NEXT" href="slide17.html" title="Slide 17">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide19.html" title="Slide 19">
+                  <li><a id="ID_SLIDE_LAST" href="slide22.html" title="Slide 22">
                         Last
                       </a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                  <li class="nav navbar-text">Slide 16 of 19</li>
+                  <li class="nav navbar-text">Slide 16 of 22</li>
                </ul>
             </div>
          </div>
@@ -42,10 +49,177 @@
          <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-9">
-               <h1 id="h1_title" class="title">Reporting Issues and Feature Requests</h1>
-               <p><a target="_github" href="https://github.com/opena11y/ainspector-for-firefox/issues">Create a github issue</a> or send me an e-mail: <a href="mailto:jongund@illinois.edu?subject=AInspector 3.0 issue">jongund@illinois.edu</a></p>
-               <p>Ideally include a link to a page you foung the problem and describe how I can replicate the issue.</p>
-               <p>NOTE: AInspector Sidebar for Firefox is an open source project and users are very important in helping make the tool better.</p>
+               <h1 id="h1_title" class="title">Table Examples</h1>
+               <h2>Row/Column Headers</h2>
+               <table class="table table-striped">
+                  <caption>Game Sales</caption>
+                  <thead>
+                     <tr>
+                        <td rowspan="2"></td>
+                        <th colspan="2" scope="colgroup">Mars</th>
+                        <th colspan="2" scope="colgroup">Venus</th>
+                     </tr>
+                     <tr>
+                        <th scope="col">Produced</th>
+                        <th scope="col">Sold</th>
+                        <th scope="col">Produced</th>
+                        <th scope="col">Sold</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <th scope="row">Teddy Bears</th>
+                        <td>50,000</td>
+                        <td>30,000</td>
+                        <td>100,000</td>
+                        <td>80,000</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Board Games</th>
+                        <td>10,000</td>
+                        <td>5,000</td>
+                        <td>12,000</td>
+                        <td>9,000</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <h2 style="margin-top: 3em">Headers Attribute</h2>
+               <table class="table table-striped">
+                  <caption>
+          Availability of Holiday Accommodations
+      </caption>
+                  <thead>
+                     <tr>
+                        <td></td>
+                        <th id="stud" scope="col">
+                  Studio
+              </th>
+                        <th id="apt" scope="col">
+                  <abbr title="Apartment">Apt</abbr>
+              </th>
+                        <th id="chal" scope="col">
+                  Chalet
+              </th>
+                        <th id="villa" scope="col">
+                  Villa
+              </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <th id="par" class="span" colspan="5" scope="colgroup">
+                  Paris
+              </th>
+                     </tr>
+                     <tr>
+                        <th headers="par" id="pbed1">
+                  1 bedroom
+              </th>
+                        <td headers="par pbed1 stud">
+                  11
+              </td>
+                        <td headers="par pbed1 apt">
+                  20
+              </td>
+                        <td headers="par pbed1 chal">
+                  25
+              </td>
+                        <td headers="par pbed1 villa">
+                  23
+              </td>
+                     </tr>
+                     <tr>
+                        <th headers="par" id="pbed2">
+                  2 bedroom
+              </th>
+                        <td headers="par pbed2 stud">
+                  -
+              </td>
+                        <td headers="par pbed2 apt">
+                  43
+              </td>
+                        <td headers="par pbed2 chal">
+                  52
+              </td>
+                        <td headers="par pbed2 villa">
+                  32
+              </td>
+                     </tr>
+                     <tr>
+                        <th headers="par" id="pbed3">
+                  3 bedroom
+              </th>
+                        <td headers="par pbed3 stud">
+                  -
+              </td>
+                        <td headers="par pbed3 apt">
+                  13
+              </td>
+                        <td headers="par pbed3 chal">
+                  15
+              </td>
+                        <td headers="par pbed3 villa">
+                  40
+              </td>
+                     </tr>
+                     <tr>
+                        <th id="rome" class="span" colspan="5" scope="colgroup">
+                  Rome
+              </th>
+                     </tr>
+                     <tr>
+                        <th id="rbed1" headers="rome">
+                  1 bedroom
+              </th>
+                        <td headers="rome rbed1 stud">
+                  13
+              </td>
+                        <td headers="rome rbed1 apt">
+                  21
+              </td>
+                        <td headers="rome rbed1 chal">
+                  22
+              </td>
+                        <td headers="rome rbed1 villa">
+                  3
+              </td>
+                     </tr>
+                     <tr>
+                        <th id="rbed2" headers="rome">
+                  2 bedroom
+              </th>
+                        <td headers="rome rbed2 stud">
+                  -
+              </td>
+                        <td headers="rome rbed2 apt">
+                  23
+              </td>
+                        <td headers="rome rbed2 chal">
+                  43
+              </td>
+                        <td headers="rome rbed2 villa">
+                  30
+              </td>
+                     </tr>
+                     <tr>
+                        <th id="rbed3" headers="rome">
+                  3 bedroom
+              </th>
+                        <td headers="rome rbed3 stud">
+                  -
+              </td>
+                        <td headers="rome rbed3 apt">
+                  16
+              </td>
+                        <td headers="rome rbed3 chal">
+                  32
+              </td>
+                        <td headers="rome rbed3 villa">
+                  40
+              </td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <div class="col"></div>
          </div>
