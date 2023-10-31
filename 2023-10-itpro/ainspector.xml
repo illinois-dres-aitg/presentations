@@ -196,22 +196,6 @@
   </slide>
 
   <slide>
-    <title>New AInspector Settings</title>
-    <contents>
-      <ul>
-        <li>WCAG Version</li>
-        <li>Success Criterion Level</li>
-        <li>Rule scope</li>
-      </ul>
-      <div style="text-align: center; width: 80%; border: #444 2px solid">
-        <img src="./images/ainspector-settings-1.png"
-             alt="Screen shot of AInspector settings for rules"
-             style="width: 100%"/>
-      </div>
-    </contents>
-  </slide>
-
-  <slide>
     <title>New WCAG 2.1 Requirements</title>
     <style>
       ul.wcag li {
@@ -286,6 +270,22 @@
         <li>2.4.13 <a target="_spec" href="https://w3.org/TR/WCAG/#focus-appearance">Focus Appearance</a> (AAA)</li>
         <li>3.3.9 <a target="_spec" href="https://w3.org/TR/WCAG/#accessible-authentication-enhanced">Accessible Authentication (Enhanced)</a> (AAA)</li>
       </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>New AInspector Settings</title>
+    <contents>
+      <ul>
+        <li>WCAG Version</li>
+        <li>Success Criterion Level</li>
+        <li>Rule scope</li>
+      </ul>
+      <div style="text-align: center; width: 80%; border: #444 2px solid">
+        <img src="./images/ainspector-settings-1.png"
+             alt="Screen shot of AInspector settings for rules"
+             style="width: 100%"/>
+      </div>
     </contents>
   </slide>
 
