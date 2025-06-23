@@ -387,7 +387,7 @@
               <xsl:value-of select="/slides/footer/."/>
             </xsl:when>
             <xsl:otherwise>
-              Copyright  &#169; 2020
+              Copyright  &#169; 2025
             </xsl:otherwise>
           </xsl:choose>
         <xsl:element name="span">

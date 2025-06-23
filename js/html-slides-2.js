@@ -1,16 +1,27 @@
-function resizeContent() {
+/* html-slides-2 */
 
-    const contentElem = document.querySelector('#content');
-    const navElem = document.querySelector('#nav');
-    contentElem.styles.marginBottom = 4;
-//    $('#content').css('marginBottom', 4);
+class HTMLSlides () {
 
-    var nav_height         = $('#nav').height();
-    var content_height     = $('#content').innerHeight();
-    var transcript_height  = $('aside[aria-label]').innerHeight();
-    if (!transcript_height) {
-      transcript_height = 0;
-    }
+  constructor () {
+    this.contentElem = document.querySelector('#content');
+    this.navElem = document.querySelector('#nav');
+    this.footerElem = document.querySelector('footer');
+    this.transcriptElem = document.querySelector('aside[aria-label]');
+    this.hasTranscript = typeof this.transcriptElem === 'object';
+
+
+  }
+
+  resizeContent() {
+
+    this.contentElem.styles.marginBottom = 4;
+
+    const navHeight     = this.navElem.getBoundingClientRect.height;
+    const contentHeight = this.contentElem.getBoundingClientRect.height;
+    const transcriptHeight = this.hasTranscript ?
+                             this.transcriptElem.getBoundingClientRect.height :
+                             0;
+
     var copyright_height = $('footer').height();
     var document_height  = $(document).height();
 
@@ -21,7 +32,10 @@ function resizeContent() {
         $('#content').css('marginBottom', space + 'px');
     }
 
-};
+
+}
+
+
 
 function showMore() {
   var found = false;

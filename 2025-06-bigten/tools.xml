@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="funct.css" type="text/css"?>
+<?xm-well_formed path="funct.dtd"?>
+<slides>
+  <lang>en</lang>
+  <footer>
+    <a href="https://illinois.edu">
+      <img src="../images/block-i.png" alt="University of Illinois"/>
+    </a>
+    Copyright &#169; 2025 University of Illinois
+  </footer>
+  <title>SkipTo.js and TOC: Headings, Landmarks and Links</title>
+
+  <person>
+    <name>Jon Gunderson, Ph.D., CPWA</name>
+    <desc>Retired Coordinator of the DRES Accessible IT Group</desc>
+    <desc href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</desc>
+    <desc href="http://dres.illinois.edu">Disability Resources and Education Services</desc>
+    <desc href="http://openweba11y.com">Open Web Accessibility Consulting</desc>
+    <desc href="mailto:jongund@illinois.edu">jongund@illinois.edu</desc>
+  </person>
+
+  <conference>
+    <name>BigTen Academic Alliance IT Accessibility Group </name>
+    <desc>June 24th, 2025</desc>
+    <desc>Urbana, Illinoia</desc>
+  </conference>
+
+  <desc href="../">Presentations</desc>
+
+  <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
+  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
+
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
+
+  <script>../js/jquery-2.1.1.min.js</script>
+  <script>../js/bootstrap.min.js</script>
+  <script>../js/bootstrap-accessibility.min.js</script>
+  <script>../js/html-slides.js</script>
+
+  <slide>
+    <style>
+      .name {
+        font-weight: bold;
+      }
+    </style>
+    <title>SkipTo.js and TOC: Headings, Landmarks and Links</title>
+    <contents>
+
+    <div class="person">
+      <div class="name">Jon Gunderson, Ph.D., CPWA</div>
+      <div>Retired Coordinator of the DRES Accessible IT Group</div>
+      <div><a href="http://accessibleit.disability.illinois.edu">DRES Accessibility IT Group</a></div>
+      <div><a href="http://illinois.edu">University of Illinois at Urbana-Champaign</a></div>
+      <div><a href="mailto:jongund@illinois.edu">jongund@illinois.edu</a></div>
+    </div>
+
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+   <slide>
+    <title>Overview</title>
+    <contents>
+      <ul>
+        <li>WCAG 2.4.1 "Bypass Blocks of Content"</li>
+        <li>History of bypass blocks requirement</li>
+        <li>Structural elements</li>
+        <li><a href="https://skipto-landmarks-headings.github.io/page-script-5/page-script.html">SkipTo.js Page Script</a></li>
+        <li>Browser Extensions:
+          <ul>
+            <li>
+              <a href="https://chromewebstore.google.com/detail/skiptojs-for-chrome/mgmnhfooeifhicajoeoamlchoadbioof">SkipTo.js for Chrome</a>
+            </li>
+            <li><a href="https://addons.mozilla.org/en-GB/firefox/addon/skipto-js-for-firefox">SkipTo.js for Firefox</a></li>
+            <li><a href="https://addons.opera.com/en/extensions/details/skiptojs-for-opera/">SkipTo.js for Opera</a></li>
+          </ul>
+        </li>
+        <li><a href="https://skipto-landmarks-headings.github.io/page-script-5/bookmarklets.html">SkipTo.js Bookmarklet</a></li>
+      </ul>
+
+      <script type="text/javascript">
+        slideShowURL()
+      </script>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>History of Bypass Blocks</title>
+    <contents>
+      <table class="table table-striped" aria-labelledby="h1_title">
+        <thead>
+          <th scope="col">Year</th>
+          <th scope="col" style="min-width: 8em">Standard</th>
+          <th scope="col">Requirement and Assistive Technology</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1999</td>
+            <td><a href="https://www.w3.org/TR/wai-aria-1.0/" target="_spec">WCAG 1.0</a></td>
+            <td>
+              <ul>
+                <li>Checkpoint 13.6 Group related links, identify the group (for user agents), and, until user agents do so, provide a way to bypass the group. [Priority 3].</li>
+                <li>Screen readers did not have features to navigate headers.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2000</td>
+            <td><a href="https://www.access-board.gov/ict/#original508" target="_spec">Section 508</a></td>
+            <td>
+              <ul>
+                <li>§ 1194.22 (o) A method shall be provided that permits users to skip repetitive navigation links.</li>
+                <li>Screen readers begin to include web page navigation features like navigating headers.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2007</td>
+            <td><a href="https://www.w3.orgTR/2007/WD-xhtml-role-20071004/" target="_spec">XHTML Role Attribute Module (Working Draft)</a>
+            </td>
+            <td>First introduction of landmark region roles:
+              <ul>
+                <li>banner</li>
+                <li>contentinfo</li>
+                <li>main</li>
+                <li>navigation</li>
+                <li>search</li>
+                <li>secondary (later changed to "complementary" in ARIA)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2008</td>
+            <td><a href="https://www.w3.org/TR/WCAG20/" target="_spec">WCAG 2.0</a></td>
+            <td>
+              <ul>
+                <li>Success Criteria 2.4.1 Bypass Blocks: A mechanism is available to bypass blocks of content that are repeated on multiple Web pages. (Level A)</li>
+                <li>JAWS Screen Reader + Some Specific Version of Microsoft Internet Explore is the default standard for accessibility.</li>
+                <li>VoiceOver for macOS is available.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2014</td>
+            <td>ARIA 1.0</td>
+            <td>
+              <ul>
+                <li>ARIA is first standard to define how browsers should communicate web page information to accessibility APIs for macOS, Windows and Linux</li>
+                <li>ARIA defines landmark region roles, although implementation in browsers has been available for years.</li>
+                <li>Mozilla Firefox and Google Chrome lead browser efforts to implement ARIA standard.</li>
+                <li>JAWS and NVDA for Windows, VoiceOver for macOS and Orca for Linux/GNOME become the dominate screen readers.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Current Bypass Blocks Techniques</title>
+    <contents>
+
+      <h2><q>Skip to Main Content</q> Link</h2>
+      <ul>
+        <li>Early implementations used 1 pixel images for the link with ALT text attribute, current implementations use visible text.</li>
+        <li>Link at beginning of page to internal anchor.</li>
+        <li>Link is hidden until it receives keyboard focus.</li>
+        <li>No significant change in technique in over 20+ years.</li>
+        <li><a href="https://webaim.org/techniques/skipnav/">WebAIM: "Skip Navigation" Links</a></li>
+      </ul>
+
+      <h2 id="id-examples">Examples</h2>
+
+      <table class="table table-striped" aria-laeblledby="id-examples">
+        <thead>
+          <th scope="col">Website</th>
+          <th scope="col">Visible when page loads</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://illinois.edu/" target="_website">Illinois</a></td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><a href="https://wisc.edu/" target="_website">Wisconsin</a></td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3.org/WAI/" target="_website">W3C Web Accessibility Initiative (WAI)</a></td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>HTML Heading and Landmark Elements</title>
+    <contents>
+      <h2 id="id-Headings-label">Heading Elements</h2>
+      <table class="table table-striped" aria-labelledby="id-headings-label">
+        <thead>
+          <tr>
+            <th scope="col">Element</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>h1</code></td>
+            <td>Title of web page at the beginning of the main content.</td>
+          </tr>
+          <tr>
+            <td><code>h2</code></td>
+            <td>
+              <ul>
+                <li>Identify sub-sections of main region.</li>
+                <li>Identify title for complementary region.</li>
+                <li>Labels for top-level navigation and complementary landmark regions.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><code>h3-h6</code></td>
+            <td>Identify sub-sections of top level regions using the heading level to identify nesting level of the section.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="id-landmarks-label">Landmark Elements</h2>
+      <table class="table table-striped" aria-labelledby="id-landmarks-label">
+        <thead>
+          <tr>
+            <th scope="col">Role</th>
+            <th scope="col">Element</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>banner</code></td>
+            <td><code>header</code></td>
+            <td>Shared content at the beginning of most pages within a website.</td>
+          </tr>
+          <tr>
+            <td><code>complementary</code></td>
+            <td><code>aside</code></td>
+            <td>Content that is related to the main content of a website, that is often located in a sidebar.</td>
+          </tr>
+          <tr>
+            <td><code>contentinfo</code></td>
+            <td><code>footer</code></td>
+            <td>Shared content at the bottom of most web pages within a website.</td>
+          </tr>
+          <tr>
+            <td><code>main</code></td>
+            <td><code>main</code></td>
+            <td>Identifies the main content of a web page.</td>
+          </tr>
+          <tr>
+            <td><code>navigation</code></td>
+            <td><code>nav</code></td>
+            <td>Identifies a group links related to website navigation.</td>
+          </tr>
+          <tr>
+            <td><code>region</code></td>
+            <td><code>section</code> with accessible name</td>
+            <td>Typically identifies subsections of other landmark regions.</td>
+          </tr>
+          <tr>
+            <td><code>search</code></td>
+            <td><code>[role=<q>search</q>]</code></td>
+            <td>Identifies search forms on a web page.</td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Goals of SkipTo.js script and browser extensions</title>
+    <contents>
+      <ul>
+        <li>Improve keyboard accessibility to web page content by giving all users the header and landmark navigation features available in screen readers.</li>
+        <li>Allow authors to identify more than one important navigational point within web resources.</li>
+        <li>Simplify and improve the reliability of implementing the WCAG 2.4.1 Bypass Blocks of Content requirement.</li>
+        <li>Increase the awareness of header and landmark region information on web pages to promote a better understanding of functional accessibility.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>SkipTo.js Page Script Examples and Browser Wxtensions</title>
+    <contents>
+
+
+      <h2>Page Script Examples</h2>
+      <ul>
+        <li><a href="https://ahs.illinois.edu" target="_website">College of Applied Health Sciences</a></li>
+        <li><a href="https://wordpress.webtheme.illinois.edu/" target="_website">Illinois Theme for WordPress</a></li>
+        <li><a href="https://www.w3.org/WAI/ARIA/apg/" target="_website">W3C ARIA Authoring Practices</a></li>
+      </ul>
+
+      <h2>Browser Extensions</h2>
+      <ul>
+        <li>
+          <a href="https://chromewebstore.google.com/detail/skiptojs-for-chrome/mgmnhfooeifhicajoeoamlchoadbioof">SkipTo.js for Chrome</a>
+        </li>
+        <li><a href="https://addons.mozilla.org/en-GB/firefox/addon/skipto-js-for-firefox">SkipTo.js for Firefox</a></li>
+        <li><a href="https://addons.opera.com/en/extensions/details/skiptojs-for-opera/">SkipTo.js for Opera</a></li>
+      </ul>
+
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>SkipTo.js Design: Menu Button</title>
+    <contents>
+      <ul>
+        <li>Button visible by default.</li>
+        <li>Button placement and styling.</li>
+        <li>Keyboard shortcut information:
+          <ul>
+            <li>Windows and Linux: <kbd>Alt+0</kbd></li>
+            <li>macOS: <kbd>Option+0</kbd></li>
+          </ul>
+      </li>
+      </ul>
+      <div class="screenshot"><img src="chrome-ahs-1280-800.png" alt="Screenshot of SkipTo menu open with highlight around the menu button"/></div>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>SkipTo.js Extensions</title>
+    <contents>
+      <ul>
+        <li>SkipTo.js becomes an assistive technology</li>
+        <li>Use on almost any website</li>
+        <li>Enables keyboard shortcuts for header and landmark navigation</li>
+      </ul>
+
+      <h2 id="landmark-regions">Landmark Regions</h2>
+      <table class="table table-striped shortcuts" aria-labelledby="landmark-regions">
+         <thead>
+            <tr>
+               <th>Key</th>
+               <th>Description</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+              <th>r</th><td>Next region</td>
+            </tr>
+            <tr>
+              <th>R</th><td>Previous region</td>
+            </tr>
+            <tr>
+              <th>m</th><td>Main regions</td>
+            </tr>
+            <tr>
+              <th>n</th><td>Navigation regions</td>
+            </tr>
+            <tr>
+              <th>c</th><td>Complementary regions</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="headings">Headings</h2>
+
+        <table class="table table-striped shortcuts" aria-labelledby="headings">
+         <thead>
+            <tr>
+               <th>Key</th>
+               <th>Description</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+              <th>h</th><td>Next heading</td>
+            </tr>
+            <tr>
+              <th>H</th><td>Previous heading</td>
+            </tr>
+            <tr>
+              <th>1</th><td>Level 1 headings</td>
+            </tr>
+            <tr>
+              <th>2</th><td>Level 2 headings</td>
+            </tr>
+            <tr>
+              <th>3</th><td>Level 3 headings</td>
+            </tr>
+            <tr>
+              <th>4</th><td>Level 4 headings</td>
+            </tr>
+            <tr>
+              <th>5</th><td>Level 5 headings</td>
+            </tr>
+            <tr>
+              <th>6</th><td>Level 6 headings</td>
+            </tr>
+          </tbody>
+        </table>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>TOC: Headings, Landmarks and Links Browser Extension</title>
+    <contents>
+
+      <figure class="image">
+         <img src="./images/chrome-1280-800-headings.png"
+              alt=""/>
+              <figcaption>Screen Shot of TOC: Headings, Landmarks and Links Side Panel</figcaption>
+      </figure>
+
+      <p>The <em>TOC: Headings, Landmarks and Links</em> extension provides a browser side panel to view the headings, landmark regions and links on a web page.</p>
+
+      <ul>
+        <li><a href="https://chromewebstore.google.com/detail/toc-headings-landmarks-an/eoadlbcfkolkpigecddbdlbneekefkfa">Chrome</a></li>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/toc-headings-landmarks-links/">Firefox</a></li>
+        <li>Opera (Coming Soon!)</li>
+      </ul>
+
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Side Panel Features</title>
+    <contents>
+      <ul>
+        <li>Uses <a href="https://opena11y.github.io/evaluation-library/">OpenA11y Evalaution Library</a></li>
+        <li>Computes <a href="https://www.w3.org/TR/accname-1.2/">accessible names using W3C algorithm</a></li>
+        <li>Emulates screen reader filtering of headings and landmarks</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Future Tool Projects</title>
+    <contents>
+      <ul>
+        <li>Updating AInspector to work on Chrome and Opera.</li>
+        <li>Updating OpenA11y Evaluation Library to identify Wave and aXe relationships with OpenA11y rules.</li>
+        <li>Creating a popup dialog box version of TOC: Headings, Landmarks and Links as an assistive technology to support keyboard navigation.</li>
+      </ul>
+    </contents>
+  </slide>
+
+
+  <slide>
+    <title>Acknowledgements</title>
+    <contents>
+      <ul>
+        <li>Thank you to Heather Stout, Director of Operations and Service at DRES for financial supporting work on the tools.</li>
+        <li>Thank you to the staff of the DRES AMS group including, Alex Cordain, Ann Fredicksen and Christy Blew for their feedback.</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Thank You!</title>
+    <contents>
+      <p>Would like to thank everyone for their work and support in making higher education more inclusive to people with disabilities by your work in making the online resources more accessible.</p>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Comments and Questions</title>
+    <contents>
+    </contents>
+  </slide>
+
+</slides>
+
+
