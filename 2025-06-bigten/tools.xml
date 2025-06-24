@@ -81,10 +81,6 @@
         </li>
         <li><a href="https://skipto-landmarks-headings.github.io/page-script-5/bookmarklets.html">SkipTo.js Bookmarklet</a></li>
       </ul>
-
-      <script type="text/javascript">
-        slideShowURL()
-      </script>
     </contents>
   </slide>
 
@@ -440,7 +436,7 @@
         <li>Computes <a href="https://www.w3.org/TR/accname-1.2/">accessible names using W3C algorithm</a></li>
         <li>Emulates screen reader filtering of headings and landmarks:
           <ul>
-            <li>Small and off-screen headings</li>
+            <li>Removes small and off-screen headings</li>
             <li>Landmarks without accessible names</li>
           </ul>
         </li>
