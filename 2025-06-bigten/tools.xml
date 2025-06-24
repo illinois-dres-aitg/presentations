@@ -439,6 +439,13 @@
         <li>Uses <a href="https://opena11y.github.io/evaluation-library/">OpenA11y Evalaution Library</a></li>
         <li>Computes <a href="https://www.w3.org/TR/accname-1.2/">accessible names using W3C algorithm</a></li>
         <li>Emulates screen reader filtering of headings and landmarks</li>
+        <li>Demonstrating ARIA enabled widgets:
+          <ul>
+            <li><em>Headings</em>: <a href="https://www.w3.org/WAI/ARIA/apg/patterns/treeview/">Tree View Pattern</a></li>
+            <li><em>Landmarks</em>: <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/">Listbox Pattern</a></li>
+            <li><em>Links</em>: <a href="https://www.w3.org/WAI/ARIA/apg/patterns/grid/">Grid Pattern</a></li>
+          </ul>
+        </li>
       </ul>
     </contents>
   </slide>
